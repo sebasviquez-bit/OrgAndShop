@@ -441,9 +441,142 @@ public class ShopTestSuite extends SpecsBaseClass {
         shopHomepage.clickSkinCoat();
 
     }
-    //
 
-    //////Continue with Groming Wellness MENU ^
+    @Test
+    public void clickDogDentalCare() throws InterruptedException {
+
+        shopHomepage.clickDogDentalCare();
+
+    }
+
+    @Test
+    public void clickDogEarEyeCare() throws InterruptedException {
+
+        shopHomepage.clickDogEarEyeCare();
+
+    }
+
+    @Test
+    public void clickGrommingKits() throws InterruptedException {
+
+        shopHomepage.clickGrommingKits();
+
+    }
+
+    @Test
+    public void clickClippersAccessories() throws InterruptedException {
+
+        shopHomepage.clickClippersAccessories();
+
+    }
+
+    @Test
+    public void clickAKCVetline() {
+
+        shopHomepage.clickAKCVetline();
+
+    }
+
+    @Test
+    public void clickAnxietyRelief() throws InterruptedException {
+
+        shopHomepage.clickAnxietyRelief();
+
+    }
+
+    @Test
+    public void clickInsectProtection() throws InterruptedException {
+
+        shopHomepage.clickInsectProtection();
+
+    }
+
+    @Test
+    public void clickMobilitySupport() throws InterruptedException {
+
+        shopHomepage.clickMobilitySupport();
+
+    }
+
+    @Test
+    public void clickWellnessAccess() throws InterruptedException {
+
+        shopHomepage.clickWellnessAccess();
+
+    }
+
+    @Test
+    public void clickTrainingSupplies() throws InterruptedException {
+
+        shopHomepage.clickTrainingSupplies();
+
+    }
+
+    @Test
+    public void clickAgilityEquip() throws InterruptedException {
+
+        shopHomepage.clickAgilityEquip();
+
+    }
+
+    @Test
+    public void clickTrainingLeashes() throws InterruptedException {
+
+        shopHomepage.clickTrainingLeashes();
+
+    }
+
+    @Test
+    public void clickTreatsPouches() throws InterruptedException {
+
+        shopHomepage.clickTreatsPouches();
+
+    }
+
+    @Test
+    public void clickPuppySupplies() throws InterruptedException {
+
+        shopHomepage.clickPuppySupplies();
+
+    }
+
+    @Test
+    public void clickMuzzles() throws InterruptedException {
+
+        shopHomepage.clickMuzzles();
+
+    }
+
+    @Test
+    public void clickBooksDVDs() throws InterruptedException {
+
+        shopHomepage.clickBooksDVDs();
+
+    }
+
+    @Test
+    public void clickBasicTraining() throws InterruptedException {
+
+        shopHomepage.clickBasicTraining();
+
+    }
+
+    @Test
+    public void clickTrickTraining() throws InterruptedException {
+
+        shopHomepage.clickTrickTraining();
+
+    }
+
+    @Test
+    public void clickBreedTraining() throws InterruptedException {
+
+        shopHomepage.clickBreedTraining();
+
+    }
+    //CANINE GOOD CITIZEN
+
+    //////Continue with TRAINING MENU ^
 
      @Test
      public void FurYourOwnGoodCampButton() throws InterruptedException {

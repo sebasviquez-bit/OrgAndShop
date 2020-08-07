@@ -52,9 +52,9 @@ public class SpecsBaseClass extends SuperBaseClass {
                 driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
                 //InitHelpers("https://test-web.akc.org/");
-                InitHelpers("https://www.akc.org/?test=true");
+                //InitHelpers("https://www.akc.org/?test=true");
                 //InitHelpers("https://devshop.akc.org/");
-                //InitHelpers("https://shop.akc.org/");
+                InitHelpers("https://shop.akc.org/");
                 InitPages();
 
                 driver.get(driverHelper.baseUrl);
@@ -62,8 +62,8 @@ public class SpecsBaseClass extends SuperBaseClass {
                 sleep(1000);
 
                 this.eyes = new Eyes();
-                this.eyes.setApiKey("z9croAylAJ31BCxQ9g0BdZE0ul770cXrtqRuwWv8A8g110");    //.ORG API KEY
-                //this.eyes.setApiKey("BPfSxtkBRJAMWYb8LGUn7G0DzwYdm8JiJPyed104Df5cs110");   //SHOP API KEY
+                //this.eyes.setApiKey("z9croAylAJ31BCxQ9g0BdZE0ul770cXrtqRuwWv8A8g110");    //.ORG API KEY
+                this.eyes.setApiKey("BPfSxtkBRJAMWYb8LGUn7G0DzwYdm8JiJPyed104Df5cs110");   //SHOP API KEY
                 this.eyes.setLogHandler(new StdoutLogHandler());
                 this.eyes.setForceFullPageScreenshot(true);
                 this.eyes.setStitchMode(StitchMode.CSS);

@@ -324,6 +324,117 @@ public class ShopHomepage {
 
     @FindBy(css = "#collection-header > div.content > div > h1")
     WebElement SkinCoatTitle;
+
+    @FindBy(css = "#grooming > li:nth-child(5) > a")
+    WebElement DogDentalCare;
+
+    @FindBy(css = "#collection-header > div.content > div > h1")
+    WebElement DogDentalCareTitle;
+
+    @FindBy(css = "#grooming > li:nth-child(6) > a")
+    WebElement DogEarEyeCare;
+
+    @FindBy(css = "#collection-header > div.content > div > h1")
+    WebElement DogEarEyeCareTitle;
+
+    @FindBy(css = "#grooming > li:nth-child(7) > a")
+    WebElement GrommingKits;
+
+    @FindBy(css = "#collection-header > div.content > div > h1")
+    WebElement GrommingKitsTitle;
+
+    @FindBy(css = "#grooming > li:nth-child(8) > a")
+    WebElement ClippersAccessories;
+
+    @FindBy(css = "#collection-header > div.content > div > h1")
+    WebElement ClippersAccessoriesTtile;
+
+    @FindBy(css = "#wellness > li:nth-child(2) > a")
+    WebElement AKCVetline;
+
+    @FindBy(css = "#wellness > li:nth-child(3) > a")
+    WebElement AnxietyRelief;
+
+    @FindBy(css = "#collection-header > div.content > div > h1")
+    WebElement AnxietyReliefTitle;
+
+    @FindBy(css = "#wellness > li:nth-child(4) > a")
+    WebElement InsectProtection;
+
+    @FindBy(css = "#collection-header > div.content > div > h1")
+    WebElement InsectProtectionTitle;
+
+    @FindBy(css = "#wellness > li:nth-child(5) > a")
+    WebElement MobilitySupport;
+
+    @FindBy(css = "#collection-header > div.content > div > h1")
+    WebElement MobilitySupportTitle;
+
+    @FindBy(css = "#wellness > li:nth-child(6) > a")
+    WebElement WellnessAccessories;
+
+    @FindBy(css = "#collection-header > div.content > div > h1")
+    WebElement WellnessAccessoriesTitle;
+
+    @FindBy(css = "#training-supplies > li:nth-child(1) > a")
+    WebElement TrainingSupplies;
+
+    @FindBy(css = "#collection-header > div.content > div > h1")
+    WebElement TrainingSuppliesTitle;
+
+    @FindBy(css = "#training-supplies > li:nth-child(2) > a")
+    WebElement AgilityEquip;
+
+    @FindBy(css = "#collection-header > div.content > div > h1")
+    WebElement AgilityEquipTitle;
+
+    @FindBy(css = "#training-supplies > li:nth-child(3) > a")
+    WebElement TrainingLeashes;
+
+    @FindBy(css = "#training-supplies > li:nth-child(3) > a")
+    WebElement TrainingLeashesTitle;
+
+    @FindBy(css = "#training-supplies > li:nth-child(4) > a")
+    WebElement TreatsPouches;
+
+    @FindBy(css = "#collection-header > div.content > div > h1")
+    WebElement TreatsPouchesTitle;
+
+    @FindBy(css = "#training-supplies > li:nth-child(5) > a")
+    WebElement PuppySupplies;
+
+    @FindBy(css = "#collection-header > div.content > div > h1")
+    WebElement PuppySuppliesTitle;
+
+    @FindBy(css = "#training-supplies > li:nth-child(6) > a")
+    WebElement Muzzles;
+
+    @FindBy(css = "#training-supplies > li:nth-child(6) > a")
+    WebElement MuzzlesTitle;
+
+    @FindBy(css = "#books-dvds > li:nth-child(1) > a")
+    WebElement BooksDVDs;
+
+    @FindBy(css = "#collection-header > div.content > div > h1")
+    WebElement BooksDVDsTitle;
+
+    @FindBy(css = "#books-dvds > li:nth-child(2) > a")
+    WebElement BasicTraining;
+
+    @FindBy(css = "#collection-header > div.content > div > h1")
+    WebElement BasicTrainingTitle;
+
+    @FindBy(css = "#books-dvds > li:nth-child(3) > a")
+    WebElement TricksTraining;
+
+    @FindBy(css = "#collection-header > div.content > div > h1")
+    WebElement TricksTrainingTitle;
+
+    @FindBy(css = "#books-dvds > li:nth-child(4) > a")
+    WebElement BreedTraining;
+
+    @FindBy(css = "#collection-header > div.content > div > h1")
+    WebElement BreedTrainingTitle;
     //
 
     @FindBy(id = "the-chosen-input-hack-2")
@@ -1006,6 +1117,215 @@ public class ShopHomepage {
         this.SkinCoat.click();
         sleep(1000);
         this.SkinCoatTitle.isDisplayed();
+
+    }
+
+    public void clickDogDentalCare() throws InterruptedException {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.grooming-wellness > a"));
+        builder.moveToElement(element).build().perform();
+        this.DogDentalCare.click();
+        sleep(1000);
+        this.DogDentalCareTitle.isDisplayed();
+
+    }
+
+    public void clickDogEarEyeCare() throws InterruptedException {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.grooming-wellness > a"));
+        builder.moveToElement(element).build().perform();
+        this.DogEarEyeCare.click();
+        sleep(1000);
+        this.DogEarEyeCareTitle.isDisplayed();
+
+    }
+
+    public void clickGrommingKits() throws InterruptedException {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.grooming-wellness > a"));
+        builder.moveToElement(element).build().perform();
+        this.GrommingKits.click();
+        sleep(1000);
+        this.GrommingKitsTitle.isDisplayed();
+
+    }
+
+    public void clickClippersAccessories() throws InterruptedException {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.grooming-wellness > a"));
+        builder.moveToElement(element).build().perform();
+        this.ClippersAccessories.click();
+        sleep(1000);
+        this.ClippersAccessoriesTtile.isDisplayed();
+
+    }
+
+    public void clickAKCVetline() {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.grooming-wellness > a"));
+        builder.moveToElement(element).build().perform();
+        this.AKCVetline.click();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.urlContains("/products/vet-helpline"));
+
+    }
+
+    public void clickAnxietyRelief() throws InterruptedException {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.grooming-wellness > a"));
+        builder.moveToElement(element).build().perform();
+        this.AnxietyRelief.click();
+        sleep(1000);
+        this.AnxietyReliefTitle.isDisplayed();
+
+    }
+
+    public void clickInsectProtection() throws InterruptedException {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.grooming-wellness > a"));
+        builder.moveToElement(element).build().perform();
+        this.InsectProtection.click();
+        sleep(1000);
+        this.InsectProtectionTitle.isDisplayed();
+
+    }
+
+    public void clickMobilitySupport() throws InterruptedException {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.grooming-wellness > a"));
+        builder.moveToElement(element).build().perform();
+        this.MobilitySupport.click();
+        sleep(1000);
+        this.MobilitySupportTitle.isDisplayed();
+
+    }
+
+    public void clickWellnessAccess() throws InterruptedException {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.grooming-wellness > a"));
+        builder.moveToElement(element).build().perform();
+        this.WellnessAccessories.click();
+        sleep(1000);
+        this.WellnessAccessoriesTitle.isDisplayed();
+
+    }
+
+    public void clickTrainingSupplies() throws InterruptedException {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.training > a"));
+        builder.moveToElement(element).build().perform();
+        this.TrainingSupplies.click();
+        sleep(1000);
+        this.TrainingSuppliesTitle.isDisplayed();
+
+    }
+
+    public void clickAgilityEquip() throws InterruptedException {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.training > a"));
+        builder.moveToElement(element).build().perform();
+        this.AgilityEquip.click();
+        sleep(1000);
+        this.AgilityEquipTitle.isDisplayed();
+
+    }
+
+    public void clickTrainingLeashes() throws InterruptedException {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.training > a"));
+        builder.moveToElement(element).build().perform();
+        this.TrainingLeashes.click();
+        sleep(1000);
+        this.TrainingLeashesTitle.isDisplayed();
+
+    }
+
+    public void clickTreatsPouches() throws InterruptedException {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.training > a"));
+        builder.moveToElement(element).build().perform();
+        this.TreatsPouches.click();
+        sleep(1000);
+        this.TreatsPouchesTitle.isDisplayed();
+
+    }
+
+    public void clickPuppySupplies() throws InterruptedException {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.training > a"));
+        builder.moveToElement(element).build().perform();
+        this.PuppySupplies.click();
+        sleep(1000);
+        this.PuppySuppliesTitle.isDisplayed();
+
+    }
+
+    public void clickMuzzles() throws InterruptedException {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.training > a"));
+        builder.moveToElement(element).build().perform();
+        this.Muzzles.click();
+        sleep(1000);
+        this.MuzzlesTitle.isDisplayed();
+
+    }
+
+    public void clickBooksDVDs() throws InterruptedException {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.training > a"));
+        builder.moveToElement(element).build().perform();
+        this.BooksDVDs.click();
+        sleep(1000);
+        this.BooksDVDsTitle.isDisplayed();
+
+    }
+
+    public void clickBasicTraining() throws InterruptedException {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.training > a"));
+        builder.moveToElement(element).build().perform();
+        this.BasicTraining.click();
+        sleep(1000);
+        this.BasicTrainingTitle.isDisplayed();
+
+    }
+
+    public void clickTrickTraining() throws InterruptedException {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.training > a"));
+        builder.moveToElement(element).build().perform();
+        this.TricksTraining.click();
+        sleep(1000);
+        this.TricksTrainingTitle.isDisplayed();
+
+    }
+
+    public void clickBreedTraining() throws InterruptedException {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.training > a"));
+        builder.moveToElement(element).build().perform();
+        this.BreedTraining.click();
+        sleep(1000);
+        this.BreedTrainingTitle.isDisplayed();
 
     }
     //
