@@ -157,11 +157,11 @@ public class BreedsMenu {
     @FindBy(css = "#page-title > h1")
     WebElement germanShepherdElement;
 
-    @FindBy(css = "body > div:nth-child(6) > div > div.page-layout > main > div.article-body > div > div > div > p:nth-child(26) > a:nth-child(1)")
-    WebElement AKCBredWithHEART;
+    @FindBy(css = "body > div:nth-child(6) > div > div.page-layout > main > div.article-body > div > div > div > p:nth-child(10) > a")
+    WebElement KennelNameReg;
 
-    @FindBy(css = "#slick-slide00 > div > div > img")
-    WebElement AKCBredWithHEARTImg;
+    @FindBy(css = "#page-title > div > h1")
+    WebElement KeneelNameRegTitle;
 
     @FindBy(css = "#main-content > div.article-body > div.content-body > div > div > table > tbody > tr:nth-child(1) > td:nth-child(2) > p:nth-child(4) > a")
     WebElement breedsMoreButton;
@@ -562,15 +562,13 @@ public class BreedsMenu {
         this.fordogbreeders.click();
         sleep(1000);
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        Actions actions = new Actions(driver);
-        actions.moveToElement(AKCBredWithHEART).perform();
-        assert(AKCBredWithHEART.isEnabled());
-        this.AKCBredWithHEART.click();
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(KennelNameReg));
+        this.KennelNameReg.click();
         sleep(1000);
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         sleep(1000);
-        this.AKCBredWithHEARTImg.isDisplayed();
+        this.KeneelNameRegTitle.isDisplayed();
 
     }
 

@@ -96,7 +96,7 @@ public class RegisterDog {
     @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > form > div.registration__radio-option.active > div.registration__radio-menu__group-set > div:nth-child(2) > label > span")
     WebElement puppyman;
 
-    @FindBy(xpath = "//html/body/div[4]/div/div[4]/div/main/form/div[3]/div[2]/div[2]/label/div/span[1]")
+    @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > form > div.registration__radio-option.active > div.registration__radio-menu__group-set > div:nth-child(2) > label > div > span.form-label")
     WebElement puppymantext;
 
     @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > aside > div > nav > ul > li:nth-child(3) > a")
@@ -225,6 +225,10 @@ public class RegisterDog {
     @FindBy(css = "#page-title > div > h1")
     WebElement purcpedheader;
 
+    @FindBy(css = "body > div:nth-child(6) > div > div.page-layout > main > div.article-body > div > div > div > h2:nth-child(7)")
+    WebElement OnlineResearchTitle;
+    //
+
     @FindBy(css = "body > div:nth-child(6) > div > div.page-layout > main > div.article-body > div > div > div > h2:nth-child(3)")
     WebElement certped;
 
@@ -234,8 +238,8 @@ public class RegisterDog {
     @FindBy(css = "body > div:nth-child(37) > div > div.page-layout > main > div.article-body > div")
     WebElement contentBody;
 
-    @FindBy(css = "body > div:nth-child(6) > div > div.page-layout > main > div.article-body > div > div > div > p:nth-child(9) > a")
-    WebElement onlinesearbut;
+    @FindBy(xpath = "//p[7]//a[1]")
+    WebElement onlinesearButton;
 
     @FindBy(css = "body > div:nth-child(37) > div > div.page-layout > main > div.article-body > div > div > div > div > ul > li:nth-child(1) > span")
     WebElement dogregmenu;
@@ -805,10 +809,9 @@ public class RegisterDog {
         sleep(1000);
         this.driver.get(this.driver.getCurrentUrl()+"?test=true");
         sleep(1000);
-        actions.moveToElement(purcpedheader).perform();
-        assert(purcpedheader.isEnabled());
-        this.purcpedheader.isDisplayed();
-        this.onlinesearbut.click();
+        actions.moveToElement(onlinesearButton).perform();
+        assert(onlinesearButton.isEnabled());
+        this.onlinesearButton.click();
         newWindow();
 
     }

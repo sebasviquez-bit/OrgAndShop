@@ -157,7 +157,7 @@ public class Homepage {
     @FindBy(css = "#page-title > div > h1")
     WebElement aboutval;
 
-    @FindBy(xpath = "//html/body/div[5]/div/div[2]/main/div[2]/div/div/h1")
+    @FindBy(css = "#page-title > div > h1")
     WebElement trainval;
 
     @FindBy(css = "#page-title > div > h1")

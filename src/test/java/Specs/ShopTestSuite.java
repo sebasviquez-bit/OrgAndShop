@@ -55,7 +55,7 @@ public class ShopTestSuite extends SpecsBaseClass {
 
     }
 
-    //@Test ---------------  Secondary test bar was removed in Sprint 052720 *****
+    @Test //Secondary test bar was removed in Sprint 052720 *****
     public void SecondarySearch() throws InterruptedException {
 
         shopHomepage.SecondarySearch();
@@ -574,7 +574,49 @@ public class ShopTestSuite extends SpecsBaseClass {
         shopHomepage.clickBreedTraining();
 
     }
-    //CANINE GOOD CITIZEN
+
+    @Test
+    public void clickGCG() throws InterruptedException {
+
+        shopHomepage.clickGCG();
+
+    }
+
+    @Test
+    public void clickBooks() throws InterruptedException {
+
+        shopHomepage.clickBooks();
+
+    }
+
+    @Test
+    public void clickMerchandise() throws InterruptedException {
+
+        shopHomepage.clickMerchandise();
+
+    }
+
+    @Test
+    public void clickMaterialsEvaluators() throws InterruptedException {
+
+        shopHomepage.clickMaterialsEvaluators();
+
+    }
+
+    @Test
+    public void clickTrainingServices() throws InterruptedException {
+
+        shopHomepage.clickTrainingServices();
+
+    }
+
+    @Test
+    public void clickGoodDogHelpLine() throws InterruptedException {
+
+        shopHomepage.clickGoodDogHelpLine();
+
+    }
+    //
 
     //////Continue with TRAINING MENU ^
 

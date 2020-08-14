@@ -199,10 +199,10 @@ public class ExpertAdvice {
     @FindBy(css = "body > div:nth-child(7) > div.page-container > div.page-layout > main > div.content-card-grid > div > div > div:nth-child(3) > div > div.content-card__body > a")
     WebElement LSquizzSport;
 
-    @FindBy(css = "body > div:nth-child(7) > div.page-container > div.page-layout > main > div.my4 > form > div > div:nth-child(2) > div > label")
+    @FindBy(xpath = "//span[@class='toggle__visual-input slider']")
     WebElement editorPick;
 
-    @FindBy(css = "body > div:nth-child(6) > div.page-container > div.page-layout > aside > div > nav > ul > li:nth-child(1) > a")
+    @FindBy(xpath = "//a[contains(text(),'Alternative Medicine')]")
     WebElement alternativeMed;
 
     @FindBy(css = "body > main > div > div.bgc-white.cmw > div > div > form > div > div.subscription__form-info-container > div.subscription__form-info-input-container > div:nth-child(1) > input")
@@ -689,9 +689,8 @@ public class ExpertAdvice {
         this.health.click();
         sleep(1000);
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("body > div:nth-child(6) > div.page-container > div.page-layout > aside > div > nav > ul > li:nth-child(1) > a")));
+        wait.until(ExpectedConditions.elementToBeClickable(alternativeMed));
         this.alternativeMed.click();
         wait.until(ExpectedConditions.urlContains("akc.org/expert-advice/health/alternative-medicine/"));
 
@@ -726,6 +725,7 @@ public class ExpertAdvice {
         sleep(1000);
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         sleep(1000);
+        //All elements are check with Eyes Applitools
 
     }
 
@@ -738,7 +738,7 @@ public class ExpertAdvice {
         sleep(1000);
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         sleep(1000);
-
+        //All elements are check with Eyes method
     }
 
 }

@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 public class ORGTestSuite extends SpecsBaseClass {
 
 
-    //@Test (dataProvider = "RegisterUsers", dataProviderClass = DataHelper.class)
+    @Test (dataProvider = "RegisterUsers", dataProviderClass = DataHelper.class)
     public void SuccessfulRegister(String sUserName, String sFirstName, String sLastName, String sPassword1, String sPassword2) throws InterruptedException {
 
         User testUser;
@@ -2005,7 +2005,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test  
+    //@Test  We need to fix this test Elements cannot be selected when running automation script on this Section*
     public void fordogbreedersArticle1() throws InterruptedException {
 
         breeds.fordogbreedersArticle1();
@@ -2029,7 +2029,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     //ExpertAdvice Menu Articles >
 
 
-    @Test
+    //@Test
     public void allcategArticle() throws InterruptedException {
 
         expertAdvice.allcategArticle();   //This test was replaced by a Visual test below >

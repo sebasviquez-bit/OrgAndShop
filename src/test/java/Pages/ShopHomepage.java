@@ -435,6 +435,39 @@ public class ShopHomepage {
 
     @FindBy(css = "#collection-header > div.content > div > h1")
     WebElement BreedTrainingTitle;
+
+    @FindBy(css = "#canine-good-citizen > li:nth-child(1) > a")
+    WebElement CGC;
+
+    @FindBy(css = "#collection-header > div.content > div > h1")
+    WebElement CGCTitle;
+
+    @FindBy(css = "#canine-good-citizen > li:nth-child(2) > a")
+    WebElement Books;
+
+    @FindBy(css = "#canine-good-citizen > li:nth-child(2) > a")
+    WebElement BooksTitle;
+
+    @FindBy(css = "#canine-good-citizen > li:nth-child(3) > a")
+    WebElement Merchandise;
+
+    @FindBy(css = "#collection-header > div.content > div > h1")
+    WebElement MerchandiseTitle;
+
+    @FindBy(css = "#canine-good-citizen > li:nth-child(4) > a")
+    WebElement MaterialsEvaluators;
+
+    @FindBy(css = "#collection-header > div.content > div > h1")
+    WebElement MaterialsEvaluatorsTitle;
+
+    @FindBy(css = "#training-services > li:nth-child(1) > a")
+    WebElement TrainingServices;
+
+    @FindBy(css = "#collection-header > div.content > div > h1")
+    WebElement TrainingServicesTitle;
+
+    @FindBy(css = "#training-services > li:nth-child(2) > a")
+    WebElement GoodDogHelpLine;
     //
 
     @FindBy(id = "the-chosen-input-hack-2")
@@ -1328,7 +1361,75 @@ public class ShopHomepage {
         this.BreedTrainingTitle.isDisplayed();
 
     }
-    //
+
+    public void clickGCG() throws InterruptedException {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.training > a"));
+        builder.moveToElement(element).build().perform();
+        this.CGC.click();
+        sleep(1000);
+        this.CGCTitle.isDisplayed();
+
+    }
+
+    public void clickBooks() throws InterruptedException {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.training > a"));
+        builder.moveToElement(element).build().perform();
+        this.Books.click();
+        sleep(1000);
+        this.BooksTitle.isDisplayed();
+
+    }
+
+    public void clickMerchandise() throws InterruptedException {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.training > a"));
+        builder.moveToElement(element).build().perform();
+        this.Merchandise.click();
+        sleep(1000);
+        this.MerchandiseTitle.isDisplayed();
+
+    }
+
+    public void clickMaterialsEvaluators() throws InterruptedException {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.training > a"));
+        builder.moveToElement(element).build().perform();
+        this.MaterialsEvaluators.click();
+        sleep(1000);
+        this.MaterialsEvaluatorsTitle.isDisplayed();
+
+    }
+
+    public void clickTrainingServices() throws InterruptedException {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.training > a"));
+        builder.moveToElement(element).build().perform();
+        this.TrainingServices.click();
+        sleep(1000);
+        this.TrainingServicesTitle.isDisplayed();
+
+    }
+
+    public void clickGoodDogHelpLine() throws InterruptedException {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.training > a"));
+        builder.moveToElement(element).build().perform();
+        this.GoodDogHelpLine.click();
+        sleep(1000);
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.urlContains("products/good-dog-helpline"));
+
+
+    }
+    ///
     //Continue with  On the Groming Wellness menu ^
 
 

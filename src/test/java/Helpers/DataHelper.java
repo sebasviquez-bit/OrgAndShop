@@ -13,7 +13,7 @@ public class DataHelper {
        return ExcelHelper.getTableArray("AKCUsers.xlsx","Sheet1", 2);
     }
 
-    @DataProvider(name="ContactShipping")
+    //@DataProvider(name="ContactShipping") This is for SHOP - Pending to be set for PurchaseOrders*
     public static Object[][] ContactShipping() throws Exception {
 
         return CsvHelper.getCSVArray("ContactShipping.csv");
@@ -24,11 +24,7 @@ public class DataHelper {
     @DataProvider(name="RegisterUsers")
     public static Object[][] credentialsRegister() throws Exception {
 
-        return CsvHelper.getCSVArray("RegJoLuis.csv");
-
-        //ExcelHelper.getTableArray("RegJoLuis.xlsx","Sheet1", 4);
-
-//        return CsvHelper.getCSVArray("Users.csv");
+        return CsvHelper.getCSVArray("NewUsersSignUp.csv");
 
     }
 

@@ -2,14 +2,11 @@ package Pages;
 
 import Helpers.DataHelper;
 import Model.User;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static java.lang.Thread.sleep;
 
@@ -25,7 +22,7 @@ public class SignIn {
     @FindBy(xpath = "//*[@id=\"gigya-login-form\"]/div[3]/div/input")
     WebElement ingresar;
 
-    @FindBy(xpath = "//*[@id=\"site-header\"]/div/div[1]/div/div[1]/nav[2]/a")
+    @FindBy(css = "#site-header > div > div.desktop-header > div > div.utility-header > nav.utility-nav.sign-in-nav > a")
     WebElement iconsignin;
 
     @FindBy(css = "#tb-links > ul > li:nth-child(5) > a")
@@ -75,22 +72,19 @@ public class SignIn {
     public void signInUser(User _testUser) throws InterruptedException {
 
         this.iconsignin.click();
-        //this.gigyabox.isDisplayed();
         this.signup.isDisplayed();
         this.forgot.isDisplayed();
         this.signinlogo.isDisplayed();
-        //this.otheroption.isDisplayed();
         this.userName.sendKeys(_testUser.username);
         this.password.sendKeys(_testUser.password);
         this.ingresar.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#site-header > div > div.desktop-header > div > div.utility-header > nav.utility-nav.sign-in-nav > a")));
-        //this.iconsignin.isDisplayed();
-        Actions actions = new Actions(driver);
-        actions.moveToElement(iconsignin).perform();
-        actions.moveToElement(iconsignin).click();
-        this.myakc.isDisplayed();
+        sleep(1000);
+        this.iconsignin.isDisplayed();
+        sleep(1000);
         this.logout.isDisplayed();
+        Actions action = new Actions(this.driver);
+        action.moveToElement(iconsignin).perform();
+        action.moveToElement(iconsignin).click();
         sleep(1000);
         this.logout.click();
         sleep(1000);
