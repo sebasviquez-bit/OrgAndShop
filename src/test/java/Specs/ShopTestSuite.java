@@ -616,12 +616,355 @@ public class ShopTestSuite extends SpecsBaseClass {
         shopHomepage.clickGoodDogHelpLine();
 
     }
+
+    @Test
+    public void clickHumanApparel()  {
+
+        shopHomepage.clickHumanApparel();
+
+    }
+
+    @Test
+    public void clickGraphicApparel()  {
+
+        shopHomepage.clickGraphicApparel();
+
+    }
+
+    @Test
+    public void clickBreedEmbroidery()  {
+
+        shopHomepage.clickBreedEmbroidery();
+
+    }
+
+    @Test
+    public void clickScarves()  {
+
+        shopHomepage.clickScarves();
+
+    }
+
+    @Test
+    public void clickHats()  {
+
+        shopHomepage.clickHats();
+
+    }
+
+    @Test
+    public void clickPajamas() {
+
+        shopHomepage.clickPajamas();
+
+    }
+
+    @Test
+    public void clickRobes() {
+
+        shopHomepage.clickRobes();
+
+    }
+
+    @Test
+    public void clickJewelry()  {
+
+        shopHomepage.clickJewelry();
+
+    }
+
+    @Test
+    public void clickPins() {
+
+        shopHomepage.clickPins();
+
+    }
+
+    @Test
+    public void clickRings() {
+
+        shopHomepage.clickRings();
+
+    }
+
+    @Test
+    public void clickEarigns()  {
+
+        shopHomepage.clickEarigns();
+
+    }
+
+    @Test
+    public void clickBracelets() {
+
+        shopHomepage.clickBracelets();
+
+    }
+
+    @Test
+    public void clickJewelryChains() {
+
+        shopHomepage.clickJewelryChains();
+
+    }
+
+    @Test
+    public void clickCharmsPendants()  {
+
+        shopHomepage.clickCharmsPendants();
+
+    }
+
+    @Test
+    public void clickSportJewlery()  {
+
+        shopHomepage.clickSportJewlery();
+
+    }
+
+    @Test
+    public void clickOvalBreedPendants()  {
+
+        shopHomepage.clickOvalBreedPendants();
+
+    }
+
+    @Test
+    public void clickToteBags()  {
+
+        shopHomepage.clickToteBags();
+
+    }
+
+    @Test
+    public void clickDuffelBags()  {
+
+        shopHomepage.clickDuffelBags();
+
+    }
+
+    @Test
+    public void clickPrintToteBags()  {
+
+        shopHomepage.clickPrintToteBags();
+
+    }
+
+    @Test
+    public void clickHandPaintTotes()  {
+
+        shopHomepage.clickHandPaintTotes();
+
+    }
+
+    @Test
+    public void clickEmbroToteBags()  {
+
+        shopHomepage.clickEmbroToteBags();
+
+    }
+
+    @Test
+    public void clickWineTotes()  {
+
+        shopHomepage.clickWineTotes();
+
+    }
+
+    @Test
+    public void clickKitchen()  {
+
+        shopHomepage.clickKitchen();
+
+    }
+
+    @Test
+    public void clickCoffeMugs()  {
+
+        shopHomepage.clickCoffeMugs();
+
+    }
+
+    @Test
+    public void clickTravelMugs()  {
+
+        shopHomepage.clickTravelMugs();
+
+    }
+
+    @Test
+    public void clickTumblers()  {
+
+        shopHomepage.clickTumblers();
+
+    }
+
+    @Test
+    public void clickWineGlasses()  {
+
+        shopHomepage.clickWineGlasses();
+
+    }
+
+    @Test
+    public void clickAprons()  {
+
+        shopHomepage.clickAprons();
+
+    }
+
+    @Test
+    public void clickOvenPot()  {
+
+        shopHomepage.clickOvenPot();
+
+    }
+
+    @Test
+    public void clickCuttingBoards()  {
+
+        shopHomepage.clickCuttingBoards();
+
+    }
+
+    @Test
+    public void clickDrinkAccesories()  {
+
+        shopHomepage.clickDrinkAccesories();
+
+    }
+
+    @Test
+    public void clickHome()  {
+
+        shopHomepage.clickHome();
+
+    }
+
+    @Test
+    public void clickDecorative()  {
+
+        shopHomepage.clickDecorative();
+
+    }
+
+    @Test
+    public void clickCardHolders()  {
+
+        shopHomepage.clickCardHolders();
+
+    }
+
+    @Test
+    public void clickCustomPetArt()  {
+
+        shopHomepage.clickCustomPetArt();
+
+    }
+
+    @Test
+    public void clickCoasters()  {
+
+        shopHomepage.clickCoasters();
+
+    }
+
+    @Test
+    public void clickTeaTowels()  {
+
+        shopHomepage.clickTeaTowels();
+
+    }
+
+    @Test
+    public void clickBlankets()  {
+
+        shopHomepage.clickBlankets();
+
+    }
+
+    @Test
+    public void clickPillows()  {
+
+        shopHomepage.clickPillows();
+
+    }
+
+    @Test
+    public void clickHolyDecor()  {
+
+        shopHomepage.clickHolyDecor();
+
+    }
+
+    @Test
+    public void clickOutdoorAcces()  {
+
+        shopHomepage.clickOutdoorAcces();
+
+    }
+
+    @Test
+    public void clickTravelAcces()  {
+
+        shopHomepage.clickTravelAcces();
+
+    }
+
+    @Test
+    public void clickKeyRings()  {
+
+        shopHomepage.clickKeyRings();
+
+    }
+
+    @Test
+    public void clickPhoneCases()  {
+
+        shopHomepage.clickPhoneCases();
+
+    }
+
+    @Test
+    public void clickLuggageTags()  {
+
+        shopHomepage.clickLuggageTags();
+
+    }
+
+    @Test
+    public void clickStationary()  {
+
+        shopHomepage.clickStationary();
+
+    }
+
+    @Test
+    public void clickUmbrellas()  {
+
+        shopHomepage.clickUmbrellas();
+
+    }
+
+    @Test
+    public void clickSportsChairs()  {
+
+        shopHomepage.clickSportsChairs();
+
+    }
+
+    @Test
+    public void clickBreeders()  {
+
+        shopHomepage.clickBreeders();
+
+    }
     //
 
-    //////Continue with TRAINING MENU ^
+    //////Continue with DogLovers MENU ^
 
      @Test
-     public void FurYourOwnGoodCampButton() throws InterruptedException {
+     public void FurYourOwnGoodCampButton() {
 
         shopHomepage.FurYourOwnGoodCampButton();
 

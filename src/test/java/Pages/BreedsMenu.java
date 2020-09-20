@@ -148,7 +148,7 @@ public class BreedsMenu {
     @FindBy(css = "#page-title > h1")
     WebElement listTittle;
 
-    @FindBy(css = "#main-content > div.article-body > div.content-body > div > div.content-body__text.content-body__text-long > div > ul > li:nth-child(2) > span")
+    @FindBy(xpath = "//body/div/div/div/main/div/div/div/div/div/ul/li[2]/span[1]")
     WebElement accordion18;
 
     @FindBy(css = "#main-content > div.article-body > div.content-body > div > div.content-body__text.content-body__text-long > div > ul > li:nth-child(2) > div > ol > li:nth-child(2) > span > a > span")

@@ -51,7 +51,7 @@ public class SpecsBaseClass extends SuperBaseClass {
                 //driver = new SafariDriver();
                 driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
-                //InitHelpers("https://test-web.akc.org/");
+                InitHelpers("https://test-web.akc.org/");
                 //InitHelpers("https://www.akc.org/?test=true");
                 //InitHelpers("https://devshop.akc.org/");
                 InitHelpers("https://shop.akc.org/");

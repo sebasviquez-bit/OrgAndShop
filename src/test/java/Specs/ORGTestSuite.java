@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 public class ORGTestSuite extends SpecsBaseClass {
 
 
-    @Test (dataProvider = "RegisterUsers", dataProviderClass = DataHelper.class)
+    //@Test (dataProvider = "RegisterUsers", dataProviderClass = DataHelper.class)
     public void SuccessfulRegister(String sUserName, String sFirstName, String sLastName, String sPassword1, String sPassword2) throws InterruptedException {
 
         User testUser;

@@ -186,7 +186,7 @@ public class ProdServ {
     @FindBy(css = "body > div.landing-page > div.anchored-nav.bgc-blue.anchored-nav--light > div.show-at-medium > div > a:nth-child(2)")
     WebElement cgcElement;
 
-    @FindBy(css = "#page-title > div > h1")
+    @FindBy(css = "body > div.landing-page > div.anchored-nav.bgc-blue.anchored-nav--light > div.show-at-medium > div > a:nth-child(1)")
     WebElement gooddogElement;
 
     @FindBy(css = "#page-title > h1")
