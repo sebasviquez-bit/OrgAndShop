@@ -364,7 +364,7 @@ public class CompareBreeds {
         //this.poprank4.isDisplayed();
         //this.poprank5.isDisplayed();
         //this.group.isDisplayed();
-        this.group1.isDisplayed();
+        //this.group1.isDisplayed();
         this.group2.isDisplayed();
         this.group3.isDisplayed();
         this.group4.isDisplayed();

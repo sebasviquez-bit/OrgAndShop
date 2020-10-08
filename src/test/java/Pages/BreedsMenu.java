@@ -169,6 +169,10 @@ public class BreedsMenu {
     @FindBy(xpath = "//*[@id=\"main-content\"]/div[1]/div[1]/div/div/table/tbody/tr[4]/td[2]/p[3]/a")
     WebElement dogHealthButton;
 
+    @FindBy(xpath = "/html/body/div[15]/div/div/div/div/span")
+    WebElement PopUpFrameClose;
+    //
+
 
     DriverHelper driverHelper;
 
@@ -183,7 +187,9 @@ public class BreedsMenu {
     public void Verifybreedsmenu() {
 
         this.menubreeds.click();
-        this.viewbreeds.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(viewbreeds));
+        //this.viewbreeds.isDisplayed();
         this.searchbreeds.isDisplayed();
         this.explorebreeds.isDisplayed();
         this.findmatch.isDisplayed();
@@ -210,13 +216,11 @@ public class BreedsMenu {
     public void Clickviewbreeds() throws InterruptedException {
 
         this.menubreeds.click();
-        sleep(1000);
-        this.viewbreeds.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(viewbreeds));
         this.viewbreeds.click();
-        sleep(1000);
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.viewbreedsElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(viewbreedsElement));
 
     }
 
@@ -450,22 +454,16 @@ public class BreedsMenu {
     public void puppiesArticle1() throws InterruptedException {
 
         this.menubreeds.click();
-        sleep(1000);
-        this.allaboutpuppies.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(allaboutpuppies));
         Actions actions = new Actions(driver);
         actions.moveToElement(allaboutpuppies).perform();
-        assert(allaboutpuppies.isEnabled());
         this.allaboutpuppies.click();
         sleep(1000);
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.preparingPuppy.isDisplayed();
-        WebDriverWait wait = new WebDriverWait(driver, 30);
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#main-content > div.article-body > div.content-body > div > div > ul:nth-child(11) > li:nth-child(1) > a")));
-        actions.moveToElement(preparingPuppy).perform();
+        wait.until(ExpectedConditions.visibilityOf(preparingPuppy));
         this.preparingPuppy.click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("body > div:nth-child(6) > div.page-container > div.page-layout > aside > div > nav > ul > li:nth-child(2) > a")));
-        this.twoMonths.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(twoMonths));
 
     }
 

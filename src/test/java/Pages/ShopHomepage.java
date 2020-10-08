@@ -2262,7 +2262,7 @@ public class ShopHomepage {
 
     }
     //
-    //Continue with  On the DogLovers menu ^
+    //Continue with  On the AKCPro menu ^
 
 
     public void FurYourOwnGoodCampButton() {

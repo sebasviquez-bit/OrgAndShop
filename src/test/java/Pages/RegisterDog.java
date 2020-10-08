@@ -463,12 +463,12 @@ public class RegisterDog {
         this.register.click();
         sleep(1000);
         this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(regdog));
         this.regdog.click();
         sleep(1000);
         this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
-        this.enrollpure.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(enrollpure));
         this.enrollpure.click();
         sleep(1000);
         this.buttoncont.click();
@@ -668,15 +668,13 @@ public class RegisterDog {
         this.register.click();
         sleep(1000);
         this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(reglitt));
         this.reglitt.click();
-        sleep(1000);
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("scroll(0, 800);");
+        wait.until(ExpectedConditions.visibilityOf(mylitt));
         this.mylitt.click();
-        sleep(1000);
         this.freshext.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(buttoncont));
         this.buttoncont.click();
         newWindow4();
 
@@ -687,15 +685,14 @@ public class RegisterDog {
         this.register.click();
         sleep(1000);
         this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(reglitt));
         this.reglitt.click();
-        sleep(1000);
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("scroll(0, 500);");
+        wait.until(ExpectedConditions.visibilityOf(mylitt));
         this.mylitt.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(froze));
         this.froze.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(buttoncont));
         this.buttoncont.click();
         newWindow4();
 
@@ -708,13 +705,14 @@ public class RegisterDog {
         this.driver.get(this.driver.getCurrentUrl()+"?test=true");
         sleep(1000);
         this.reglitt.click();
-        sleep(1000);
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(mylitt));
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("scroll(0, 500);");
         this.mylitt.click();
-        sleep(2000);
+        wait.until(ExpectedConditions.visibilityOf(special));
         this.special.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(buttoncont));
         this.buttoncont.click();
         newWindow4();
 

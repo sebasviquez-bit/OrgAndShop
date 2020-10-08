@@ -331,6 +331,13 @@ public class Homepage {
     @FindBy(css = "#contents > div.choice.choice_specific")
     WebElement SpecificFeedback;
 
+    @FindBy(css = "body > div.page-home.bgc-white.cmw > div.page-home__top-stories.backdrop > div > div.section-title.section-title--center > h2")
+    WebElement TopStoriesTitle;
+
+    @FindBy(css = "body > div.page-home.bgc-white.cmw > div.breed-feature > div.breed-feature__col.breed-feature__content-col > div > div > div > div.tool-grid__header > div > h2")
+    WebElement FindRightBreedTitle;
+
+
     DriverHelper driverHelper;
 
     WebDriver driver;
@@ -768,7 +775,7 @@ public class Homepage {
     public void VerifyFindPuppiesicon() throws InterruptedException {
 
         Actions actions = new Actions(driver);
-        actions.moveToElement(findpuppyicon).perform();
+        actions.moveToElement(TopStoriesTitle).perform();
         assert(findpuppyicon.isEnabled());
         this.findpuppyicon.click();
         valid1();
@@ -963,7 +970,7 @@ public class Homepage {
     public void VerifyTrend3() {
 
         Actions actions = new Actions(driver);
-        actions.moveToElement(trendnews2).perform();
+        actions.moveToElement(FindRightBreedTitle).perform();
         assert(trendnews3.isEnabled());
         this.trendnews3.click();
         WebDriverWait wait = new WebDriverWait(driver, 10);
