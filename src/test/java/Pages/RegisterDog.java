@@ -401,16 +401,13 @@ public class RegisterDog {
         this.regdog.click();
         sleep(1000);
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        //wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > form > div.registration__radio-option.active > div.registration__radio-menu__group-trigger > label > span")));
+        wait.until(ExpectedConditions.visibilityOf(regpure));
         this.regpure.click();
-        sleep(1000);
         this.newown.click();
-        sleep(1000);
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > form > a")));
+        wait.until(ExpectedConditions.visibilityOf(buttoncont));
         this.buttoncont.click();  //FIX THIS OBJECT *
         newWindow();
-        sleep(1000);
-        this.regform2.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(regform2));
 
     }
 
@@ -424,16 +421,14 @@ public class RegisterDog {
         assert(regdog.isEnabled());
         this.regdog.click();
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > form > div:nth-child(1) > div.registration__radio-menu__group-trigger > label > span")));
+        wait.until(ExpectedConditions.visibilityOf(regpure));
         this.regpure.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(prepaid));
         this.prepaid.click();
-        sleep(1000);
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("scroll(0, 800);");
+        wait.until(ExpectedConditions.visibilityOf(buttoncont));
         this.buttoncont.click();
         newWindow();
-        this.regform3.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(regform3));
 
     }
 
@@ -442,15 +437,14 @@ public class RegisterDog {
         this.register.click();
         sleep(1000);
         this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
         Actions actions = new Actions(driver);
         actions.moveToElement(regdog).perform();
         assert(regdog.isEnabled());
         this.regdog.click();
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > form > div:nth-child(2) > div.registration__radio-menu__group-trigger > label > span")));
+        wait.until(ExpectedConditions.visibilityOf(enrolldog));
         this.enrolldog.click();
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > form > a")));
+        wait.until(ExpectedConditions.visibilityOf(buttoncont));
         this.buttoncont.click();
         newWindow2();
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("body > div.landing-page > div.content-section.content-block-list--top-bottom-spacing > div > div.content-block__text > p:nth-child(7) > iframe")));
@@ -493,7 +487,6 @@ public class RegisterDog {
         this.other.click();
         sleep(1000);
         this.foreigreg.click();
-        sleep(1000);
         this.buttoncont.click();
         newWindow4();
 
@@ -531,6 +524,7 @@ public class RegisterDog {
         this.regdog.click();
         sleep(1000);
         this.other.click();
+        sleep(1000);
         this.openreg.click();
         this.buttoncont.click();
         newWindow4();

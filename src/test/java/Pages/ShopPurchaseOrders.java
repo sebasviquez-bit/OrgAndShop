@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -15,6 +16,25 @@ public class ShopPurchaseOrders {
 
     @FindBy(css = "#homepage-banners > a.homepage-banner.active > h2 > span.cta")
     WebElement ShopNowBanner0;
+
+    @FindBy(css = "#product-11595701892 > div > div.card-details > a > h2")
+    WebElement BaseballCaps;
+
+    @FindBy(css = "#product-11595701892 > div > div.product-card-img-wrap")
+    WebElement BaseballCap;
+
+    @FindBy(css = "#product-11595701892 > div > div.product-card-img-wrap > button")
+    WebElement QuickViewButton;
+
+    @FindBy(css = "#quick-view > div > div")
+    WebElement QuickViewModal;
+
+    @FindBy(css = "#quick-view > div > div > div.quick-view__product-fields > a")
+    WebElement QVModalProdDetail;
+    //
+
+    @FindBy(css = "#index > section:nth-child(4)")
+    WebElement FurYourOwnGoodSection;
 
     @FindBy(id = "collection-header")
     WebElement CollectionHeader;
@@ -106,22 +126,106 @@ public class ShopPurchaseOrders {
     @FindBy(id = "checkout_different_billing_address_false")
     WebElement SameAsShippingAdd;
 
+
     WebDriver driver;
 
     // Constructor
+
     public ShopPurchaseOrders (WebDriver _driver){
         this.driver = _driver;
         PageFactory.initElements(driver,this);
     }
 
+    //Methods
+
     public void BasicPurchase() throws InterruptedException {
 
-        this.ShopNowBanner0.isDisplayed();
-        this.ShopNowBanner0.click();
+        Actions actions = new Actions(driver);
+        actions.moveToElement(FurYourOwnGoodSection).perform();
+        assert(BaseballCaps.isEnabled());
+        this.BaseballCaps.click();
+        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
+        jse.executeScript("scroll(0, 400);");
+        this.ProductDetails.isDisplayed();
+        this.AddToCartText.isDisplayed();
+        this.AddToCartText.click();
         sleep(1000);
-        this.CollectionHeader.isDisplayed();
-        this.ItemPriceDetails.isDisplayed();
-        this.ItemPriceDetails.click();
+        this.CheckOutButton.isDisplayed();
+        this.CheckOutButton.click();
+        sleep(1000);
+        jse.executeScript("scroll(0, 400);");
+        this.ShoppingCartSection.isDisplayed();
+        this.CheckOutButton2.isDisplayed();
+        this.CheckOutButton2.click();
+        sleep(2000);
+        this.CheckOutForm.isDisplayed();
+        sleep(1000);
+        this.CheckOutFormEmail.sendKeys("sebas.viquez@hotmail.com");
+        sleep(1000);
+        this.CheckOutFormFirstName.sendKeys("sebas");
+        sleep(1000);
+        this.CheckOutFormLasttName.sendKeys("viquez");
+        sleep(1000);
+        this.CheckOutFormShippingAddres.sendKeys("NY");
+        sleep(1000);
+        this.CheckOutFormCity.sendKeys("NY");
+        sleep(1000);
+        this.CheckOutFormContry.sendKeys("United States");
+        sleep(1000);
+        this.CheckOutFormState.sendKeys("New York");
+        sleep(1000);
+        this.CheckOutFormZip.sendKeys("10001");
+        sleep(1000);
+        this.CheckOutFormPhone.sendKeys("919-233-9767");
+        sleep(1000);
+        this.ContinueShippingButton.click();
+        sleep(1000);
+        this.CheckOutWrapForm.isDisplayed();
+        this.CheckOutWrapFormEmail.isDisplayed();
+        sleep(2000);
+        this.CheckOutWrapFormContinueButton.click();
+        sleep(2000);
+        this.PaymentGateway.isDisplayed();
+        this.CreditCardFields.isDisplayed();
+        sleep(1000);
+        this.CreditCardNumberCase.isDisplayed();
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt
+                (By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[2]/fieldset[1]/div[3]/div[3]/div[1]/div[1]/div[1]/iframe[1]")));
+        driver.findElement(By.id("number")).sendKeys("4321123456789034");
+        driver.switchTo().defaultContent();
+        this.CreditCardNameCase.isDisplayed();
+        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt
+                (By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[2]/fieldset[1]/div[3]/div[3]/div[2]/div[1]/div[1]/iframe[1]")));
+        driver.findElement(By.id("name")).sendKeys("Sebas Viquez");
+        driver.switchTo().defaultContent();
+        this.ExpDate.isDisplayed();
+        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt
+                (By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[2]/fieldset[1]/div[3]/div[3]/div[3]/div[1]/div[1]/iframe[1]")));
+        driver.findElement(By.id("expiry")).sendKeys("10 20");
+        driver.switchTo().defaultContent();
+        this.SecuCode.isDisplayed();
+        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt
+                (By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[2]/fieldset[1]/div[3]/div[3]/div[4]/div[1]/div[1]/iframe[1]")));
+        driver.findElement(By.id("verification_value")).sendKeys("123");
+        driver.switchTo().defaultContent();
+        this.PaypalPayment.isDisplayed();
+        this.SameAsShippingAdd.isDisplayed();
+        this.PayNowButton.click();
+        sleep(2000);
+    }
+
+    public void QuickViewPurchase() throws InterruptedException {
+
+        Actions actions = new Actions(driver);
+        actions.moveToElement(BaseballCap).perform();
+        assert(QuickViewButton.isEnabled());
+        this.QuickViewButton.click();
+        this.QuickViewModal.isDisplayed();
+        this.QVModalProdDetail.click();
+        sleep(1000);
+        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         sleep(1000);
         JavascriptExecutor jse = (JavascriptExecutor) driver;
         jse.executeScript("scroll(0, 400);");
@@ -193,6 +297,9 @@ public class ShopPurchaseOrders {
         this.PayNowButton.click();
         sleep(2000);
 
+
     }
+
+
 
 }

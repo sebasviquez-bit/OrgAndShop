@@ -7,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static java.lang.Thread.sleep;
 
@@ -84,7 +86,7 @@ public class Search {
     @FindBy(css = "#breed-collection-filter > div > div > a")
     WebElement dropdownDogLover;
 
-    @FindBy(css = "#collection-main > ul > li:nth-child(1) > div > div > div.card-details > h2")
+    @FindBy(css = "#collection-main > ul.grid.collection-grid.gradient > li:nth-child(1) > div > div")
     WebElement productDetailDogLover;
 
     @FindBy(css = "#page-title > h1")
@@ -166,10 +168,13 @@ public class Search {
 
     public void ShopSearch(Word _searchword) throws InterruptedException {
 
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(ShopSearch));
         this.ShopSearch.sendKeys(_searchword.WordSearch);
         this.ShopSearch.sendKeys(Keys.RETURN);
-        sleep(1000);
-        this.ShopResultTitle.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(ShopResultTitle));
+        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
+        //this.ShopResultTitle.isDisplayed();
         this.ShopResultSearchBar.isDisplayed();
         this.ShopResultSections.isDisplayed();
         this.ShopResultImage.isDisplayed();
@@ -178,13 +183,14 @@ public class Search {
 
     public void ShopSearchBreed(Word _searchword) throws InterruptedException {
 
-        sleep(1000);
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(dropdown));
         this.dropdown.click();
         sleep(1000);
         this.ShopSearchBreed.sendKeys(_searchword.WordSearch);
         this.ShopSearchBreed.sendKeys(Keys.RETURN);
-        sleep(1000);
-        this.ShopSearchBreedTitle.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(ShopSearchBreedTitle));
+        //this.ShopSearchBreedTitle.isDisplayed();
         this.ChooseBreedTitle.isDisplayed();
         this.ShopSearchBreedImage.isDisplayed();
 
@@ -193,6 +199,8 @@ public class Search {
     public void ShopDogLoversSearch(Word _searchword) throws InterruptedException {
 
         driver.navigate().to("https://shop.akc.org/collections/dog-lovers");
+        sleep(1000);
+        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         sleep(1000);
         this.dropdownDogLover.click();
         sleep(1000);

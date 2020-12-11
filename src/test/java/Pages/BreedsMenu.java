@@ -103,7 +103,7 @@ public class BreedsMenu {
     @FindBy(css = "#page-title > h1")
     WebElement fordogownersElement;
 
-    @FindBy(xpath = "//*[@id=\"page-title\"]/h1")
+    @FindBy(css = "#page-title > h1")
     WebElement viewbreedsElement;
 
     @FindBy(xpath = "//*[@id=\"mega-menu\"]")
@@ -148,7 +148,7 @@ public class BreedsMenu {
     @FindBy(css = "#page-title > h1")
     WebElement listTittle;
 
-    @FindBy(xpath = "//body/div/div/div/main/div/div/div/div/div/ul/li[2]/span[1]")
+    @FindBy(css = "#main-content > div.article-body > div.content-body > div > div.content-body__text.content-body__text-long > div > ul > li:nth-child(2) > span")
     WebElement accordion18;
 
     @FindBy(css = "#main-content > div.article-body > div.content-body > div > div.content-body__text.content-body__text-long > div > ul > li:nth-child(2) > div > ol > li:nth-child(2) > span > a > span")
@@ -480,14 +480,8 @@ public class BreedsMenu {
         actions.moveToElement(preparingPuppy).perform();
         this.preparingPuppy.isDisplayed();
         this.preparingPuppy.click();
-        sleep(1000);
         actions.moveToElement(newPuppyCheck).perform();
         assert(newPuppyCheck.isEnabled());
-        this.newPuppyCheck.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.newPuppyCheckElement.isDisplayed();
 
     }
 
@@ -539,9 +533,9 @@ public class BreedsMenu {
         sleep(1000);
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         this.mostpopdogsElement.isDisplayed();
-        JavascriptExecutor jse = (JavascriptExecutor) driver;
-        jse.executeScript("scroll(0, 1000)");
-        this.accordion18.isDisplayed();
+        Actions actions = new Actions(driver);
+        actions.moveToElement(accordion18).perform();
+        assert(accordion18.isEnabled());
         this.accordion18.click();
         sleep(1000);
         this.germanShepherd.isDisplayed();

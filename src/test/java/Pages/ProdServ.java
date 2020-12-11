@@ -518,15 +518,12 @@ public class ProdServ {
     public void Clickregdown() throws InterruptedException {
 
         this.produservi.click();
-        sleep(1000);
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#product-services > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(1) > ul > li:nth-child(4) > a")));
-        this.regdown.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(regdown));
         this.regdown.click();
         sleep(1000);
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.regdownElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(regdownElement));
 
     }
 
@@ -560,8 +557,8 @@ public class ProdServ {
 
         this.produservi.click();
         sleep(1000);
-        WebDriverWait wait = new WebDriverWait(driver, 20);
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#product-services > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(2) > ul > li:nth-child(2) > a")));
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(akcrescue));
         this.akcrescue.click();
         sleep(1000);
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");

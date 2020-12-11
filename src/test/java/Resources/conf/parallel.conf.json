@@ -1,0 +1,27 @@
+{
+  "server": "hub-cloud.browserstack.com",
+  "user": "sebastianviquez1",
+  "key": "szDfCvzz6f8QZE54aXkN",
+
+  "capabilities": {
+    "build": ".ORG2",
+    "name": "parallel_tests",
+    "browserstack.debug": true
+  },
+
+  "environments": {
+    "chrome": {
+      "browser": "chrome"
+    },
+    "firefox": {
+      "browser": "firefox"
+    },
+    "safari": {
+      "os": "OS X",
+      "browser": "safari"
+    },
+    "ie": {
+      "browser": "internet explorer"
+    }
+  }
+}

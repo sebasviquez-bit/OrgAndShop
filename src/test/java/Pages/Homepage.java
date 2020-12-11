@@ -949,7 +949,7 @@ public class Homepage {
     public void VerifyTrend1() {
 
         Actions actions = new Actions(driver);
-        actions.moveToElement(trendnews1).perform();
+        actions.moveToElement(expbreed).perform();
         assert(trendnews1.isEnabled());
         this.trendnews1.click();
         WebDriverWait wait = new WebDriverWait(driver, 10);

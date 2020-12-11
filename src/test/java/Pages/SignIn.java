@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static java.lang.Thread.sleep;
 
@@ -78,7 +80,8 @@ public class SignIn {
         this.userName.sendKeys(_testUser.username);
         this.password.sendKeys(_testUser.password);
         this.ingresar.click();
-        sleep(1000);
+        WebDriverWait wait = new WebDriverWait (driver, 20);
+        wait.until(ExpectedConditions.visibilityOf(iconsignin));
         this.iconsignin.isDisplayed();
         sleep(1000);
         this.logout.isDisplayed();

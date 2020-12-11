@@ -2060,7 +2060,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void HomelivingArticle() throws InterruptedException {
 
         expertAdvice.HomelivingArticle();
