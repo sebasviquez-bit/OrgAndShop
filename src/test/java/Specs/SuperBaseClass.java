@@ -40,7 +40,7 @@ public class SuperBaseClass {
     DriverHelper driverHelper;
 
 
-    protected void InitPages(){
+    public void InitPages(){
 
         signIn = new SignIn(this.driver);
         register = new Register(this.driver, driverHelper);
@@ -68,7 +68,7 @@ public class SuperBaseClass {
 
     }
 
-    protected void InitHelpers(String baseUrl){
+    public void InitHelpers(String baseUrl){
 
         dataHelper = new DataHelper();
         driverHelper = new DriverHelper(driver, baseUrl);

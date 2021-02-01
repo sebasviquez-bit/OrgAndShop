@@ -8,10 +8,10 @@ import com.applitools.eyes.RectangleSize;
 import com.applitools.eyes.selenium.fluent.Target;
 import org.testng.annotations.Test;
 
-public class ShopTestSuite extends SpecsBaseClass {
+public class ShopTestSuite extends SpecsBrowserStack {
 
 
-    //@Test (dataProvider = "RegisterUsers", dataProviderClass = DataHelper.class)
+    @Test (dataProvider = "RegisterUsers", dataProviderClass = DataHelper.class)
     public void SuccessfulRegister(String sUserName, String sFirstName, String sLastName, String sPassword1, String sPassword2) throws InterruptedException {
 
         User testUser;
@@ -29,7 +29,7 @@ public class ShopTestSuite extends SpecsBaseClass {
     }
 
     @Test (dataProvider = "WordSearch", dataProviderClass = DataHelper.class)
-    public void ShopSearch(String sWord) throws InterruptedException {
+    public void ShopSearch(String sWord) {
 
         Word searchWord;
         searchWord = new Word(sWord);
@@ -38,7 +38,7 @@ public class ShopTestSuite extends SpecsBaseClass {
     }
 
     @Test (dataProvider = "WordSearch", dataProviderClass = DataHelper.class)
-    public void ShopSearchBreed(String sWord) throws InterruptedException {
+    public void ShopSearchBreed(String sWord) {
 
         Word searchWord;
         searchWord = new Word(sWord);
@@ -47,7 +47,7 @@ public class ShopTestSuite extends SpecsBaseClass {
     }
 
     @Test (dataProvider = "WordSearch", dataProviderClass = DataHelper.class)
-    public void ShopDogLoversSearch(String sWord) throws InterruptedException {
+    public void ShopDogLoversSearch(String sWord) {
 
         Word searchWord;
         searchWord = new Word(sWord);
@@ -63,7 +63,7 @@ public class ShopTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void checkTopHeaderPromoBar() throws InterruptedException {
+    public void checkTopHeaderPromoBar() {
 
         shopHomepage.checkTopHeaderPromoBar();
 
@@ -333,9 +333,9 @@ public class ShopTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void clickAKCVisaCard()  {
+    public void clickSideMenu()  {
 
-        ShopEssentials.clickAKCVisaCard();
+        ShopEssentials.clickSideMenu();
 
     }
 
@@ -1249,16 +1249,16 @@ public class ShopTestSuite extends SpecsBaseClass {
      }
 
     @Test
-    public void ViewMoreChewyProdCampButton() throws InterruptedException {
+    public void ViewMoreChewyProdCampButton() {
 
         shopHomepage.ViewMoreChewyProdCampButton();
 
     }
 
     @Test
-    public void ViewMoreBreedEmbroideryButton() throws InterruptedException {
+    public void ViewMoreBeeHoundButton() {
 
-        shopHomepage.ViewMoreBreedEmbroideryButton();
+        shopHomepage.ViewMoreBeeHoundButton();
 
     }
 
@@ -1321,7 +1321,7 @@ public class ShopTestSuite extends SpecsBaseClass {
     //PurchaseOrders scenarios:
 
     @Test
-    public void BasicPurchase() throws InterruptedException {
+    public void BasicPurchase() {
 
         shopPurchaseOrders.BasicPurchase();
 
@@ -1349,7 +1349,7 @@ public class ShopTestSuite extends SpecsBaseClass {
 
     //Main Menus >
 
-    //@Test
+    @Test
     public void VisualShopDogBasicsMenu() {
 
         driver.navigate().to("https://shop.akc.org/collections/dog-essentials-supplies");
@@ -1359,7 +1359,7 @@ public class ShopTestSuite extends SpecsBaseClass {
 
     }
 
-    //@Test
+    @Test
     public void VisualShopOntheGoMenu() {
 
         driver.navigate().to("https://shop.akc.org/collections/on-the-go-dog-travel-products");

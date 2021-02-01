@@ -9,8 +9,7 @@ import org.testng.annotations.Test;
 
 public class ORGTestSuite extends SpecsBaseClass {
 
-
-    //@Test (dataProvider = "RegisterUsers", dataProviderClass = DataHelper.class)
+    @Test (dataProvider = "RegisterUsers", dataProviderClass = DataHelper.class)
     public void SuccessfulRegister(String sUserName, String sFirstName, String sLastName, String sPassword1, String sPassword2) throws InterruptedException {
 
         User testUser;
@@ -35,7 +34,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void TopMenu() throws InterruptedException {
+    public void TopMenu() {
 
         homepage.Verifytopmenu();
 
@@ -63,7 +62,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void SportsEventsVerify() throws InterruptedException {
+    public void SportsEventsVerify() {
 
         sportsEvents.VerifySportsEvents();
 
@@ -77,49 +76,49 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void CompareBreedsVerify() throws InterruptedException {
+    public void CompareBreedsVerify() {
 
         compareBreeds.VerifyCompareBreeds();
 
     }
 
     @Test
-    public void BreedSelectorVerify1() throws InterruptedException {
+    public void BreedSelectorVerify1() {
 
         breedSelector.VerifyBreedSelector1();
 
     }
 
     @Test
-    public void BreedSelectorVerify2() throws InterruptedException {
+    public void BreedSelectorVerify2() {
 
         breedSelector.VerifyBreedSelector2();
 
     }
 
     @Test
-    public void BreedSelectorVerify3() throws InterruptedException {
+    public void BreedSelectorVerify3() {
 
         breedSelector.VerifyBreedSelector3();
 
     }
 
     @Test
-    public void VerifyDogName() throws InterruptedException {
+    public void VerifyDogName() {
 
         dogName.DogNameVerify();
 
     }
 
     @Test
-    public void CanMyDogEatVerify1() throws InterruptedException {
+    public void CanMyDogEatVerify1() {
 
         canMyDogEat.VerifyCanMyDogEat1();
 
     }
 
     @Test
-    public void CanMyDogEatVerify2() throws InterruptedException {
+    public void CanMyDogEatVerify2() {
 
         canMyDogEat.VerifyCanMyDogEat2();
 
@@ -127,7 +126,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void RegisterDogVerify1() throws InterruptedException {
+    public void RegisterDogVerify1() {
 
         registerDog.VerifyRegisterDog1();
 
@@ -135,7 +134,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void RegisterDogVerify2() throws InterruptedException {
+    public void RegisterDogVerify2() {
 
         registerDog.VerifyRegisterDog2();
 
@@ -143,14 +142,14 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void RegisterDogVerify3()  throws InterruptedException {
+    public void RegisterDogVerify3() {
 
         registerDog.VerifyRegisterDog3();
 
     }
 
     @Test
-    public void RegisterDogVerify4() throws InterruptedException {
+    public void RegisterDogVerify4() {
 
         registerDog.VerifyRegisterDog4();
 
@@ -158,7 +157,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test (dataProvider = "WordSearch", dataProviderClass = DataHelper.class)
-    public void SearchVerify(String sWord) throws InterruptedException {
+    public void SearchVerify(String sWord) {
 
         Word searchWord;
         searchWord = new Word(sWord);
@@ -167,7 +166,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test (dataProvider = "WordSearch", dataProviderClass = DataHelper.class)
-    public void HeroBreedSearch(String sWord) throws InterruptedException {
+    public void HeroBreedSearch(String sWord) {
 
         Word searchWord;
         searchWord = new Word(sWord);
@@ -177,7 +176,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test (dataProvider = "WordSearch", dataProviderClass = DataHelper.class)
-    public void HeroAsideSearch(String sWord) throws InterruptedException {
+    public void HeroAsideSearch(String sWord) {
 
         Word searchWord;
         searchWord = new Word(sWord);
@@ -187,7 +186,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void RegisterDogVerify5() throws InterruptedException {
+    public void RegisterDogVerify5() {
 
         registerDog.VerifyRegisterDog5();
 
@@ -195,7 +194,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void RegisterDogVerify6() throws InterruptedException {
+    public void RegisterDogVerify6() {
 
         registerDog.VerifyRegisterDog6();
 
@@ -203,7 +202,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void RegisterDogVerify7() throws InterruptedException {
+    public void RegisterDogVerify7() {
 
         registerDog.VerifyRegisterDog7();
 
@@ -211,7 +210,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void RegisterDogVerify8() throws InterruptedException {
+    public void RegisterDogVerify8() {
 
         registerDog.VerifyRegisterDog8();
 
@@ -219,7 +218,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void RegisterDogVerify9() throws InterruptedException {
+    public void RegisterDogVerify9() {
 
         registerDog.VerifyRegisterDog9();
 
@@ -227,7 +226,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void RegisterLitterVerify() throws InterruptedException {
+    public void RegisterLitterVerify() {
 
         registerDog.VerifyRegisterLitter();
 
@@ -235,7 +234,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void RegisterLitterVerify2() throws InterruptedException {
+    public void RegisterLitterVerify2() {
 
         registerDog.VerifyRegisterLitter2();
 
@@ -243,7 +242,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void RegisterLitterVerify3() throws InterruptedException {
+    public void RegisterLitterVerify3() {
 
         registerDog.VerifyRegisterLitter3();
 
@@ -251,7 +250,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void RegisterLitterVerify4() throws InterruptedException {
+    public void RegisterLitterVerify4() {
 
         registerDog.VerifyRegisterLitter4();
 
@@ -259,7 +258,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void RegisterLitterVerify5() throws InterruptedException {
+    public void RegisterLitterVerify5() {
 
         registerDog.VerifyRegisterLitter5();
 
@@ -267,7 +266,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void RegisterLitterVerify6() throws InterruptedException {
+    public void RegisterLitterVerify6() {
 
         registerDog.VerifyRegisterLitter6();
 
@@ -275,7 +274,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void RegisterLitterVerify7() throws InterruptedException {
+    public void RegisterLitterVerify7() {
 
         registerDog.VerifyRegisterLitter7();
 
@@ -283,7 +282,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void RegisterLitterVerify8() throws InterruptedException {
+    public void RegisterLitterVerify8() {
 
         registerDog.VerifyRegisterLitter8();
 
@@ -291,7 +290,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void RegisterLitterVerify9() throws InterruptedException {
+    public void RegisterLitterVerify9() {
 
         registerDog.VerifyRegisterLitter9();
 
@@ -299,7 +298,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void TransOwnerVerify() throws InterruptedException {
+    public void TransOwnerVerify() {
 
         registerDog.VerifyTransOwner();
 
@@ -307,7 +306,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void PurchPediVerify() throws InterruptedException {
+    public void PurchPediVerify() {
 
         registerDog.VerifyPurchPedig();
 
@@ -315,7 +314,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void PurchPediVerify2() throws InterruptedException {
+    public void PurchPediVerify2() {
 
         registerDog.VerifyPurchPedig2();
 
@@ -323,7 +322,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void MoreInfoVerify() throws InterruptedException {
+    public void MoreInfoVerify() {
 
         registerDog.VerifyMoreInformation();
 
@@ -343,7 +342,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void RegisterVerify() throws InterruptedException {
+    public void RegisterVerify() {
 
         homepage.VerifyRegistericon();
 
@@ -351,16 +350,15 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void TrainingVerify()  throws InterruptedException {
+    public void TrainingVerify()  {
 
         homepage.VerifyTrainingicon();
-
 
     }
 
 
     @Test
-    public void SportsVerify() throws InterruptedException {
+    public void SportsVerify() {
 
         homepage.VerifySportsicon();
 
@@ -368,7 +366,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void AKCCareVerify() throws InterruptedException {
+    public void AKCCareVerify() {
 
         homepage.VerifyAKCCareicon();
 
@@ -376,7 +374,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void FindPuppiesVerify()  throws InterruptedException {
+    public void FindPuppiesVerify()  {
 
         homepage.VerifyFindPuppiesicon();
 
@@ -384,7 +382,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void ShopVerify() throws InterruptedException {
+    public void ShopVerify() {
 
         homepage.VerifyShopicon();
 
@@ -392,7 +390,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void AKCTVVerify() throws InterruptedException {
+    public void AKCTVVerify() {
 
         homepage.VerifyAKCTVicon();
 
@@ -405,7 +403,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    //@Test   Finish this test and continue with General Feedback option ... *****
+    @Test
     public void SpecificFeedback() {
 
         homepage.SpecificFeedback();
@@ -413,23 +411,28 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void TopStoryVerify1() throws InterruptedException {
+    public void GeneralFeedback() {
+
+        homepage.GeneralFeedback();
+
+    }
+
+    @Test
+    public void TopStoryVerify1() {
 
         homepage.VerifyTopstory1();
 
     }
 
-
     @Test
-    public void TopStoryVerify2() throws InterruptedException {
+    public void TopStoryVerify2() {
 
         homepage.VerifyTopstory2();
 
     }
 
-
     @Test
-    public void TopStoryVerify3() throws InterruptedException {
+    public void TopStoryVerify3() {
 
         homepage.VerifyTopstory3();
 
@@ -437,15 +440,14 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void TopStoryVerify4() throws InterruptedException {
+    public void TopStoryVerify4() {
 
         homepage.VerifyTopstory4();
 
     }
 
-
     @Test
-    public void VerifyAKCTVideo() throws InterruptedException {
+    public void VerifyAKCTVideo() {
 
         homepage.VerifyAKCTVideo();
 
@@ -489,21 +491,21 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void TrendVerify1() throws InterruptedException {
+    public void TrendVerify1() {
 
         homepage.VerifyTrend1();
 
     }
 
     @Test
-    public void TrendVerify2() throws InterruptedException {
+    public void TrendVerify2() {
 
         homepage.VerifyTrend2();
 
     }
 
     @Test
-    public void TrendVerify3() throws InterruptedException {
+    public void TrendVerify3() {
 
         homepage.VerifyTrend3();
 
@@ -511,7 +513,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void BreedofDayVerify() throws InterruptedException {
+    public void BreedofDayVerify() {
 
         homepage.VerifyBreedofDay();
 
@@ -519,7 +521,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void ExpBreedsVerify() throws InterruptedException {
+    public void ExpBreedsVerify() {
 
         homepage.VerifyExpBreeds();
 
@@ -527,7 +529,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void AKCCanineVerify() throws InterruptedException {
+    public void AKCCanineVerify() {
 
         homepage.VerifyAKCCanine();
 
@@ -535,7 +537,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void RescueNetVerify() throws InterruptedException {
+    public void RescueNetVerify() {
 
         homepage.VerifyRescueNet();
 
@@ -543,7 +545,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void AKCReuniteVerify() throws InterruptedException {
+    public void AKCReuniteVerify() {
 
         homepage.VerifyAKCReunite();
 
@@ -551,7 +553,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void HumaneFundVerify() throws InterruptedException {
+    public void HumaneFundVerify() {
 
         homepage.VerifyHumaneFund();
 
@@ -559,7 +561,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void MuseumofDogVerify() throws InterruptedException {
+    public void MuseumofDogVerify() {
 
         homepage.VerifyMuseumofDog();
 
@@ -567,7 +569,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void ProtectRightsVerify() throws InterruptedException {
+    public void ProtectRightsVerify() {
 
         homepage.VerifyProtectRights();
 
@@ -696,7 +698,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void FindEventsbutVerify() throws InterruptedException  {
+    public void FindEventsbutVerify() {
 
         homepage.VerifyFindEvents();
 
@@ -713,174 +715,159 @@ public class ORGTestSuite extends SpecsBaseClass {
     //Test for Adds Verify & Click:
 
     @Test
-    public void AddVerify() throws InterruptedException {
+    public void AddVerify() {
 
         homepage.VerifyAdd();
 
     }
 
     @Test
-    public void ClickAdd() throws InterruptedException {
+    public void ClickAdd() {
 
         homepage.ClickAdd();
 
     }
 
     @Test
-    public void VerifyAdd1() throws InterruptedException {
+    public void VerifyAdd1() {
 
         homepage.VerifyAdd1();
 
     }
 
     @Test
-    public void ClickAdd1() throws InterruptedException {
+    public void ClickAdd1() {
 
         homepage.ClickAdd1();
 
     }
 
-    //Test for Breeds Menu click action:
+    //Test for BreedsMenu click action:
 
 
     @Test
-    public void Clickviewbreeds() throws InterruptedException {
+    public void Clickviewbreeds() {
 
         breeds.Clickviewbreeds();
 
     }
 
     @Test
-    public void Clicksearchbreeds() throws InterruptedException {
+    public void Clicksearchbreeds() {
 
         breeds.Clicksearchbreeds();
 
-
     }
 
     @Test
-    public void Clickexplorebreeds() throws InterruptedException {
+    public void Clickexplorebreeds() {
 
         breeds.Clickexplorebreeds();
 
-
     }
 
     @Test
-    public void Clickfindmatch() throws InterruptedException {
+    public void Clickfindmatch() {
 
         breeds.Clickfindmatch();
 
-
     }
 
     @Test
-    public void Clickcomparebreeds() throws InterruptedException {
+    public void Clickcomparebreeds() {
 
         breeds.Clickcomparebreeds();
 
-
     }
 
     @Test
-    public void Clickfindapuppy() throws InterruptedException {
+    public void Clickfindapuppy() {
 
         breeds.Clickfindapuppy();
 
-
     }
 
     @Test
-    public void Clickchooseabreed() throws InterruptedException {
+    public void Clickchooseabreed() {
 
         breeds.Clickchooseabreed();
 
-
     }
 
     @Test
-    public void Clickwhygetdog() throws InterruptedException {
+    public void Clickwhygetdog() {
 
         breeds.Clickwhygetdog();
 
-
     }
 
     @Test
-    public void Clickfindrespbreeder() throws InterruptedException {
+    public void Clickfindrespbreeder() {
 
         breeds.Clickfindrespbreeder();
 
-
     }
 
     @Test
-    public void Clickgetstartdogsports() throws InterruptedException {
+    public void Clickgetstartdogsports() {
 
         breeds.Clickgetstartdogsports();
 
-
     }
 
     @Test
-    public void Clickallaboutpuppies() throws InterruptedException {
+    public void Clickallaboutpuppies() {
 
         breeds.Clickallaboutpuppies();
 
-
     }
 
     @Test
-    public void Clickfindpurebreed() throws InterruptedException {
+    public void Clickfindpurebreed() {
 
         breeds.Clickfindpurebreed();
 
-
     }
 
     @Test
-    public void Clickmenuregdog() throws InterruptedException {
+    public void Clickmenuregdog() {
 
         breeds.Clickmenuregdog();
 
-
     }
 
     @Test
-    public void Clickfindbreedclub() throws InterruptedException {
+    public void Clickfindbreedclub() {
 
         breeds.Clickfindbreedclub();
 
     }
 
     @Test
-    public void Clickmostpopdogs() throws InterruptedException {
+    public void Clickmostpopdogs() {
 
         breeds.Clickmostpopdogs();
 
-
     }
 
     @Test
-    public void Clickfordogbreeders() throws InterruptedException {
+    public void Clickfordogbreeders() {
 
         breeds.Clickfordogbreeders();
 
-
     }
 
     @Test
-    public void Clickfordogowners() throws InterruptedException {
+    public void Clickfordogowners() {
 
         breeds.Clickfordogowners();
 
     }
 
-
     //Tests for ExpertAdvice Menu Click action:
 
     @Test
-    public void Clickartexpadv() throws InterruptedException {
+    public void Clickartexpadv() {
 
         expertAdvice.Clickartexpadv();
 
@@ -888,7 +875,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickallcateg() throws InterruptedException {
+    public void Clickallcateg() {
 
         expertAdvice.Clickallcateg();
 
@@ -896,161 +883,161 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickdogbreeding() throws InterruptedException {
+    public void Clickdogbreeding() {
 
         expertAdvice.Clickdogbreeding();
 
     }
 
     @Test
-    public void Clickgrooming() throws InterruptedException {
+    public void Clickgrooming(){
 
         expertAdvice.Clickgrooming();
 
     }
 
     @Test
-    public void Clickhealth() throws InterruptedException {
+    public void Clickhealth() {
 
         expertAdvice.Clickhealth();
 
     }
 
     @Test
-    public void Clickhomeliving() throws InterruptedException {
+    public void Clickhomeliving() {
 
         expertAdvice.Clickhomeliving();
 
     }
 
     @Test
-    public void Clicklifestyle() throws InterruptedException {
+    public void Clicklifestyle() {
 
         expertAdvice.Clicklifestyle();
 
     }
 
     @Test
-    public void Clicknews() throws InterruptedException {
+    public void Clicknews() {
 
         expertAdvice.Clicknews();
 
     }
 
     @Test
-    public void Clicknutrition() throws InterruptedException {
+    public void Clicknutrition() {
 
         expertAdvice.Clicknutrition();
 
     }
 
     @Test
-    public void Clickpuppyinfo() throws InterruptedException {
+    public void Clickpuppyinfo()  {
 
         expertAdvice.Clickpuppyinfo();
 
     }
 
     @Test
-    public void Clicksports() throws InterruptedException {
+    public void Clicksports() {
 
         expertAdvice.Clicksports();
 
     }
 
     @Test
-    public void Clicktraining() throws InterruptedException {
+    public void Clicktraining() {
 
         expertAdvice.Clicktraining();
 
     }
 
     @Test
-    public void Clickvetcorner() throws InterruptedException {
+    public void Clickvetcorner() {
 
         expertAdvice.Clickvetcorner();
 
     }
 
     @Test
-    public void ClickfindmatchOnExpAdvMenu() throws InterruptedException {
+    public void ClickfindmatchOnExpAdvMenu() {
 
         expertAdvice.ClickfindmatchOnExpAdvMenu();
 
     }
 
     @Test
-    public void Clickdognamefind() throws InterruptedException {
+    public void Clickdognamefind() {
 
         expertAdvice.Clickdognamefind();
 
     }
 
     @Test
-    public void Clickcandogeat() throws InterruptedException {
+    public void Clickcandogeat() {
 
         expertAdvice.Clickcandogeat();
 
     }
 
     @Test
-    public void Clickakctv() throws InterruptedException {
+    public void Clickakctv() {
 
         expertAdvice.Clickakctv();
 
     }
 
     @Test
-    public void Clickakcmag() throws InterruptedException {
+    public void Clickakcmag() {
 
         expertAdvice.Clickakcmag();
 
     }
 
     @Test
-    public void Clicknewsletter() throws InterruptedException {
+    public void Clicknewsletter() {
 
         expertAdvice.Clicknewsletter();
 
     }
 
     @Test
-    public void Clickpresscenter() throws InterruptedException {
+    public void Clickpresscenter() {
 
         expertAdvice.Clickpresscenter();
 
     }
 
     @Test
-    public void Clickakcdetection() throws InterruptedException {
+    public void Clickakcdetection() {
 
         expertAdvice.Clickakcdetection();
 
     }
 
     @Test
-    public void Clickakccanine() throws InterruptedException {
+    public void Clickakccanine() {
 
         expertAdvice.Clickakccanine();
 
     }
 
     @Test
-    public void Clickgovernment() throws InterruptedException {
+    public void Clickgovernment() {
 
         expertAdvice.Clickgovernment();
 
     }
 
     @Test
-    public void Clickakceducation() throws InterruptedException {
+    public void Clickakceducation() {
 
         expertAdvice.Clickakceducation();
 
     }
 
     @Test
-    public void Clickakclibrary() throws InterruptedException {
+    public void Clickakclibrary() {
 
         expertAdvice.Clickakclibrary();
 
@@ -1067,217 +1054,217 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void Clickshopdog() throws InterruptedException {
+    public void Clickshopdog() {
 
         prodserv.Clickshopdog();
 
     }
 
     @Test
-    public void Clickbreedspecif() throws InterruptedException {
+    public void Clickbreedspecif() {
 
         prodserv.Clickbreedspecif();
 
     }
 
     @Test
-    public void Clicktoystreats() throws InterruptedException {
+    public void Clicktoystreats() {
 
         prodserv.Clicktoystreats();
 
     }
 
     @Test
-    public void Clicktrainingprod() throws InterruptedException {
+    public void Clicktrainingprod() {
 
         prodserv.Clicktrainingprod();
 
     }
 
     @Test
-    public void Clickdoggift() throws InterruptedException {
+    public void Clickdoggift()  {
 
         prodserv.Clickdoggift();
 
     }
 
     @Test
-    public void Clickdna() throws InterruptedException {
+    public void Clickdna() {
 
         prodserv.Clickdna();
 
     }
 
     @Test
-    public void ClickakctvProdServ() throws InterruptedException {
+    public void ClickakctvProdServ() {
 
         prodserv.ClickakctvProdServ();
 
     }
 
     @Test
-    public void ClickakcmagProdServ() throws InterruptedException {
+    public void ClickakcmagProdServ() {
 
         prodserv.ClickakcmagProdServ();
 
     }
 
     @Test
-    public void Clickpedigrees() throws InterruptedException {
+    public void Clickpedigrees() {
 
         prodserv.Clickpedigrees();
 
     }
 
     @Test
-    public void Clickbreedrep() throws InterruptedException {
+    public void Clickbreedrep() {
 
         prodserv.Clickbreedrep();
 
     }
 
     @Test
-    public void Clickakccomp() throws InterruptedException {
+    public void Clickakccomp() {
 
         prodserv.Clickakccomp();
 
     }
 
     @Test
-    public void Clickregdog() throws InterruptedException {
+    public void Clickregdog() {
 
         prodserv.Clickregdog();
 
     }
 
     @Test
-    public void Clickregpure() throws InterruptedException {
+    public void Clickregpure() {
 
         prodserv.Clickregpure();
 
     }
 
     @Test
-    public void reglitter() throws InterruptedException {
+    public void reglitter() {
 
         prodserv.reglitter();
 
     }
 
     @Test
-    public void Clickenroll() throws InterruptedException {
+    public void Clickenroll() {
 
         prodserv.Clickenroll();
 
     }
 
     @Test
-    public void Clickregdown() throws InterruptedException {
+    public void Clickregdown() {
 
         prodserv.Clickregdown();
 
     }
 
     @Test
-    public void Clickfinddog() throws InterruptedException {
+    public void Clickfinddog() {
 
         prodserv.Clickfinddog();
 
     }
 
     @Test
-    public void Clickfinpuppy() throws InterruptedException {
+    public void Clickfinpuppy() {
 
         prodserv.Clickfinpuppy();
 
     }
 
     @Test
-    public void Clickakcrescue() throws InterruptedException {
+    public void Clickakcrescue() {
 
         prodserv.Clickakcrescue();
 
     }
 
     @Test
-    public void Clickbreedrefer() throws InterruptedException {
+    public void Clickbreedrefer() {
 
         prodserv.Clickbreedrefer();
 
     }
 
     @Test
-    public void Clickpuppyvisor() throws InterruptedException {
+    public void Clickpuppyvisor() {
 
         prodserv.Clickpuppyvisor();
 
     }
 
     @Test
-    public void Clicktrainserv() throws InterruptedException {
+    public void Clicktrainserv() {
 
         prodserv.Clicktrainserv();
 
     }
 
     @Test
-    public void Clickcgc() throws InterruptedException {
+    public void Clickcgc() {
 
         prodserv.Clickcgc();
 
     }
 
     @Test
-    public void Clickgooddog() throws InterruptedException {
+    public void Clickgooddog() {
 
         prodserv.Clickgooddog();
 
     }
 
     @Test
-    public void Clickfindtrainclub() throws InterruptedException {
+    public void Clickfindtrainclub() {
 
         prodserv.Clickfindtrainclub();
 
     }
 
     @Test
-    public void Clickakccaninecolle() throws InterruptedException {
+    public void Clickakccaninecolle() {
 
         prodserv.Clickakccaninecolle();
 
     }
 
     @Test
-    public void Clickhealthgen() throws InterruptedException {
+    public void Clickhealthgen() {
 
         prodserv.Clickhealthgen();
 
     }
 
     @Test
-    public void Clickfindgroom() throws InterruptedException {
+    public void Clickfindgroom() {
 
         prodserv.Clickfindgroom();
 
     }
 
     @Test
-    public void Clickakcsafe() throws InterruptedException {
+    public void Clickakcsafe() {
 
         prodserv.Clickakcsafe();
 
     }
 
     @Test
-    public void Clickakcpet() throws InterruptedException {
+    public void Clickakcpet() {
 
         prodserv.Clickakcpet();
 
     }
 
     @Test
-    public void Clickakcvete() throws InterruptedException {
+    public void Clickakcvete() {
 
         prodserv.Clickakcvete();
 
@@ -1291,14 +1278,14 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickakcreunite() throws InterruptedException {
+    public void Clickakcreunite() {
 
         prodserv.Clickakcreunite();
 
     }
 
     @Test
-    public void Clickbreedprog() throws InterruptedException {
+    public void Clickbreedprog() {
 
         prodserv.Clickbreedprog();
 
@@ -1349,42 +1336,42 @@ public class ORGTestSuite extends SpecsBaseClass {
     //Test for SportsEvents Menu click action:
 
     @Test
-    public void Clickintrodog() throws InterruptedException {
+    public void Clickintrodog() {
 
         sportsEvents.Clickintrodog();
 
     }
 
     @Test
-    public void Clickcanpartenro() throws InterruptedException {
+    public void Clickcanpartenro() {
 
         sportsEvents.Clickcanpartenro();
 
     }
 
     @Test
-    public void Clicktitleabrev() throws InterruptedException {
+    public void Clicktitleabrev() {
 
         sportsEvents.Clicktitleabrev();
 
     }
 
     @Test
-    public void Clickwhichsports() throws InterruptedException {
+    public void Clickwhichsports() {
 
         sportsEvents.Clickwhichsports();
 
     }
 
     @Test
-    public void Clickgetstartdog() throws InterruptedException {
+    public void Clickgetstartdog() {
 
         sportsEvents.Clickgetstartdog();
 
     }
 
     @Test
-    public void Clickupcomevent() throws InterruptedException {
+    public void Clickupcomevent() {
 
         sportsEvents.Clickupcomevent();
 
@@ -1405,154 +1392,154 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickakcagility() throws InterruptedException {
+    public void Clickakcagility() {
 
         sportsEvents.Clickakcagility();
 
     }
 
     @Test
-    public void Clickobediencecla() throws InterruptedException {
+    public void Clickobediencecla() {
 
         sportsEvents.Clickobediencecla();
 
     }
 
     @Test
-    public void Clickakcmeet() throws InterruptedException {
+    public void Clickakcmeet() {
 
         sportsEvents.Clickakcmeet();
 
     }
 
     @Test
-    public void Clickakcnatobechamp() throws InterruptedException {
+    public void Clickakcnatobechamp() {
 
         sportsEvents.Clickakcnatobechamp();
 
     }
 
     @Test
-    public void Clickakcrallynatchamp() throws InterruptedException {
+    public void Clickakcrallynatchamp() {
 
         sportsEvents.Clickakcrallynatchamp();
 
     }
 
     @Test
-    public void Clickconfdogshow() throws InterruptedException {
+    public void Clickconfdogshow() {
 
         sportsEvents.Clickconfdogshow();
 
     }
 
     @Test
-    public void Clickmatchshow() throws InterruptedException {
+    public void Clickmatchshow() {
 
         sportsEvents.Clickmatchshow();
 
     }
 
     @Test
-    public void Clickfourtosix() throws InterruptedException {
+    public void Clickfourtosix() {
 
         sportsEvents.Clickfourtosix();
 
     }
 
     @Test
-    public void Clickpuppyachiev() throws InterruptedException {
+    public void Clickpuppyachiev() {
 
         sportsEvents.Clickpuppyachiev();
 
     }
 
     @Test
-    public void Clicknatiohand() throws InterruptedException {
+    public void Clicknatiohand() {
 
         sportsEvents.Clicknatiohand();
 
     }
 
     @Test
-    public void Clickopenshow() throws InterruptedException {
+    public void Clickopenshow() {
 
         sportsEvents.Clickopenshow();
 
     }
 
     @Test
-    public void Clickcompsport() throws InterruptedException {
+    public void Clickcompsport() {
 
         sportsEvents.Clickcompsport();
 
     }
 
     @Test
-    public void Clickagility() throws InterruptedException {
+    public void Clickagility() {
 
         sportsEvents.Clickagility();
 
     }
 
     @Test
-    public void Clickobedience() throws InterruptedException {
+    public void Clickobedience() {
 
         sportsEvents.Clickobedience();
 
     }
 
     @Test
-    public void Clickrally() throws InterruptedException {
+    public void Clickrally() {
 
         sportsEvents.Clickrally();
 
     }
 
     @Test
-    public void Clicktracking() throws InterruptedException {
+    public void Clicktracking() {
 
         sportsEvents.Clicktracking();
 
     }
 
     @Test
-    public void Clicktittlereco() throws InterruptedException {
+    public void Clicktittlereco() {
 
         sportsEvents.Clicktittlereco();
 
     }
 
     @Test
-    public void Clickbarnhunt() throws InterruptedException {
+    public void Clickbarnhunt() {
 
         sportsEvents.Clickbarnhunt();
 
     }
 
     @Test
-    public void Clickdiscdog() throws InterruptedException {
+    public void Clickdiscdog() {
 
         sportsEvents.Clickdiscdog();
 
     }
 
     @Test
-    public void Clickdivingdog() throws InterruptedException {
+    public void Clickdivingdog() {
 
         sportsEvents.Clickdivingdog();
 
     }
 
     @Test
-    public void Clickflyball() throws InterruptedException {
+    public void Clickflyball() {
 
         sportsEvents.Clickflyball();
 
     }
 
     @Test
-    public void Clicksearchresc() throws InterruptedException {
+    public void Clicksearchresc() {
 
         sportsEvents.Clicksearchresc();
 
@@ -1587,7 +1574,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickearthdog() throws InterruptedException {
+    public void Clickearthdog() {
 
         sportsEvents.Clickearthdog();
 
@@ -1657,21 +1644,21 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickpeewee() throws InterruptedException {
+    public void Clickpeewee() {
 
         sportsEvents.Clickpeewee();
 
     }
 
     @Test
-    public void Clickakcfamdog() throws InterruptedException {
+    public void Clickakcfamdog() {
 
         sportsEvents.Clickakcfamdog();
 
     }
 
     @Test
-    public void Clickcgcstar() throws InterruptedException {
+    public void Clickcgcstar() {
 
         sportsEvents.Clickcgcstar();
 
@@ -1734,7 +1721,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickpointaward() throws InterruptedException {
+    public void Clickpointaward() {
 
         sportsEvents.Clickpointaward();
 
@@ -1748,7 +1735,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickjudgesdirec() throws InterruptedException {
+    public void Clickjudgesdirec() {
 
         sportsEvents.Clickjudgesdirec();
 
@@ -1776,16 +1763,23 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickakccontact() throws InterruptedException {
+    public void Clickakccontact() {
 
         sportsEvents.Clickakccontact();
 
     }
 
     @Test
-    public void Clickakcrhp() throws InterruptedException {
+    public void Clickakcrhp() {
 
         sportsEvents.Clickakcrhp();
+
+    }
+
+    @Test
+    public void ClickjuniorRes() {
+
+        sportsEvents.ClickjuniorRes();
 
     }
 
@@ -1793,133 +1787,133 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void Clicksearchallclub() throws InterruptedException {
+    public void Clicksearchallclub()  {
 
         clubsDelegates.Clicksearchallclub();
 
     }
 
     @Test
-    public void Clickfindanevent() throws InterruptedException {
+    public void Clickfindanevent() {
 
         clubsDelegates.Clickfindanevent();
 
     }
 
     @Test
-    public void Clicktrainclass() throws InterruptedException {
+    public void Clicktrainclass() {
 
         clubsDelegates.Clicktrainclass();
 
     }
 
     @Test
-    public void Clickaboutclub() throws InterruptedException {
+    public void Clickaboutclub() {
 
         clubsDelegates.Clickaboutclub();
 
     }
 
     @Test
-    public void Clickformclub() throws InterruptedException {
+    public void Clickformclub() {
 
         clubsDelegates.Clickformclub();
 
     }
 
     @Test
-    public void Clickclubdevelop() throws InterruptedException {
+    public void Clickclubdevelop()  {
 
         clubsDelegates.Clickclubdevelop();
 
     }
 
     @Test
-    public void Clickpromoteclub() throws InterruptedException {
+    public void Clickpromoteclub() {
 
         clubsDelegates.Clickpromoteclub();
 
     }
 
     @Test
-    public void Clickclubresources() throws InterruptedException {
+    public void Clickclubresources() {
 
         clubsDelegates.Clickclubresources();
 
     }
 
     @Test
-    public void Clickdelegatespor() throws InterruptedException {
+    public void Clickdelegatespor() {
 
         clubsDelegates.Clickdelegatespor();
 
     }
 
     @Test
-    public void Clickdelegatesdir() throws InterruptedException {
+    public void Clickdelegatesdir() {
 
         clubsDelegates.Clickdelegatesdir();
 
     }
 
     @Test
-    public void Clickdelegatesmeet() throws InterruptedException {
+    public void Clickdelegatesmeet() {
 
         clubsDelegates.Clickdelegatesmeet();
 
     }
 
     @Test
-    public void Clickboardmin() throws InterruptedException {
+    public void Clickboardmin() {
 
         clubsDelegates.Clickboardmin();
 
     }
 
     @Test
-    public void Clickdelegatestan() throws InterruptedException {
+    public void Clickdelegatestan() {
 
         clubsDelegates.Clickdelegatestan();
 
     }
 
     @Test
-    public void Clickperspective() throws InterruptedException {
+    public void Clickperspective() {
 
         clubsDelegates.Clickperspective();
 
     }
 
     @Test
-    public void Clickakcgazette() throws InterruptedException {
+    public void Clickakcgazette() {
 
         clubsDelegates.Clickakcgazette();
 
     }
 
     @Test
-    public void Clickrolakcdel() throws InterruptedException {
+    public void Clickrolakcdel() {
 
         clubsDelegates.Clickrolakcdel();
 
     }
 
     @Test
-    public void Clickimportance() throws InterruptedException {
+    public void Clickimportance()  {
 
         clubsDelegates.Clickimportance();
 
     }
 
     @Test
-    public void Clicklegisla() throws InterruptedException {
+    public void Clicklegisla()  {
 
         clubsDelegates.Clicklegisla();
 
     }
 
     @Test
-    public void Clicklegislaalarm() throws InterruptedException {
+    public void Clicklegislaalarm() {
 
         clubsDelegates.Clicklegislaalarm();
 
@@ -1933,28 +1927,28 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickgovernrelat() throws InterruptedException {
+    public void Clickgovernrelat() {
 
         clubsDelegates.Clickgovernrelat();
 
     }
 
     @Test
-    public void Clickovercollec() throws InterruptedException {
+    public void Clickovercollec() {
 
         clubsDelegates.Clickovercollec();
 
     }
 
     @Test
-    public void Clickclubarchives() throws InterruptedException {
+    public void Clickclubarchives() {
 
         clubsDelegates.Clickclubarchives();
 
     }
 
     @Test
-    public void Clicksearchlib() throws InterruptedException {
+    public void Clicksearchlib() {
 
         clubsDelegates.Clicksearchlib();
 
@@ -1978,32 +1972,19 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void puppiesArticle2() throws InterruptedException {
+    public void puppiesArticle2() {
 
         breeds.puppiesArticle2();
 
     }
 
     @Test
-    public void puppiesArticle3() throws InterruptedException {
+    public void puppiesArticle3() {
 
         breeds.puppiesArticle3();
 
     }
 
-    @Test
-    public void mostpopdogsArticle1() throws InterruptedException {
-
-        breeds.mostpopdogsArticle1();
-
-    }
-
-    @Test
-    public void mostpopdogsArticle2() throws InterruptedException {
-
-        breeds.mostpopdogsArticle2();
-
-    }
 
     //@Test  We need to fix this test Elements cannot be selected when running automation script on this Section*
     public void fordogbreedersArticle1() throws InterruptedException {
@@ -2013,7 +1994,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void ForDogOwnerArticle1() throws InterruptedException {
+    public void ForDogOwnerArticle1() {
 
         breeds.ForDogOwnerArticle1();
 
@@ -2037,7 +2018,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     //@Test
-    public void dogbreedArticle() throws InterruptedException {
+    public void dogbreedArticle() {
 
         expertAdvice.dogbreedArticle();
         eyes.open(driver, "AKC", "dogbreedArticle", new RectangleSize(1420, 680));
@@ -2047,7 +2028,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void healthArticle() throws InterruptedException {
+    public void healthArticle() {
 
         expertAdvice.healthArticle();
 
@@ -2071,7 +2052,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
 
-    @Test
+    //@Test
     public void lifestyleArticle() throws InterruptedException {
 
         expertAdvice.lifestyleArticle();
@@ -2104,7 +2085,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void ProdServArticle3() throws InterruptedException {
+    public void ProdServArticle3() {
 
         prodserv.ProdServArticle3();
 
@@ -2156,7 +2137,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    //@Test
+    @Test
     public void VisualClickwhygetdog() throws InterruptedException {
 
         breeds.Clickwhygetdog();
@@ -2186,7 +2167,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    //@Test
+    @Test
     public void VisualBestDogFoodArticle() {
 
         driver.navigate().to("https://www.akc.org/expert-advice/nutrition/best-dog-food-choosing-whats-right-for-your-dog/");
@@ -2237,7 +2218,6 @@ public class ORGTestSuite extends SpecsBaseClass {
         eyes.close();
 
     }
-
 
 
 
