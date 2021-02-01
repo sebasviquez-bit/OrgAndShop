@@ -1,11 +1,8 @@
 package Pages;
 
-import Helpers.DriverHelper;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -27,7 +24,7 @@ public class SportsEvents {
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[1]/div[1]/div/div/ul/li[2]/a")
     WebElement canpartenro;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[1]/div[1]/div/div/ul/li[3]/a")
+    @FindBy(css = "#sports-events > div:nth-child(1) > div:nth-child(1) > div > div > ul > li:nth-child(3) > a")
     WebElement titleabrev;
 
     @FindBy(css = "#sports-events > div:nth-child(1) > div:nth-child(1) > div > div > ul > li:nth-child(4) > a")
@@ -93,7 +90,7 @@ public class SportsEvents {
     @FindBy(xpath = "//*[@id=\"sports-events\"]/div[2]/div/div/div[1]/ul/li[2]/ul/li[2]/a")
     WebElement obedience;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[2]/div/div/div[1]/ul/li[2]/ul/li[3]/a")
+    @FindBy(css = "#sports-events > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(2) > ul > li:nth-child(3) > a")
     WebElement rally;
 
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[2]/div/div/div[1]/ul/li[2]/ul/li[4]/a")
@@ -201,7 +198,7 @@ public class SportsEvents {
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[3]/div/div/div/ul/li[6]/a")
     WebElement judgingres;
 
-    @FindBy(xpath = "//*[@id=\"sports-events\"]/div[3]/div/div/div/ul/li[7]/a")
+    @FindBy(css = "#sports-events > div:nth-child(3) > div > div > div > ul > li:nth-child(7) > a")
     WebElement judgesdirec;
 
     @FindBy(css = "#sports-events > div:nth-child(3) > div > div > div > ul > li:nth-child(8) > a")
@@ -311,7 +308,7 @@ public class SportsEvents {
     @FindBy(css = "#page-title > div > h1")
     WebElement searchrescElement;
 
-    @FindBy(xpath = "//*[@id=\"page-title\"]/div/h1")
+    @FindBy(css = "#page-title > div > h1")
     WebElement parentclubrecElement;
 
     @FindBy(xpath = "//*[@id=\"page-title\"]/h1")
@@ -420,9 +417,7 @@ public class SportsEvents {
     WebElement retrieversNat;
 
 
-
-    DriverHelper driverHelper;
-
+    //Driver
     WebDriver driver;
 
     // Constructor
@@ -432,11 +427,13 @@ public class SportsEvents {
 
     }
 
-    public void VerifySportsEvents() throws InterruptedException {
+    //Methods
+
+    public void VerifySportsEvents() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.getstart.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(getstart));
         this.introdog.isDisplayed();
         this.canpartenro.isDisplayed();
         this.titleabrev.isDisplayed();
@@ -507,875 +504,679 @@ public class SportsEvents {
     }
 
 
-    public void Clickintrodog() throws InterruptedException {
+    public void Clickintrodog() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.introdog.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(introdog));
         this.introdog.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.introdogElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(introdogElement));
 
     }
 
-    public void Clickcanpartenro() throws InterruptedException {
+    public void Clickcanpartenro() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.canpartenro.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(canpartenro));
         this.canpartenro.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("scroll(0, 500);");
-        this.AKCCaninePartnersTitle.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(AKCCaninePartnersTitle));
 
     }
 
-    public void Clicktitleabrev() throws InterruptedException {
+    public void Clicktitleabrev() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.titleabrev.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(titleabrev));
         this.titleabrev.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.titleabrevElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(titleabrevElement));
 
     }
 
-    public void Clickwhichsports() throws InterruptedException {
+    public void Clickwhichsports() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.whichsports.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(whichsports));
         this.whichsports.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.whichsportsElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(whichsportsElement));
 
     }
 
-    public void Clickgetstartdog() throws InterruptedException {
+    public void Clickgetstartdog() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.getstartdog.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(getstartdog));
         this.getstartdog.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.getstartdogElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(getstartdogElement));
 
     }
 
-    public void Clickupcomevent() throws InterruptedException {
+    public void Clickupcomevent() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.upcomevent.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(upcomevent));
         this.upcomevent.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(upcomeventElement));
         this.upcomeventElement.isDisplayed();
 
     }
 
-    public void Clicknatiotrack() throws InterruptedException {
+    public void Clicknatiotrack() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.natiotrack.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(natiotrack));
         this.natiotrack.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.natiotrackElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(natiotrackElement));
 
     }
 
-    public void Clicknatiochamp() throws InterruptedException {
+    public void Clicknatiochamp() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.natiochamp.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(natiochamp));
         this.natiochamp.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.natiochampElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(natiochampElement));
 
     }
 
-    public void Clickakcagility() throws InterruptedException {
+    public void Clickakcagility() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.akcagility.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(akcagility));
         this.akcagility.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.akcagilityElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(akcagilityElement));
 
     }
 
-    public void Clickobediencecla() throws InterruptedException {
+    public void Clickobediencecla() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.obediencecla.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(obediencecla));
         this.obediencecla.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        this.obedienceclaElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(obedienceclaElement));
 
     }
 
-    public void Clickakcmeet() throws InterruptedException {
+    public void Clickakcmeet() {
 
         this.sportevent.click();
-        sleep(1000);
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("scroll(0, 300);");
-        this.akcmeet.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView();", akcmeet);
         this.akcmeet.click();
-        sleep(2000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.akcmeetElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(akcmeetElement));
 
     }
 
-    public void Clickakcnatobechamp() throws InterruptedException {
+    public void Clickakcnatobechamp() {
 
         this.sportevent.click();
-        sleep(1000);
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("scroll(0, 300);");
-        this.akcnatobechamp.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView();", akcnatobechamp);
         this.akcnatobechamp.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(akcnatobechampElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.akcnatobechampElement.isDisplayed();
 
     }
 
-    public void Clickakcrallynatchamp() throws InterruptedException {
+    public void Clickakcrallynatchamp() {
 
         this.sportevent.click();
-        sleep(1000);
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("scroll(0, 300);");
-        this.akcrallynatchamp.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView();", akcrallynatchamp);
         this.akcrallynatchamp.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(akcrallynatchampElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.akcrallynatchampElement.isDisplayed();
 
     }
 
-    public void Clickconfdogshow() throws InterruptedException {
+    public void Clickconfdogshow() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.confdogshow.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(confdogshow));
         this.confdogshow.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(confdogshowElement));
         this.confdogshowElement.isDisplayed();
 
     }
 
-    public void Clickmatchshow() throws InterruptedException {
+    public void Clickmatchshow() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.matchshow.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(matchshow));
         this.matchshow.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.matchshowElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(matchshowElement));
 
     }
 
-    public void Clickfourtosix() throws InterruptedException {
+    public void Clickfourtosix() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.fourtosix.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(fourtosix));
         this.fourtosix.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.fourtosixElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(fourtosixElement));
 
     }
 
-    public void Clickpuppyachiev() throws InterruptedException {
+    public void Clickpuppyachiev() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.puppyachiev.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(puppyachiev));
         this.puppyachiev.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(puppyachievElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.puppyachievElement.isDisplayed();
 
     }
 
-    public void Clicknatiohand() throws InterruptedException {
+    public void Clicknatiohand() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.natiohand.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(natiohand));
         this.natiohand.click();
-        sleep(1000);
-        driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.natiohandElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(natiohandElement));
 
     }
 
-    public void Clickopenshow() throws InterruptedException {
+    public void Clickopenshow() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.openshow.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(openshow));
         this.openshow.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.openshowElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(openshowElement));
 
     }
 
-    public void Clickcompsport() throws InterruptedException {
+    public void Clickcompsport() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.compsport.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(compsport));
+        wait.until(ExpectedConditions.elementToBeClickable(compsport));
         this.compsport.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.compsportElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(compsportElement));
 
     }
 
-    public void Clickagility() throws InterruptedException {
+    public void Clickagility() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.agility.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(agility));
         this.agility.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(agilityElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.agilityElement.isDisplayed();
 
     }
 
-    public void Clickobedience() throws InterruptedException {
+    public void Clickobedience() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.obedience.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(obedience));
+        wait.until(ExpectedConditions.elementToBeClickable(obedience));
         this.obedience.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.obedienceElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(obedienceElement));
 
     }
 
-    public void Clickrally() throws InterruptedException {
+    public void Clickrally() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.rally.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(rally));
         this.rally.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(rallyElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.rallyElement.isDisplayed();
 
     }
 
-    public void Clicktracking() throws InterruptedException {
+    public void Clicktracking() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.tracking.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(tracking));
         this.tracking.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.trackingElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(trackingElement));
 
     }
 
-    public void Clicktittlereco() throws InterruptedException {
+    public void Clicktittlereco() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.tittlereco.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(tittlereco));
         this.tittlereco.click();
-        sleep(1000);
-        driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.tittlerecoElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(tittlerecoElement));
 
     }
 
-    public void Clickbarnhunt() throws InterruptedException {
+    public void Clickbarnhunt() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.barnhunt.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(barnhunt));
         this.barnhunt.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.barnhuntElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(barnhuntElement));
 
     }
 
-    public void Clickdiscdog() throws InterruptedException {
+    public void Clickdiscdog() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.discdog.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(discdog));
         this.discdog.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.discdogElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(discdogElement));
 
     }
 
-    public void Clickdivingdog() throws InterruptedException {
+    public void Clickdivingdog() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.divingdog.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(divingdog));
         this.divingdog.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.divingdogElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(divingdogElement));
 
     }
 
-    public void Clickflyball() throws InterruptedException {
+    public void Clickflyball() {
 
         this.sportevent.click();
-        sleep(1000);
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("scroll(0, 300);");
-        this.flyball.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(flyball));
         this.flyball.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.flyballElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(flyballElement));
 
     }
 
-    public void Clicksearchresc() throws InterruptedException {
+    public void Clicksearchresc() {
 
         this.sportevent.click();
-        sleep(1000);
-        Actions actions = new Actions(driver);
-        actions.moveToElement(tempTest).perform();
-        assert(searchresc.isEnabled());
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#sports-events > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(3) > ul > li:nth-child(5) > a")));
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView();", searchresc);
         this.searchresc.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(searchrescElement));
         this.searchrescElement.isDisplayed();
 
     }
 
-    public void Clickparentclubrec() throws InterruptedException {
+    public void Clickparentclubrec() {
 
         this.sportevent.click();
-        sleep(1000);
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("scroll(0, 300);");
-        this.parentclubrec.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView();", parentclubrec);
         this.parentclubrec.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.parentclubrecElement.isDisplayed();
+        wait.until(ExpectedConditions.elementToBeClickable(parentclubrecElement));
 
     }
 
-    public void Clickperfsport() throws InterruptedException {
+    public void Clickperfsport() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.perfsport.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(perfsport));
         this.perfsport.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.perfsportElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(perfsportElement));
 
     }
 
-    public void Clickfieldevnthound() throws InterruptedException {
+    public void Clickfieldevnthound() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.fieldevnthound.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(fieldevnthound));
         this.fieldevnthound.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.fieldevnthoundElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(fieldevnthoundElement));
 
     }
 
-    public void Clickcourscat() throws InterruptedException {
+    public void Clickcourscat() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.courscat.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(courscat));
         this.courscat.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.courscatElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(courscatElement));
 
     }
 
-    public void Clickearthdog() throws InterruptedException {
+    public void Clickearthdog() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.earthdog.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(earthdog));
+        wait.until(ExpectedConditions.elementToBeClickable(earthdog));
         this.earthdog.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.earthdogElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(earthdogElement));
 
     }
 
-    public void Clickherding() throws InterruptedException {
+    public void Clickherding() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.herding.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(herding));
         this.herding.click();
-        sleep(2000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.herdingElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(herdingElement));
 
     }
 
-    public void Clickpointbreed() throws InterruptedException {
+    public void Clickpointbreed() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.pointbreed.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(pointbreed));
         this.pointbreed.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.pointbreedElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(pointbreedElement));
 
     }
 
-    public void Clickretrievers() throws InterruptedException {
+    public void Clickretrievers() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.retrievers.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(retrievers));
         this.retrievers.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.retrieversElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(retrieversElement));
 
     }
 
-    public void ClickscentWork() throws InterruptedException {
+    public void ClickscentWork() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.scentWork.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(scentWork));
         this.scentWork.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.scentWorkElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(scentWorkElement));
 
     }
 
-    public void Clickspaniels() throws InterruptedException {
+    public void Clickspaniels() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.spaniels.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(spaniels));
         this.spaniels.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.spanielsElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(spanielsElement));
 
     }
 
-    public void Clicksportsjun() throws InterruptedException {
+    public void Clicksportsjun() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.sportsjun.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(sportsjun));
         this.sportsjun.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.sportsjunElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(sportsjunElement));
 
     }
 
-    public void Clickjunshow() throws InterruptedException {
+    public void Clickjunshow() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.junshow.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(junshow));
+        wait.until(ExpectedConditions.elementToBeClickable(junshow));
         this.junshow.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(junshowElement));
         this.junshowElement.isDisplayed();
 
     }
 
-    public void Clickjuncomp() throws InterruptedException {
+    public void Clickjuncomp() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.juncomp.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(juncomp));
         this.juncomp.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.juncompElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(juncompElement));
 
     }
 
-    public void Clickjunperf() throws InterruptedException {
+    public void Clickjunperf() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.junperf.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(junperf));
         this.junperf.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.junperfElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(junperfElement));
 
     }
 
-    public void Clickpeewee() throws InterruptedException {
+    public void Clickpeewee() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.peewee.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(peewee));
         this.peewee.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(peeweeElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.peeweeElement.isDisplayed();
-
 
     }
 
-    public void Clickakcfamdog() throws InterruptedException {
+    public void Clickakcfamdog() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.akcfamdog.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(akcfamdog));
+        wait.until(ExpectedConditions.elementToBeClickable(akcfamdog));
         this.akcfamdog.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.akcfamdogElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(akcfamdogElement));
 
     }
 
-    public void Clickcgcstar() throws InterruptedException {
+    public void Clickcgcstar() {
 
         this.sportevent.click();
-        sleep(1000);
-        Actions actions = new Actions(driver);
-        actions.moveToElement(tempTest).perform();
-        assert(cgcstar.isEnabled());
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(cgcstar));
         this.cgcstar.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        actions.moveToElement(cgcstarElement).perform();
-        assert(cgcstarElement.isEnabled());
-        this.cgcstarElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(cgcstarElement));
+
 
     }
 
-    public void ClicktrickVirtual() throws InterruptedException {
+    public void ClicktrickVirtual() {
 
         this.sportevent.click();
-        sleep(1000);
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("scroll(0, 300);");
-        this.trickVirtual.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView();", trickVirtual);
         this.trickVirtual.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.trickVirtualElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(trickVirtualElement));
 
     }
 
-    public void ClicktherapyDog() throws InterruptedException {
+    public void ClicktherapyDog() {
 
         this.sportevent.click();
-        sleep(1000);
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("scroll(0, 300);");
-        this.therapyDog.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView();", therapyDog);
         this.therapyDog.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.therapyDogElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(therapyDogElement));
 
     }
 
-    public void ClickfitDog() throws InterruptedException {
+    public void ClickfitDog() {
 
         this.sportevent.click();
-        sleep(1000);
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("scroll(0, 200);");
-        this.fitDog.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView();", fitDog);
         this.fitDog.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(fitDogElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.fitDogElement.isDisplayed();
 
     }
 
-    public void ClicktempTest() throws InterruptedException {
+    public void ClicktempTest() {
 
         this.sportevent.click();
-        sleep(1000);
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("scroll(0, 300);");
-        this.tempTest.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView();", tempTest);
         this.tempTest.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
+        wait.until(ExpectedConditions.elementToBeClickable(tempTestElement));
         this.tempTestElement.isDisplayed();
 
     }
 
-    public void Clickeventse() throws InterruptedException {
+    public void Clickeventse() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.eventse.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(eventse));
         this.eventse.click();
-        for (String winHandle : driver.getWindowHandles()) {
-                driver.switchTo().window(winHandle);
-            }
-            WebDriverWait wait = new WebDriverWait(driver, 30);
-            wait.until(ExpectedConditions.urlContains("https://webapps.akc.org/"));
+        for (String winHandle : driver.getWindowHandles()) { driver.switchTo().window(winHandle); }
+        wait.until(ExpectedConditions.urlContains("https://webapps.akc.org/"));
 
     }
 
-    public void Clickdownform() throws InterruptedException {
+    public void Clickdownform() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.downform.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(downform));
         this.downform.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.downformElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(downformElement));
 
     }
 
-    public void Clickrulesreg() throws InterruptedException {
+    public void Clickrulesreg() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.rulesreg.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(rulesreg));
         this.rulesreg.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.rulesregElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(rulesregElement));
 
     }
 
-    public void Clickoem() throws InterruptedException {
+    public void Clickoem() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.oem.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(oem));
         this.oem.click();
-        for (String winHandle : driver.getWindowHandles()) {
-            driver.switchTo().window(winHandle);
-        }
-        WebDriverWait wait = new WebDriverWait(driver, 30);
+        for (String winHandle : driver.getWindowHandles()) { driver.switchTo().window(winHandle); }
         wait.until(ExpectedConditions.urlContains("https://www.apps.akc.org/"));
 
     }
 
-    public void Clickpointaward() throws InterruptedException {
+    public void Clickpointaward() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.pointaward.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        //wait.until(ExpectedConditions.visibilityOf(pointaward));
+        wait.until(ExpectedConditions.elementToBeClickable(pointaward));
         this.pointaward.click();
-        for (String winHandle : driver.getWindowHandles()) {
-            driver.switchTo().window(winHandle);
-        }
-        WebDriverWait wait = new WebDriverWait(driver, 30);
+        for (String winHandle : driver.getWindowHandles()) { driver.switchTo().window(winHandle); }
         wait.until(ExpectedConditions.urlContains("https://www.apps.akc.org/"));
 
     }
 
-    public void Clickjudgingres() throws InterruptedException {
+    public void Clickjudgingres() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.judgingres.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(judgingres));
         this.judgingres.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.judgingresElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(judgingresElement));
 
     }
 
-    public void Clickjudgesdirec() throws InterruptedException {
+    public void Clickjudgesdirec() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.judgesdirec.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(judgesdirec));
         this.judgesdirec.click();
-        for (String winHandle : driver.getWindowHandles()) {
-            driver.switchTo().window(winHandle);
-        }
-        WebDriverWait wait = new WebDriverWait(driver, 30);
+        for (String winHandle : driver.getWindowHandles()) { driver.switchTo().window(winHandle); }
         wait.until(ExpectedConditions.urlContains("https://www.apps.akc.org/"));
 
     }
 
-    public void Clickjudgeseduc() throws InterruptedException {
+    public void Clickjudgeseduc() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.judgeseduc.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(judgeseduc));
         this.judgeseduc.click();
-        for (String winHandle : driver.getWindowHandles()) {
-            driver.switchTo().window(winHandle);
-        }
-        WebDriverWait wait = new WebDriverWait(driver, 30);
+        for (String winHandle : driver.getWindowHandles()) { driver.switchTo().window(winHandle); }
         wait.until(ExpectedConditions.urlContains("https://www.caninecollege.akc.org/"));
 
     }
 
-    public void Clickakcweeklywin() throws InterruptedException {
+    public void Clickakcweeklywin() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.akcweeklywin.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(akcweeklywin));
         this.akcweeklywin.click();
-        for (String winHandle : driver.getWindowHandles()) {
-            driver.switchTo().window(winHandle);
-        }
-        WebDriverWait wait = new WebDriverWait(driver, 30);
+        for (String winHandle : driver.getWindowHandles()) { driver.switchTo().window(winHandle); }
         wait.until(ExpectedConditions.urlContains("https://www.akcwinners.com/"));
 
     }
 
-    public void Clickeventcanc() throws InterruptedException {
+    public void Clickeventcanc() {
 
         this.sportevent.click();
-        sleep(1000);
-        this.eventcanc.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(eventcanc));
         this.eventcanc.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.eventcancElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(eventcancElement));
 
     }
 
-    public void Clickakccontact() throws InterruptedException {
+    public void Clickakccontact() {
 
         this.sportevent.click();
-        sleep(1000);
-        Actions actions = new Actions(driver);
-        actions.moveToElement(juniorRes).perform();
-        assert(akccontact.isEnabled());
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(akccontact));
         this.akccontact.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.akccontactElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(akccontactElement));
 
     }
 
-    public void Clickakcrhp() throws InterruptedException {
+    public void Clickakcrhp() {
 
         this.sportevent.click();
-        sleep(1000);
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("scroll(0, 300);");
-        this.akcrhp.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(akcrhp));
         this.akcrhp.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.akcrhpElement.isDisplayed();
+        wait.until(ExpectedConditions.elementToBeClickable(akcrhpElement));
 
     }
 
-    public void ClickjuniorRes() throws InterruptedException {
+    public void ClickjuniorRes() {
 
         this.sportevent.click();
-        sleep(1000);
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("scroll(0, 300);");
-        this.juniorRes.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView();", juniorRes);
         this.juniorRes.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.juniorResElement.isDisplayed();
+        wait.until(ExpectedConditions.elementToBeClickable(juniorResElement));
+        //this.driver.get(this.driver.getCurrentUrl() + "?test=true");
 
     }
 
@@ -1386,23 +1187,22 @@ public class SportsEvents {
     public void SportsEventsArticle1() throws InterruptedException {
 
         this.sportevent.click();
-        sleep(1000);
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(whichsports));
         this.whichsports.isDisplayed();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#sports-events > div:nth-child(1) > div:nth-child(1) > div > div > ul > li:nth-child(4) > a")));
+        wait.until(ExpectedConditions.visibilityOf(whichsports));
         this.whichsports.click();
         sleep(1000);
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         sleep(1000);
-        //this.add1.isDisplayed();
 
     }
 
     public void SportsEventArticle2() throws InterruptedException {
 
         this.sportevent.click();
-        sleep(1000);
-        this.retrievers.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(retrievers));
         this.retrievers.click();
         sleep(1000);
         driver.get(this.driver.getCurrentUrl() + "?test=true");

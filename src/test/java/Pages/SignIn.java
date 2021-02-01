@@ -1,6 +1,5 @@
 package Pages;
 
-import Helpers.DataHelper;
 import Model.User;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -61,52 +60,42 @@ public class SignIn {
     WebElement otheroption;
 
 
-
+    //Driver
     WebDriver driver;
-    DataHelper dataHelper;
 
-
+    //Constructor
     public SignIn(WebDriver _driver){
         this.driver = _driver;
         PageFactory.initElements(driver,this);
     }
 
+    //Methods
+
     public void signInUser(User _testUser) throws InterruptedException {
 
         this.iconsignin.click();
-        this.signup.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(signup));
         this.forgot.isDisplayed();
         this.signinlogo.isDisplayed();
         this.userName.sendKeys(_testUser.username);
         this.password.sendKeys(_testUser.password);
         this.ingresar.click();
-        WebDriverWait wait = new WebDriverWait (driver, 20);
         wait.until(ExpectedConditions.visibilityOf(iconsignin));
-        this.iconsignin.isDisplayed();
-        sleep(1000);
-        this.logout.isDisplayed();
-        Actions action = new Actions(this.driver);
-        action.moveToElement(iconsignin).perform();
-        action.moveToElement(iconsignin).click();
-        sleep(1000);
-        this.logout.click();
-        sleep(1000);
-        this.iconsignin.isDisplayed();
 
     }
 
     public void signInUserShop(User _testUser) throws InterruptedException {
 
         this.iconsigninShop.click();
-        sleep(1000);
-        this.signup.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(signup));
         this.forgot.isDisplayed();
         this.signinlogo.isDisplayed();
         this.userName.sendKeys(_testUser.username);
         this.password.sendKeys(_testUser.password);
         this.ingresar.click();
-        sleep(1000);
-        this.iconsigninShop.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(iconsigninShop));
         sleep(1000);
         this.logoutShop.isDisplayed();
         Actions action = new Actions(this.driver);

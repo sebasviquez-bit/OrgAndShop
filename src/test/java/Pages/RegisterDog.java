@@ -1,17 +1,12 @@
 package Pages;
 
-import Helpers.DriverHelper;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import static java.lang.Thread.sleep;
 
 public class RegisterDog {
 
@@ -287,9 +282,7 @@ public class RegisterDog {
     WebElement dowformsbody;
 
 
-
-    DriverHelper driverHelper;
-
+    //Driver
     WebDriver driver;
 
     // Constructor
@@ -297,13 +290,12 @@ public class RegisterDog {
         this.driver = _driver;
         PageFactory.initElements(driver, this);
 
-
     }
 
+    //Methods
+
     private void newWindow() {
-        for(String winHandle : driver.getWindowHandles()){
-            driver.switchTo().window(winHandle);
-        }
+        for(String winHandle : driver.getWindowHandles()) { driver.switchTo().window(winHandle);}
         WebDriverWait wait = new WebDriverWait(driver,30);
         wait.until(ExpectedConditions.urlContains("https://www.apps.akc.org/"));
     }
@@ -313,7 +305,7 @@ public class RegisterDog {
             driver.switchTo().window(winHandle);
         }
         WebDriverWait wait = new WebDriverWait(driver,30);
-        wait.until(ExpectedConditions.urlContains("https://www.akc.org/register/information/canine-partners/enroll/"));
+        wait.until(ExpectedConditions.urlContains("/register/information/canine-partners/enroll/"));
     }
 
     private void newWindow3() {
@@ -332,16 +324,13 @@ public class RegisterDog {
         wait.until(ExpectedConditions.urlContains("images.akc.org/pdf/"));
     }
 
+    public void VerifyRegisterDog1() {
 
-
-
-    public void VerifyRegisterDog1() throws InterruptedException {
-
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(register));
         this.register.click();
-        sleep(1000);
         this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("body > div.registration.cmw.bgc-white > div > div.registration__header > img")));
+        wait.until(ExpectedConditions.visibilityOf(registerimg));
         this.registerimg.isDisplayed();
         this.online.isDisplayed();
         this.regdog.isDisplayed();
@@ -350,9 +339,7 @@ public class RegisterDog {
         this.purcped.isDisplayed();
         this.moreinfo.isDisplayed();
         this.regdog.click();
-        sleep(1000);
-        //wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > form > div.registration__radio-option.active > div.registration__radio-menu__group-trigger > label > span")));
-        this.regpure.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(regpure));
         this.regpuretext.isDisplayed();
         this.checkreg.isDisplayed();
         this.enrolldog.isDisplayed();
@@ -364,22 +351,18 @@ public class RegisterDog {
         this.other.isDisplayed();
         this.othertext.isDisplayed();
         this.regpure.click();
-        sleep(1000);
-        this.ownlitt.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(ownlitt));
         this.ownlitttext.isDisplayed();
         this.newown.isDisplayed();
         this.newowntext.isDisplayed();
         this.prepaid.isDisplayed();
         this.prepaidtext.isDisplayed();
         this.enrolldog.click();
-        sleep(1000);
-        this.joincantext.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(joincantext));
         this.enrollpure.click();
-        sleep(1000);
-        this.akcpal.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(akcpal));
         this.other.click();
-        sleep(1000);
-        this.foreigreg.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(foreigreg));
         this.foreigregtext.isDisplayed();
         this.fundstock.isDisplayed();
         this.fundstocktext.isDisplayed();
@@ -392,35 +375,30 @@ public class RegisterDog {
     }
 
 
-    public void VerifyRegisterDog2() throws InterruptedException {
+    public void VerifyRegisterDog2() {
 
         this.register.click();
-        sleep(1000);
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(regdog));
         this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
         this.regdog.click();
-        sleep(1000);
-        WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOf(regpure));
         this.regpure.click();
         this.newown.click();
         wait.until(ExpectedConditions.visibilityOf(buttoncont));
-        this.buttoncont.click();  //FIX THIS OBJECT *
+        this.buttoncont.click();
         newWindow();
         wait.until(ExpectedConditions.visibilityOf(regform2));
 
     }
 
-    public void VerifyRegisterDog3() throws InterruptedException {
+    public void VerifyRegisterDog3() {
 
         this.register.click();
-        sleep(1000);
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(regdog));
         this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        Actions actions = new Actions(driver);
-        actions.moveToElement(regdog).perform();
-        assert(regdog.isEnabled());
         this.regdog.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOf(regpure));
         this.regpure.click();
         wait.until(ExpectedConditions.visibilityOf(prepaid));
@@ -428,20 +406,16 @@ public class RegisterDog {
         wait.until(ExpectedConditions.visibilityOf(buttoncont));
         this.buttoncont.click();
         newWindow();
-        wait.until(ExpectedConditions.visibilityOf(regform3));
+        wait.until(ExpectedConditions.urlContains("apps.akc.org//"));
 
     }
 
-    public void VerifyRegisterDog4() throws InterruptedException {
+    public void VerifyRegisterDog4() {
 
         this.register.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        Actions actions = new Actions(driver);
-        actions.moveToElement(regdog).perform();
-        assert(regdog.isEnabled());
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(regdog));
         this.regdog.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOf(enrolldog));
         this.enrolldog.click();
         wait.until(ExpectedConditions.visibilityOf(buttoncont));
@@ -452,132 +426,107 @@ public class RegisterDog {
     }
 
 
-    public void VerifyRegisterDog5() throws InterruptedException {
+    public void VerifyRegisterDog5() {
 
         this.register.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.visibilityOf(regdog));
+        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
         this.regdog.click();
-        sleep(1000);
         this.driver.get(this.driver.getCurrentUrl()+"?test=true");
         wait.until(ExpectedConditions.visibilityOf(enrollpure));
         this.enrollpure.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(buttoncont));
         this.buttoncont.click();
         newWindow3();
 
     }
 
 
-    public void VerifyRegisterDog6() throws InterruptedException {
+    public void VerifyRegisterDog6() {
 
         this.register.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
-        Actions actions = new Actions(driver);
-        actions.moveToElement(regdog).perform();
-        assert(regdog.isEnabled());
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(regdog));
         this.regdog.click();
-        sleep(1000);
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("scroll(0, 800);");
+        wait.until(ExpectedConditions.visibilityOf(other));
         this.other.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(foreigreg));
         this.foreigreg.click();
+        wait.until(ExpectedConditions.visibilityOf(buttoncont));
         this.buttoncont.click();
         newWindow4();
 
     }
 
-    public void VerifyRegisterDog7() throws InterruptedException {
+    public void VerifyRegisterDog7() {
 
         this.register.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
-        Actions actions = new Actions(driver);
-        actions.moveToElement(regdog).perform();
-        assert(regdog.isEnabled());
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(regdog));
         this.regdog.click();
-        sleep(2000);
+        wait.until(ExpectedConditions.visibilityOf(other));
         this.other.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(fundstock));
         this.fundstock.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(buttoncont));
         this.buttoncont.click();
         newWindow3();
 
     }
 
-    public void VerifyRegisterDog8() throws InterruptedException {
+    public void VerifyRegisterDog8() {
 
         this.register.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
-        Actions actions = new Actions(driver);
-        actions.moveToElement(regdog).perform();
-        assert(regdog.isEnabled());
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(regdog));
         this.regdog.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(other));
         this.other.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(openreg));
         this.openreg.click();
+        wait.until(ExpectedConditions.visibilityOf(buttoncont));
         this.buttoncont.click();
         newWindow4();
 
     }
 
-    public void VerifyRegisterDog9() throws InterruptedException {
+    public void VerifyRegisterDog9() {
 
         this.register.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
-        Actions actions = new Actions(driver);
-        actions.moveToElement(regdog).perform();
-        assert(regdog.isEnabled());
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(regdog));
         this.regdog.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.elementToBeClickable(other));
         this.other.click();
+        wait.until(ExpectedConditions.elementToBeClickable(kenname));
         this.kenname.click();
+        wait.until(ExpectedConditions.elementToBeClickable(buttoncont));
         this.buttoncont.click();
         newWindow4();
 
     }
 
 
-    public void VerifyRegisterLitter() throws InterruptedException {
+    public void VerifyRegisterLitter() {
 
         this.register.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
-        this.reglitt.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(reglitt));
         this.reglitt.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
-        Actions actions = new Actions(driver);
-        actions.moveToElement(regalit).perform();
-        assert(regalit.isEnabled());
-        this.regalittext.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(regalittext));
         this.mylitt.isDisplayed();
         this.mylitttext.isDisplayed();
         this.breezreg.isDisplayed();
         this.regalit.click();
-        sleep(1000);
-        this.damsire.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(damsire));
         this.damsiretext.isDisplayed();
         this.onlydam.isDisplayed();
         this.onlydamtext.isDisplayed();
         this.onlysire.isDisplayed();
         this.onlysiretext.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(mylitt));
         this.mylitt.click();
-        sleep(1000);
         this.fresh.isDisplayed();
         this.freshtext.isDisplayed();
         this.freshext.isDisplayed();
@@ -587,8 +536,7 @@ public class RegisterDog {
         this.special.isDisplayed();
         this.specialtext.isDisplayed();
         this.breezreg.click();
-        sleep(1000);
-        this.ezregopt.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(ezregopt));
         this.ezregopttext.isDisplayed();
         this.puppyman.isDisplayed();
         this.puppymantext.isDisplayed();
@@ -599,74 +547,63 @@ public class RegisterDog {
 
     }
 
-    public void VerifyRegisterLitter2() throws InterruptedException {
+    public void VerifyRegisterLitter2() {
 
         this.register.click();
-        sleep(2000);
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(reglitt));
         this.reglitt.click();
-        sleep(1000);
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("scroll(0, 500);");
+        wait.until(ExpectedConditions.visibilityOf(regalit));
         this.regalit.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(onlydam));
         this.onlydam.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(buttoncont));
         this.buttoncont.click();
         newWindow();
 
     }
 
-    public void VerifyRegisterLitter3() throws InterruptedException {
+    public void VerifyRegisterLitter3() {
 
         this.register.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(reglitt));
         this.reglitt.click();
-        sleep(1000);
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("scroll(0, 500);");
-        this.regalit.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(regalit));
         this.regalit.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(onlysire));
         this.onlysire.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(buttoncont));
         this.buttoncont.click();
         newWindow();
 
     }
 
-    public void VerifyRegisterLitter4() throws InterruptedException {
+    public void VerifyRegisterLitter4() {
 
         this.register.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
-        this.reglitt.click();
-        sleep(1000);
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("scroll(0, 500);");
-        this.mylitt.click();
-        sleep(1000);
-        this.fresh.click();
-        sleep(1000);
-        this.buttoncont.click();
-        newWindow4();
-
-    }
-
-    public void VerifyRegisterLitter5() throws InterruptedException {
-
-        this.register.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.visibilityOf(reglitt));
         this.reglitt.click();
         wait.until(ExpectedConditions.visibilityOf(mylitt));
         this.mylitt.click();
+        wait.until(ExpectedConditions.visibilityOf(fresh));
+        this.fresh.click();
+        wait.until(ExpectedConditions.visibilityOf(buttoncont));
+        this.buttoncont.click();
+        newWindow4();
+
+    }
+
+    public void VerifyRegisterLitter5() {
+
+        this.register.click();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(reglitt));
+        this.reglitt.click();
+        wait.until(ExpectedConditions.visibilityOf(mylitt));
+        this.mylitt.click();
+        wait.until(ExpectedConditions.visibilityOf(freshext));
         this.freshext.click();
         wait.until(ExpectedConditions.visibilityOf(buttoncont));
         this.buttoncont.click();
@@ -674,11 +611,9 @@ public class RegisterDog {
 
     }
 
-    public void VerifyRegisterLitter6() throws InterruptedException {
+    public void VerifyRegisterLitter6() {
 
         this.register.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.visibilityOf(reglitt));
         this.reglitt.click();
@@ -692,17 +627,13 @@ public class RegisterDog {
 
     }
 
-    public void VerifyRegisterLitter7() throws InterruptedException {
+    public void VerifyRegisterLitter7() {
 
         this.register.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
-        this.reglitt.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(reglitt));
+        this.reglitt.click();
         wait.until(ExpectedConditions.visibilityOf(mylitt));
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("scroll(0, 500);");
         this.mylitt.click();
         wait.until(ExpectedConditions.visibilityOf(special));
         this.special.click();
@@ -712,122 +643,86 @@ public class RegisterDog {
 
     }
 
-    public void VerifyRegisterLitter8() throws InterruptedException {
+    public void VerifyRegisterLitter8() {
 
         this.register.click();
-        sleep(2000);
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(reglitt));
         this.reglitt.click();
-        sleep(1000);
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("scroll(0, 500);");
+        wait.until(ExpectedConditions.visibilityOf(breezreg));
         this.breezreg.click();
-        sleep(2000);
+        wait.until(ExpectedConditions.visibilityOf(ezregopt));
         this.ezregopt.click();
-        sleep(2000);
+        wait.until(ExpectedConditions.visibilityOf(buttoncont));
         this.buttoncont.click();
         newWindow();
 
     }
 
-    public void VerifyRegisterLitter9() throws InterruptedException {
+    public void VerifyRegisterLitter9() {
 
         this.register.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(reglitt));
         this.reglitt.click();
-        sleep(1000);
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("scroll(0, 500);");
+        wait.until(ExpectedConditions.visibilityOf(breezreg));
         this.breezreg.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(puppyman));
         this.puppyman.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(buttoncont));
         this.buttoncont.click();
         newWindow();
 
     }
 
-    public void VerifyTransOwner() throws InterruptedException {
+    public void VerifyTransOwner() {
 
         this.register.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(transown));
         this.transown.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("scroll(0, 500);");
-        this.transownheader.isDisplayed();
-        this.transownbody.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(transownheader));
+        wait.until(ExpectedConditions.visibilityOf(transownbody));
+        wait.until(ExpectedConditions.visibilityOf(transownbut));
         this.transownbut.click();
-        //this.transownform.isDisplayed();
         newWindow();
 
     }
 
-    public void VerifyPurchPedig() throws InterruptedException {
+    public void VerifyPurchPedig() {
 
         this.register.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("scroll(0, 500);");
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(purcped));
         this.purcped.click();
-        sleep(1000);
-        this.purcpedheader.isDisplayed();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("body > div:nth-child(7) > div > div.page-layout > main > div.article-body > div > div > div > p:nth-child(6) > a")));
+        wait.until(ExpectedConditions.visibilityOf(purcpedheader));
+        wait.until(ExpectedConditions.elementToBeClickable(certpedbut));
         this.certpedbut.click();
         newWindow();
 
     }
 
-    public void VerifyPurchPedig2() throws InterruptedException {
+    public void VerifyPurchPedig2() {
 
         this.register.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
-        Actions actions = new Actions(driver);
-        actions.moveToElement(purcped).perform();
-        assert(purcped.isEnabled());
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(purcped));
         this.purcped.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
-        actions.moveToElement(onlinesearButton).perform();
-        assert(onlinesearButton.isEnabled());
+        wait.until(ExpectedConditions.elementToBeClickable(onlinesearButton));
         this.onlinesearButton.click();
         newWindow();
 
     }
 
-    public void VerifyMoreInformation() throws InterruptedException {
+    public void VerifyMoreInformation() {
 
         this.register.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("scroll(0, 500);");
-        this.moreinfo.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(moreinfo));
         this.moreinfo.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#page-title > div > h1")));
-        //this.feesched.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(feesched));
 
     }
-
-
 
 
 }

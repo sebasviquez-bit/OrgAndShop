@@ -6,8 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
-import static java.lang.Thread.sleep;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Register {
 
@@ -47,8 +47,8 @@ public class Register {
     @FindBy(xpath = "//div[contains(@class, 'alert-success')]")
     WebElement alertSuccess;
 
+    //Driver
     DriverHelper driverHelper;
-
     WebDriver driver;
 
     // Constructor
@@ -58,48 +58,54 @@ public class Register {
         PageFactory.initElements(driver,this);
     }
 
-    // Registro de usuario .ORG
-    public void registerUser(User _testUser) throws InterruptedException {
+    //Methods
 
+    // Registro de usuario .ORG
+    public void registerUser(User _testUser) {
+
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(iconsignin));
         this.iconsignin.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(signup));
         this.signup.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(userName));
         this.userName.sendKeys(_testUser.username);
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(firstName));
         this.firstName.sendKeys(_testUser.firstName);
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(lastName));
         this.lastName.sendKeys(_testUser.lastName);
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(password1));
         this.password1.sendKeys(_testUser.password1);
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(password2));
         this.password2.sendKeys(_testUser.password2);
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(registrarse));
         this.registrarse.click();
-        sleep(2000);
+        wait.until(ExpectedConditions.visibilityOf(iconsignin));
         this.iconsignin.isDisplayed();
+
     }
 
     // Registro de usuario SHOP
-    public void registerUserShop(User _testUser) throws InterruptedException {
+    public void registerUserShop(User _testUser) {
 
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(iconsigninShop));
         this.iconsigninShop.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(signup));
         this.signup.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(userName));
         this.userName.sendKeys(_testUser.username);
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(firstName));
         this.firstName.sendKeys(_testUser.firstName);
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(lastName));
         this.lastName.sendKeys(_testUser.lastName);
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(password1));
         this.password1.sendKeys(_testUser.password1);
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(password2));
         this.password2.sendKeys(_testUser.password2);
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(registrarse));
         this.registrarse.click();
-        sleep(2000);
-        this.NameProfileShop.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(NameProfileShop));
 
     }
 

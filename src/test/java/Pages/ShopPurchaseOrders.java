@@ -17,13 +17,13 @@ public class ShopPurchaseOrders {
     @FindBy(css = "#homepage-banners > a.homepage-banner.active > h2 > span.cta")
     WebElement ShopNowBanner0;
 
-    @FindBy(css = "#product-11595701892 > div > div.card-details > a > h2")
-    WebElement BaseballCaps;
+    @FindBy(css = "#product-4804947804254 > div > div.card-details > a > h2")
+    WebElement ProductText;
 
-    @FindBy(css = "#product-11595701892 > div > div.product-card-img-wrap")
-    WebElement BaseballCap;
+    @FindBy(css = "#product-4804947804254 > div > div.product-card-img-wrap > img")
+    WebElement ProductImage;
 
-    @FindBy(css = "#product-11595701892 > div > div.product-card-img-wrap > button")
+    @FindBy(css = "#dog-lovers-human-apparel-bee-and-the-hound > li:nth-child(1) > div > div.product-card-img-wrap > button")
     WebElement QuickViewButton;
 
     @FindBy(css = "#quick-view > div > div")
@@ -120,11 +120,15 @@ public class ShopPurchaseOrders {
     @FindBy(css = "#payment-gateway-subfields-5885129 > div.fieldset > div:nth-child(3) > div > label")
     WebElement CreditCardNameCase;
 
-    @FindBy(xpath = "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[2]/fieldset[1]/div[4]/div[1]/input[1]")
+    @FindBy(css = "#checkout-wrap > div > div > div.main > div.main__content > div.step > div > form > div.section.section--payment-method > div.section__content > div:nth-child(2) > fieldset > div:nth-child(5) > div.radio__label > label")
     WebElement PaypalPayment;
 
-    @FindBy(id = "checkout_different_billing_address_false")
+    @FindBy(css = "#checkout-wrap > div > div > div.main > div.main__content > div.step > div > form > div.section.section--billing-address > div.section__content > fieldset > div:nth-child(2) > label")
     WebElement SameAsShippingAdd;
+
+    @FindBy(css = "#checkout-wrap > div > div > div.main > div.main__content > div.step > div > form > div.section.section--billing-address > div.section__content > fieldset > div:nth-child(3) > label")
+    WebElement DifferentBillingAdd;
+    //
 
 
     WebDriver driver;
@@ -138,88 +142,83 @@ public class ShopPurchaseOrders {
 
     //Methods
 
-    public void BasicPurchase() throws InterruptedException {
+    public void BasicPurchase() {
 
         Actions actions = new Actions(driver);
         actions.moveToElement(FurYourOwnGoodSection).perform();
-        assert(BaseballCaps.isEnabled());
-        this.BaseballCaps.click();
+        assert(ProductText.isEnabled());
+        this.ProductText.click();
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         JavascriptExecutor jse = (JavascriptExecutor) driver;
         jse.executeScript("scroll(0, 400);");
         this.ProductDetails.isDisplayed();
         this.AddToCartText.isDisplayed();
         this.AddToCartText.click();
-        sleep(1000);
-        this.CheckOutButton.isDisplayed();
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(CheckOutButton));
         this.CheckOutButton.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(ShoppingCartSection));
         jse.executeScript("scroll(0, 400);");
         this.ShoppingCartSection.isDisplayed();
         this.CheckOutButton2.isDisplayed();
         this.CheckOutButton2.click();
-        sleep(2000);
-        this.CheckOutForm.isDisplayed();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(CheckOutForm));
         this.CheckOutFormEmail.sendKeys("sebas.viquez@hotmail.com");
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(CheckOutFormFirstName));
         this.CheckOutFormFirstName.sendKeys("sebas");
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(CheckOutFormLasttName));
         this.CheckOutFormLasttName.sendKeys("viquez");
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(CheckOutFormShippingAddres));
         this.CheckOutFormShippingAddres.sendKeys("NY");
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(CheckOutFormCity));
         this.CheckOutFormCity.sendKeys("NY");
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(CheckOutFormContry));
         this.CheckOutFormContry.sendKeys("United States");
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(CheckOutFormState));
         this.CheckOutFormState.sendKeys("New York");
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(CheckOutFormZip));
         this.CheckOutFormZip.sendKeys("10001");
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(CheckOutFormPhone));
         this.CheckOutFormPhone.sendKeys("919-233-9767");
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(ContinueShippingButton));
         this.ContinueShippingButton.click();
-        sleep(1000);
-        this.CheckOutWrapForm.isDisplayed();
-        this.CheckOutWrapFormEmail.isDisplayed();
-        sleep(2000);
+        wait.until(ExpectedConditions.visibilityOf(CheckOutWrapForm));
+        wait.until(ExpectedConditions.visibilityOf(CheckOutWrapFormEmail));
+        wait.until(ExpectedConditions.elementToBeClickable(CheckOutWrapFormContinueButton));
         this.CheckOutWrapFormContinueButton.click();
-        sleep(2000);
-        this.PaymentGateway.isDisplayed();
-        this.CreditCardFields.isDisplayed();
-        sleep(1000);
-        this.CreditCardNumberCase.isDisplayed();
-        WebDriverWait wait = new WebDriverWait(driver, 5);
-        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt
-                (By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[2]/fieldset[1]/div[3]/div[3]/div[1]/div[1]/div[1]/iframe[1]")));
+        wait.until(ExpectedConditions.visibilityOf(PaymentGateway));
+        wait.until(ExpectedConditions.visibilityOf(CreditCardFields));
+        wait.until(ExpectedConditions.visibilityOf(CreditCardNumberCase));
+        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath
+                ("/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[2]/fieldset[1]/div[3]/div[3]/div[1]/div[1]/div[1]/iframe[1]")));
         driver.findElement(By.id("number")).sendKeys("4321123456789034");
         driver.switchTo().defaultContent();
         this.CreditCardNameCase.isDisplayed();
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt
-                (By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[2]/fieldset[1]/div[3]/div[3]/div[2]/div[1]/div[1]/iframe[1]")));
+                (By.xpath("//*[@id=\"payment-gateway-subfields-5885129\"]/div[3]/div[2]/div/div/iframe")));
         driver.findElement(By.id("name")).sendKeys("Sebas Viquez");
         driver.switchTo().defaultContent();
         this.ExpDate.isDisplayed();
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt
-                (By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[2]/fieldset[1]/div[3]/div[3]/div[3]/div[1]/div[1]/iframe[1]")));
-        driver.findElement(By.id("expiry")).sendKeys("10 20");
+                (By.xpath("//*[@id=\"payment-gateway-subfields-5885129\"]/div[3]/div[3]/div/div/iframe")));
+        driver.findElement(By.id("expiry")).sendKeys("10 21");
         driver.switchTo().defaultContent();
         this.SecuCode.isDisplayed();
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt
-                (By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[2]/fieldset[1]/div[3]/div[3]/div[4]/div[1]/div[1]/iframe[1]")));
+                (By.xpath("//*[@id=\"payment-gateway-subfields-5885129\"]/div[3]/div[4]/div/div[1]/iframe")));
         driver.findElement(By.id("verification_value")).sendKeys("123");
         driver.switchTo().defaultContent();
         this.PaypalPayment.isDisplayed();
         this.SameAsShippingAdd.isDisplayed();
+        this.DifferentBillingAdd.isDisplayed();
         this.PayNowButton.click();
-        sleep(2000);
+
     }
 
     public void QuickViewPurchase() throws InterruptedException {
 
         Actions actions = new Actions(driver);
-        actions.moveToElement(BaseballCap).perform();
+        actions.moveToElement(ProductImage).perform();
         assert(QuickViewButton.isEnabled());
         this.QuickViewButton.click();
         this.QuickViewModal.isDisplayed();
@@ -232,71 +231,64 @@ public class ShopPurchaseOrders {
         this.ProductDetails.isDisplayed();
         this.AddToCartText.isDisplayed();
         this.AddToCartText.click();
-        sleep(1000);
-        this.CheckOutButton.isDisplayed();
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.visibilityOf(CheckOutButton));
         this.CheckOutButton.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(ShoppingCartSection));
         jse.executeScript("scroll(0, 400);");
         this.ShoppingCartSection.isDisplayed();
         this.CheckOutButton2.isDisplayed();
         this.CheckOutButton2.click();
-        sleep(2000);
-        this.CheckOutForm.isDisplayed();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(CheckOutForm));
         this.CheckOutFormEmail.sendKeys("sebas.viquez@hotmail.com");
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(CheckOutFormFirstName));
         this.CheckOutFormFirstName.sendKeys("sebas");
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(CheckOutFormLasttName));
         this.CheckOutFormLasttName.sendKeys("viquez");
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(CheckOutFormShippingAddres));
         this.CheckOutFormShippingAddres.sendKeys("NY");
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(CheckOutFormCity));
         this.CheckOutFormCity.sendKeys("NY");
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(CheckOutFormContry));
         this.CheckOutFormContry.sendKeys("United States");
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(CheckOutFormState));
         this.CheckOutFormState.sendKeys("New York");
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(CheckOutFormZip));
         this.CheckOutFormZip.sendKeys("10001");
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(CheckOutFormPhone));
         this.CheckOutFormPhone.sendKeys("919-233-9767");
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(ContinueShippingButton));
         this.ContinueShippingButton.click();
-        sleep(1000);
-        this.CheckOutWrapForm.isDisplayed();
-        this.CheckOutWrapFormEmail.isDisplayed();
-        sleep(2000);
+        wait.until(ExpectedConditions.visibilityOf(CheckOutWrapForm));
+        wait.until(ExpectedConditions.visibilityOf(CheckOutWrapFormEmail));
+        wait.until(ExpectedConditions.elementToBeClickable(CheckOutWrapFormContinueButton));
         this.CheckOutWrapFormContinueButton.click();
-        sleep(2000);
-        this.PaymentGateway.isDisplayed();
-        this.CreditCardFields.isDisplayed();
-        sleep(1000);
-        this.CreditCardNumberCase.isDisplayed();
-        WebDriverWait wait = new WebDriverWait(driver, 5);
-        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt
-                (By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[2]/fieldset[1]/div[3]/div[3]/div[1]/div[1]/div[1]/iframe[1]")));
+        wait.until(ExpectedConditions.visibilityOf(PaymentGateway));
+        wait.until(ExpectedConditions.visibilityOf(CreditCardFields));
+        wait.until(ExpectedConditions.visibilityOf(CreditCardNumberCase));
+        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath
+                ("/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[2]/fieldset[1]/div[3]/div[3]/div[1]/div[1]/div[1]/iframe[1]")));
         driver.findElement(By.id("number")).sendKeys("4321123456789034");
         driver.switchTo().defaultContent();
         this.CreditCardNameCase.isDisplayed();
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt
-                (By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[2]/fieldset[1]/div[3]/div[3]/div[2]/div[1]/div[1]/iframe[1]")));
+                (By.xpath("//*[@id=\"payment-gateway-subfields-5885129\"]/div[3]/div[2]/div/div/iframe")));
         driver.findElement(By.id("name")).sendKeys("Sebas Viquez");
         driver.switchTo().defaultContent();
         this.ExpDate.isDisplayed();
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt
-                (By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[2]/fieldset[1]/div[3]/div[3]/div[3]/div[1]/div[1]/iframe[1]")));
-        driver.findElement(By.id("expiry")).sendKeys("10 20");
+                (By.xpath("//*[@id=\"payment-gateway-subfields-5885129\"]/div[3]/div[3]/div/div/iframe")));
+        driver.findElement(By.id("expiry")).sendKeys("10 21");
         driver.switchTo().defaultContent();
         this.SecuCode.isDisplayed();
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt
-                (By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[2]/div[2]/fieldset[1]/div[3]/div[3]/div[4]/div[1]/div[1]/iframe[1]")));
+                (By.xpath("//*[@id=\"payment-gateway-subfields-5885129\"]/div[3]/div[4]/div/div[1]/iframe")));
         driver.findElement(By.id("verification_value")).sendKeys("123");
         driver.switchTo().defaultContent();
         this.PaypalPayment.isDisplayed();
         this.SameAsShippingAdd.isDisplayed();
+        this.DifferentBillingAdd.isDisplayed();
         this.PayNowButton.click();
-        sleep(2000);
-
 
     }
 

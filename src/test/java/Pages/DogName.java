@@ -8,8 +8,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import static java.lang.Thread.sleep;
-
 public class DogName {
 
 
@@ -193,15 +191,13 @@ public class DogName {
 
 
 
-    public void DogNameVerify() throws InterruptedException {
+    public void DogNameVerify() {
 
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("body > div.page-home.bgc-white.cmw > div.breed-feature > div.breed-feature__col.breed-feature__content-col > div > div > div > div.tool-grid__wrap > div:nth-child(4) > a")));
-        this.dognametool.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(dognametool));
         this.dognametool.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(dognameheader));
         this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
         this.dognameheader.isDisplayed();
         this.male.isDisplayed();
         this.female.isDisplayed();
@@ -308,7 +304,6 @@ public class DogName {
         this.celebrity.click();
         this.but2.isDisplayed();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#sidebar-left-contents > div.mid-blackboard > ul > li:nth-child(4) > a")));
-        sleep(1000);
         this.cute.isDisplayed();
         this.cute.click();
         this.but3.isDisplayed();
@@ -332,8 +327,5 @@ public class DogName {
         this.but4.isDisplayed();
 
     }
-
-
-
 
 }

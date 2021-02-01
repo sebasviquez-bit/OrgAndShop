@@ -1,11 +1,7 @@
 package Pages;
 
-import Helpers.DriverHelper;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -21,7 +17,7 @@ public class ProdServ {
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[1]/div/h3")
     WebElement products;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[1]/div/div/div/ul/li[1]/a")
+    @FindBy(css = "#product-services > div:nth-child(1) > div > div > div > ul > li:nth-child(1) > a")
     WebElement shopdog;
 
     @FindBy(css = "#product-services > div:nth-child(1) > div > div > div > ul > li:nth-child(1) > ul > li:nth-child(1) > a")
@@ -57,7 +53,7 @@ public class ProdServ {
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[2]/div/h3")
     WebElement services;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[2]/div/div/div[1]/ul/li[1]/a")
+    @FindBy(css = "#product-services > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(1) > a")
     WebElement regdog;
 
     @FindBy(css = "#product-services > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(1) > ul > li:nth-child(1) > a")
@@ -72,7 +68,7 @@ public class ProdServ {
     @FindBy(css = "#product-services > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(1) > ul > li:nth-child(4) > a")
     WebElement regdown;
 
-    @FindBy(xpath = "//*[@id=\"product-services\"]/div[2]/div/div/div[1]/ul/li[2]/a")
+    @FindBy(css = "#product-services > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(2) > a")
     WebElement finddog;
 
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[2]/div/div/div[1]/ul/li[2]/ul/li[1]/a")
@@ -126,7 +122,7 @@ public class ProdServ {
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[2]/div/div/div[2]/ul/li[1]/ul/li[7]/a")
     WebElement linkakc;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[2]/div/div/div[2]/ul/li[2]/a")
+    @FindBy(css = "#product-services > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(2) > a")
     WebElement breedprog;
 
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[2]/div/div/div[2]/ul/li[2]/ul/li[1]/a")
@@ -245,10 +241,7 @@ public class ProdServ {
     @FindBy(css = "body > div.landing-page > div.side-by-side.bgc-white.py7.bpm-my7.side-by-side--not-full-width > div > div.side-by-side__content > div > h2")
     WebElement trainresTitle;
 
-
-
-    DriverHelper driverHelper;
-
+    // Driver
     WebDriver driver;
 
     // Constructor
@@ -258,8 +251,12 @@ public class ProdServ {
 
     }
 
-    public void VerifyProdServ(){
+    //Methods
 
+    public void VerifyProdServ() {
+
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(produservi));
         this.produservi.click();
         this.products.isDisplayed();
         this.shopdog.isDisplayed();
@@ -304,528 +301,439 @@ public class ProdServ {
         this.browseserv.isDisplayed();
         this.akcshop.isDisplayed();
 
-
     }
 
     //Click on Menu links to validate element(s) methods >
 
-
-    public void Clickshopdog() throws InterruptedException {
+    public void Clickshopdog() {
 
         this.produservi.click();
-        sleep(1000);
-        this.shopdog.isDisplayed();
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(shopdog));
         this.shopdog.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
-        WebDriverWait wait = new WebDriverWait(driver, 30);
-        final Boolean until = wait.until(ExpectedConditions.urlContains("https://shop.akc.org/"));
+        wait.until(ExpectedConditions.urlContains("https://shop.akc.org/"));
 
     }
 
-    public void Clickbreedspecif() throws InterruptedException {
+    public void Clickbreedspecif() {
 
         this.produservi.click();
-        sleep(1000);
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#product-services > div:nth-child(1) > div > div > div > ul > li:nth-child(1) > ul > li:nth-child(1) > a")));
-        this.breedspecif.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(breedspecif));
         this.breedspecif.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
-        final Boolean until = wait.until(ExpectedConditions.urlContains("https://shop.akc.org/"));
+        wait.until(ExpectedConditions.urlContains("https://shop.akc.org/"));
 
     }
 
-    public void Clicktoystreats() throws InterruptedException {
+    public void Clicktoystreats() {
 
         this.produservi.click();
-        sleep(1000);
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#product-services > div:nth-child(1) > div > div > div > ul > li:nth-child(1) > ul > li:nth-child(2) > a")));
-        this.toystreats.isDisplayed();
+        wait.until(ExpectedConditions.elementToBeClickable(toystreats));
         this.toystreats.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
-        final Boolean until = wait.until(ExpectedConditions.urlContains("https://shop.akc.org/"));
+        wait.until(ExpectedConditions.urlContains("https://shop.akc.org/"));
 
     }
 
-    public void Clicktrainingprod() throws InterruptedException {
+    public void Clicktrainingprod() {
 
         this.produservi.click();
-        sleep(1000);
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#product-services > div:nth-child(1) > div > div > div > ul > li:nth-child(1) > ul > li:nth-child(3) > a")));
-        this.trainingprod.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(trainingprod));
         this.trainingprod.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
-        final Boolean until = wait.until(ExpectedConditions.urlContains("https://shop.akc.org/"));
+        wait.until(ExpectedConditions.urlContains("https://shop.akc.org/"));
 
     }
 
-    public void Clickdoggift() throws InterruptedException {
+    public void Clickdoggift() {
 
         this.produservi.click();
-        sleep(1000);
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        //wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#product-services > div:nth-child(1) > div > div > div > ul > li:nth-child(1) > ul > li:nth-child(4) > a")));
-        this.doggift.isDisplayed();
+        wait.until(ExpectedConditions.elementToBeClickable(doggift));
         this.doggift.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlToBe("https://shop.akc.org/collections/essentials-play-dog-gift-packs"));
 
     }
 
-    public void Clickdna() throws InterruptedException {
+    public void Clickdna() {
 
         this.produservi.click();
-        sleep(1000);
-        this.dna.isDisplayed();
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(dna));
+        wait.until(ExpectedConditions.elementToBeClickable(dna));
         this.dna.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.dnaElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(dnaElement));
 
     }
 
-    public void ClickakctvProdServ() throws InterruptedException {
+    public void ClickakctvProdServ() {
 
         this.produservi.click();
-        sleep(1000);
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#product-services > div:nth-child(1) > div > div > div > ul > li:nth-child(3) > a")));
-        this.akctv.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(akctv));
         this.akctv.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
-        final Boolean until = wait.until(ExpectedConditions.urlContains("https://akc.tv/"));
+        wait.until(ExpectedConditions.urlContains("https://akc.tv/"));
 
     }
 
-    public void ClickakcmagProdServ() throws InterruptedException {
+    public void ClickakcmagProdServ() {
 
         this.produservi.click();
-        sleep(1000);
-        WebDriverWait wait = new WebDriverWait(driver, 20);
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#product-services > div:nth-child(1) > div > div > div > ul > li:nth-child(4) > a")));
-        this.akcmag.isDisplayed();
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(akcmag));
         this.akcmag.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
+        wait.until(ExpectedConditions.elementToBeClickable(akcmagElement));
         this.akcmagElement.isDisplayed();
 
     }
 
-    public void Clickpedigrees() throws InterruptedException {
+    public void Clickpedigrees() {
 
         this.produservi.click();
-        sleep(1000);
-        WebDriverWait wait = new WebDriverWait(driver, 20);
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#product-services > div:nth-child(1) > div > div > div > ul > li:nth-child(5) > a")));
-        this.pedigrees.isDisplayed();
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(pedigrees));
+        wait.until(ExpectedConditions.elementToBeClickable(pedigrees));
         this.pedigrees.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
-        final Boolean until = wait.until(ExpectedConditions.urlContains("https://www.apps.akc.org/"));
+        wait.until(ExpectedConditions.urlContains("https://www.apps.akc.org/"));
 
     }
 
-    public void Clickbreedrep() throws InterruptedException {
+    public void Clickbreedrep() {
 
         this.produservi.click();
-        sleep(1000);
-        WebDriverWait wait = new WebDriverWait(driver, 20);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#product-services > div:nth-child(1) > div > div > div > ul > li:nth-child(6) > a")));
-        this.breedrep.isDisplayed();
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(breedrep));
         this.breedrep.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
-        final Boolean until = wait.until(ExpectedConditions.urlContains("https://www.apps.akc.org/apps/store/?view=category&cde_category=BRDR"));
+        wait.until(ExpectedConditions.urlContains("https://www.apps.akc.org/apps/store/?view=category&cde_category=BRDR"));
 
     }
 
-    public void Clickakccomp() throws InterruptedException {
+    public void Clickakccomp() {
 
         this.produservi.click();
-        sleep(1000);
-        WebDriverWait wait = new WebDriverWait(driver, 20);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#product-services > div:nth-child(1) > div > div > div > ul > li:nth-child(7) > a")));
-        this.akccomp.isDisplayed();
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(akccomp));
         this.akccomp.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
-        final Boolean until = wait.until(ExpectedConditions.urlContains("https://www.apps.akc.org/apps/"));
+        wait.until(ExpectedConditions.urlContains("https://www.apps.akc.org/apps/"));
 
     }
 
-    public void Clickregdog() throws InterruptedException {
+    public void Clickregdog() {
 
         this.produservi.click();
-        sleep(1000);
-        this.regdog.isDisplayed();
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(regdog));
         this.regdog.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.regdogElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(regdogElement));
 
     }
 
-    public void Clickregpure() throws InterruptedException {
+    public void Clickregpure() {
 
         this.produservi.click();
-        sleep(1000);
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#product-services > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(1) > ul > li:nth-child(1) > a")));
-        this.regpure.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(regpure));
         this.regpure.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.regpureElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(regpureElement));
 
     }
 
-    public void reglitter() throws InterruptedException {
+    public void reglitter() {
 
         this.produservi.click();
-        sleep(1000);
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#product-services > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(1) > ul > li:nth-child(2) > a")));
-        this.reglitter.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(reglitter));
         this.reglitter.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("scroll(0, 500);");
-        this.reglitterRadiobutton.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(reglitterRadiobutton));
 
     }
 
-    public void Clickenroll() throws InterruptedException {
+    public void Clickenroll() {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#product-services > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(1) > ul > li:nth-child(3) > a")));
+        wait.until(ExpectedConditions.elementToBeClickable(enroll));
         this.enroll.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(AKCCaninePartners));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        Actions actions = new Actions(driver);
-        actions.moveToElement(AKCCaninePartners).perform();
-        assert(AKCCaninePartners.isEnabled());
-        this.AKCCaninePartners.isDisplayed();
 
     }
 
-    public void Clickregdown() throws InterruptedException {
+    public void Clickregdown() {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOf(regdown));
         this.regdown.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         wait.until(ExpectedConditions.visibilityOf(regdownElement));
+        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
 
     }
 
-    public void Clickfinddog() throws InterruptedException {
+    public void Clickfinddog() {
 
         this.produservi.click();
-        sleep(1000);
-        WebDriverWait wait = new WebDriverWait(driver, 20);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"product-services\"]/div[2]/div/div/div[1]/ul/li[2]/a")));
-        this.finddog.isDisplayed();
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(finddog));
         this.finddog.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
-        final Boolean until = wait.until(ExpectedConditions.urlContains("https://marketplace.akc.org/"));
+        wait.until(ExpectedConditions.urlContains("https://marketplace.akc.org/"));
 
     }
 
-    public void Clickfinpuppy() throws InterruptedException {
+    public void Clickfinpuppy() {
 
         this.produservi.click();
-        sleep(1000);
-        WebDriverWait wait = new WebDriverWait(driver, 20);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"product-services\"]/div[2]/div/div/div[1]/ul/li[2]/ul/li[1]/a")));
-        this.finpuppy.isDisplayed();
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(finpuppy));
         this.finpuppy.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
-        final Boolean until = wait.until(ExpectedConditions.urlContains("https://marketplace.akc.org/"));
+        wait.until(ExpectedConditions.urlContains("https://marketplace"));
 
     }
 
-    public void Clickakcrescue() throws InterruptedException {
+    public void Clickakcrescue() {
 
         this.produservi.click();
-        sleep(1000);
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(akcrescue));
+        wait.until(ExpectedConditions.elementToBeClickable(akcrescue));
         this.akcrescue.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(akcrescueElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.akcrescueElement.isDisplayed();
 
     }
 
-    public void Clickbreedrefer() throws InterruptedException {
+    public void Clickbreedrefer() {
 
         this.produservi.click();
-        sleep(1000);
-        this.breedrefer.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(breedrefer));
+        wait.until(ExpectedConditions.elementToBeClickable(breedrefer));
         this.breedrefer.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.breedreferElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(breedreferElement));
 
     }
 
-    public void Clickpuppyvisor() throws InterruptedException {
+    public void Clickpuppyvisor() {
 
         this.produservi.click();
-        sleep(1000);
-        WebDriverWait wait = new WebDriverWait(driver, 20);
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#product-services > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(2) > ul > li:nth-child(4) > a")));
-        this.puppyvisor.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(puppyvisor));
         this.puppyvisor.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
-        final Boolean until = wait.until(ExpectedConditions.urlContains("https://marketplace.akc.org/"));
+        wait.until(ExpectedConditions.urlContains("https://marketplace.akc.org/"));
 
 
     }
 
-    public void Clicktrainserv() throws InterruptedException {
+    public void Clicktrainserv() {
 
         this.produservi.click();
-        sleep(1000);
-        WebDriverWait wait = new WebDriverWait(driver, 20);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"product-services\"]/div[2]/div/div/div[1]/ul/li[3]/a")));
-        this.trainserv.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(trainserv));
         this.trainserv.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        this.trainservElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(trainservElement));
 
     }
 
-    public void Clickcgc() throws InterruptedException {
+    public void Clickcgc() {
 
         this.produservi.click();
-        sleep(1000);
-        this.cgc.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(cgc));
         this.cgc.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("scroll(0, 500);");
-        this.cgcElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(cgcElement));
 
     }
 
-    public void Clickgooddog() throws InterruptedException {
+    public void Clickgooddog() {
 
         this.produservi.click();
-        sleep(1000);
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#product-services > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(3) > ul > li:nth-child(2) > a")));
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(gooddog));
         this.gooddog.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(gooddogElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.gooddogElement.isDisplayed();
 
     }
 
-    public void Clickfindtrainclub() throws InterruptedException {
+    public void Clickfindtrainclub() {
 
         this.produservi.click();
-        sleep(1000);
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#product-services > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(3) > ul > li:nth-child(3) > a")));
-        this.findtrainclub.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 20);
+        wait.until(ExpectedConditions.visibilityOf(findtrainclub));
         this.findtrainclub.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
-        final Boolean until = wait.until(ExpectedConditions.urlContains("https://webapps.akc.org"));
+        wait.until(ExpectedConditions.urlContains("https://webapps.akc.org"));
 
     }
 
-    public void Clickakccaninecolle() throws InterruptedException {
+    public void Clickakccaninecolle() {
 
         this.produservi.click();
-        sleep(1000);
-        this.akccaninecolle.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 20);
+        wait.until(ExpectedConditions.visibilityOf(akccaninecolle));
         this.akccaninecolle.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
-        WebDriverWait wait = new WebDriverWait(driver, 30);
-        final Boolean until = wait.until(ExpectedConditions.urlContains("https://www.caninecollege.akc.org/"));
+        wait.until(ExpectedConditions.urlContains("https://www.caninecollege.akc.org/"));
 
     }
 
-    public void Clickhealthgen() throws InterruptedException {
+    public void Clickhealthgen() {
 
         this.produservi.click();
-        sleep(1000);
-        this.healthgen.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(healthgen));
         this.healthgen.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(healthgenElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        this.healthgenElement.isDisplayed();
 
     }
 
-    public void Clickfindgroom() throws InterruptedException {
+    public void Clickfindgroom() {
 
         this.produservi.click();
-        sleep(1000);
-        this.findgroom.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(findgroom));
         this.findgroom.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
-        WebDriverWait wait = new WebDriverWait(driver, 30);
-        final Boolean until = wait.until(ExpectedConditions.urlContains("https://marketplace.akc.org/"));
+        wait.until(ExpectedConditions.urlContains("https://marketplace.akc.org/"));
 
     }
 
-    public void Clickakcsafe() throws InterruptedException {
+    public void Clickakcsafe() {
 
         this.produservi.click();
-        sleep(1000);
-        this.akcsafe.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(akcsafe));
         this.akcsafe.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(akcsafeElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        this.akcsafeElement.isDisplayed();
+
     }
 
-    public void Clickakcpet() throws InterruptedException {
+    public void Clickakcpet() {
 
         this.produservi.click();
-        sleep(1000);
-        this.akcpet.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(akcpet));
         this.akcpet.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
-        WebDriverWait wait = new WebDriverWait(driver, 30);
-        final Boolean until = wait.until(ExpectedConditions.urlContains("https://www.akcpetinsurance.com/"));
+        wait.until(ExpectedConditions.urlContains("https://www.akcpetinsurance.com/"));
 
     }
 
-    public void Clickakcvete() throws InterruptedException {
+    public void Clickakcvete() {
 
         this.produservi.click();
-        sleep(1000);
-        this.akcvete.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(akcvete));
+        wait.until(ExpectedConditions.elementToBeClickable(akcvete));
         this.akcvete.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
-        WebDriverWait wait = new WebDriverWait(driver, 30);
-        final Boolean until = wait.until(ExpectedConditions.urlContains("https://webapps.akc.org/"));
+        wait.until(ExpectedConditions.urlContains("https://webapps.akc.org/"));
 
     }
 
     public void Clickakccanineretreat() throws InterruptedException {
 
         this.produservi.click();
-        sleep(1000);
-        this.akccanineretreat.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(akccanineretreat));
         this.akccanineretreat.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
-        WebDriverWait wait = new WebDriverWait(driver, 30);
-        final Boolean until = wait.until(ExpectedConditions.urlContains("https://akccanineretreat.com/"));
+        wait.until(ExpectedConditions.urlContains("https://akccanineretreat.com/"));
 
     }
 
-    public void Clickakcreunite() throws InterruptedException {
+    public void Clickakcreunite()  {
 
         this.produservi.click();
-        sleep(1000);
-        this.akcreunite.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(akcreunite));
         this.akcreunite.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
-        WebDriverWait wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.urlContains("akcreunite.org/"));
 
     }
 
-    public void Clickbreedprog() throws InterruptedException {
+    public void Clickbreedprog() {
 
         this.produservi.click();
-        sleep(1000);
-        this.breedprog.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(breedprog));
         this.breedprog.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.breedprogElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(breedprogElement));
 
     }
 
-    public void Clickbom() throws InterruptedException {
+    public void Clickbom() {
 
         this.produservi.click();
-        sleep(1000);
-        this.bom.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(bom));
         this.bom.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(bomElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        this.bomElement.isDisplayed();
 
     }
 
-    public void Clickbwh() throws InterruptedException {
+    public void Clickbwh() {
 
         this.produservi.click();
-        sleep(1000);
-        this.bwh.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(bwh));
         this.bwh.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.bwhElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(bwhElement));
 
     }
 
-    public void Clickbez() throws InterruptedException {
+    public void Clickbez() {
 
         this.produservi.click();
-        sleep(1000);
-        this.bez.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(bez));
         this.bez.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
-        WebDriverWait wait = new WebDriverWait(driver, 30);
-        final Boolean until = wait.until(ExpectedConditions.urlContains("https://www.apps.akc.org/"));
+        wait.until(ExpectedConditions.urlContains("https://www.apps.akc.org/"));
 
     }
 
-    public void Clickseall() throws InterruptedException {
+    public void Clickseall() {
 
         this.produservi.click();
-        sleep(1000);
-        this.seall.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(seall));
         this.seall.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        this.seallElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(seallElement));
 
     }
 
-    public void Clickbrowseserv() throws InterruptedException {
+    public void Clickbrowseserv() {
 
         this.produservi.click();
-        sleep(1000);
-        this.browseserv.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(browseserv));
         this.browseserv.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        this.browseservElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(browseservElement));
 
     }
 
-    public void Clickakcshop() throws InterruptedException {
+    public void Clickakcshop() {
 
         this.produservi.click();
-        sleep(1000);
-        this.akcshop.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(akcshop));
         this.akcshop.click();
-        WebDriverWait wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.urlToBe("https://shop.akc.org/"));
 
     }
@@ -836,8 +744,8 @@ public class ProdServ {
     public void ProdServArticle1() throws InterruptedException {
 
         this.produservi.click();
-        sleep(1000);
-        this.dna.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(dna));
         this.dna.click();
         sleep(1000);
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
@@ -848,8 +756,8 @@ public class ProdServ {
     public void ProdServArticle2() throws InterruptedException {
 
         this.produservi.click();
-        sleep(1000);
-        this.akcmag.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(akcmag));
         this.akcmag.click();
         sleep(1000);
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
@@ -857,17 +765,13 @@ public class ProdServ {
 
     }
 
-    public void ProdServArticle3() throws InterruptedException {
+    public void ProdServArticle3() {
 
         this.produservi.click();
-        sleep(1000);
-        this.cgc.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(cgc));
         this.cgc.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        //this.cgcMenu.isDisplayed();
-        this.whatiscgcMenu.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(whatiscgcMenu));
 
     }
 

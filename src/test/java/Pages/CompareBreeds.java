@@ -1,15 +1,11 @@
 package Pages;
 import Helpers.DriverHelper;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import static java.lang.Thread.sleep;
 
 
 public class CompareBreeds {
@@ -313,45 +309,39 @@ public class CompareBreeds {
 
     }
 
-    public void VerifyCompareBreeds() throws InterruptedException {
+    public void VerifyCompareBreeds() {
 
         this.breeds.click();
-        sleep(1000);
-        this.breedscompa.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(breedscompa));
         this.breedscompa.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(select1));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
         this.select1.isDisplayed();
         this.select1.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(affens));
         this.affens.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(affenspic));
         this.affenspic.isDisplayed();
         this.select2.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(akita));
         this.akita.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(akitapic));
         this.akitapic.isDisplayed();
         this.select3.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(beagle));
         this.beagle.click();
         this.beaglepic.isDisplayed();
         this.select4.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(boxer));
         this.boxer.click();
         this.boxerpic.isDisplayed();
         this.select5.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(bullterrier));
         this.bullterrier.click();
         this.bullterrierpic.isDisplayed();
         this.breedcompbutton.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("body > div.breed-select-wrap > div > div > div.page-layout > main > div.breed-comparison-theme-wrap > div.breed-comparison-select-and-breed-data > div.breed-comparison-wrap-table > div.breed-comparison-wrap-table-inner > div > div > div:nth-child(3)")));
-        Actions actions = new Actions(driver);
-        actions.moveToElement(personality).perform();
-        assert(personality.isEnabled());
-        this.personality.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(personality));
         //this.perso1.isDisplayed();
         //this.perso2.isDisplayed();
         //this.perso3.isDisplayed();
@@ -365,8 +355,8 @@ public class CompareBreeds {
         //this.poprank5.isDisplayed();
         //this.group.isDisplayed();
         //this.group1.isDisplayed();
-        this.group2.isDisplayed();
-        this.group3.isDisplayed();
+        //this.group2.isDisplayed();
+        //this.group3.isDisplayed();
         this.group4.isDisplayed();
         this.group5.isDisplayed();
         this.size.isDisplayed();

@@ -20,8 +20,8 @@ public class ShopEssentials {
     @FindBy(css = "#essentials-side-nav")
     WebElement EssentialsSideNav;
 
-    @FindBy(css = "#side-nav > p:nth-child(4) > a > img")
-    WebElement AKCVisaCard;
+    @FindBy(css = "#play > li:nth-child(3) > a")
+    WebElement SideMenuFetchToys;
     //
 
     @FindBy(css = "#essentials-eat-drink > li:nth-child(1) > a")
@@ -180,7 +180,7 @@ public class ShopEssentials {
 
     }
 
-    public void clickAKCVisaCard() {
+    public void clickSideMenu() {
 
         this.EssentialsMenu.isDisplayed();
         this.EssentialsMenu.click();
@@ -188,9 +188,10 @@ public class ShopEssentials {
         wait.until(ExpectedConditions.visibilityOf(DogEssentialsTitle));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         wait.until(ExpectedConditions.visibilityOf(EssentialsSideNav));
-        this.AKCVisaCard.click();
+        wait.until(ExpectedConditions.elementToBeClickable(SideMenuFetchToys));
+        this.SideMenuFetchToys.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
-        wait.until(ExpectedConditions.urlContains("https://www.apps.akc.org//general/visa/"));
+        wait.until(ExpectedConditions.urlContains("/collections/essentials-play-tough-toys"));
 
     }
 

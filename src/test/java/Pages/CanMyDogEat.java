@@ -1,16 +1,12 @@
 package Pages;
 import Helpers.DriverHelper;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import static java.lang.Thread.sleep;
 
 public class CanMyDogEat {
 
@@ -107,7 +103,7 @@ public class CanMyDogEat {
     @FindBy(xpath = "//html/body/main/div/section/div[4]/a[1]")
     WebElement yes1;
 
-    @FindBy(xpath = "//html/body/main/div/section/div[4]/a[2]")
+    @FindBy(css = "#content > div:nth-child(9) > a.no-answer.incorrect")
     WebElement no1;
 
     @FindBy(xpath = "//html/body/main/div/section/div[5]/a[1]")
@@ -293,6 +289,9 @@ public class CanMyDogEat {
     @FindBy(xpath = "//html/body/main/div/section/div[16]/div[1]/img")
     WebElement resultsimg;
 
+    @FindBy(css = "body > div.bcpNotificationBar.bcpNotificationBarStickyBottom")
+    WebElement BottomBanner;
+
 
     DriverHelper driverHelper;
 
@@ -307,23 +306,20 @@ public class CanMyDogEat {
     }
 
 
-    public void VerifyCanMyDogEat1() throws InterruptedException {
+    public void VerifyCanMyDogEat1() {
 
         this.breedsmenu.click();
-        sleep(1000);
-        this.findmatch.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(findmatch));
         this.findmatch.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(canmydog));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("scroll(0, 800);");
-        this.canmydog.isDisplayed();
         this.canmydog.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(tittle));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.tittle.isDisplayed();
+        HiddeBanner();
         this.img.isDisplayed();
         this.msg.isDisplayed();
         this.apples.isDisplayed();
@@ -416,66 +412,53 @@ public class CanMyDogEat {
 
     }
 
-
-    public void VerifyCanMyDogEat2() throws InterruptedException {
+    public void VerifyCanMyDogEat2() {
 
 
         this.breedsmenu.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"dog-breeds\"]/div[2]/div/div/div/ul/li[1]/a/div")));
-        this.findmatch.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(findmatch));
         this.findmatch.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        //wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#can-my-dog-eat-___\\? > a > strong")));
-        Actions actions = new Actions(driver);
-        actions.moveToElement(canmydog).perform();
-        assert(canmydog.isEnabled());
+        wait.until(ExpectedConditions.elementToBeClickable(canmydog));
         this.canmydog.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(no1));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
+        HiddeBanner();
+        wait.until(ExpectedConditions.elementToBeClickable(no1));
         this.no1.click();
-        sleep(1000);
-        this.otheranswer1.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(otheranswer1));
         this.no2.click();
-        sleep(1000);
-        this.otheranswer2.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(otheranswer2));
         this.no3.click();
-        sleep(1000);
-        this.otheranswer3.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(otheranswer3));
         this.no4.click();
-        sleep(1000);
-        this.otheranswer4.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(otheranswer4));
         this.no5.click();
-        sleep(1000);
-        this.otheranswer5.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(otheranswer5));
         this.no6.click();
-        sleep(1000);
-        this.otheranswer6.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(otheranswer6));
         this.no7.click();
-        sleep(1000);
-        this.otheranswer7.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(otheranswer7));
         this.no8.click();
-        sleep(1000);
-        this.otheranswer8.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(otheranswer8));
         this.no9.click();
-        sleep(1000);
-        this.otheranswer9.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(otheranswer9));
         this.no10.click();
-        sleep(1000);
-        this.otheranswer10.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(otheranswer10));
         this.no11.click();
-        sleep(1000);
-        this.otheranswer11.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(otheranswer11));
         this.no12.click();
-        sleep(1000);
-        this.otheranswer12.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(otheranswer12));
         this.results.isDisplayed();
         this.resultsimg.isDisplayed();
         this.suggestion.isDisplayed();
 
+    }
+
+    public void HiddeBanner() {
+
+        JavascriptExecutor jse = (JavascriptExecutor)driver;
+        jse.executeScript("arguments[0].style.visibility='hidden'", BottomBanner);
     }
 
 }

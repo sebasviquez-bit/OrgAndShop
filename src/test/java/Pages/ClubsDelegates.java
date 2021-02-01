@@ -8,8 +8,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import static java.lang.Thread.sleep;
-
 public class ClubsDelegates {
 
 
@@ -52,7 +50,7 @@ public class ClubsDelegates {
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[5]/div[3]/div/h3")
     WebElement fordelegates;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[5]/div[3]/div/div/div/ul/li[1]/a")
+    @FindBy(css = "#clubs-delegates > div:nth-child(3) > div > div > div > ul > li:nth-child(1) > a")
     WebElement delegatespor;
 
     @FindBy(css = "#clubs-delegates > div:nth-child(3) > div > div > div > ul > li:nth-child(2) > a")
@@ -178,11 +176,11 @@ public class ClubsDelegates {
 
     }
 
-
-    public void VerifyClubsDelegates(){
+    public void VerifyClubsDelegates() {
 
         this.clubdelegat.click();
-        this.findclub.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(findclub));
         this.searchallclub.isDisplayed();
         this.findanevent.isDisplayed();
         this.clubsoffer.isDisplayed();
@@ -216,318 +214,273 @@ public class ClubsDelegates {
 
     }
 
-    public void Clicksearchallclub() throws InterruptedException {
+    public void Clicksearchallclub() {
 
         this.clubdelegat.click();
-        sleep(1000);
-        this.searchallclub.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(searchallclub));
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("scroll(253, 12);");
         this.searchallclub.click();
-        //this.driver.get(this.driver.getCurrentUrl()+"?test=true"); //to add the string *
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
-        WebDriverWait wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.urlContains("https://webapps.akc.org/"));
 
     }
 
-    public void Clickfindanevent() throws InterruptedException {
+    public void Clickfindanevent() {
 
         this.clubdelegat.click();
-        sleep(1000);
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(findanevent));
         this.findanevent.isDisplayed();
         this.findanevent.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        this.findaneventElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(findaneventElement));
+        //this.driver.get(this.driver.getCurrentUrl()+"?test=true");
 
     }
 
-    public void Clicktrainclass() throws InterruptedException {
+    public void Clicktrainclass() {
 
         this.clubdelegat.click();
-        sleep(1000);
-        this.trainclass.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(trainclass));
         this.trainclass.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
-        WebDriverWait wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.urlContains("https://webapps.akc.org/"));
 
     }
 
-    public void Clickaboutclub() throws InterruptedException {
+    public void Clickaboutclub() {
 
         this.clubdelegat.click();
-        sleep(1000);
-        this.aboutclub.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(aboutclub));
         this.aboutclub.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        this.aboutclubElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(aboutclubElement));
+        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
 
     }
 
-    public void Clickformclub() throws InterruptedException {
+    public void Clickformclub() {
 
         this.clubdelegat.click();
-        sleep(1000);
-        this.formclub.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(formclub));
         this.formclub.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        this.formclubElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(formclubElement));
 
     }
 
-    public void Clickclubdevelop() throws InterruptedException {
+    public void Clickclubdevelop() {
 
         this.clubdelegat.click();
-        sleep(1000);
-        this.clubdevelop.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(clubdevelop));
         this.clubdevelop.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(clubdevelopElement));
         this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
         this.clubdevelopElement.isDisplayed();
 
     }
 
-    public void Clickpromoteclub() throws InterruptedException {
+    public void Clickpromoteclub() {
 
         this.clubdelegat.click();
-        sleep(1000);
-        this.promoteclub.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(promoteclub));
         this.promoteclub.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(promoteclubElement));
         this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        this.promoteclubElement.isDisplayed();
+
 
     }
 
-    public void Clickclubresources() throws InterruptedException {
+    public void Clickclubresources() {
 
         this.clubdelegat.click();
-        sleep(1000);
-        this.clubresources.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(clubresources));
         this.clubresources.click();
-        sleep(1000);
         this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
-        this.clubresourcesElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(clubresourcesElement));
 
     }
 
-    public void Clickdelegatespor() throws InterruptedException {
+    public void Clickdelegatespor() {
 
         this.clubdelegat.click();
-        sleep(1000);
-        this.delegatespor.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(delegatespor));
+        wait.until(ExpectedConditions.elementToBeClickable(delegatespor));
         this.delegatespor.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        this.delegatesporElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(delegatesporElement));
 
     }
 
-    public void Clickdelegatesdir() throws InterruptedException {
+    public void Clickdelegatesdir() {
 
         this.clubdelegat.click();
-        sleep(1000);
-        this.delegatesdir.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(delegatesdir));
+        wait.until(ExpectedConditions.elementToBeClickable(delegatesdir));
         this.delegatesdir.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
-        WebDriverWait wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.urlContains("https://www.apps.akc.org/"));
 
     }
 
-    public void Clickdelegatesmeet() throws InterruptedException {
+    public void Clickdelegatesmeet() {
 
         this.clubdelegat.click();
-        sleep(1000);
-        this.delegatesmeet.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(delegatesmeet));
         this.delegatesmeet.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
-        this.delegatesmeetElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(delegatesmeetElement));
 
     }
 
-    public void Clickboardmin() throws InterruptedException {
+    public void Clickboardmin() {
 
         this.clubdelegat.click();
-        sleep(1000);
-        this.boardmin.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(boardmin));
         this.boardmin.click();
-        sleep(1000);
         this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
-        this.boardminElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(boardminElement));
 
     }
 
-    public void Clickdelegatestan() throws InterruptedException {
+    public void Clickdelegatestan() {
 
         this.clubdelegat.click();
-        sleep(1000);
-        this.delegatestan.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(delegatestan));
         this.delegatestan.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
-        this.delegatestanElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(delegatestanElement));
 
     }
 
-    public void Clickperspective() throws InterruptedException {
+    public void Clickperspective() {
 
         this.clubdelegat.click();
-        sleep(1000);
-        this.perspective.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(perspective));
         this.perspective.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
-        this.perspectiveElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(perspectiveElement));
 
     }
 
-    public void Clickakcgazette() throws InterruptedException {
+    public void Clickakcgazette() {
 
         this.clubdelegat.click();
-        sleep(1000);
-        this.akcgazette.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(akcgazette));
         this.akcgazette.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
-        this.akcgazetteElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(akcgazetteElement));
 
     }
 
-    public void Clickrolakcdel() throws InterruptedException {
+    public void Clickrolakcdel() {
 
         this.clubdelegat.click();
-        sleep(1000);
-        this.rolakcdel.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(rolakcdel));
         this.rolakcdel.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
-        WebDriverWait wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.urlContains("https://www.youtube.com/"));
 
     }
 
-    public void Clickimportance() throws InterruptedException {
+    public void Clickimportance() {
 
         this.clubdelegat.click();
-        sleep(1000);
-        this.importance.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(importance));
         this.importance.click();
-        WebDriverWait wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.urlMatches("http://images.akc.org/pdf/The_Importance_of_Your_AKC_Delegate_2018.pdf"));
 
     }
 
-    public void Clicklegisla() throws InterruptedException {
+    public void Clicklegisla() {
 
         this.clubdelegat.click();
-        sleep(1000);
-        this.legisla.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(legisla));
         this.legisla.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
-        WebDriverWait wait = new WebDriverWait(driver, 30);
-        wait.until(ExpectedConditions.urlContains("akcgr.org/akc/lac?0"));
+        wait.until(ExpectedConditions.urlContains("https://cqrcengage.com/akc/lac"));
 
     }
 
-    public void Clicklegislaalarm() throws InterruptedException {
+    public void Clicklegislaalarm() {
 
         this.clubdelegat.click();
-        sleep(1000);
-        this.legislaalarm.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(legislaalarm));
         this.legislaalarm.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
-        this.legislaalarmElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(legislaalarmElement));
 
     }
 
-    public void Clickakcpac() throws InterruptedException {
+    public void Clickakcpac() {
 
         this.clubdelegat.click();
-        sleep(1000);
-        this.akcpac.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(akcpac));
         this.akcpac.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
-        this.akcpacElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(akcpacElement));
 
     }
 
-    public void Clickgovernrelat() throws InterruptedException {
+    public void Clickgovernrelat() {
 
         this.clubdelegat.click();
-        sleep(1000);
-        this.governrelat.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(governrelat));
         this.governrelat.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
-        this.governrelatElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(governrelatElement));
 
     }
 
-    public void Clickovercollec() throws InterruptedException {
+    public void Clickovercollec() {
 
         this.clubdelegat.click();
-        sleep(1000);
-        this.overcollec.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(overcollec));
         this.overcollec.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
-        this.overcollecElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(overcollecElement));
 
     }
 
-    public void Clickclubarchives() throws InterruptedException {
+    public void Clickclubarchives() {
 
         this.clubdelegat.click();
-        sleep(1000);
-        this.clubarchives.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(clubarchives));
         this.clubarchives.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
-        this.clubarchivesElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(clubarchivesElement));
+        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
 
     }
 
-    public void Clicksearchlib() throws InterruptedException {
+    public void Clicksearchlib() {
 
         this.clubdelegat.click();
-        sleep(1000);
-        this.searchlib.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(searchlib));
         this.searchlib.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
-        WebDriverWait wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.urlContains("http://a40015.eos-intl.net/"));
 
     }
 
-    public void Clickhowtovisit() throws InterruptedException {
+    public void Clickhowtovisit() {
 
         this.clubdelegat.click();
-        sleep(1000);
-        this.howtovisit.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(howtovisit));
         this.howtovisit.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        sleep(1000);
-        this.howtovisitElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(howtovisitElement));
 
     }
 

@@ -25,6 +25,5 @@ public class User {
         this.password = password;
     }
 
-   // public User(String sEmail, String sFirstName, String sLastName, String sPassword1, String sPassword2) {
-    //}
+
 }

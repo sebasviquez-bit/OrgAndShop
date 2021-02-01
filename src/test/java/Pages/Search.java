@@ -1,7 +1,5 @@
 package Pages;
-import Helpers.DataHelper;
 import Model.Word;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,8 +7,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import static java.lang.Thread.sleep;
 
 public class Search {
 
@@ -101,72 +97,57 @@ public class Search {
     @FindBy(id = "anchor-panel-breed-standard")
     WebElement breedStandardTab;
 
-
+    //Driver
     WebDriver driver;
-    DataHelper dataHelper;
 
-
+    //Constructor
     public Search(WebDriver _driver) {
         this.driver = _driver;
         PageFactory.initElements(driver, this);
 
     }
 
-    public void SearchPage(Word _searchword) throws InterruptedException {
+    //Methods
+
+    public void SearchPage(Word _searchword) {
 
         this.search.sendKeys(_searchword.WordSearch);
         this.search.sendKeys(Keys.RETURN);
-        //this.searchbutton2.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.SearchCampImg.isDisplayed();
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("scroll(0, 300);");
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(SearchCampImg));
         this.numresults.isDisplayed();
         this.sections.isDisplayed();
         this.resultsimg.isDisplayed();
         this.firstresult.isDisplayed();
         this.frbody.isDisplayed();
-        //this.listresults.isDisplayed();
-        //this.navigate.isDisplayed();
 
     }
 
-    public void HeroBreedSearch(Word _searchword) throws InterruptedException {
+    public void HeroBreedSearch(Word _searchword) {
 
         this.HeroBreedSearch.sendKeys(_searchword.WordSearch);
         this.HeroBreedSearch.sendKeys(Keys.RETURN);
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.resultsTitle.isDisplayed();
-        this.overviewTab.isDisplayed();
-        //this.puppiesTab.isDisplayed();
-        //this.breedStandardTab.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(resultsTitle));
+        wait.until(ExpectedConditions.visibilityOf(overviewTab));
 
     }
 
-    public void HeroAsideSearch(Word _searchword) throws InterruptedException {
+    public void HeroAsideSearch(Word _searchword) {
 
         this.HeroAsideSearch.sendKeys(_searchword.WordSearch);
         this.HeroAsideSearch.sendKeys(Keys.RETURN);
-        //this.searchbutton2.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.SearchCampImg.isDisplayed();
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("scroll(0, 300);");
-        this.numresults.isDisplayed();
-        this.sections.isDisplayed();
-        this.resultsimg.isDisplayed();
-        this.firstresult.isDisplayed();
-        this.frbody.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(SearchCampImg));
+        wait.until(ExpectedConditions.visibilityOf(numresults));
+        wait.until(ExpectedConditions.visibilityOf(sections));
+        //wait.until(ExpectedConditions.visibilityOf(resultsimg));
+        wait.until(ExpectedConditions.visibilityOf(firstresult));
+        wait.until(ExpectedConditions.visibilityOf(frbody));
 
     }
 
-    public void ShopSearch(Word _searchword) throws InterruptedException {
+    public void ShopSearch(Word _searchword) {
 
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.visibilityOf(ShopSearch));
@@ -175,39 +156,38 @@ public class Search {
         wait.until(ExpectedConditions.visibilityOf(ShopResultTitle));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         //this.ShopResultTitle.isDisplayed();
-        this.ShopResultSearchBar.isDisplayed();
-        this.ShopResultSections.isDisplayed();
-        this.ShopResultImage.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(ShopResultSearchBar));
+        wait.until(ExpectedConditions.visibilityOf(ShopResultSections));
+        wait.until(ExpectedConditions.visibilityOf(ShopResultImage));
 
     }
 
-    public void ShopSearchBreed(Word _searchword) throws InterruptedException {
+    public void ShopSearchBreed(Word _searchword) {
 
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.visibilityOf(dropdown));
         this.dropdown.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(ShopSearchBreed));
         this.ShopSearchBreed.sendKeys(_searchword.WordSearch);
         this.ShopSearchBreed.sendKeys(Keys.RETURN);
         wait.until(ExpectedConditions.visibilityOf(ShopSearchBreedTitle));
         //this.ShopSearchBreedTitle.isDisplayed();
-        this.ChooseBreedTitle.isDisplayed();
-        this.ShopSearchBreedImage.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(ChooseBreedTitle));
+        wait.until(ExpectedConditions.visibilityOf(ShopSearchBreedImage));
 
     }
 
-    public void ShopDogLoversSearch(Word _searchword) throws InterruptedException {
+    public void ShopDogLoversSearch(Word _searchword) {
 
         driver.navigate().to("https://shop.akc.org/collections/dog-lovers");
-        sleep(1000);
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(dropdownDogLover));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
         this.dropdownDogLover.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(ShopDogLoversSearch));
         this.ShopDogLoversSearch.sendKeys(_searchword.WordSearch);
         this.ShopDogLoversSearch.sendKeys(Keys.RETURN);
-        sleep(1000);
-        this.productDetailDogLover.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(productDetailDogLover));
 
     }
 

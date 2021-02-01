@@ -6,8 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
-import static java.lang.Thread.sleep;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BreedSelector {
 
@@ -314,18 +314,18 @@ public class BreedSelector {
     }
 
 
-    public void VerifyBreedSelector1() throws InterruptedException {
+    public void VerifyBreedSelector1() {
 
         this.breedsmenu.click();
-        sleep(1000);
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(findmatch));
         this.findmatch.isDisplayed();
         this.findmatch.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(getstarted));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
         this.getstarted.isDisplayed();
         this.getstarted.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(headbreedsel1));
         this.headbreedsel1.isDisplayed();
         this.imagepage1.isDisplayed();
         this.newtodogs.isDisplayed();
@@ -336,7 +336,7 @@ public class BreedSelector {
         this.owndogpastlab.isDisplayed();
         this.newtodogs.click();
         this.continue1.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(headbreedsel2));
         this.headbreedsel2.isDisplayed();
         this.imagepage2.isDisplayed();
         this.apartment.isDisplayed();
@@ -347,7 +347,7 @@ public class BreedSelector {
         this.houselargelab.isDisplayed();
         this.apartment.click();
         this.continue2.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(headbreedsel3));
         this.headbreedsel3.isDisplayed();
         this.imagepage3.isDisplayed();
         this.yes.isDisplayed();
@@ -356,7 +356,7 @@ public class BreedSelector {
         this.nolab.isDisplayed();
         //this.yes.click();
         this.continue3.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(headbreedsel4));
         this.headbreedsel4.isDisplayed();
         this.imagepage4.isDisplayed();
         this.yes2.isDisplayed();
@@ -365,7 +365,7 @@ public class BreedSelector {
         this.no2lab.isDisplayed();
         this.yes2.click();
         this.continue4.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(headbreedsel5));
         this.headbreedsel5.isDisplayed();
         this.imagepage5.isDisplayed();
         this.onlybarks.isDisplayed();
@@ -375,7 +375,7 @@ public class BreedSelector {
         this.plusbark.click();
         this.plusbark.click();
         this.continue5.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(headbreedsel6));
         this.headbreedsel6.isDisplayed();
         this.imagepage6.isDisplayed();
         this.infreq.isDisplayed();
@@ -384,7 +384,7 @@ public class BreedSelector {
         this.freqlab.isDisplayed();
         this.infreq.click();
         this.continue6.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(actlevelheader));
         this.actlevelheader.isDisplayed();
         this.actlevelpict.isDisplayed();
         this.hangcouch.isDisplayed();
@@ -395,9 +395,8 @@ public class BreedSelector {
         this.goingadvlab.isDisplayed();
         this.hangcouch.click();
         this.continue8.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(headresults));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(2000);
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("scroll(0, 500);");
         this.headresults.isDisplayed();
@@ -435,23 +434,22 @@ public class BreedSelector {
 
     }
 
-    public void VerifyBreedSelector2() throws InterruptedException {
+    public void VerifyBreedSelector2() {
 
         this.breedsmenu.click();
-        sleep(1000);
-        this.findmatch.isDisplayed();
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(findmatch));
         this.findmatch.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(getstarted));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
         this.getstarted.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(currentowndog));
         Actions actions = new Actions(driver);
         actions.moveToElement(currentowndog).perform();
         assert(currentowndog.isEnabled());
         this.currentowndog.click();
         this.continue1.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(timeheadersel));
         this.timeheadersel.isDisplayed();
         this.timeheaderpict.isDisplayed();
         this.littletime.isDisplayed();
@@ -462,12 +460,11 @@ public class BreedSelector {
         this.alotoftimelab.isDisplayed();
         this.littletime.click();
         this.continue7.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(housesmall));
         this.housesmall.click();
         this.continue2.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(headresults));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(3000);
         this.headresults.isDisplayed();
         this.imageresults.isDisplayed();
         this.results.isDisplayed();
@@ -504,53 +501,50 @@ public class BreedSelector {
     }
 
 
-    public void VerifyBreedSelector3() throws InterruptedException {
+    public void VerifyBreedSelector3() {
 
 
         this.breedsmenu.click();
-        sleep(1000);
-        this.findmatch.isDisplayed();
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(findmatch));
         this.findmatch.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(getstarted));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
         this.getstarted.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(owndogpast));
         Actions actions = new Actions(driver);
         actions.moveToElement(owndogpast).perform();
         assert(owndogpast.isEnabled());
         this.owndogpast.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(continue1));
         this.continue1.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(sometime));
         this.sometime.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(continue7));
         this.continue7.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(houselarge));
         this.houselarge.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(continue2));
         this.continue2.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(no2));
         this.no2.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(continue4));
         this.continue4.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(plusbark));
         this.plusbark.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(plusbark));
         this.plusbark.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(plusbark));
         this.plusbark.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(plusbark));
         this.plusbark.click();
-        sleep(1000);
-        this.plusbark.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(continue5));
         this.continue5.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(freq));
         this.freq.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(continue6));
         this.continue6.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(actlevelheader));
         this.actlevelheader.isDisplayed();
         this.actlevelpict.isDisplayed();
         this.hangcouch.isDisplayed();
@@ -560,11 +554,10 @@ public class BreedSelector {
         this.goingadv.isDisplayed();
         this.goingadvlab.isDisplayed();
         this.hangcouch.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(continue8));
         this.continue8.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(headresults));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("scroll(0, 500);");
         this.headresults.isDisplayed();
@@ -595,7 +588,6 @@ public class BreedSelector {
         //this.breedcompdetail.isDisplayed();
         //this.quizagain.isDisplayed();
         //this.sharequiz.isDisplayed();
-
 
     }
 

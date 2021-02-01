@@ -1,7 +1,5 @@
 package Pages;
 
-import Helpers.DriverHelper;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -34,7 +32,7 @@ public class BreedsMenu {
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[1]/div[1]/div/div/form/div[2]/div/div[2]/div/div[1]/div[2]")
     WebElement explorebreedsDrop;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[1]/div[2]/div/div/div/ul/li[1]/a/div")
+    @FindBy(css = "#dog-breeds > div:nth-child(2) > div > div > div > ul > li:nth-child(1) > a > div")
     WebElement findmatch;
 
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[1]/div[2]/div/div/div/ul/li[2]/a/div")
@@ -127,10 +125,10 @@ public class BreedsMenu {
     @FindBy(xpath = "//*[@id=\"main-content\"]/div[1]/div[2]/div/div/ul[2]/li[3]/a")
     WebElement threeMonths;
 
-    @FindBy(css = "body > div:nth-child(7) > div.page-container > div.page-layout > main > div.content-card-grid > div > div > div:nth-child(1) > div > div.content-card__body > a")
+    @FindBy(css = "ntent-card-grid > div > div > div:nth-child(1) > div > div.content-card__body > a")
     WebElement newPuppyCheck;
 
-    @FindBy(css = "#page-title > h1")
+    @FindBy(css = "#page-title > div > h1")
     WebElement newPuppyCheckElement;
 
     @FindBy(css = "#page-title > div > h1")
@@ -169,12 +167,10 @@ public class BreedsMenu {
     @FindBy(xpath = "//*[@id=\"main-content\"]/div[1]/div[1]/div/div/table/tbody/tr[4]/td[2]/p[3]/a")
     WebElement dogHealthButton;
 
-    @FindBy(xpath = "/html/body/div[15]/div/div/div/div/span")
-    WebElement PopUpFrameClose;
-    //
+    @FindBy(css = "body > div.bcpNotificationBar.bcpNotificationBarStickyBottom")
+    WebElement BottomBanner;
 
 
-    DriverHelper driverHelper;
 
     WebDriver driver;
 
@@ -189,7 +185,6 @@ public class BreedsMenu {
         this.menubreeds.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.visibilityOf(viewbreeds));
-        //this.viewbreeds.isDisplayed();
         this.searchbreeds.isDisplayed();
         this.explorebreeds.isDisplayed();
         this.findmatch.isDisplayed();
@@ -213,7 +208,7 @@ public class BreedsMenu {
     //Click methods for Breeds.Menu tabs
 
 
-    public void Clickviewbreeds() throws InterruptedException {
+    public void Clickviewbreeds() {
 
         this.menubreeds.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
@@ -224,227 +219,206 @@ public class BreedsMenu {
 
     }
 
-    public void Clicksearchbreeds() throws InterruptedException {
+    public void Clicksearchbreeds() {
 
         this.menubreeds.click();
-        sleep(1000);
-        this.searchbreeds.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(searchbreeds));
         this.searchbreeds.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(searchbreedsDrop));
         this.searchbreedsDrop.isDisplayed();
         this.searchbreedsDrop.click();
-        sleep(100);
+        wait.until(ExpectedConditions.visibilityOf(searchbreedsElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
         this.searchbreedsElement.isDisplayed();
 
     }
 
-    public void Clickexplorebreeds() throws InterruptedException {
+    public void Clickexplorebreeds() {
 
         this.menubreeds.click();
-        sleep(1000);
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(explorebreeds));
         this.explorebreeds.isDisplayed();
         this.explorebreeds.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(explorebreedsDrop));
         this.explorebreedsDrop.isDisplayed();
         this.explorebreedsDrop.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(explorebreedsElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
         this.explorebreedsElement.isDisplayed();
 
     }
 
-    public void Clickfindmatch() throws InterruptedException {
+    public void Clickfindmatch() {
 
         this.menubreeds.click();
-        sleep(1000);
-        this.findmatch.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(findmatch));
         this.findmatch.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.findmatchElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(findmatchElement));
 
     }
 
-    public void Clickcomparebreeds() throws InterruptedException {
+    public void Clickcomparebreeds() {
 
         this.menubreeds.click();
-        sleep(1000);
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(comparebreeds));
         this.comparebreeds.isDisplayed();
         this.comparebreeds.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(comparebreedsElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
         this.comparebreedsElement.isDisplayed();
 
     }
 
-    public void Clickfindapuppy() throws InterruptedException {  // New tab method :
+    public void Clickfindapuppy() {
 
         this.menubreeds.click();
-        sleep(1000);
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(findapuppy));
         this.findapuppy.isDisplayed();
         this.findapuppy.click();
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.urlContains("https://marketplace.akc.org/"));
 
     }
 
-    public void Clickchooseabreed() throws InterruptedException {
+    public void Clickchooseabreed() {
 
         this.menubreeds.click();
-        sleep(1000);
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(chooseabreed));
         this.chooseabreed.isDisplayed();
         this.chooseabreed.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(chooseabreedElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
         this.chooseabreedElement.isDisplayed();
 
     }
 
-    public void Clickwhygetdog() throws InterruptedException {
+    public void Clickwhygetdog() {
 
         this.menubreeds.click();
-        sleep(1000);
-        this.whygetdog.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(whygetdog));
         this.whygetdog.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(whygetdogElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
         this.whygetdogElement.isDisplayed();
 
     }
 
-    public void Clickfindrespbreeder() throws InterruptedException {
+    public void Clickfindrespbreeder() {
 
         this.menubreeds.click();
-        sleep(1000);
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(findrespbreeder));
         this.findrespbreeder.isDisplayed();
         this.findrespbreeder.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(findrespbreederElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
         this.findrespbreederElement.isDisplayed();
 
     }
 
-    public void Clickgetstartdogsports() throws InterruptedException {
+    public void Clickgetstartdogsports() {
 
         this.menubreeds.click();
-        sleep(1000);
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(getstartdogsports));
         this.getstartdogsports.isDisplayed();
         this.getstartdogsports.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(getstartdogsportsElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
         this.getstartdogsportsElement.isDisplayed();
 
     }
 
-    public void Clickallaboutpuppies() throws InterruptedException {
+    public void Clickallaboutpuppies() {
 
         this.menubreeds.click();
-        sleep(1000);
-        this.allaboutpuppies.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(allaboutpuppies));
         this.allaboutpuppies.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(allaboutpuppiesElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
         this.allaboutpuppiesElement.isDisplayed();
 
     }
 
-    public void Clickfindpurebreed() throws InterruptedException {
+    public void Clickfindpurebreed() {
 
         this.menubreeds.click();
-        sleep(1000);
-        this.findpurebreed.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(findpurebreed));
+        wait.until(ExpectedConditions.elementToBeClickable(findpurebreed));
         this.findpurebreed.click();
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.urlContains("https://marketplace.akc.org/puppies"));
 
     }
 
-    public void Clickmenuregdog() throws InterruptedException {
+    public void Clickmenuregdog() {
 
         this.menubreeds.click();
-        sleep(1000);
-        this.menuregdog.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(menuregdog));
         this.menuregdog.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(menuregdogElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
         this.menuregdogElement.isDisplayed();
 
     }
 
-    public void Clickfindbreedclub() throws InterruptedException {
+    public void Clickfindbreedclub() {
 
         this.menubreeds.click();
-        sleep(1000);
-        this.findbreedclub.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(findbreedclub));
         this.findbreedclub.click();
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        for (String winHandle : driver.getWindowHandles()) {
-            driver.switchTo().window(winHandle);
-        }
-        WebDriverWait wait = new WebDriverWait(driver, 30);
+        for (String winHandle : driver.getWindowHandles()) { driver.switchTo().window(winHandle); }
         wait.until(ExpectedConditions.urlContains("https://webapps.akc.org/club-search/"));
 
     }
 
-    public void Clickmostpopdogs() throws InterruptedException {
+    public void Clickmostpopdogs() {
 
         this.menubreeds.click();
-        sleep(1000);
-        WebDriverWait wait = new WebDriverWait(driver, 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"dog-breeds\"]/div[4]/div/div/div/ul/li[4]/a")));
-        this.mostpopdogs.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(mostpopdogs));
         this.mostpopdogs.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(mostpopdogsElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.mostpopdogsElement.isDisplayed();
 
     }
 
-    public void Clickfordogbreeders() throws InterruptedException {
+    public void Clickfordogbreeders() {
 
         this.menubreeds.click();
-        sleep(1000);
-        WebDriverWait wait = new WebDriverWait(driver, 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"dog-breeds\"]/div[4]/div/div/div/ul/li[5]/a")));
-        this.fordogbreeders.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(fordogbreeders));
+        wait.until(ExpectedConditions.elementToBeClickable(fordogbreeders));
         this.fordogbreeders.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(fordogbreedersElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.fordogbreedersElement.isDisplayed();
 
     }
 
-    public void Clickfordogowners() throws InterruptedException {
+    public void Clickfordogowners() {
 
         this.menubreeds.click();
-        sleep(1000);
-        this.fordogowners.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(fordogowners));
         this.fordogowners.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.fordogownersElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(fordogownersElement));
 
     }
 
@@ -464,87 +438,36 @@ public class BreedsMenu {
         wait.until(ExpectedConditions.visibilityOf(preparingPuppy));
         this.preparingPuppy.click();
         wait.until(ExpectedConditions.visibilityOf(twoMonths));
+        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
 
     }
 
-    public void puppiesArticle2() throws InterruptedException {
+    public void puppiesArticle2() {
 
         this.menubreeds.click();
-        sleep(1000);
-        this.allaboutpuppies.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(allaboutpuppies));
         this.allaboutpuppies.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.elementToBeClickable(preparingPuppy));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        Actions actions = new Actions(driver);
-        actions.moveToElement(preparingPuppy).perform();
-        this.preparingPuppy.isDisplayed();
         this.preparingPuppy.click();
-        actions.moveToElement(newPuppyCheck).perform();
-        assert(newPuppyCheck.isEnabled());
+        wait.until(ExpectedConditions.visibilityOf(newPuppyCheckElement));
 
     }
 
-    public void puppiesArticle3() throws InterruptedException {
+    public void puppiesArticle3() {
 
         this.menubreeds.click();
-        sleep(1000);
-        this.allaboutpuppies.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(allaboutpuppies));
         this.allaboutpuppies.click();
-        sleep(1000);
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.preparingPuppy.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(preparingPuppy));
         this.threeMonths.isDisplayed();
 
 
     }
 
-    public void mostpopdogsArticle1() throws InterruptedException {
-
-        this.menubreeds.click();
-        sleep(1000);
-        this.mostpopdogs.isDisplayed();
-        this.mostpopdogs.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        this.mostpopdogsElement.isDisplayed();
-        Actions actions = new Actions(driver);
-        actions.moveToElement(accordion19).perform();
-        assert(accordion19.isEnabled());
-        this.accordion19.click();
-        sleep(1000);
-        this.frenchBull.isDisplayed();
-        this.fullList.isDisplayed();
-        this.fullList.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.listTittle.isDisplayed();
-
-    }
-
-    public void mostpopdogsArticle2() throws InterruptedException {
-
-        this.menubreeds.click();
-        sleep(1000);
-        this.mostpopdogs.isDisplayed();
-        this.mostpopdogs.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        this.mostpopdogsElement.isDisplayed();
-        Actions actions = new Actions(driver);
-        actions.moveToElement(accordion18).perform();
-        assert(accordion18.isEnabled());
-        this.accordion18.click();
-        sleep(1000);
-        this.germanShepherd.isDisplayed();
-        this.germanShepherd.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        this.germanShepherdElement.isDisplayed();
-
-    }
 
     public void fordogbreedersArticle1() throws InterruptedException {
 
@@ -564,18 +487,17 @@ public class BreedsMenu {
 
     }
 
-    public void ForDogOwnerArticle1() throws InterruptedException {
+    public void ForDogOwnerArticle1() {
 
         this.menubreeds.click();
-        sleep(1000);
-        this.fordogowners.isDisplayed();
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(fordogowners));
         this.fordogowners.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.elementToBeClickable(breedsMoreButton));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
+        HiddeBanner();
         this.breedsMoreButton.isDisplayed();
         this.breedsMoreButton.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.urlContains("akc.org/dog-breed-selector/"));
 
     }
@@ -588,16 +510,21 @@ public class BreedsMenu {
         this.fordogowners.click();
         sleep(1000);
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        JavascriptExecutor jse = (JavascriptExecutor) driver;
-        jse.executeScript("scroll(0, 1000)");
-        sleep(1000);
-        this.dogHealthButton.isDisplayed();
-        this.dogHealthButton.click();
+        HiddeBanner();
+        JavascriptExecutor js = (JavascriptExecutor) driver;
         WebDriverWait wait = new WebDriverWait(driver, 10);
+        js.executeScript("100,500");
+        wait.until(ExpectedConditions.elementToBeClickable(breedsMoreButton));
+        this.dogHealthButton.click();
         wait.until(ExpectedConditions.urlToBe("https://www.akc.org/expert-advice/health/"));
 
     }
 
+    public void HiddeBanner() {
+
+        JavascriptExecutor jse = (JavascriptExecutor)driver;
+        jse.executeScript("arguments[0].style.visibility='hidden'", BottomBanner);
+    }
 
 }
 

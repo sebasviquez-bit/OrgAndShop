@@ -1,23 +1,19 @@
 {
+  "server": "hub-cloud.browserstack.com",
+  "user": "sebastianviquez1",
+  "key": "szDfCvzz6f8QZE54aXkN",
+
   "capabilities": {
-    "build": "ORGSuite",
-    "name": "suite_test",
+    "build": ".ORG",
+    "name": "ORGTestSuite",
     "browserstack.debug": true
   },
 
   "environments": {
+
     "chrome": {
       "browser": "chrome"
-    },
-    "firefox": {
-      "browser": "firefox"
-    },
-    "safari": {
-      "os": "OS X",
-      "browser": "safari"
-    },
-    "ie": {
-      "browser": "internet explorer"
     }
   }
+
 }

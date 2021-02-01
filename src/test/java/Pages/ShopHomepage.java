@@ -53,10 +53,10 @@ public class ShopHomepage {
     @FindBy(css = "#homepage-banners > a.homepage-banner.active > img")
     WebElement ShopNowBanner0;
 
-    @FindBy(css = "#product-11595701892 > div > div.product-card-img-wrap")
-    WebElement BaseballCap;
+    @FindBy(xpath = "//*[@id=\"dog-lovers-human-apparel-bee-and-the-hound\"]/li[1]/div/div[1]/img")
+    WebElement BeeHoundProduct;
 
-    @FindBy(css = "#product-11595701892 > div > div.product-card-img-wrap > button")
+    @FindBy(xpath = "//*[@id=\"index\"]/section[2]/div[1]/ul/li[1]/div/div[1]/button")
     WebElement QuickViewButton;
 
     @FindBy(css = "#quick-view > div > div")
@@ -72,8 +72,8 @@ public class ShopHomepage {
     @FindBy(css = "#index > section:nth-child(4) > div.cta > a")
     WebElement FurYourOwnGoodCampButton;
 
-    @FindBy(css = "#index > section:nth-child(2) > div.cta > a")
-    WebElement ViewMoreChewyProdCampButton;
+    @FindBy(css = "#index > section:nth-child(4) > div.cta > a")
+    WebElement ViewMoreChewyButton;
 
     @FindBy(css = "#collection-main > ul.pagination.clearfix > li:nth-child(3) > a")
     WebElement NextButton;
@@ -81,8 +81,8 @@ public class ShopHomepage {
     @FindBy(css = "#collection-main > ul.pagination.clearfix > li:nth-child(1) > a")
     WebElement PrevButton;
 
-    @FindBy(css = "#index > section:nth-child(4) > div.cta > a")
-    WebElement ViewMoreBreedEmbroideryButton;
+    @FindBy(css = "#index > section:nth-child(2) > div.cta > a")
+    WebElement ViewMoreBeeHoundButton;
 
     @FindBy(css = "#index > section:nth-child(3) > div.cta > a")
     WebElement ViewMoreNationalChamp2020;
@@ -160,13 +160,12 @@ public class ShopHomepage {
 
     // Methods
 
-    public void checkTopHeaderPromoBar() throws InterruptedException {
+    public void checkTopHeaderPromoBar() {
 
         this.TopHeaderPromoBar.isDisplayed();
         this.TopHeaderPromoBar.click();
-        sleep(1000);
         WebDriverWait wait = new WebDriverWait(driver, 5);
-        wait.until(ExpectedConditions.urlContains("https://www.akc.org/dog-owners/coronavirus-covid19-outbreak-resources-dog-lovers"));
+        wait.until(ExpectedConditions.urlContains("/pages/shippingpolicies"));
 
     }
 
@@ -260,7 +259,7 @@ public class ShopHomepage {
     public void checkQuickView() {
 
         Actions actions = new Actions(driver);
-        actions.moveToElement(BaseballCap).perform();
+        actions.moveToElement(BeeHoundProduct).perform();
         assert(QuickViewButton.isEnabled());
         this.QuickViewButton.click();
         this.QuickViewModal.isDisplayed();
@@ -279,17 +278,14 @@ public class ShopHomepage {
 
     }
 
-    public void ViewMoreChewyProdCampButton() throws InterruptedException {
+    public void ViewMoreChewyProdCampButton() {
 
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("scroll(0, 1000);");
-        this.ViewMoreChewyProdCampButton.isDisplayed();
-        this.ViewMoreChewyProdCampButton.click();
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(ViewMoreChewyButton));
+        this.ViewMoreChewyButton.click();
+        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         wait.until(ExpectedConditions.urlContains("chewy"));
-        jse.executeScript("scroll(0, 6800);");
-        wait.until(ExpectedConditions.visibilityOf(NextButton));
+        wait.until(ExpectedConditions.elementToBeClickable(NextButton));
         this.NextButton.click();
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         wait.until(ExpectedConditions.urlContains("page=2"));
@@ -310,14 +306,14 @@ public class ShopHomepage {
 
     }
 
-    public void ViewMoreBreedEmbroideryButton() {
+    public void ViewMoreBeeHoundButton() {
 
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("scroll(0, 1500);");
-        this.ViewMoreBreedEmbroideryButton.isDisplayed();
-        this.ViewMoreBreedEmbroideryButton.click();
+        this.ViewMoreBeeHoundButton.isDisplayed();
+        this.ViewMoreBeeHoundButton.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.urlContains("/collections/dog-lovers-human-apparel-embroidered-products"));
+        wait.until(ExpectedConditions.urlContains("/collections/dog-lovers-human-apparel-bee-and-the-hound"));
 
     }
 

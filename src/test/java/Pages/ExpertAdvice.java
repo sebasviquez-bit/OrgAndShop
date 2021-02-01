@@ -2,10 +2,8 @@ package Pages;
 
 import Helpers.DriverHelper;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -287,351 +285,277 @@ public class ExpertAdvice {
     }
 
 
-    //Click methods for expertAdvice Menu tabs
+    //Click methods for ExpertAdvice Menu tabs
 
 
-    public void Clickartexpadv() throws InterruptedException {
+    public void Clickartexpadv() {
 
         this.menuexpadv.click();
-        sleep(1000);
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(artexpadv));
         this.artexpadv.isDisplayed();
         this.artexpadv.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        this.artexpadvElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(artexpadvElement));
 
     }
 
-    public void Clickallcateg() throws InterruptedException {
+    public void Clickallcateg() {
 
         this.menuexpadv.click();
-        sleep(1000);
-        this.allcateg.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(allcateg));
         this.allcateg.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.allcategElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(allcategElement));
 
     }
 
-    public void Clickdogbreeding() throws InterruptedException {
+    public void Clickdogbreeding() {
 
         this.menuexpadv.click();
-        sleep(1000);
-        this.dogbreeding.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(dogbreeding));
         this.dogbreeding.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.dogbreedingElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(dogbreedingElement));
 
     }
 
-    public void Clickgrooming() throws InterruptedException {
+    public void Clickgrooming() {
 
         this.menuexpadv.click();
-        sleep(1000);
-        this.grooming.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(grooming));
         this.grooming.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(2000);
-        this.groomingElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(groomingElement));
 
     }
 
-    public void Clickhealth() throws InterruptedException {
+    public void Clickhealth() {
 
         this.menuexpadv.click();
-        sleep(1000);
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"expert-advice\"]/div[2]/div/div/div[1]/ul/li[4]/a")));
-        this.health.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(health));
         this.health.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(healthElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        this.healthElement.isDisplayed();
 
     }
 
-    public void Clickhomeliving() throws InterruptedException {
+    public void Clickhomeliving() {
 
         this.menuexpadv.click();
-        sleep(1000);
-        this.homeliving.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(homeliving));
         this.homeliving.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.homelivingElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(homelivingElement));
 
     }
 
-    public void Clicklifestyle() throws InterruptedException {
+    public void Clicklifestyle() {
 
         this.menuexpadv.click();
-        sleep(1000);
-        this.lifestyle.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(lifestyle));
         this.lifestyle.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.lifestyleElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(lifestyleElement));
 
     }
 
-    public void Clicknews() throws InterruptedException {
+    public void Clicknews() {
 
         this.menuexpadv.click();
-        sleep(1000);
-        this.news.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(news));
         this.news.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(newsElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.newsElement.isDisplayed();
 
     }
 
-    public void Clicknutrition() throws InterruptedException {
+    public void Clicknutrition() {
 
         this.menuexpadv.click();
-        sleep(1000);
-        this.nutrition.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(nutrition));
+        wait.until(ExpectedConditions.elementToBeClickable(nutrition));
         this.nutrition.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(nutritionElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.nutritionElement.isDisplayed();
 
     }
 
-    public void Clickpuppyinfo() throws InterruptedException {
+    public void Clickpuppyinfo() {
 
         this.menuexpadv.click();
-        sleep(1000);
-        this.puppyinfo.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(puppyinfo));
+        wait.until(ExpectedConditions.elementToBeClickable(puppyinfo));
         this.puppyinfo.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.puppyinfoElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(puppyinfoElement));
 
     }
 
-    public void Clicksports() throws InterruptedException {
+    public void Clicksports() {
 
         this.menuexpadv.click();
-        sleep(1000);
-        this.sports.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(sports));
         this.sports.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.sportsElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(sportsElement));
 
     }
 
-    public void Clicktraining() throws InterruptedException {
+    public void Clicktraining() {
 
         this.menuexpadv.click();
-        sleep(1000);
-        this.training.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(training));
         this.training.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.trainingElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(trainingElement));
 
     }
 
-    public void Clickvetcorner() throws InterruptedException {
+    public void Clickvetcorner() {
 
         this.menuexpadv.click();
-        sleep(1000);
-        this.vetcorner.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(vetcorner));
         this.vetcorner.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(vetcornerElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.vetcornerElement.isDisplayed();
 
     }
 
-    public void ClickfindmatchOnExpAdvMenu() throws InterruptedException {
+    public void ClickfindmatchOnExpAdvMenu() {
 
         this.menuexpadv.click();
-        sleep(1000);
-        this.findmatch.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(findmatch));
         this.findmatch.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.findmatchElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(findmatchElement));
 
     }
 
-    public void Clickdognamefind() throws InterruptedException {
+    public void Clickdognamefind() {
 
         this.menuexpadv.click();
-        sleep(1000);
-        this.dognamefind.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(dognamefind));
         this.dognamefind.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.dognamefindElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(dognamefindElement));
 
     }
 
-    public void Clickcandogeat() throws InterruptedException {
+    public void Clickcandogeat()  {
 
         this.menuexpadv.click();
-        sleep(1000);
-        this.candogeat.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(candogeat));
         this.candogeat.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.candogeatElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(candogeatElement));
 
     }
 
-    public void Clickakctv() throws InterruptedException {
+    public void Clickakctv() {
 
         this.menuexpadv.click();
-        sleep(1000);
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"expert-advice\"]/div[4]/div/div/div/ul/li[1]/a")));
-        this.akctv.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(akctv));
         this.akctv.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
-        final Boolean until = wait.until(ExpectedConditions.urlToBe("https://akc.tv/"));
+        wait.until(ExpectedConditions.urlToBe("https://akc.tv/"));
 
     }
 
-    public void Clickakcmag() throws InterruptedException {
+    public void Clickakcmag() {
 
         this.menuexpadv.click();
-        sleep(1000);
-        this.akcmag.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(akcmag));
+        wait.until(ExpectedConditions.elementToBeClickable(akcmag));
         this.akcmag.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.akcmagElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(akcmagElement));
 
     }
 
-    public void Clicknewsletter() throws InterruptedException {
+    public void Clicknewsletter() {
 
         this.menuexpadv.click();
-        sleep(1000);
-        this.newsletter.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(newsletter));
         this.newsletter.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.newsletterElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(newsletterElement));
 
     }
 
-    public void Clickpresscenter() throws InterruptedException {
+    public void Clickpresscenter() {
 
         this.menuexpadv.click();
-        sleep(1000);
-        this.presscenter.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(presscenter));
         this.presscenter.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.presscenterElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(presscenterElement));
 
     }
 
-    public void Clickakcdetection() throws InterruptedException {
+    public void Clickakcdetection() {
 
         this.menuexpadv.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#expert-advice > div:nth-child(4) > div > div > div > ul > li:nth-child(5) > a")));
-        Actions actions = new Actions(driver);
-        actions.moveToElement(akceducation).perform();
-        assert(akcdetection.isEnabled());
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(akcdetection));
         this.akcdetection.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#page-title > div > h1")));
-        //this.akcdetectionElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(akcdetectionElement));
 
     }
 
-    public void Clickakccanine() throws InterruptedException {
+    public void Clickakccanine() {
 
         this.menuexpadv.click();
-        sleep(1000);
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#expert-advice > div:nth-child(4) > div > div > div > ul > li:nth-child(6) > a")));
-        this.akccanine.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(akccanine));
         this.akccanine.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
-        final Boolean until = wait.until(ExpectedConditions.urlContains("https://www.caninecollege.akc.org/"));
+        wait.until(ExpectedConditions.urlContains("https://www.caninecollege.akc.org/"));
 
     }
 
-    public void Clickgovernment() throws InterruptedException {
+    public void Clickgovernment() {
 
         this.menuexpadv.click();
-        sleep(1000);
-        this.government.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(government));
         this.government.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(governmentElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.governmentElement.isDisplayed();
 
     }
 
-    public void Clickakceducation() throws InterruptedException {
+    public void Clickakceducation() {
 
         this.menuexpadv.click();
-        Actions actions = new Actions(driver);
-        actions.moveToElement(akceducation).perform();
-        assert(akceducation.isEnabled());
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#expert-advice > div:nth-child(4) > div > div > div > ul > li:nth-child(8) > a")));
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(akceducation));
         this.akceducation.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.akceducationElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(akceducationElement));
 
     }
 
-    public void Clickakclibrary() throws InterruptedException {
+    public void Clickakclibrary() {
 
         this.menuexpadv.click();
-        sleep(1000);
-        this.akclibrary.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(akclibrary));
         this.akclibrary.click();
-        sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        this.akclibraryElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(akclibraryElement));
 
     }
 
     public void SubscriptionForm () {
 
         this.menuexpadv.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#expert-advice > div:nth-child(4) > div > div > div > ul > li:nth-child(3) > a")));
-        Actions actions = new Actions(driver);
-        actions.moveToElement(newsletter).perform();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(newsletter));
         this.newsletter.click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("body > main > div > div.bgc-white.cmw > div > div > div.subscription__page-header-container > h1")));
-        this.newsletterElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(newsletterElement));
         this.SubsFormFirstName.sendKeys("Sebas");
         this.SubsFormLastName.sendKeys("Viquez");
         this.SubsFormEmail.sendKeys("sebas.viquez@gmail.com");
@@ -653,78 +577,63 @@ public class ExpertAdvice {
     //Articles methods >
 
 
-    public void allcategArticle() throws InterruptedException {
+    public void allcategArticle() {
 
         this.menuexpadv.click();
-        sleep(1000);
-        this.allcateg.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(allcateg));
         this.allcateg.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.visibilityOf(allcateg));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("body > div:nth-child(6) > div.page-container > div.page-layout > main > div.my4 > form")));
 
     }
 
-    public void dogbreedArticle() throws InterruptedException {
+    public void dogbreedArticle() {
 
         this.menuexpadv.click();
-        sleep(1000);
-        this.dogbreeding.isDisplayed();
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("scroll(512, 136);");
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(dogbreeding));
         this.dogbreeding.click();
-        sleep(1000);
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
 
     }
 
-    public void healthArticle() throws InterruptedException {
+    public void healthArticle() {
 
         this.menuexpadv.click();
-        sleep(1000);
-        this.health.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(health));
         this.health.click();
-        sleep(1000);
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(alternativeMed));
         this.alternativeMed.click();
-        wait.until(ExpectedConditions.urlContains("akc.org/expert-advice/health/alternative-medicine/"));
+        wait.until(ExpectedConditions.urlContains("expert-advice/health/alternative-medicine/"));
 
     }
 
     public void newsArticle() throws InterruptedException {
 
         this.menuexpadv.click();
-        sleep(1000);
-        this.news.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(news));
         this.news.click();
         sleep(1000);
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
-        Actions actions = new Actions(driver);
-        actions.moveToElement(editorPick).perform();
-        assert(editorPick.isEnabled());
+        wait.until(ExpectedConditions.visibilityOf(editorPick));
         this.editorPick.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.urlContains("akc.org/expert-advice/news/?editor_pick%5B%5D=editor-pick"));
+        wait.until(ExpectedConditions.urlContains("/expert-advice/news/?editor_pick%5B%5D=editor-pick"));
 
     }
 
     public void HomelivingArticle() throws InterruptedException {
 
         this.menuexpadv.click();
-        sleep(1000);
-        this.homeliving.isDisplayed();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#expert-advice > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(5) > a")));
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(homeliving));
         this.homeliving.click();
         sleep(1000);
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
         //All elements are check with Eyes Applitools
 
     }
@@ -732,12 +641,11 @@ public class ExpertAdvice {
     public void lifestyleArticle() throws InterruptedException {
 
         this.menuexpadv.click();
-        sleep(1000);
-        this.lifestyle.isDisplayed();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(lifestyle));
         this.lifestyle.click();
         sleep(1000);
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
         //All elements are check with Eyes method
     }
 

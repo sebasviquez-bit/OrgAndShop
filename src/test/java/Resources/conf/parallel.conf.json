@@ -4,24 +4,40 @@
   "key": "szDfCvzz6f8QZE54aXkN",
 
   "capabilities": {
-    "build": ".ORG2",
-    "name": "parallel_tests",
-    "browserstack.debug": true
+    "build": ".ORG",
+    "name": "parallel_tests_multithread",
+    "browserstack.debug": true,
+    "browserstack.local": "false",
+    "browserstack.tunnel": "false",
+    "browserstack.selenium_version": "3.141.59",
+    "browserstack.idleTimeout": 30
   },
 
   "environments": {
-    "chrome": {
-      "browser": "chrome"
-    },
+
     "firefox": {
-      "browser": "firefox"
+      "platform": "Windows",
+      "browser": "firefox",
+      "browser_version": "84.0",
+      "browserstack.geckodriver": "0.28.0"
     },
+
+    "chrome": {
+      "os": "Windows",
+      "os_version": "10",
+      "browser": "chrome",
+      "browser_version": "87.0.4280.88",
+      "browserstack.chrome.driver": "87.0.4280.20"
+    },
+
     "safari": {
-      "os": "OS X",
-      "browser": "safari"
-    },
-    "ie": {
-      "browser": "internet explorer"
+      "platform": "Mac",
+      "browser": "Safari",
+      "browser_version": "13.0.3",
+      "browserstack.safari.driver": "2.45"
+
     }
+
   }
+
 }
