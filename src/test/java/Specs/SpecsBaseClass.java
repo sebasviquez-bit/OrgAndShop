@@ -10,6 +10,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import java.lang.reflect.Method;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 
@@ -22,20 +24,20 @@ public class SpecsBaseClass extends SuperBaseClass {
         public void InitializeTests(Method method) {
 
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("headless");
+        //options.addArguments("headless");
 
         //Map<String, String> mobileEmulation = new HashMap<>();
         //mobileEmulation.put("deviceName", "iPhone 8");
         //options.setExperimentalOption("mobileEmulation", mobileEmulation);
 
         //driver = getDriver(method.getNam());
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(options);
         //driver = new FirefoxDriver();
         //driver = new InternetExplorerDriver();
         //driver = new SafariDriver();
 
-        InitHelpers("https://test-web.akc.org/");
-        //InitHelpers("https://www.akc.org/?test=true");
+        //InitHelpers("https://test-web.akc.org/");
+        InitHelpers("https://www.akc.org/?test=true");
         //InitHelpers("https://devshop.akc.org/");
         //InitHelpers("https://shop.akc.org/?test=true");
         InitPages();

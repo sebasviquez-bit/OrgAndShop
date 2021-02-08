@@ -1,5 +1,6 @@
 package Pages;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -101,7 +102,7 @@ public class ProdServ {
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[2]/div/div/div[2]/ul/li[1]/a")
     WebElement healthgen;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[2]/div/div/div[2]/ul/li[1]/ul/li[1]/a")
+    @FindBy(css = "#product-services > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(1) > ul > li:nth-child(1) > a")
     WebElement findgroom;
 
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[2]/div/div/div[2]/ul/li[1]/ul/li[2]/a")
@@ -636,7 +637,6 @@ public class ProdServ {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(akcvete));
         wait.until(ExpectedConditions.elementToBeClickable(akcvete));
         this.akcvete.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
@@ -769,7 +769,9 @@ public class ProdServ {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(cgc));
+        wait.until(ExpectedConditions.elementToBeClickable(cgc));
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView();", cgc);
         this.cgc.click();
         wait.until(ExpectedConditions.visibilityOf(whatiscgcMenu));
 

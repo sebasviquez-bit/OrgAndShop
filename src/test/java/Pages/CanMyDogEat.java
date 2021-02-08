@@ -420,6 +420,7 @@ public class CanMyDogEat {
         wait.until(ExpectedConditions.elementToBeClickable(findmatch));
         this.findmatch.click();
         wait.until(ExpectedConditions.elementToBeClickable(canmydog));
+        HiddeBanner();
         this.canmydog.click();
         wait.until(ExpectedConditions.visibilityOf(no1));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");

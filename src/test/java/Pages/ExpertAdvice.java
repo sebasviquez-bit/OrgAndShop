@@ -2,6 +2,7 @@ package Pages;
 
 import Helpers.DriverHelper;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -242,6 +243,9 @@ public class ExpertAdvice {
     @FindBy(css = "#subscription__modal-msg-1")
     WebElement SubsFormConfirmation;
 
+    @FindBy(css = "body > div.bcpNotificationBar.bcpNotificationBarStickyBottom")
+    WebElement BottomBanner;
+
 
     DriverHelper driverHelper;
 
@@ -333,7 +337,7 @@ public class ExpertAdvice {
 
         this.menuexpadv.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(health));
+        wait.until(ExpectedConditions.elementToBeClickable(health));
         this.health.click();
         wait.until(ExpectedConditions.visibilityOf(healthElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
@@ -556,6 +560,7 @@ public class ExpertAdvice {
         wait.until(ExpectedConditions.visibilityOf(newsletter));
         this.newsletter.click();
         wait.until(ExpectedConditions.visibilityOf(newsletterElement));
+        HiddeBanner();
         this.SubsFormFirstName.sendKeys("Sebas");
         this.SubsFormLastName.sendKeys("Viquez");
         this.SubsFormEmail.sendKeys("sebas.viquez@gmail.com");
@@ -648,5 +653,12 @@ public class ExpertAdvice {
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         //All elements are check with Eyes method
     }
+
+    public void HiddeBanner() {
+
+        JavascriptExecutor jse = (JavascriptExecutor)driver;
+        jse.executeScript("arguments[0].style.visibility='hidden'", BottomBanner);
+    }
+
 
 }

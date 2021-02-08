@@ -38,7 +38,7 @@ public class ClubsDelegates {
     @FindBy(xpath = "//*[@id=\"clubs-delegates\"]/div[2]/div/div/div/ul/li[2]/a")
     WebElement formclub;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[5]/div[2]/div/div/div/ul/li[3]/a")
+    @FindBy(css = "#clubs-delegates > div:nth-child(2) > div > div > div > ul > li:nth-child(3) > a")
     WebElement clubdevelop;
 
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[5]/div[2]/div/div/div/ul/li[4]/a")
@@ -279,7 +279,6 @@ public class ClubsDelegates {
         this.clubdevelop.click();
         wait.until(ExpectedConditions.visibilityOf(clubdevelopElement));
         this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        this.clubdevelopElement.isDisplayed();
 
     }
 
@@ -344,9 +343,11 @@ public class ClubsDelegates {
         this.clubdelegat.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(boardmin));
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView();", boardmin);
         this.boardmin.click();
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
         wait.until(ExpectedConditions.visibilityOf(boardminElement));
+        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
 
     }
 
@@ -384,7 +385,7 @@ public class ClubsDelegates {
 
         this.clubdelegat.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(rolakcdel));
+        wait.until(ExpectedConditions.elementToBeClickable(rolakcdel));
         this.rolakcdel.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://www.youtube.com/"));

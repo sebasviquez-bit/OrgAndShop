@@ -1,5 +1,6 @@
 package Pages;
 import Helpers.DriverHelper;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -298,7 +299,8 @@ public class CompareBreeds {
     @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[39]/div[5]/a")
     WebElement findpuppy5;
 
-    DriverHelper driverHelper;
+    @FindBy(css = "body > div.bcpNotificationBar.bcpNotificationBarStickyBottom")
+    WebElement BottomBanner;
 
     WebDriver driver;
 
@@ -317,6 +319,7 @@ public class CompareBreeds {
         this.breedscompa.click();
         wait.until(ExpectedConditions.visibilityOf(select1));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
+        HiddeBanner();
         this.select1.isDisplayed();
         this.select1.click();
         wait.until(ExpectedConditions.visibilityOf(affens));
@@ -357,8 +360,8 @@ public class CompareBreeds {
         //this.group1.isDisplayed();
         //this.group2.isDisplayed();
         //this.group3.isDisplayed();
-        this.group4.isDisplayed();
-        this.group5.isDisplayed();
+        //this.group4.isDisplayed();
+        //this.group5.isDisplayed();
         this.size.isDisplayed();
         this.size1.isDisplayed();
         this.size2.isDisplayed();
@@ -421,5 +424,12 @@ public class CompareBreeds {
 
     }
 
+    public void HiddeBanner() {
+
+        JavascriptExecutor jse = (JavascriptExecutor)driver;
+        jse.executeScript("arguments[0].style.visibility='hidden'", BottomBanner);
+    }
 
 }
+
+

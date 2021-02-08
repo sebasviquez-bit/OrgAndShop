@@ -409,7 +409,7 @@ public class Homepage {
             driver.switchTo().window(winHandle);
         }
         WebDriverWait wait = new WebDriverWait(driver, 30);
-        wait.until(ExpectedConditions.urlContains("https://apps.apple.com/us/app/akc-tv"));
+        wait.until(ExpectedConditions.urlContains("https://itunes.apple.com/"));
 
     }
 
@@ -768,6 +768,7 @@ public class Homepage {
 
     public void VerifyFindPuppiesicon() {
 
+        HiddeBanner();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.visibilityOf(findpuppyicon));
         this.findpuppyicon.click();

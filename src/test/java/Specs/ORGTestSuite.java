@@ -1553,21 +1553,21 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickperfsport() throws InterruptedException {
+    public void Clickperfsport() {
 
         sportsEvents.Clickperfsport();
 
     }
 
     @Test
-    public void Clickfieldevnthound() throws InterruptedException {
+    public void Clickfieldevnthound() {
 
         sportsEvents.Clickfieldevnthound();
 
     }
 
     @Test
-    public void Clickcourscat() throws InterruptedException {
+    public void Clickcourscat() {
 
         sportsEvents.Clickcourscat();
 
@@ -1609,28 +1609,28 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickspaniels() throws InterruptedException {
+    public void Clickspaniels() {
 
         sportsEvents.Clickspaniels();
 
     }
 
     @Test
-    public void Clicksportsjun() throws InterruptedException {
+    public void Clicksportsjun() {
 
         sportsEvents.Clicksportsjun();
 
     }
 
     @Test
-    public void Clickjunshow() throws InterruptedException {
+    public void Clickjunshow() {
 
         sportsEvents.Clickjunshow();
 
     }
 
     @Test
-    public void Clickjuncomp() throws InterruptedException {
+    public void Clickjuncomp() {
 
         sportsEvents.Clickjuncomp();
 
@@ -1728,7 +1728,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickjudgingres() throws InterruptedException {
+    public void Clickjudgingres() {
 
         sportsEvents.Clickjudgingres();
 
@@ -1964,14 +1964,14 @@ public class ORGTestSuite extends SpecsBaseClass {
     //Breeds Menu Articles tests:
 
 
-    @Test
+    //@Test
     public void puppiesArticle1() throws InterruptedException {
 
         breeds.puppiesArticle1();
 
     }
 
-    @Test
+    //@Test
     public void puppiesArticle2() {
 
         breeds.puppiesArticle2();

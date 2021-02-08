@@ -14,7 +14,7 @@ public class BreedSelector {
     @FindBy(xpath = "//html/body/div[2]/div/div[1]/div/div[2]/nav/a[1]")
     WebElement breedsmenu;
 
-    @FindBy(xpath = "//*[@id=\"dog-breeds\"]/div[2]/div/div/div/ul/li[1]/a/div")
+    @FindBy(css = "#dog-breeds > div:nth-child(2) > div > div > div > ul > li:nth-child(1) > a > div")
     WebElement findmatch;
 
     @FindBy(xpath = "//*[@id=\"get-started\"]")
@@ -302,6 +302,9 @@ public class BreedSelector {
     @FindBy(xpath = "//*[@id=\"activity-level-continue\"]")
     WebElement continue8;
 
+    @FindBy(css = "body > div.bcpNotificationBar.bcpNotificationBarStickyBottom")
+    WebElement BottomBanner;
+
 
     DriverHelper driverHelper;
 
@@ -323,6 +326,7 @@ public class BreedSelector {
         this.findmatch.click();
         wait.until(ExpectedConditions.visibilityOf(getstarted));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
+        HiddeBanner();
         this.getstarted.isDisplayed();
         this.getstarted.click();
         wait.until(ExpectedConditions.visibilityOf(headbreedsel1));
@@ -442,6 +446,7 @@ public class BreedSelector {
         this.findmatch.click();
         wait.until(ExpectedConditions.visibilityOf(getstarted));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
+        HiddeBanner();
         this.getstarted.click();
         wait.until(ExpectedConditions.visibilityOf(currentowndog));
         Actions actions = new Actions(driver);
@@ -510,6 +515,7 @@ public class BreedSelector {
         this.findmatch.click();
         wait.until(ExpectedConditions.visibilityOf(getstarted));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
+        HiddeBanner();
         this.getstarted.click();
         wait.until(ExpectedConditions.visibilityOf(owndogpast));
         Actions actions = new Actions(driver);
@@ -591,5 +597,10 @@ public class BreedSelector {
 
     }
 
+    public void HiddeBanner() {
+
+        JavascriptExecutor jse = (JavascriptExecutor)driver;
+        jse.executeScript("arguments[0].style.visibility='hidden'", BottomBanner);
+    }
 
 }
