@@ -157,6 +157,9 @@ public class Homepage {
     @FindBy(css = "body > div.page-home.bgc-white.cmw > div.page-home__hero-container > div > div.cmw > div > div.interactive-hero__inner > div.interactive-hero__item.three > div > a:nth-child(1) > img")
     WebElement findpuppyicon;
 
+    @FindBy(css = "body > div.page-home.bgc-white.cmw > div.page-home__hero-container > div > div.cmw > div > div.interactive-hero__inner > div.interactive-hero__item.eight > div > a.interactive-anchor")
+    WebElement PetInsuIcon;
+
     @FindBy(xpath = "//*[@id=\"panel-AKC Canine Health Foundation\"]/div/p")
     WebElement akccareval;
 
@@ -657,12 +660,12 @@ public class Homepage {
 
     }
 
-    private void validadd1() {
+    private void validPetInsurance() {
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
         WebDriverWait wait = new WebDriverWait(driver, 30);
-        wait.until(ExpectedConditions.urlContains("shop.akc.org/?utm_source=akc.org&utm_medium=house_display"));
+        wait.until(ExpectedConditions.urlContains("https://www.akcpetinsurance.com/"));
 
     }
 
@@ -790,6 +793,16 @@ public class Homepage {
         wait.until(ExpectedConditions.visibilityOf(akctvicon));
         this.akctvicon.click();
         valid3();
+
+    }
+
+    public void VerifyPetInsuIcon() {
+
+        HiddeBanner();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(PetInsuIcon));
+        this.PetInsuIcon.click();
+        validPetInsurance();
 
     }
 

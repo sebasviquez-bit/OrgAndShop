@@ -472,7 +472,7 @@ public class ProdServ {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(regdown));
+        wait.until(ExpectedConditions.elementToBeClickable(regdown));
         this.regdown.click();
         wait.until(ExpectedConditions.visibilityOf(regdownElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");

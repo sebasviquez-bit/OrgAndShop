@@ -397,6 +397,13 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
+    public void VerifyPetInsuIcon() {
+
+        homepage.VerifyPetInsuIcon();
+
+    }
+
+    @Test
     public void UsabillaFeedback() {
 
         homepage.UsabillaFeedback();
@@ -1378,7 +1385,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clicknatiotrack() throws InterruptedException {
+    public void Clicknatiotrack() {
 
         sportsEvents.Clicknatiotrack();
 
@@ -1609,21 +1616,21 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickspaniels() throws InterruptedException {
+    public void Clickspaniels() {
 
         sportsEvents.Clickspaniels();
 
     }
 
     @Test
-    public void Clicksportsjun() throws InterruptedException {
+    public void Clicksportsjun() {
 
         sportsEvents.Clicksportsjun();
 
     }
 
     @Test
-    public void Clickjunshow() throws InterruptedException {
+    public void Clickjunshow() {
 
         sportsEvents.Clickjunshow();
 
@@ -1756,7 +1763,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickeventcanc() throws InterruptedException {
+    public void Clickeventcanc() {
 
         sportsEvents.Clickeventcanc();
 

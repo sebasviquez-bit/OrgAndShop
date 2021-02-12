@@ -84,7 +84,7 @@ public class SportsEvents {
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[2]/div/div/div[1]/ul/li[2]/a")
     WebElement compsport;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[2]/div/div/div[1]/ul/li[2]/ul/li[1]/a")
+    @FindBy(css = "#sports-events > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(2) > ul > li:nth-child(1) > a")
     WebElement agility;
 
     @FindBy(xpath = "//*[@id=\"sports-events\"]/div[2]/div/div/div[1]/ul/li[2]/ul/li[2]/a")
@@ -141,7 +141,7 @@ public class SportsEvents {
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[2]/div/div/div[2]/ul/li[1]/ul/li[7]/a")
     WebElement scentWork;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[2]/div/div/div[2]/ul/li[1]/ul/li[8]/a")
+    @FindBy(css = "#sports-events > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(1) > ul > li:nth-child(8) > a")
     WebElement spaniels;
 
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[2]/div/div/div[2]/ul/li[2]/a")
@@ -207,7 +207,7 @@ public class SportsEvents {
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[3]/div/div/div/ul/li[9]/a")
     WebElement akcweeklywin;
 
-    @FindBy(xpath = "//*[@id=\"sports-events\"]/div[3]/div/div/div/ul/li[10]/a")
+    @FindBy(css = "#sports-events > div:nth-child(3) > div > div > div > ul > li:nth-child(10) > a")
     WebElement eventcanc;
 
     @FindBy(css = "#sports-events > div:nth-child(3) > div > div > div > ul > li:nth-child(12) > a")
@@ -569,7 +569,7 @@ public class SportsEvents {
 
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(natiotrack));
+        wait.until(ExpectedConditions.elementToBeClickable(natiotrack));
         this.natiotrack.click();
         wait.until(ExpectedConditions.visibilityOf(natiotrackElement));
 
@@ -717,7 +717,7 @@ public class SportsEvents {
 
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(agility));
+        wait.until(ExpectedConditions.elementToBeClickable(agility));
         this.agility.click();
         wait.until(ExpectedConditions.visibilityOf(agilityElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
@@ -914,7 +914,7 @@ public class SportsEvents {
 
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(spaniels));
+        wait.until(ExpectedConditions.elementToBeClickable(spaniels));
         this.spaniels.click();
         wait.until(ExpectedConditions.visibilityOf(spanielsElement));
 

@@ -208,7 +208,7 @@ public class RegisterDog {
     @FindBy(xpath = "//*[@id=\"page-title\"]/div/h1")
     WebElement transownheader;
 
-    @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > div.article-body > div > div > div > p:nth-child(3)")
+    @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > div.article-body > div > div > div")
     WebElement transownbody;
 
     @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > div.article-body > div > div > div > p:nth-child(4) > a")
@@ -679,7 +679,7 @@ public class RegisterDog {
 
         this.register.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(transown));
+        wait.until(ExpectedConditions.elementToBeClickable(transown));
         this.transown.click();
         wait.until(ExpectedConditions.visibilityOf(transownheader));
         wait.until(ExpectedConditions.visibilityOf(transownbody));
@@ -693,7 +693,7 @@ public class RegisterDog {
 
         this.register.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(purcped));
+        wait.until(ExpectedConditions.elementToBeClickable(purcped));
         this.purcped.click();
         wait.until(ExpectedConditions.visibilityOf(purcpedheader));
         wait.until(ExpectedConditions.elementToBeClickable(certpedbut));

@@ -344,7 +344,7 @@ public class ExpertAdvice {
 
         this.menuexpadv.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(homeliving));
+        wait.until(ExpectedConditions.elementToBeClickable(homeliving));
         this.homeliving.click();
         wait.until(ExpectedConditions.visibilityOf(homelivingElement));
 
@@ -511,7 +511,7 @@ public class ExpertAdvice {
 
         this.menuexpadv.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(akccanine));
+        wait.until(ExpectedConditions.elementToBeClickable(akccanine));
         this.akccanine.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://www.caninecollege.akc.org/"));
