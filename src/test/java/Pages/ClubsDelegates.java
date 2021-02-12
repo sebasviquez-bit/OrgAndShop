@@ -65,7 +65,7 @@ public class ClubsDelegates {
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[5]/div[3]/div/div/div/ul/li[5]/a")
     WebElement delegatestan;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[5]/div[3]/div/div/div/ul/li[6]/a")
+    @FindBy(css = "#clubs-delegates > div:nth-child(3) > div > div > div > ul > li:nth-child(6) > a")
     WebElement perspective;
 
     @FindBy(xpath = "//*[@id=\"clubs-delegates\"]/div[3]/div/div/div/ul/li[7]/a")
@@ -365,7 +365,7 @@ public class ClubsDelegates {
 
         this.clubdelegat.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(perspective));
+        wait.until(ExpectedConditions.elementToBeClickable(perspective));
         this.perspective.click();
         wait.until(ExpectedConditions.visibilityOf(perspectiveElement));
 

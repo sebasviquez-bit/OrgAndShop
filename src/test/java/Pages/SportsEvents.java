@@ -138,7 +138,7 @@ public class SportsEvents {
     @FindBy(css = "#sports-events > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(1) > ul > li:nth-child(6) > a")
     WebElement retrievers;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[2]/div/div/div[2]/ul/li[1]/ul/li[7]/a")
+    @FindBy(css = "#sports-events > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(1) > ul > li:nth-child(7) > a")
     WebElement scentWork;
 
     @FindBy(css = "#sports-events > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(1) > ul > li:nth-child(8) > a")
@@ -207,7 +207,7 @@ public class SportsEvents {
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[3]/div/div/div/ul/li[9]/a")
     WebElement akcweeklywin;
 
-    @FindBy(xpath = "//*[@id=\"sports-events\"]/div[3]/div/div/div/ul/li[10]/a")
+    @FindBy(css = "#sports-events > div:nth-child(3) > div > div > div > ul > li:nth-child(10) > a")
     WebElement eventcanc;
 
     @FindBy(css = "#sports-events > div:nth-child(3) > div > div > div > ul > li:nth-child(12) > a")
@@ -218,7 +218,7 @@ public class SportsEvents {
 
     //After click Elements >
 
-    @FindBy(xpath = "//*[@id=\"page-title\"]/h1")
+    @FindBy(css = "#page-title > h1")
     WebElement introdogElement;
 
     @FindBy(css = "body > div.landing-page > div.section-title.section-title--top-spacing.section-title--center > h2")
@@ -416,6 +416,9 @@ public class SportsEvents {
     @FindBy(xpath = "//html/body/div[5]/div/div[2]/aside/div/nav/ul/li[4]/a")
     WebElement retrieversNat;
 
+    @FindBy(css = "body > div.bcpNotificationBar.bcpNotificationBarStickyBottom")
+    WebElement BottomBanner;
+
 
     //Driver
     WebDriver driver;
@@ -508,7 +511,7 @@ public class SportsEvents {
 
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(introdog));
+        wait.until(ExpectedConditions.elementToBeClickable(introdog));
         this.introdog.click();
         wait.until(ExpectedConditions.visibilityOf(introdogElement));
 
@@ -1155,6 +1158,7 @@ public class SportsEvents {
 
     public void Clickakccontact() {
 
+        HiddeBanner();
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(akccontact));
@@ -1213,6 +1217,12 @@ public class SportsEvents {
         driver.get(this.driver.getCurrentUrl() + "?test=true");
         sleep(1000);
 
+    }
+
+    public void HiddeBanner() {
+
+        JavascriptExecutor jse = (JavascriptExecutor)driver;
+        jse.executeScript("arguments[0].style.visibility='hidden'", BottomBanner);
     }
 
 }

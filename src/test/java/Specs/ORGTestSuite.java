@@ -397,6 +397,14 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
+    public void VerifyPetInsuIcon() {
+
+        homepage.VerifyPetInsuIcon();
+
+    }
+    //
+
+    @Test
     public void UsabillaFeedback() {
 
         homepage.UsabillaFeedback();
@@ -1312,22 +1320,22 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
-    public void Clickseall() throws InterruptedException {
+    //@Test  This Menu was removed from Prod&Serv
+    public void Clickseall() {
 
         prodserv.Clickseall();
 
     }
 
     @Test
-    public void Clickbrowseserv() throws InterruptedException {
+    public void Clickbrowseserv() {
 
         prodserv.Clickbrowseserv();
 
     }
 
     @Test
-    public void Clickakcshop() throws InterruptedException {
+    public void Clickakcshop() {
 
         prodserv.Clickakcshop();
 
@@ -1595,7 +1603,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickretrievers() throws InterruptedException {
+    public void Clickretrievers() {
 
         sportsEvents.Clickretrievers();
 
@@ -1756,7 +1764,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickeventcanc() throws InterruptedException {
+    public void Clickeventcanc() {
 
         sportsEvents.Clickeventcanc();
 

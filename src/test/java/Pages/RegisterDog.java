@@ -209,7 +209,7 @@ public class RegisterDog {
     @FindBy(xpath = "//*[@id=\"page-title\"]/div/h1")
     WebElement transownheader;
 
-    @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > div.article-body > div > div > div > p:nth-child(3)")
+    @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > div.article-body > div > div > div")
     WebElement transownbody;
 
     @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > div.article-body > div > div > div > p:nth-child(4) > a")
@@ -509,7 +509,7 @@ public class RegisterDog {
 
         this.register.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(regdog));
+        wait.until(ExpectedConditions.elementToBeClickable(regdog));
         this.regdog.click();
         wait.until(ExpectedConditions.elementToBeClickable(other));
         HiddeBanner();
@@ -712,7 +712,7 @@ public class RegisterDog {
 
         this.register.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(transown));
+        wait.until(ExpectedConditions.elementToBeClickable(transown));
         HiddeBanner();
         this.transown.click();
         wait.until(ExpectedConditions.visibilityOf(transownheader));

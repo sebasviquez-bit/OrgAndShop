@@ -1,6 +1,7 @@
 package Pages;
 import Helpers.DriverHelper;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -179,8 +180,11 @@ public class DogName {
     @FindBy(xpath = "//html/body/main/div/section/div[4]/ul/li[6]/button")
     WebElement but6;
 
-    DriverHelper driverHelper;
+    @FindBy(css = "body > div.bcpNotificationBar.bcpNotificationBarStickyBottom")
+    WebElement BottomBanner;
 
+
+    //Driver
     WebDriver driver;
 
     // Constructor
@@ -189,7 +193,7 @@ public class DogName {
         PageFactory.initElements(driver,this);
     }
 
-
+    //Methods
 
     public void DogNameVerify() {
 
@@ -328,4 +332,9 @@ public class DogName {
 
     }
 
+    public void HiddeBanner() {
+
+        JavascriptExecutor jse = (JavascriptExecutor)driver;
+        jse.executeScript("arguments[0].style.visibility='hidden'", BottomBanner);
+    }
 }

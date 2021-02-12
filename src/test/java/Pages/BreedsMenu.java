@@ -374,7 +374,6 @@ public class BreedsMenu {
         this.menuregdog.click();
         wait.until(ExpectedConditions.visibilityOf(menuregdogElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        this.menuregdogElement.isDisplayed();
 
     }
 
