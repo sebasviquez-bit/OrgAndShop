@@ -1,6 +1,7 @@
 package Pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -681,9 +682,7 @@ public class RegisterDog {
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(transown));
         this.transown.click();
-        wait.until(ExpectedConditions.visibilityOf(transownheader));
-        wait.until(ExpectedConditions.visibilityOf(transownbody));
-        wait.until(ExpectedConditions.visibilityOf(transownbut));
+        wait.until(ExpectedConditions.elementToBeClickable(transownbut));
         this.transownbut.click();
         newWindow();
 
@@ -708,6 +707,8 @@ public class RegisterDog {
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(purcped));
         this.purcped.click();
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView();", onlinesearButton);
         wait.until(ExpectedConditions.elementToBeClickable(onlinesearButton));
         this.onlinesearButton.click();
         newWindow();

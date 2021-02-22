@@ -142,10 +142,10 @@ public class Homepage {
     @FindBy(css = "#home__good-works-text-link")
     WebElement careicon;
 
-    @FindBy(css = "body > div.page-home.bgc-white.cmw > div.page-home__hero-container > div > div.cmw > div > div.interactive-hero__inner > div.interactive-hero__item.six > div > a:nth-child(1) > img")
+    @FindBy(css = "body > div.page-home.bgc-white.cmw > div.page-home__hero-container > div > div.cmw > div > div.interactive-hero__inner > div.interactive-hero__item.seven > div > a.interactive-hero__image-wrap")
     WebElement shopicon;
 
-    @FindBy(css = "body > div.page-home.bgc-white.cmw > div.page-home__hero-container > div > div.cmw > div > div.interactive-hero__inner > div.interactive-hero__item.eight > div > a:nth-child(1) > img")
+    @FindBy(css = "body > div.page-home.bgc-white.cmw > div.page-home__hero-container > div > div.cmw > div > div.interactive-hero__inner > div.interactive-hero__item.six > div > a.interactive-anchor")
     WebElement akctvicon;
 
     @FindBy(css = "body > div.page-home.bgc-white.cmw > div.page-home__hero-container > div > div.cmw > div > div.interactive-hero__inner > div.interactive-hero__item.seven > div > a.interactive-anchor")
@@ -753,17 +753,17 @@ public class Homepage {
 
         HiddeBanner();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(sportsicon));
+        wait.until(ExpectedConditions.elementToBeClickable(sportsicon));
         this.sportsicon.click();
-        wait.until(ExpectedConditions.visibilityOf(sportsval));
+        valid2();
 
     }
 
-    public void VerifyAKCCareicon() {
+    public void VerifyAKCCareicon() {  //THIS ICON WAS REMOVED FROM HOMEPAGE 02/13/21
 
         HiddeBanner();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(careicon));
+        wait.until(ExpectedConditions.elementToBeClickable(careicon));
         this.careicon.click();
         wait.until(ExpectedConditions.visibilityOf(akccareval));
 
@@ -789,8 +789,9 @@ public class Homepage {
 
     public void VerifyAKCTVicon() {
 
+        HiddeBanner();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(akctvicon));
+        wait.until(ExpectedConditions.elementToBeClickable(akctvicon));
         this.akctvicon.click();
         valid3();
 
@@ -919,6 +920,7 @@ public class Homepage {
         jse.executeScript("scroll(0, 1200)");
         WebDriverWait wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("/html[1]/body[1]/div[4]/div[4]/div[1]/div[1]/iframe[1]")));
+        wait.until(ExpectedConditions.elementToBeClickable(akctvimg3));
         this.akctvimg3.click();
         validapple();
 

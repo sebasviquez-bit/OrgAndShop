@@ -374,7 +374,7 @@ public class ClubsDelegates {
 
         this.clubdelegat.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(akcgazette));
+        wait.until(ExpectedConditions.elementToBeClickable(akcgazette));
         this.akcgazette.click();
         wait.until(ExpectedConditions.visibilityOf(akcgazetteElement));
 
@@ -446,7 +446,7 @@ public class ClubsDelegates {
 
         this.clubdelegat.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(overcollec));
+        wait.until(ExpectedConditions.elementToBeClickable(overcollec));
         this.overcollec.click();
         wait.until(ExpectedConditions.visibilityOf(overcollecElement));
 
@@ -467,7 +467,7 @@ public class ClubsDelegates {
 
         this.clubdelegat.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(searchlib));
+        wait.until(ExpectedConditions.elementToBeClickable(searchlib));
         this.searchlib.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("http://a40015.eos-intl.net/"));
@@ -478,7 +478,7 @@ public class ClubsDelegates {
 
         this.clubdelegat.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(howtovisit));
+        wait.until(ExpectedConditions.elementToBeClickable(howtovisit));
         this.howtovisit.click();
         wait.until(ExpectedConditions.visibilityOf(howtovisitElement));
 

@@ -254,7 +254,7 @@ public class BreedsMenu {
 
         this.menubreeds.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(findmatch));
+        wait.until(ExpectedConditions.elementToBeClickable(findmatch));
         this.findmatch.click();
         wait.until(ExpectedConditions.visibilityOf(findmatchElement));
 

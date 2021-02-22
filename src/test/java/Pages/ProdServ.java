@@ -71,7 +71,7 @@ public class ProdServ {
     @FindBy(css = "#product-services > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(2) > a")
     WebElement finddog;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[2]/div/div/div[1]/ul/li[2]/ul/li[1]/a")
+    @FindBy(css = "#product-services > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(2) > ul > li:nth-child(1) > a")
     WebElement finpuppy;
 
     @FindBy(css = "#product-services > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(2) > ul > li:nth-child(2) > a")
@@ -107,7 +107,7 @@ public class ProdServ {
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[2]/div/div/div[2]/ul/li[1]/ul/li[2]/a")
     WebElement akcsafe;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[2]/div/div/div[2]/ul/li[1]/ul/li[3]/a")
+    @FindBy(css = "#product-services > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(1) > ul > li:nth-child(3) > a")
     WebElement akcpet;
 
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[2]/div/div/div[2]/ul/li[1]/ul/li[4]/a")
@@ -342,7 +342,7 @@ public class ProdServ {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(trainingprod));
+        wait.until(ExpectedConditions.elementToBeClickable(trainingprod));
         this.trainingprod.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://shop.akc.org/"));
@@ -420,7 +420,7 @@ public class ProdServ {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(akccomp));
+        wait.until(ExpectedConditions.elementToBeClickable(akccomp));
         this.akccomp.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://www.apps.akc.org/apps/"));
@@ -451,7 +451,7 @@ public class ProdServ {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(reglitter));
+        wait.until(ExpectedConditions.elementToBeClickable(reglitter));
         this.reglitter.click();
         wait.until(ExpectedConditions.visibilityOf(reglitterRadiobutton));
 
@@ -549,7 +549,7 @@ public class ProdServ {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(cgc));
+        wait.until(ExpectedConditions.elementToBeClickable(cgc));
         this.cgc.click();
         wait.until(ExpectedConditions.visibilityOf(cgcElement));
 
@@ -570,7 +570,7 @@ public class ProdServ {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait (driver, 20);
-        wait.until(ExpectedConditions.visibilityOf(findtrainclub));
+        wait.until(ExpectedConditions.elementToBeClickable(findtrainclub));
         this.findtrainclub.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://webapps.akc.org"));
@@ -625,7 +625,7 @@ public class ProdServ {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(akcpet));
+        wait.until(ExpectedConditions.elementToBeClickable(akcpet));
         this.akcpet.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://www.akcpetinsurance.com/"));
@@ -701,7 +701,7 @@ public class ProdServ {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(bez));
+        wait.until(ExpectedConditions.elementToBeClickable(bez));
         this.bez.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://www.apps.akc.org/"));

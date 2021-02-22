@@ -113,7 +113,7 @@ public class ExpertAdvice {
     @FindBy(css = "#page-title > div > h1")
     WebElement lifestyleElement;
 
-    @FindBy(xpath = "//*[@id=\"page-title\"]/div/h1")
+    @FindBy(css = "#page-title > div > h1")
     WebElement newsElement;
 
     @FindBy(css = "#page-title > div > h1")
@@ -364,7 +364,7 @@ public class ExpertAdvice {
 
         this.menuexpadv.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(news));
+        wait.until(ExpectedConditions.elementToBeClickable(news));
         this.news.click();
         wait.until(ExpectedConditions.visibilityOf(newsElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
@@ -398,7 +398,7 @@ public class ExpertAdvice {
 
         this.menuexpadv.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(sports));
+        wait.until(ExpectedConditions.elementToBeClickable(sports));
         this.sports.click();
         wait.until(ExpectedConditions.visibilityOf(sportsElement));
 
@@ -491,7 +491,7 @@ public class ExpertAdvice {
 
         this.menuexpadv.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(presscenter));
+        wait.until(ExpectedConditions.elementToBeClickable(presscenter));
         this.presscenter.click();
         wait.until(ExpectedConditions.visibilityOf(presscenterElement));
 
@@ -514,7 +514,7 @@ public class ExpertAdvice {
         wait.until(ExpectedConditions.elementToBeClickable(akccanine));
         this.akccanine.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
-        wait.until(ExpectedConditions.urlContains("https://www.caninecollege.akc.org/"));
+        wait.until(ExpectedConditions.urlContains("https://www.caninecollege"));
 
     }
 
