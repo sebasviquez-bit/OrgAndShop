@@ -368,10 +368,10 @@ public class ExpertAdvice {
 
         this.menuexpadv.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.elementToBeClickable(news));
+        wait.until(ExpectedConditions.visibilityOf(news));
         this.news.click();
         wait.until(ExpectedConditions.visibilityOf(newsElement));
-        //this.driver.get(this.driver.getCurrentUrl() + "?test=true");
+        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
 
     }
 
@@ -537,7 +537,7 @@ public class ExpertAdvice {
 
         this.menuexpadv.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.elementToBeClickable(akceducation));
+        wait.until(ExpectedConditions.visibilityOf(akceducation));
         this.akceducation.click();
         wait.until(ExpectedConditions.visibilityOf(akceducationElement));
 
@@ -547,7 +547,7 @@ public class ExpertAdvice {
 
         this.menuexpadv.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.elementToBeClickable(akclibrary));
+        wait.until(ExpectedConditions.visibilityOf(akclibrary));
         this.akclibrary.click();
         wait.until(ExpectedConditions.visibilityOf(akclibraryElement));
 

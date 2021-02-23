@@ -145,7 +145,7 @@ public class Homepage {
     @FindBy(css = "body > div.page-home.bgc-white.cmw > div.page-home__hero-container > div > div.cmw > div > div.interactive-hero__inner > div.interactive-hero__item.six > div > a:nth-child(1) > img")
     WebElement shopicon;
 
-    @FindBy(css = "body > div.page-home.bgc-white.cmw > div.page-home__hero-container > div > div.cmw > div > div.interactive-hero__inner > div.interactive-hero__item.six > div > a.interactive-hero__image-wrap")
+    @FindBy(css = "body > div.page-home.bgc-white.cmw > div.page-home__hero-container > div > div.cmw > div > div.interactive-hero__inner > div.interactive-hero__item.eight > div > a:nth-child(1) > img")
     WebElement akctvicon;
 
     @FindBy(css = "body > div.page-home.bgc-white.cmw > div.page-home__hero-container > div > div.cmw > div > div.interactive-hero__inner > div.interactive-hero__item.seven > div > a.interactive-anchor")
@@ -763,7 +763,7 @@ public class Homepage {
 
         HiddeBanner();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.elementToBeClickable(careicon));
+        wait.until(ExpectedConditions.visibilityOf(careicon));
         this.careicon.click();
         wait.until(ExpectedConditions.visibilityOf(akccareval));
 
@@ -790,9 +790,8 @@ public class Homepage {
 
     public void VerifyAKCTVicon() {
 
-        HiddeBanner();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.elementToBeClickable(akctvicon));
+        wait.until(ExpectedConditions.visibilityOf(akctvicon));
         this.akctvicon.click();
         valid3();
 

@@ -365,7 +365,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
 
-    //@Test  The icon was removed/replaceed for PetInsurane on 02/14/21
+    @Test
     public void AKCCareVerify() {
 
         homepage.VerifyAKCCareicon();
@@ -1645,7 +1645,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickjunperf() {
+    public void Clickjunperf() throws InterruptedException {
 
         sportsEvents.Clickjunperf();
 

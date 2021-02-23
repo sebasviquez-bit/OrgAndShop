@@ -550,7 +550,7 @@ public class ProdServ {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.elementToBeClickable(cgc));
+        wait.until(ExpectedConditions.visibilityOf(cgc));
         this.cgc.click();
         wait.until(ExpectedConditions.visibilityOf(cgcElement));
 

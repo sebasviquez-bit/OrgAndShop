@@ -275,7 +275,7 @@ public class ClubsDelegates {
 
         this.clubdelegat.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.elementToBeClickable(clubdevelop));
+        wait.until(ExpectedConditions.visibilityOf(clubdevelop));
         this.clubdevelop.click();
         wait.until(ExpectedConditions.visibilityOf(clubdevelopElement));
         this.driver.get(this.driver.getCurrentUrl()+"?test=true");
