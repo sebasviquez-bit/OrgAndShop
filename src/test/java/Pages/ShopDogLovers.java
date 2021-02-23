@@ -584,7 +584,7 @@ public class ShopDogLovers {
 
         this.dogLoversMenu.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(WineTotes));
+        wait.until(ExpectedConditions.elementToBeClickable(WineTotes));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         this.WineTotes.click();
         wait.until(ExpectedConditions.visibilityOf(WineTotesTitle));
@@ -738,7 +738,7 @@ public class ShopDogLovers {
 
         this.dogLoversMenu.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(Coasters));
+        wait.until(ExpectedConditions.elementToBeClickable(Coasters));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         this.Coasters.click();
         wait.until(ExpectedConditions.visibilityOf(CoastersTitle));
