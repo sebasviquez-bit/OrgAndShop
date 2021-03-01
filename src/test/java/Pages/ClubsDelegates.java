@@ -62,7 +62,7 @@ public class ClubsDelegates {
     @FindBy(css = "#clubs-delegates > div:nth-child(3) > div > div > div > ul > li:nth-child(4) > a")
     WebElement boardmin;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[5]/div[3]/div/div/div/ul/li[5]/a")
+    @FindBy(css = "#clubs-delegates > div:nth-child(3) > div > div > div > ul > li:nth-child(5) > a")
     WebElement delegatestan;
 
     @FindBy(css = "#clubs-delegates > div:nth-child(3) > div > div > div > ul > li:nth-child(6) > a")
@@ -355,7 +355,7 @@ public class ClubsDelegates {
 
         this.clubdelegat.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(delegatestan));
+        wait.until(ExpectedConditions.elementToBeClickable(delegatestan));
         this.delegatestan.click();
         wait.until(ExpectedConditions.visibilityOf(delegatestanElement));
 

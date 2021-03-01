@@ -321,7 +321,7 @@ public class ProdServ {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(breedspecif));
+        wait.until(ExpectedConditions.elementToBeClickable(breedspecif));
         this.breedspecif.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://shop.akc.org/"));

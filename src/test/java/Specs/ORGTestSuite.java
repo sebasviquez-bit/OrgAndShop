@@ -365,7 +365,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
 
-    @Test
+    //@Test //This icon was removed to iclude the Pet Insurance icon
     public void AKCCareVerify() {
 
         homepage.VerifyAKCCareicon();
@@ -1589,7 +1589,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickherding() throws InterruptedException {
+    public void Clickherding() {
 
         sportsEvents.Clickherding();
 
