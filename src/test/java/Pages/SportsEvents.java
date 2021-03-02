@@ -204,7 +204,7 @@ public class SportsEvents {
     @FindBy(css = "#sports-events > div:nth-child(3) > div > div > div > ul > li:nth-child(8) > a")
     WebElement judgeseduc;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[3]/div/div/div/ul/li[9]/a")
+    @FindBy(css = "#sports-events > div:nth-child(3) > div > div > div > ul > li:nth-child(9) > a")
     WebElement akcweeklywin;
 
     @FindBy(css = "#sports-events > div:nth-child(3) > div > div > div > ul > li:nth-child(10) > a")

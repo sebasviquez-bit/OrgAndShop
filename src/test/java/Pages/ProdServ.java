@@ -104,7 +104,7 @@ public class ProdServ {
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[2]/div/div/div[2]/ul/li[1]/ul/li[1]/a")
     WebElement findgroom;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[2]/div/div/div[2]/ul/li[1]/ul/li[2]/a")
+    @FindBy(css = "#product-services > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(1) > ul > li:nth-child(2) > a")
     WebElement akcsafe;
 
     @FindBy(css = "#product-services > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(1) > ul > li:nth-child(3) > a")
@@ -128,7 +128,7 @@ public class ProdServ {
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[2]/div/div/div[2]/ul/li[2]/ul/li[1]/a")
     WebElement bom;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[2]/div/div/div[2]/ul/li[2]/ul/li[2]/a")
+    @FindBy(css = "#product-services > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(2) > ul > li:nth-child(2) > a")
     WebElement bwh;
 
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[2]/div/div/div[2]/ul/li[2]/ul/li[3]/a")
@@ -409,7 +409,7 @@ public class ProdServ {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(breedrep));
+        wait.until(ExpectedConditions.elementToBeClickable(breedrep));
         this.breedrep.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://www.apps.akc.org/apps/store/?view=category&cde_category=BRDR"));
@@ -644,7 +644,7 @@ public class ProdServ {
 
     }
 
-    public void Clickakccanineretreat() throws InterruptedException {
+    public void Clickakccanineretreat() {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
@@ -691,7 +691,7 @@ public class ProdServ {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(bwh));
+        wait.until(ExpectedConditions.elementToBeClickable(bwh));
         this.bwh.click();
         wait.until(ExpectedConditions.visibilityOf(bwhElement));
 

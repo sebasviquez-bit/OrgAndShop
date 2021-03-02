@@ -1278,7 +1278,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickakccanineretreat() throws InterruptedException {
+    public void Clickakccanineretreat() {
 
         prodserv.Clickakccanineretreat();
 
@@ -1306,7 +1306,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickbwh() throws InterruptedException {
+    public void Clickbwh() {
 
         prodserv.Clickbwh();
 
