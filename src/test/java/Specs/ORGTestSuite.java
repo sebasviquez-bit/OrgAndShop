@@ -711,6 +711,14 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
+    @Test
+    public void ClickFooterTikTok() {
+
+        homepage.ClickFooterTikTok();
+
+    }
+    //
+
 
     @Test
     public void RegisterDogbutVerify() {
@@ -1686,28 +1694,28 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void ClickfitDog() throws InterruptedException {
+    public void ClickfitDog() {
 
         sportsEvents.ClickfitDog();
 
     }
 
     @Test
-    public void ClicktempTest() throws InterruptedException {
+    public void ClicktempTest() {
 
         sportsEvents.ClicktempTest();
 
     }
 
     @Test
-    public void Clickeventse() throws InterruptedException {
+    public void Clickeventse() {
 
         sportsEvents.Clickeventse();
 
     }
 
     @Test
-    public void Clickdownform() throws InterruptedException {
+    public void Clickdownform() {
 
         sportsEvents.Clickdownform();
 
@@ -1735,7 +1743,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickjudgingres() throws InterruptedException {
+    public void Clickjudgingres() {
 
         sportsEvents.Clickjudgingres();
 
@@ -2144,7 +2152,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void VisualClickwhygetdog() throws InterruptedException {
 
         breeds.Clickwhygetdog();
@@ -2174,7 +2182,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void VisualBestDogFoodArticle() {
 
         driver.navigate().to("https://www.akc.org/expert-advice/nutrition/best-dog-food-choosing-whats-right-for-your-dog/");

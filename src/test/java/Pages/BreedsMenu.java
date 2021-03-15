@@ -416,7 +416,7 @@ public class BreedsMenu {
 
         this.menubreeds.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(fordogowners));
+        wait.until(ExpectedConditions.elementToBeClickable(fordogowners));
         this.fordogowners.click();
         wait.until(ExpectedConditions.visibilityOf(fordogownersElement));
 

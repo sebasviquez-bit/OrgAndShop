@@ -42,7 +42,7 @@ public class SportsEvents {
     @FindBy(css = "#sports-events > div:nth-child(1) > div:nth-child(2) > div > div > ul > li:nth-child(2) > a")
     WebElement natiotrack;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[1]/div[2]/div/div/ul/li[3]/a")
+    @FindBy(css = "#sports-events > div:nth-child(1) > div:nth-child(2) > div > div > ul > li:nth-child(3) > a")
     WebElement natiochamp;
 
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[1]/div[2]/div/div/ul/li[4]/a")
@@ -548,7 +548,7 @@ public class SportsEvents {
 
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(getstartdog));
+        wait.until(ExpectedConditions.elementToBeClickable(getstartdog));
         this.getstartdog.click();
         wait.until(ExpectedConditions.visibilityOf(getstartdogElement));
 
@@ -579,7 +579,7 @@ public class SportsEvents {
 
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(natiochamp));
+        wait.until(ExpectedConditions.elementToBeClickable(natiochamp));
         this.natiochamp.click();
         wait.until(ExpectedConditions.visibilityOf(natiochampElement));
 
@@ -790,7 +790,7 @@ public class SportsEvents {
 
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(divingdog));
+        wait.until(ExpectedConditions.elementToBeClickable(divingdog));
         this.divingdog.click();
         wait.until(ExpectedConditions.visibilityOf(divingdogElement));
 
@@ -1023,9 +1023,9 @@ public class SportsEvents {
         WebDriverWait wait = new WebDriverWait (driver, 10);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", fitDog);
+        wait.until(ExpectedConditions.elementToBeClickable(fitDog));
         this.fitDog.click();
         wait.until(ExpectedConditions.visibilityOf(fitDogElement));
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
 
     }
 
@@ -1045,7 +1045,7 @@ public class SportsEvents {
 
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(eventse));
+        wait.until(ExpectedConditions.elementToBeClickable(eventse));
         this.eventse.click();
         for (String winHandle : driver.getWindowHandles()) { driver.switchTo().window(winHandle); }
         wait.until(ExpectedConditions.urlContains("https://webapps.akc.org/"));

@@ -119,7 +119,7 @@ public class ExpertAdvice {
     @FindBy(css = "#page-title > div > h1")
     WebElement nutritionElement;
 
-    @FindBy(xpath = "//*[@id=\"page-title\"]/div/h1")
+    @FindBy(css = "#page-title > div > h1")
     WebElement puppyinfoElement;
 
     @FindBy(css = "#page-title > div > h1")
@@ -354,7 +354,7 @@ public class ExpertAdvice {
 
         this.menuexpadv.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(lifestyle));
+        wait.until(ExpectedConditions.elementToBeClickable(lifestyle));
         this.lifestyle.click();
         wait.until(ExpectedConditions.visibilityOf(lifestyleElement));
 
@@ -387,7 +387,6 @@ public class ExpertAdvice {
 
         this.menuexpadv.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(puppyinfo));
         wait.until(ExpectedConditions.elementToBeClickable(puppyinfo));
         this.puppyinfo.click();
         wait.until(ExpectedConditions.visibilityOf(puppyinfoElement));
@@ -408,7 +407,7 @@ public class ExpertAdvice {
 
         this.menuexpadv.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(training));
+        wait.until(ExpectedConditions.elementToBeClickable(training));
         this.training.click();
         wait.until(ExpectedConditions.visibilityOf(trainingElement));
 

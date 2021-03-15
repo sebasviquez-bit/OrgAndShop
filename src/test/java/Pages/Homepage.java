@@ -352,6 +352,12 @@ public class Homepage {
     @FindBy(css = "body > div.bcpNotificationBar.bcpNotificationBarStickyBottom")
     WebElement BottomBanner;
 
+    @FindBy(css = "body > div.site-footer.cmw > div.page-container > div.site-footer__wrap.site-footer__social.site-footer__wrap--ac.bpm-py3 > div.site-footer__wrap-inner.bpm-flex-shrink-0 > div > div > a:nth-child(4)")
+    WebElement FooterIconTikTok;
+
+    @FindBy(css = "body > div.site-footer.cmw > div.page-container > div.site-footer__wrap.site-footer__social.site-footer__wrap--ac.bpm-py3 > div.site-footer__wrap-inner.bpm-flex-shrink-0 > div > div > a:nth-child(1)")
+    WebElement FooterIconFB;
+
 
     WebDriver driver;
 
@@ -1449,6 +1455,17 @@ public class Homepage {
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         WebDriverWait wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.urlContains("https:"));
+
+    }
+
+    public void ClickFooterTikTok() {
+
+        HiddeBanner();
+        WebDriverWait wait = new WebDriverWait(driver, 30);
+        wait.until(ExpectedConditions.elementToBeClickable(FooterIconTikTok));
+        this.FooterIconTikTok.click();
+        for (String winHandle : driver.getWindowHandles()) { driver.switchTo().window(winHandle);}
+        wait.until(ExpectedConditions.urlContains("https://www.tiktok.com"));
 
     }
 

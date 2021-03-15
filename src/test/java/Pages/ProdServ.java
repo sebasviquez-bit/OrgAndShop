@@ -110,7 +110,7 @@ public class ProdServ {
     @FindBy(css = "#product-services > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(1) > ul > li:nth-child(3) > a")
     WebElement akcpet;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[2]/div/div/div[2]/ul/li[1]/ul/li[4]/a")
+    @FindBy(css = "#product-services > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(1) > ul > li:nth-child(4) > a")
     WebElement akcvete;
 
     @FindBy(css = "#product-services > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(1) > ul > li:nth-child(5) > a")
@@ -581,7 +581,7 @@ public class ProdServ {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait (driver, 20);
-        wait.until(ExpectedConditions.visibilityOf(akccaninecolle));
+        wait.until(ExpectedConditions.elementToBeClickable(akccaninecolle));
         this.akccaninecolle.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://www.caninecollege.akc.org/"));
@@ -636,7 +636,6 @@ public class ProdServ {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(akcvete));
         wait.until(ExpectedConditions.elementToBeClickable(akcvete));
         this.akcvete.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
@@ -732,7 +731,7 @@ public class ProdServ {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(akcshop));
+        wait.until(ExpectedConditions.elementToBeClickable(akcshop));
         this.akcshop.click();
         wait.until(ExpectedConditions.urlToBe("https://shop.akc.org/"));
 

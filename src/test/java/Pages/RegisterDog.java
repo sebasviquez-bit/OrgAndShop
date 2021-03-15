@@ -234,7 +234,7 @@ public class RegisterDog {
     @FindBy(css = "body > div:nth-child(37) > div > div.page-layout > main > div.article-body > div")
     WebElement contentBody;
 
-    @FindBy(xpath = "//p[7]//a[1]")
+    @FindBy(css = "body > div:nth-child(6) > div > div.page-layout > main > div.article-body > div > div > div > p:nth-child(9) > a")
     WebElement onlinesearButton;
 
     @FindBy(css = "body > div:nth-child(37) > div > div.page-layout > main > div.article-body > div > div > div > div > ul > li:nth-child(1) > span")
@@ -707,9 +707,9 @@ public class RegisterDog {
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(purcped));
         this.purcped.click();
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView();", onlinesearButton);
         wait.until(ExpectedConditions.elementToBeClickable(onlinesearButton));
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
+        jse.executeScript("scroll(100, 1000);");
         this.onlinesearButton.click();
         newWindow();
 

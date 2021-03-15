@@ -333,7 +333,7 @@ public class ClubsDelegates {
 
         this.clubdelegat.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(delegatesmeet));
+        wait.until(ExpectedConditions.elementToBeClickable(delegatesmeet));
         this.delegatesmeet.click();
         wait.until(ExpectedConditions.visibilityOf(delegatesmeetElement));
 
@@ -364,7 +364,7 @@ public class ClubsDelegates {
 
         this.clubdelegat.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(perspective));
+        wait.until(ExpectedConditions.elementToBeClickable(perspective));
         this.perspective.click();
         wait.until(ExpectedConditions.visibilityOf(perspectiveElement));
 
@@ -384,7 +384,7 @@ public class ClubsDelegates {
 
         this.clubdelegat.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(rolakcdel));
+        wait.until(ExpectedConditions.elementToBeClickable(rolakcdel));
         this.rolakcdel.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://www.youtube.com/"));
