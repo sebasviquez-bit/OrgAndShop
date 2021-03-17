@@ -1328,7 +1328,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickseall() throws InterruptedException {
+    public void Clickseall() {
 
         prodserv.Clickseall();
 

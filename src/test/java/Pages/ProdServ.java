@@ -134,7 +134,7 @@ public class ProdServ {
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[2]/div/div/div[2]/ul/li[2]/ul/li[3]/a")
     WebElement bez;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[2]/div/div/div[2]/ul/li[2]/ul/li[4]/a")
+    @FindBy(css = "#product-services > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(4) > a")
     WebElement seall;
 
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[2]/div/div/div[2]/ul/li[4]/a")
@@ -200,7 +200,7 @@ public class ProdServ {
     @FindBy(css = "#page-title > div > h1")
     WebElement bwhElement;
 
-    @FindBy(css = "#page-title > div > h1")
+    @FindBy(css = "#page-title")
     WebElement seallElement;
 
     @FindBy(xpath = "//*[@id=\"page-title\"]/h1")
@@ -711,7 +711,7 @@ public class ProdServ {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(seall));
+        wait.until(ExpectedConditions.elementToBeClickable(seall));
         this.seall.click();
         wait.until(ExpectedConditions.visibilityOf(seallElement));
 

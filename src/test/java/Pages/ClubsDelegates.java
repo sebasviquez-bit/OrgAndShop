@@ -101,7 +101,7 @@ public class ClubsDelegates {
     @FindBy(css = "#clubs-delegates > div:nth-child(4) > div:nth-child(2) > div > div > ul > li:nth-child(2) > a")
     WebElement clubarchives;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[5]/div[4]/div[2]/div/div/ul/li[3]/a")
+    @FindBy(css = "#clubs-delegates > div:nth-child(4) > div:nth-child(2) > div > div > ul > li:nth-child(3) > a")
     WebElement searchlib;
 
     @FindBy(css = "#clubs-delegates > div:nth-child(4) > div:nth-child(2) > div > div > ul > li:nth-child(4) > a")
@@ -459,7 +459,6 @@ public class ClubsDelegates {
         wait.until(ExpectedConditions.elementToBeClickable(clubarchives));
         this.clubarchives.click();
         wait.until(ExpectedConditions.visibilityOf(clubarchivesElement));
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
 
     }
 
