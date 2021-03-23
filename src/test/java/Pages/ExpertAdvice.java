@@ -307,7 +307,7 @@ public class ExpertAdvice {
 
         this.menuexpadv.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(allcateg));
+        wait.until(ExpectedConditions.elementToBeClickable(allcateg));
         this.allcateg.click();
         wait.until(ExpectedConditions.visibilityOf(allcategElement));
 
@@ -495,7 +495,7 @@ public class ExpertAdvice {
 
         this.menuexpadv.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(presscenter));
+        wait.until(ExpectedConditions.elementToBeClickable(presscenter));
         this.presscenter.click();
         wait.until(ExpectedConditions.visibilityOf(presscenterElement));
 
@@ -505,7 +505,7 @@ public class ExpertAdvice {
 
         this.menuexpadv.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(akcdetection));
+        wait.until(ExpectedConditions.elementToBeClickable(akcdetection));
         this.akcdetection.click();
         wait.until(ExpectedConditions.visibilityOf(akcdetectionElement));
 
@@ -537,7 +537,7 @@ public class ExpertAdvice {
 
         this.menuexpadv.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(akceducation));
+        wait.until(ExpectedConditions.elementToBeClickable(akceducation));
         this.akceducation.click();
         wait.until(ExpectedConditions.visibilityOf(akceducationElement));
 
@@ -560,7 +560,7 @@ public class ExpertAdvice {
         wait.until(ExpectedConditions.visibilityOf(newsletter));
         this.newsletter.click();
         wait.until(ExpectedConditions.visibilityOf(newsletterElement));
-        HiddeBanner();
+        //HiddeBanner();
         this.SubsFormFirstName.sendKeys("Sebas");
         this.SubsFormLastName.sendKeys("Viquez");
         this.SubsFormEmail.sendKeys("sebas.viquez@gmail.com");

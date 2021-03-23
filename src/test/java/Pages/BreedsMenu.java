@@ -308,8 +308,6 @@ public class BreedsMenu {
         wait.until(ExpectedConditions.visibilityOf(whygetdog));
         this.whygetdog.click();
         wait.until(ExpectedConditions.visibilityOf(whygetdogElement));
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        this.whygetdogElement.isDisplayed();
 
     }
 
@@ -451,19 +449,6 @@ public class BreedsMenu {
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         this.preparingPuppy.click();
         wait.until(ExpectedConditions.visibilityOf(newPuppyCheckElement));
-
-    }
-
-    public void puppiesArticle3() {
-
-        this.menubreeds.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(allaboutpuppies));
-        this.allaboutpuppies.click();
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        wait.until(ExpectedConditions.visibilityOf(preparingPuppy));
-        this.threeMonths.isDisplayed();
-
 
     }
 

@@ -298,7 +298,7 @@ public class ClubsDelegates {
 
         this.clubdelegat.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(clubresources));
+        wait.until(ExpectedConditions.elementToBeClickable(clubresources));
         this.clubresources.click();
         this.driver.get(this.driver.getCurrentUrl()+"?test=true");
         wait.until(ExpectedConditions.visibilityOf(clubresourcesElement));
@@ -375,7 +375,7 @@ public class ClubsDelegates {
 
         this.clubdelegat.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(akcgazette));
+        wait.until(ExpectedConditions.elementToBeClickable(akcgazette));
         this.akcgazette.click();
         wait.until(ExpectedConditions.visibilityOf(akcgazetteElement));
 
@@ -406,7 +406,7 @@ public class ClubsDelegates {
 
         this.clubdelegat.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(legisla));
+        wait.until(ExpectedConditions.elementToBeClickable(legisla));
         this.legisla.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://cqrcengage.com/akc/lac"));

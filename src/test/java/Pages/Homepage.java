@@ -94,11 +94,15 @@ public class Homepage {
     @FindBy(xpath = "//html/body/div[6]/div/div[1]/div[1]") //This is only enabled in Prod ***
     WebElement akcf1;
 
-    @FindBy(xpath = "//html/body/div[6]/div/div[2]/div[2]/div/div")
+    @FindBy(css = "body > div.site-footer.cmw > div.page-container > div.site-footer__wrap.site-footer__social.site-footer__wrap--ac.bpm-py3 > div.site-footer__wrap-inner.bpm-flex-shrink-0 > div > div")
     WebElement social;
 
     @FindBy(css = "body > div.site-footer.cmw > div.page-container > div.site-footer__wrap.site-footer__social.site-footer__wrap--ac.bpm-py3 > div.site-footer__wrap-inner.site-footer__corp-stamp > div.site-footer__statement")
     WebElement footer;
+
+    @FindBy(css = "body > div.site-footer.cmw > div.page-container > div.site-footer__wrap.site-footer__social.site-footer__wrap--ac.bpm-py3 > div.site-footer__wrap-inner.bpm-flex-shrink-0 > div > div > a:nth-child(4)")
+    WebElement TickTokIcon;
+
 
     @FindBy(xpath = "//html/body/div[6]/div/div[3]/div[2]/div/ul/li[1]")
     WebElement akcf2;
@@ -142,13 +146,13 @@ public class Homepage {
     @FindBy(css = "#home__good-works-text-link")
     WebElement careicon;
 
-    @FindBy(css = "body > div.page-home.bgc-white.cmw > div.page-home__hero-container > div > div.cmw > div > div.interactive-hero__inner > div.interactive-hero__item.six > div > a:nth-child(1) > img")
+    @FindBy(css = "body > div.page-home.bgc-white.cmw > div.page-home__hero-container > div > div.cmw > div > div.interactive-hero__inner > div.interactive-hero__item.seven > div > a.interactive-hero__image-wrap")
     WebElement shopicon;
 
     @FindBy(css = "body > div.page-home.bgc-white.cmw > div.page-home__hero-container > div > div.cmw > div > div.interactive-hero__inner > div.interactive-hero__item.six > div > a.interactive-hero__image-wrap")
     WebElement akctvicon;
 
-    @FindBy(css = "body > div.page-home.bgc-white.cmw > div.page-home__hero-container > div > div.cmw > div > div.interactive-hero__inner > div.interactive-hero__item.seven > div > a.interactive-anchor")
+    @FindBy(css = "body > div.page-home.bgc-white.cmw > div.page-home__hero-container > div > div.cmw > div > div.interactive-hero__inner > div.interactive-hero__item.nine > div > a.interactive-hero__image-wrap")
     WebElement sportsicon;
 
     //@FindBy(xpath = "//*[@id=\"welcome\"]/div/a[1]/img") This was Removed on Sprint 10/02/20 ************
@@ -268,46 +272,46 @@ public class Homepage {
     @FindBy(css = "#slick-slide00 > a")
     WebElement conf;
 
-    @FindBy(css = "#slick-slide01 > a")
+    @FindBy(css = "#slick-slide05 > a")
     WebElement obe;
 
     @FindBy(css = "#slick-slide02 > a")
     WebElement ral;
 
-    @FindBy(css = "#slick-slide03 > a")
+    @FindBy(css = "#slick-slide01 > a")
     WebElement agi;
 
-    @FindBy(css = "#slick-slide04 > a")
+    @FindBy(css = "#slick-slide06 > a")
     WebElement track;
 
-    @FindBy(css = "#slick-slide05 > a")
+    @FindBy(css = "#slick-slide07 > a")
     WebElement herd;
 
-    @FindBy(css = "#slick-slide06 > a")
+    @FindBy(css = "#slick-slide08 > a")
     WebElement earthdog;
 
-    @FindBy(css = "#slick-slide07 > a")
+    @FindBy(css = "#slick-slide09 > a")
     WebElement fieldtri;
 
-    @FindBy(css = "#slick-slide08 > a")
+    @FindBy(css = "#slick-slide010 > a")
     WebElement hunt;
 
-    @FindBy(css = "#slick-slide09 > a")
+    @FindBy(css = "#slick-slide011 > a")
     WebElement farmdog;
 
-    @FindBy(css = "#slick-slide010 > a")
+    @FindBy(css = "#slick-slide012 > a")
     WebElement lurecours;
 
-    @FindBy(css = "#slick-slide011 > a")
+    @FindBy(css = "#slick-slide013 > a")
     WebElement coursabi;
 
-    @FindBy(css = "#slick-slide012 > a")
+    @FindBy(css = "#slick-slide03 > a")
     WebElement fastcat;
 
-    @FindBy(css = "#slick-slide013 > a")
+    @FindBy(css = "#slick-slide014 > a")
     WebElement conhound;
 
-    @FindBy(css = "#slick-slide014 > a")
+    @FindBy(css = "#slick-slide04 > a")
     WebElement scentwork;
 
     @FindBy(css = "#slick-slide015 > a")
@@ -699,7 +703,7 @@ public class Homepage {
         this.eventbutton.isDisplayed();
         this.regheader.isDisplayed();
         this.regimg.isDisplayed();
-        //this.akcf1.isDisplayed(); //This is available only in Prod*
+        this.akcf1.isDisplayed();
         this.social.isDisplayed();
         this.footer.isDisplayed();
         this.akcf2.isDisplayed();
@@ -753,7 +757,7 @@ public class Homepage {
 
         HiddeBanner();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(sportsicon));
+        wait.until(ExpectedConditions.elementToBeClickable(sportsicon));
         this.sportsicon.click();
         wait.until(ExpectedConditions.visibilityOf(sportsval));
 
@@ -782,7 +786,7 @@ public class Homepage {
     public void VerifyShopicon() {
 
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(shopicon));
+        wait.until(ExpectedConditions.elementToBeClickable(shopicon));
         this.shopicon.click();
         valid2();
 
@@ -1079,10 +1083,21 @@ public class Homepage {
 
     }
 
-    public void VerifyObedience() {
+    public void VerifyObedience() throws InterruptedException {
 
+        HiddeBanner();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(obe));
+        wait.until(ExpectedConditions.visibilityOf(sportsarrow));
+        this.sportsarrow.click();
+        sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
         this.obe.click();
         validobedience();
 
@@ -1100,18 +1115,29 @@ public class Homepage {
     public void VerifyAgility() {
 
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(agi));
+        wait.until(ExpectedConditions.elementToBeClickable(agi));
         this.agi.click();
         validagility();
 
     }
 
-    public void VerifyTracking() {
+    public void VerifyTracking() throws InterruptedException {
 
         HiddeBanner();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.visibilityOf(sportsarrow));
         this.sportsarrow.click();
+        sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
         this.track.click();
         validtracking();
 
@@ -1122,6 +1148,16 @@ public class Homepage {
         HiddeBanner();
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOf(sportsarrow));
+        this.sportsarrow.click();
+        sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
         this.sportsarrow.click();
         sleep(1000);
         this.sportsarrow.click();
@@ -1136,6 +1172,16 @@ public class Homepage {
         HiddeBanner();
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOf(sportsarrow));
+        this.sportsarrow.click();
+        sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
         this.sportsarrow.click();
         sleep(1000);
         this.sportsarrow.click();
@@ -1160,6 +1206,16 @@ public class Homepage {
         sleep(1000);
         this.sportsarrow.click();
         sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
         this.fieldtri.click();
         validfieldtrials();
 
@@ -1170,6 +1226,16 @@ public class Homepage {
         HiddeBanner();
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(sportsarrow));
+        this.sportsarrow.click();
+        sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
         this.sportsarrow.click();
         sleep(1000);
         this.sportsarrow.click();
@@ -1202,6 +1268,10 @@ public class Homepage {
         sleep(1000);
         this.sportsarrow.click();
         sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
         this.farmdog.click();
         validfarmdog();
 
@@ -1212,6 +1282,10 @@ public class Homepage {
         HiddeBanner();
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOf(sportsarrow));
+        this.sportsarrow.click();
+        sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
         this.sportsarrow.click();
         sleep(1000);
         this.sportsarrow.click();
@@ -1252,6 +1326,10 @@ public class Homepage {
         sleep(1000);
         this.sportsarrow.click();
         sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
         this.coursabi.click();
         validcoursingability();
 
@@ -1262,22 +1340,6 @@ public class Homepage {
         HiddeBanner();
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOf(sportsarrow));
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
         this.sportsarrow.click();
         sleep(1000);
         this.fastcat.click();
@@ -1310,6 +1372,8 @@ public class Homepage {
         sleep(1000);
         this.sportsarrow.click();
         sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
         this.conhound.click();
         validcoonhound();
 
@@ -1319,25 +1383,7 @@ public class Homepage {
 
         HiddeBanner();
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(sportsarrow));
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.elementToBeClickable(sportsarrow));
         this.sportsarrow.click();
         sleep(1000);
         this.sportsarrow.click();
@@ -1398,6 +1444,17 @@ public class Homepage {
         wait.until(ExpectedConditions.visibilityOf(regdogbut));
         this.regdogbut.click();
         validregisterdog();
+
+    }
+
+    public void VerifyFooterSocialIcons() {
+
+        HiddeBanner();
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(TickTokIcon));
+        this.TickTokIcon.click();
+        for (String winHandle : driver.getWindowHandles()) { driver.switchTo().window(winHandle);}
+        wait.until(ExpectedConditions.urlContains("https://www.tiktok.com/"));
 
     }
 

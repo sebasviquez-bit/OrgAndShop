@@ -640,15 +640,15 @@ public class RegisterDog {
 
         this.register.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(reglitt));
+        wait.until(ExpectedConditions.elementToBeClickable(reglitt));
         HiddeBanner();
         this.reglitt.click();
-        wait.until(ExpectedConditions.visibilityOf(mylitt));
+        wait.until(ExpectedConditions.elementToBeClickable(mylitt));
         HiddeBanner();
         this.mylitt.click();
-        wait.until(ExpectedConditions.visibilityOf(froze));
+        wait.until(ExpectedConditions.elementToBeClickable(froze));
         this.froze.click();
-        wait.until(ExpectedConditions.visibilityOf(buttoncont));
+        wait.until(ExpectedConditions.elementToBeClickable(buttoncont));
         this.buttoncont.click();
         newWindow4();
 
@@ -715,9 +715,7 @@ public class RegisterDog {
         wait.until(ExpectedConditions.elementToBeClickable(transown));
         HiddeBanner();
         this.transown.click();
-        wait.until(ExpectedConditions.visibilityOf(transownheader));
-        wait.until(ExpectedConditions.visibilityOf(transownbody));
-        wait.until(ExpectedConditions.visibilityOf(transownbut));
+        wait.until(ExpectedConditions.elementToBeClickable(transownbut));
         HiddeBanner();
         this.transownbut.click();
         newWindow();

@@ -72,7 +72,7 @@ public class ProdServ {
     @FindBy(css = "#product-services > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(2) > a")
     WebElement finddog;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[2]/div/div/div[1]/ul/li[2]/ul/li[1]/a")
+    @FindBy(css = "#product-services > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(2) > ul > li:nth-child(1) > a")
     WebElement finpuppy;
 
     @FindBy(css = "#product-services > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(2) > ul > li:nth-child(2) > a")
@@ -129,7 +129,7 @@ public class ProdServ {
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[2]/div/div/div[2]/ul/li[2]/ul/li[1]/a")
     WebElement bom;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[2]/div/div/div[2]/ul/li[2]/ul/li[2]/a")
+    @FindBy(css = "#product-services > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(2) > ul > li:nth-child(2) > a")
     WebElement bwh;
 
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[2]/div/div/div[2]/ul/li[2]/ul/li[3]/a")
@@ -141,7 +141,7 @@ public class ProdServ {
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[2]/div/div/div[2]/ul/li[4]/a")
     WebElement browseserv;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[3]/div/div/a/img")
+    @FindBy(css = "#product-services > div:nth-child(3) > div > a")
     WebElement akcshop;
 
     @FindBy(css = "#page-title > div > h1")
@@ -210,6 +210,9 @@ public class ProdServ {
     @FindBy(xpath = "//html/body/div[1]/div[1]/header/div[2]/a[2]/img")
     WebElement akcshopElement;
 
+    @FindBy(css = "body > div.bcpNotificationBar.bcpNotificationBarStickyBottom")
+    WebElement BottomBanner;
+
     //Articles Elements >
 
     @FindBy(css = "body > div:nth-child(7) > div > div.page-layout > aside > div > nav > ul > li > a")
@@ -241,6 +244,7 @@ public class ProdServ {
 
     @FindBy(css = "body > div.landing-page > div.side-by-side.bgc-white.py7.bpm-my7.side-by-side--not-full-width > div > div.side-by-side__content > div > h2")
     WebElement trainresTitle;
+
 
     // Driver
     WebDriver driver;
@@ -528,7 +532,7 @@ public class ProdServ {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(puppyvisor));
+        wait.until(ExpectedConditions.elementToBeClickable(puppyvisor));
         this.puppyvisor.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://marketplace.akc.org/"));
@@ -548,9 +552,10 @@ public class ProdServ {
 
     public void Clickcgc() {
 
+        HiddeBanner();
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(cgc));
+        wait.until(ExpectedConditions.elementToBeClickable(cgc));
         this.cgc.click();
         wait.until(ExpectedConditions.visibilityOf(cgcElement));
 
@@ -691,7 +696,7 @@ public class ProdServ {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(bwh));
+        wait.until(ExpectedConditions.elementToBeClickable(bwh));
         this.bwh.click();
         wait.until(ExpectedConditions.visibilityOf(bwhElement));
 
@@ -732,7 +737,7 @@ public class ProdServ {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(akcshop));
+        wait.until(ExpectedConditions.elementToBeClickable(akcshop));
         this.akcshop.click();
         wait.until(ExpectedConditions.urlToBe("https://shop.akc.org/"));
 
@@ -775,6 +780,12 @@ public class ProdServ {
         this.cgc.click();
         wait.until(ExpectedConditions.visibilityOf(whatiscgcMenu));
 
+    }
+
+    public void HiddeBanner() {
+
+        JavascriptExecutor jse = (JavascriptExecutor)driver;
+        jse.executeScript("arguments[0].style.visibility='hidden'", BottomBanner);
     }
 
 }

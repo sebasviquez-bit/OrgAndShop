@@ -373,7 +373,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
 
-    @Test
+    //@Test  //This was removed from HomePage 02/13/21
     public void FindPuppiesVerify()  {
 
         homepage.VerifyFindPuppiesicon();
@@ -593,7 +593,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void ObedienceVerify() {
+    public void ObedienceVerify() throws InterruptedException {
 
         homepage.VerifyObedience();
 
@@ -617,7 +617,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void TrackingVerify() {
+    public void TrackingVerify() throws InterruptedException {
 
         homepage.VerifyTracking();
 
@@ -719,6 +719,14 @@ public class ORGTestSuite extends SpecsBaseClass {
         homepage.VerifyRegisterDogbut();
 
     }
+
+    @Test
+    public void FooterSocialIcons() {
+
+        homepage.VerifyFooterSocialIcons();
+
+    }
+
 
     //Test for Adds Verify & Click:
 
@@ -1307,14 +1315,14 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickbwh() throws InterruptedException {
+    public void Clickbwh() {
 
         prodserv.Clickbwh();
 
     }
 
     @Test
-    public void Clickbez() throws InterruptedException {
+    public void Clickbez()  {
 
         prodserv.Clickbez();
 
@@ -1386,14 +1394,14 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clicknatiotrack() throws InterruptedException {
+    public void Clicknatiotrack() {
 
         sportsEvents.Clicknatiotrack();
 
     }
 
     @Test
-    public void Clicknatiochamp() throws InterruptedException {
+    public void Clicknatiochamp() {
 
         sportsEvents.Clicknatiochamp();
 
@@ -1715,14 +1723,14 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickrulesreg() throws InterruptedException {
+    public void Clickrulesreg()  {
 
         sportsEvents.Clickrulesreg();
 
     }
 
     @Test
-    public void Clickoem() throws InterruptedException {
+    public void Clickoem() {
 
         sportsEvents.Clickoem();
 
@@ -1750,14 +1758,14 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickjudgeseduc() throws InterruptedException {
+    public void Clickjudgeseduc() {
 
         sportsEvents.Clickjudgeseduc();
 
     }
 
     @Test
-    public void Clickakcweeklywin() throws InterruptedException {
+    public void Clickakcweeklywin() {
 
         sportsEvents.Clickakcweeklywin();
 
@@ -1983,13 +1991,6 @@ public class ORGTestSuite extends SpecsBaseClass {
     public void puppiesArticle2() {
 
         breeds.puppiesArticle2();
-
-    }
-
-    @Test
-    public void puppiesArticle3() {
-
-        breeds.puppiesArticle3();
 
     }
 
