@@ -91,8 +91,8 @@ public class Homepage {
     @FindBy(xpath = "//html/body/div[4]/section[3]/div/div/div[1]/div/img")
     WebElement regimg;
 
-    @FindBy(xpath = "//html/body/div[6]/div/div[1]/div[1]") //This is only enabled in Prod ***
-    WebElement akcf1;
+    @FindBy(css = "body > div.site-footer.cmw > div.page-container > div.be-ix-link-block > div > div") //This is only enabled in Prod ***
+    WebElement MoreToExp;
 
     @FindBy(css = "body > div.site-footer.cmw > div.page-container > div.site-footer__wrap.site-footer__social.site-footer__wrap--ac.bpm-py3 > div.site-footer__wrap-inner.bpm-flex-shrink-0 > div > div")
     WebElement social;
@@ -703,7 +703,7 @@ public class Homepage {
         this.eventbutton.isDisplayed();
         this.regheader.isDisplayed();
         this.regimg.isDisplayed();
-        this.akcf1.isDisplayed();
+        //this.MoreToExp.isDisplayed();
         this.social.isDisplayed();
         this.footer.isDisplayed();
         this.akcf2.isDisplayed();

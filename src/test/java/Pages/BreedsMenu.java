@@ -71,7 +71,7 @@ public class BreedsMenu {
     @FindBy(xpath = "//*[@id=\"dog-breeds\"]/div[4]/div/div/div/ul/li[5]/a")
     WebElement fordogbreeders;
 
-    @FindBy(xpath = "//*[@id=\"dog-breeds\"]/div[4]/div/div/div/ul/li[6]/a")
+    @FindBy(css = "#dog-breeds > div:nth-child(4) > div > div > div > ul > li:nth-child(6) > a")
     WebElement fordogowners;
 
     @FindBy(xpath = "//*[@id=\"page-title\"]/h1")
@@ -254,7 +254,7 @@ public class BreedsMenu {
 
         this.menubreeds.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(findmatch));
+        wait.until(ExpectedConditions.elementToBeClickable(findmatch));
         this.findmatch.click();
         wait.until(ExpectedConditions.visibilityOf(findmatchElement));
 
@@ -305,7 +305,7 @@ public class BreedsMenu {
 
         this.menubreeds.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(whygetdog));
+        wait.until(ExpectedConditions.elementToBeClickable(whygetdog));
         this.whygetdog.click();
         wait.until(ExpectedConditions.visibilityOf(whygetdogElement));
 
@@ -413,7 +413,7 @@ public class BreedsMenu {
 
         this.menubreeds.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(fordogowners));
+        wait.until(ExpectedConditions.elementToBeClickable(fordogowners));
         this.fordogowners.click();
         wait.until(ExpectedConditions.visibilityOf(fordogownersElement));
 

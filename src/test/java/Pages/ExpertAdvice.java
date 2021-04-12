@@ -368,7 +368,7 @@ public class ExpertAdvice {
 
         this.menuexpadv.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(news));
+        wait.until(ExpectedConditions.elementToBeClickable(news));
         this.news.click();
         wait.until(ExpectedConditions.visibilityOf(newsElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
@@ -402,7 +402,7 @@ public class ExpertAdvice {
 
         this.menuexpadv.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(sports));
+        wait.until(ExpectedConditions.elementToBeClickable(sports));
         this.sports.click();
         wait.until(ExpectedConditions.visibilityOf(sportsElement));
 
@@ -443,7 +443,7 @@ public class ExpertAdvice {
 
         this.menuexpadv.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(dognamefind));
+        wait.until(ExpectedConditions.elementToBeClickable(dognamefind));
         this.dognamefind.click();
         wait.until(ExpectedConditions.visibilityOf(dognamefindElement));
 
@@ -526,10 +526,10 @@ public class ExpertAdvice {
 
         this.menuexpadv.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(government));
+        wait.until(ExpectedConditions.elementToBeClickable(government));
         this.government.click();
         wait.until(ExpectedConditions.visibilityOf(governmentElement));
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
+        //this.driver.get(this.driver.getCurrentUrl() + "?test=true");
 
     }
 
@@ -560,7 +560,7 @@ public class ExpertAdvice {
         wait.until(ExpectedConditions.visibilityOf(newsletter));
         this.newsletter.click();
         wait.until(ExpectedConditions.visibilityOf(newsletterElement));
-        //HiddeBanner();
+        HiddeBanner();
         this.SubsFormFirstName.sendKeys("Sebas");
         this.SubsFormLastName.sendKeys("Viquez");
         this.SubsFormEmail.sendKeys("sebas.viquez@gmail.com");

@@ -1562,7 +1562,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickparentclubrec() throws InterruptedException {
+    public void Clickparentclubrec() {
 
         sportsEvents.Clickparentclubrec();
 
@@ -1604,7 +1604,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickpointbreed() throws InterruptedException {
+    public void Clickpointbreed() {
 
         sportsEvents.Clickpointbreed();
 
@@ -1681,42 +1681,42 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void ClicktrickVirtual() throws InterruptedException {
+    public void ClicktrickVirtual() {
 
         sportsEvents.ClicktrickVirtual();
 
     }
 
     @Test
-    public void ClicktherapyDog() throws InterruptedException {
+    public void ClicktherapyDog() {
 
         sportsEvents.ClicktherapyDog();
 
     }
 
     @Test
-    public void ClickfitDog() throws InterruptedException {
+    public void ClickfitDog() {
 
         sportsEvents.ClickfitDog();
 
     }
 
     @Test
-    public void ClicktempTest() throws InterruptedException {
+    public void ClicktempTest() {
 
         sportsEvents.ClicktempTest();
 
     }
 
     @Test
-    public void Clickeventse() throws InterruptedException {
+    public void Clickeventse() {
 
         sportsEvents.Clickeventse();
 
     }
 
     @Test
-    public void Clickdownform() throws InterruptedException {
+    public void Clickdownform() {
 
         sportsEvents.Clickdownform();
 
@@ -1936,7 +1936,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickakcpac() throws InterruptedException {
+    public void Clickakcpac() {
 
         clubsDelegates.Clickakcpac();
 
@@ -1971,7 +1971,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickhowtovisit() throws InterruptedException {
+    public void Clickhowtovisit() {
 
         clubsDelegates.Clickhowtovisit();
 

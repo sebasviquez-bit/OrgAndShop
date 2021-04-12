@@ -330,6 +330,7 @@ public class RegisterDog {
 
     public void VerifyRegisterDog1() {
 
+        HiddeBanner();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(register));
         this.register.click();
@@ -341,6 +342,7 @@ public class RegisterDog {
         this.transown.isDisplayed();
         this.purcped.isDisplayed();
         this.moreinfo.isDisplayed();
+        HiddeBanner();
         this.regdog.click();
         wait.until(ExpectedConditions.visibilityOf(regpure));
         HiddeBanner();
@@ -423,6 +425,7 @@ public class RegisterDog {
         this.register.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.visibilityOf(regdog));
+        HiddeBanner();
         this.regdog.click();
         wait.until(ExpectedConditions.visibilityOf(enrolldog));
         HiddeBanner();
@@ -459,6 +462,7 @@ public class RegisterDog {
         this.register.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.visibilityOf(regdog));
+        HiddeBanner();
         this.regdog.click();
         wait.until(ExpectedConditions.visibilityOf(other));
         HiddeBanner();
@@ -476,6 +480,7 @@ public class RegisterDog {
         this.register.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.visibilityOf(regdog));
+        HiddeBanner();
         this.regdog.click();
         wait.until(ExpectedConditions.visibilityOf(other));
         HiddeBanner();
@@ -493,6 +498,7 @@ public class RegisterDog {
         this.register.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.visibilityOf(regdog));
+        HiddeBanner();
         this.regdog.click();
         wait.until(ExpectedConditions.visibilityOf(other));
         HiddeBanner();
@@ -510,6 +516,7 @@ public class RegisterDog {
         this.register.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(regdog));
+        HiddeBanner();
         this.regdog.click();
         wait.until(ExpectedConditions.elementToBeClickable(other));
         HiddeBanner();
@@ -726,7 +733,7 @@ public class RegisterDog {
 
         this.register.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(purcped));
+        wait.until(ExpectedConditions.elementToBeClickable(purcped));
         HiddeBanner();
         this.purcped.click();
         wait.until(ExpectedConditions.visibilityOf(purcpedheader));

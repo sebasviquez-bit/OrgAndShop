@@ -24,14 +24,14 @@ public class SpecsBaseClass extends SuperBaseClass {
         public void InitializeTests(Method method) {
 
         ChromeOptions options = new ChromeOptions();
-        //options.addArguments("headless");
+        options.addArguments("headless");
 
         //Map<String, String> mobileEmulation = new HashMap<>();
         //mobileEmulation.put("deviceName", "iPhone 8");
         //options.setExperimentalOption("mobileEmulation", mobileEmulation);
 
         //driver = getDriver(method.getNam());
-        driver = new ChromeDriver(options);
+        driver = new ChromeDriver();
         //driver = new FirefoxDriver();
         //driver = new InternetExplorerDriver();
         //driver = new SafariDriver();
@@ -44,7 +44,7 @@ public class SpecsBaseClass extends SuperBaseClass {
 
         driver.get(driverHelper.baseUrl);
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
         this.eyes = new Eyes();
         this.eyes.setApiKey("z9croAylAJ31BCxQ9g0BdZE0ul770cXrtqRuwWv8A8g110");    //.ORG API KEY

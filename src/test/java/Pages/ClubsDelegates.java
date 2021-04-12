@@ -83,8 +83,8 @@ public class ClubsDelegates {
     @FindBy(css = "#clubs-delegates > div:nth-child(4) > div:nth-child(1) > div > div > ul > li:nth-child(1) > a")
     WebElement legisla;
 
-    @FindBy(xpath = "//*[@id=\"clubs-delegates\"]/div[4]/div[1]/div/div/ul/li[2]/a")
-    WebElement legislaalarm;
+    @FindBy(css = "#clubs-delegates > div:nth-child(4) > div:nth-child(1) > div > div > ul > li:nth-child(2) > a")
+    WebElement legislalert;
 
     @FindBy(css = "#clubs-delegates > div:nth-child(4) > div:nth-child(1) > div > div > ul > li:nth-child(3) > a")
     WebElement akcpac;
@@ -203,7 +203,7 @@ public class ClubsDelegates {
         this.importance.isDisplayed();
         this.governrelat.isDisplayed();
         this.legisla.isDisplayed();
-        this.legislaalarm.isDisplayed();
+        this.legislalert.isDisplayed();
         this.akcpac.isDisplayed();
         this.governrelat.isDisplayed();
         this.akclibrary.isDisplayed();
@@ -231,8 +231,7 @@ public class ClubsDelegates {
 
         this.clubdelegat.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(findanevent));
-        this.findanevent.isDisplayed();
+        wait.until(ExpectedConditions.elementToBeClickable(findanevent));
         this.findanevent.click();
         wait.until(ExpectedConditions.visibilityOf(findaneventElement));
         //this.driver.get(this.driver.getCurrentUrl()+"?test=true");
@@ -332,7 +331,7 @@ public class ClubsDelegates {
 
         this.clubdelegat.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(delegatesmeet));
+        wait.until(ExpectedConditions.elementToBeClickable(delegatesmeet));
         this.delegatesmeet.click();
         wait.until(ExpectedConditions.visibilityOf(delegatesmeetElement));
 
@@ -417,8 +416,8 @@ public class ClubsDelegates {
 
         this.clubdelegat.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(legislaalarm));
-        this.legislaalarm.click();
+        wait.until(ExpectedConditions.elementToBeClickable(legislalert));
+        this.legislalert.click();
         wait.until(ExpectedConditions.visibilityOf(legislaalarmElement));
 
     }
@@ -427,7 +426,7 @@ public class ClubsDelegates {
 
         this.clubdelegat.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(akcpac));
+        wait.until(ExpectedConditions.elementToBeClickable(akcpac));
         this.akcpac.click();
         wait.until(ExpectedConditions.visibilityOf(akcpacElement));
 
@@ -437,7 +436,7 @@ public class ClubsDelegates {
 
         this.clubdelegat.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(governrelat));
+        wait.until(ExpectedConditions.elementToBeClickable(governrelat));
         this.governrelat.click();
         wait.until(ExpectedConditions.visibilityOf(governrelatElement));
 
@@ -447,7 +446,7 @@ public class ClubsDelegates {
 
         this.clubdelegat.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(overcollec));
+        wait.until(ExpectedConditions.elementToBeClickable(overcollec));
         this.overcollec.click();
         wait.until(ExpectedConditions.visibilityOf(overcollecElement));
 
@@ -479,7 +478,7 @@ public class ClubsDelegates {
 
         this.clubdelegat.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(howtovisit));
+        wait.until(ExpectedConditions.elementToBeClickable(howtovisit));
         this.howtovisit.click();
         wait.until(ExpectedConditions.visibilityOf(howtovisitElement));
 
