@@ -446,7 +446,7 @@ public class BreedsMenu {
 
         this.menubreeds.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(allaboutpuppies));
+        wait.until(ExpectedConditions.elementToBeClickable(allaboutpuppies));
         this.allaboutpuppies.click();
         wait.until(ExpectedConditions.elementToBeClickable(preparingPuppy));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");

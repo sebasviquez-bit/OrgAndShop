@@ -719,7 +719,7 @@ public class RegisterDog {
 
         this.register.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(moreinfo));
+        wait.until(ExpectedConditions.elementToBeClickable(moreinfo));
         this.moreinfo.click();
         wait.until(ExpectedConditions.visibilityOf(feesched));
 
