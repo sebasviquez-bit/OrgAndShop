@@ -348,7 +348,7 @@ public class ExpertAdvice {
 
         this.menuexpadv.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(homeliving));
+        wait.until(ExpectedConditions.elementToBeClickable(homeliving));
         this.homeliving.click();
         wait.until(ExpectedConditions.visibilityOf(homelivingElement));
 
@@ -371,7 +371,6 @@ public class ExpertAdvice {
         wait.until(ExpectedConditions.elementToBeClickable(news));
         this.news.click();
         wait.until(ExpectedConditions.visibilityOf(newsElement));
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
 
     }
 
@@ -453,7 +452,7 @@ public class ExpertAdvice {
 
         this.menuexpadv.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(candogeat));
+        wait.until(ExpectedConditions.elementToBeClickable(candogeat));
         this.candogeat.click();
         wait.until(ExpectedConditions.visibilityOf(candogeatElement));
 
@@ -463,7 +462,7 @@ public class ExpertAdvice {
 
         this.menuexpadv.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(akctv));
+        wait.until(ExpectedConditions.elementToBeClickable(akctv));
         this.akctv.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlToBe("https://akc.tv/"));
@@ -485,7 +484,7 @@ public class ExpertAdvice {
 
         this.menuexpadv.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(newsletter));
+        wait.until(ExpectedConditions.elementToBeClickable(newsletter));
         this.newsletter.click();
         wait.until(ExpectedConditions.visibilityOf(newsletterElement));
 

@@ -65,10 +65,10 @@ public class BreedsMenu {
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[1]/div[4]/div/div/div/ul/li[3]/a")
     WebElement findbreedclub;
 
-    @FindBy(xpath = "//*[@id=\"dog-breeds\"]/div[4]/div/div/div/ul/li[4]/a")
+    @FindBy(css = "#dog-breeds > div:nth-child(4) > div > div > div > ul > li:nth-child(4) > a")
     WebElement mostpopdogs;
 
-    @FindBy(xpath = "//*[@id=\"dog-breeds\"]/div[4]/div/div/div/ul/li[5]/a")
+    @FindBy(css = "#dog-breeds > div:nth-child(4) > div > div > div > ul > li:nth-child(5) > a")
     WebElement fordogbreeders;
 
     @FindBy(css = "#dog-breeds > div:nth-child(4) > div > div > div > ul > li:nth-child(6) > a")
@@ -379,7 +379,7 @@ public class BreedsMenu {
 
         this.menubreeds.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(findbreedclub));
+        wait.until(ExpectedConditions.elementToBeClickable(findbreedclub));
         this.findbreedclub.click();
         for (String winHandle : driver.getWindowHandles()) { driver.switchTo().window(winHandle); }
         wait.until(ExpectedConditions.urlContains("https://webapps.akc.org/club-search/"));
@@ -390,10 +390,9 @@ public class BreedsMenu {
 
         this.menubreeds.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(mostpopdogs));
+        wait.until(ExpectedConditions.elementToBeClickable(mostpopdogs));
         this.mostpopdogs.click();
         wait.until(ExpectedConditions.visibilityOf(mostpopdogsElement));
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
 
     }
 
@@ -401,7 +400,6 @@ public class BreedsMenu {
 
         this.menubreeds.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(fordogbreeders));
         wait.until(ExpectedConditions.elementToBeClickable(fordogbreeders));
         this.fordogbreeders.click();
         wait.until(ExpectedConditions.visibilityOf(fordogbreedersElement));

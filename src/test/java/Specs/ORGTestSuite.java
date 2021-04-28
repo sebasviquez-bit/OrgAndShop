@@ -224,6 +224,13 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
+    @Test
+    public void RegisterDogVerify10() {
+
+        registerDog.VerifyRegisterDog10();
+
+    }
+
 
     @Test
     public void RegisterLitterVerify() {

@@ -42,13 +42,13 @@ public class SportsEvents {
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[1]/div[2]/div/div/ul/li[2]/a")
     WebElement natiotrack;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[1]/div[2]/div/div/ul/li[3]/a")
+    @FindBy(css = "#sports-events > div:nth-child(1) > div:nth-child(2) > div > div > ul > li:nth-child(3) > a")
     WebElement natiochamp;
 
     @FindBy(css = "#sports-events > div:nth-child(1) > div:nth-child(2) > div > div > ul > li:nth-child(4) > a")
     WebElement akcagility;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[1]/div[2]/div/div/ul/li[5]/a")
+    @FindBy(css = "#sports-events > div:nth-child(1) > div:nth-child(2) > div > div > ul > li:nth-child(5) > a")
     WebElement obediencecla;
 
     @FindBy(css = "#sports-events > div:nth-child(1) > div:nth-child(2) > div > div > ul > li:nth-child(6) > a")
@@ -84,10 +84,10 @@ public class SportsEvents {
     @FindBy(css = "#sports-events > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(2) > a")
     WebElement compsport;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[2]/div/div/div[1]/ul/li[2]/ul/li[1]/a")
+    @FindBy(css = "#sports-events > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(2) > ul > li:nth-child(1) > a")
     WebElement agility;
 
-    @FindBy(xpath = "//*[@id=\"sports-events\"]/div[2]/div/div/div[1]/ul/li[2]/ul/li[2]/a")
+    @FindBy(css = "#sports-events > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(2) > ul > li:nth-child(2) > a")
     WebElement obedience;
 
     @FindBy(css = "#sports-events > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(2) > ul > li:nth-child(3) > a")
@@ -144,7 +144,7 @@ public class SportsEvents {
     @FindBy(css = "#sports-events > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(1) > ul > li:nth-child(8) > a")
     WebElement spaniels;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[2]/div/div/div[2]/ul/li[2]/a")
+    @FindBy(css = "#sports-events > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(2) > a")
     WebElement sportsjun;
 
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[2]/div/div/div[2]/ul/li[2]/ul/li[1]/a")
@@ -582,7 +582,7 @@ public class SportsEvents {
 
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(natiochamp));
+        wait.until(ExpectedConditions.elementToBeClickable(natiochamp));
         this.natiochamp.click();
         wait.until(ExpectedConditions.visibilityOf(natiochampElement));
 
@@ -602,7 +602,7 @@ public class SportsEvents {
 
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(obediencecla));
+        wait.until(ExpectedConditions.elementToBeClickable(obediencecla));
         this.obediencecla.click();
         wait.until(ExpectedConditions.visibilityOf(obedienceclaElement));
 
