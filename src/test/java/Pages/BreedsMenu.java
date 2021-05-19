@@ -212,7 +212,7 @@ public class BreedsMenu {
 
         this.menubreeds.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(viewbreeds));
+        wait.until(ExpectedConditions.elementToBeClickable(viewbreeds));
         this.viewbreeds.click();
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         wait.until(ExpectedConditions.visibilityOf(viewbreedsElement));
@@ -328,12 +328,9 @@ public class BreedsMenu {
 
         this.menubreeds.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(getstartdogsports));
-        this.getstartdogsports.isDisplayed();
+        wait.until(ExpectedConditions.elementToBeClickable(getstartdogsports));
         this.getstartdogsports.click();
         wait.until(ExpectedConditions.visibilityOf(getstartdogsportsElement));
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        this.getstartdogsportsElement.isDisplayed();
 
     }
 

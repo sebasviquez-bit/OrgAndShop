@@ -792,10 +792,8 @@ public class RegisterDog {
         this.register.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(purcped));
-        HiddeBanner();
         this.purcped.click();
         wait.until(ExpectedConditions.elementToBeClickable(onlinesearButton));
-        HiddeBanner();
         this.onlinesearButton.click();
         newWindow();
 

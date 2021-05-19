@@ -362,7 +362,7 @@ public class CompareBreeds {
         //this.group3.isDisplayed();
         //this.group4.isDisplayed();
         //this.group5.isDisplayed();
-        this.size.isDisplayed();
+        //this.size.isDisplayed();
         this.size1.isDisplayed();
         this.size2.isDisplayed();
         this.size3.isDisplayed();

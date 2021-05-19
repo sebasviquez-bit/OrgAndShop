@@ -515,7 +515,7 @@ public class BreedSelector {
         this.findmatch.click();
         wait.until(ExpectedConditions.visibilityOf(getstarted));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        HiddeBanner();
+        //HiddeBanner();
         this.getstarted.click();
         wait.until(ExpectedConditions.visibilityOf(owndogpast));
         Actions actions = new Actions(driver);

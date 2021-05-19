@@ -1294,7 +1294,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickakccanineretreat() throws InterruptedException {
+    public void Clickakccanineretreat() {
 
         prodserv.Clickakccanineretreat();
 
@@ -2154,7 +2154,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void VisualClickwhygetdog() throws InterruptedException {
+    public void VisualClickwhygetdog() {
 
         breeds.Clickwhygetdog();
         eyes.open(driver, "AKC", "Clickwhygetdog", new RectangleSize(1430, 680));

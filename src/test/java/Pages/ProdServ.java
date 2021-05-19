@@ -480,7 +480,6 @@ public class ProdServ {
         wait.until(ExpectedConditions.elementToBeClickable(regdown));
         this.regdown.click();
         wait.until(ExpectedConditions.visibilityOf(regdownElement));
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
 
     }
 
@@ -521,7 +520,6 @@ public class ProdServ {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(breedrefer));
         wait.until(ExpectedConditions.elementToBeClickable(breedrefer));
         this.breedrefer.click();
         wait.until(ExpectedConditions.visibilityOf(breedreferElement));
@@ -536,7 +534,6 @@ public class ProdServ {
         this.puppyvisor.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://marketplace.akc.org/"));
-
 
     }
 
@@ -620,7 +617,7 @@ public class ProdServ {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(akcsafe));
+        wait.until(ExpectedConditions.elementToBeClickable(akcsafe));
         this.akcsafe.click();
         wait.until(ExpectedConditions.visibilityOf(akcsafeElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
@@ -649,7 +646,7 @@ public class ProdServ {
 
     }
 
-    public void Clickakccanineretreat() throws InterruptedException {
+    public void Clickakccanineretreat() {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);

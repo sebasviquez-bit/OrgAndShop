@@ -434,7 +434,7 @@ public class Homepage {
             driver.switchTo().window(winHandle);
         }
         WebDriverWait wait = new WebDriverWait(driver, 30);
-        wait.until(ExpectedConditions.urlContains("/products-services/magazines/"));
+        wait.until(ExpectedConditions.urlContains("/American-Kennel-Club-Inc-Family/"));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
 
     }
