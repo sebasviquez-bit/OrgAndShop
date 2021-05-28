@@ -48,7 +48,7 @@ public class SportsEvents {
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[1]/div[2]/div/div/ul/li[4]/a")
     WebElement akcagility;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[1]/div[2]/div/div/ul/li[5]/a")
+    @FindBy(xpath = "//a[contains(@class,'menu-link')][normalize-space()='Obedience Classic']")
     WebElement obediencecla;
 
     @FindBy(css = "#sports-events > div:nth-child(1) > div:nth-child(2) > div > div > ul > li:nth-child(6) > a")
@@ -192,7 +192,7 @@ public class SportsEvents {
     @FindBy(xpath = "//*[@id=\"sports-events\"]/div[3]/div/div/div/ul/li[4]/a")
     WebElement oem;
 
-    @FindBy(xpath = "//*[@id=\"sports-events\"]/div[3]/div/div/div/ul/li[5]/a")
+    @FindBy(css = "#sports-events > div:nth-child(3) > div > div > div > ul > li:nth-child(5) > a")
     WebElement pointaward;
 
     @FindBy(css = "#sports-events > div:nth-child(3) > div > div > div > ul > li:nth-child(6) > a")
@@ -589,7 +589,7 @@ public class SportsEvents {
 
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(akcagility));
+        wait.until(ExpectedConditions.elementToBeClickable(akcagility));
         this.akcagility.click();
         wait.until(ExpectedConditions.visibilityOf(akcagilityElement));
 
@@ -599,7 +599,7 @@ public class SportsEvents {
 
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(obediencecla));
+        wait.until(ExpectedConditions.elementToBeClickable(obediencecla));
         this.obediencecla.click();
         wait.until(ExpectedConditions.visibilityOf(obedienceclaElement));
 
@@ -728,7 +728,6 @@ public class SportsEvents {
 
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(obedience));
         wait.until(ExpectedConditions.elementToBeClickable(obedience));
         this.obedience.click();
         wait.until(ExpectedConditions.visibilityOf(obedienceElement));
@@ -1181,7 +1180,7 @@ public class SportsEvents {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", juniorRes);
         this.juniorRes.click();
-        wait.until(ExpectedConditions.elementToBeClickable(juniorResElement));
+        wait.until(ExpectedConditions.visibilityOf(juniorResElement));
         //this.driver.get(this.driver.getCurrentUrl() + "?test=true");
 
     }

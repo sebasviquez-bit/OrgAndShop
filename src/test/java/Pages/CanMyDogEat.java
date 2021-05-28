@@ -319,7 +319,7 @@ public class CanMyDogEat {
         this.canmydog.click();
         wait.until(ExpectedConditions.visibilityOf(tittle));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        HiddeBanner();
+        //HiddeBanner();
         this.img.isDisplayed();
         this.msg.isDisplayed();
         this.apples.isDisplayed();
@@ -423,7 +423,7 @@ public class CanMyDogEat {
         this.canmydog.click();
         wait.until(ExpectedConditions.visibilityOf(no1));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        HiddeBanner();
+        //HiddeBanner();
         wait.until(ExpectedConditions.elementToBeClickable(no1));
         this.no1.click();
         wait.until(ExpectedConditions.visibilityOf(otheranswer1));

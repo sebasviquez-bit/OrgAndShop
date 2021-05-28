@@ -107,7 +107,7 @@ public class ExpertAdvice {
     @FindBy(css = "#page-title > div > h1")
     WebElement healthElement;
 
-    @FindBy(xpath = "//*[@id=\"page-title\"]/div/h1")
+    @FindBy(css = "#page-title > div > h1")
     WebElement homelivingElement;
 
     @FindBy(css = "#page-title > div > h1")
@@ -292,8 +292,7 @@ public class ExpertAdvice {
 
         this.menuexpadv.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(artexpadv));
-        this.artexpadv.isDisplayed();
+        wait.until(ExpectedConditions.elementToBeClickable(artexpadv));
         this.artexpadv.click();
         wait.until(ExpectedConditions.visibilityOf(artexpadvElement));
 
@@ -303,7 +302,7 @@ public class ExpertAdvice {
 
         this.menuexpadv.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(allcateg));
+        wait.until(ExpectedConditions.elementToBeClickable(allcateg));
         this.allcateg.click();
         wait.until(ExpectedConditions.visibilityOf(allcategElement));
 
@@ -458,7 +457,7 @@ public class ExpertAdvice {
 
         this.menuexpadv.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(akctv));
+        wait.until(ExpectedConditions.elementToBeClickable(akctv));
         this.akctv.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlToBe("https://akc.tv/"));
@@ -480,7 +479,7 @@ public class ExpertAdvice {
 
         this.menuexpadv.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(newsletter));
+        wait.until(ExpectedConditions.elementToBeClickable(newsletter));
         this.newsletter.click();
         wait.until(ExpectedConditions.visibilityOf(newsletterElement));
 

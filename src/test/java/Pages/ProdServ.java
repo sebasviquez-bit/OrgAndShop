@@ -131,13 +131,13 @@ public class ProdServ {
     @FindBy(css = "#product-services > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(2) > ul > li:nth-child(2) > a")
     WebElement bwh;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[2]/div/div/div[2]/ul/li[2]/ul/li[3]/a")
+    @FindBy(css = "#product-services > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(2) > ul > li:nth-child(3) > a")
     WebElement bez;
 
     @FindBy(css = "#product-services > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(4) > a")
     WebElement seall;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[2]/div/div/div[2]/ul/li[4]/a")
+    @FindBy(css = "#product-services > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(4) > a")
     WebElement browseserv;
 
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[3]/div/div/a/img")
@@ -203,7 +203,7 @@ public class ProdServ {
     @FindBy(css = "#page-title")
     WebElement seallElement;
 
-    @FindBy(xpath = "//*[@id=\"page-title\"]/h1")
+    @FindBy(xpath = "#page-title > h1")
     WebElement browseservElement;
 
     @FindBy(xpath = "//html/body/div[1]/div[1]/header/div[2]/a[2]/img")
@@ -516,7 +516,6 @@ public class ProdServ {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(breedrefer));
         wait.until(ExpectedConditions.elementToBeClickable(breedrefer));
         this.breedrefer.click();
         wait.until(ExpectedConditions.visibilityOf(breedreferElement));
@@ -717,15 +716,6 @@ public class ProdServ {
 
     }
 
-    public void Clickbrowseserv() {
-
-        this.produservi.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(browseserv));
-        this.browseserv.click();
-        wait.until(ExpectedConditions.visibilityOf(browseservElement));
-
-    }
 
     public void Clickakcshop() {
 

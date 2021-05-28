@@ -164,28 +164,41 @@ public class RegisterDog {
     @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > form > div.registration__radio-option.active > div.registration__radio-menu__group-set > p")
     WebElement akcpal;
 
-    @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > form > div.registration__radio-option.active > div.registration__radio-menu__group-set > div:nth-child(1) > label > span")
+    @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > form > div.registration__radio-option.active > div.registration__radio-menu__group-set > div:nth-child(1) > div.registration__radio-menu__group-trigger > label > span")
     WebElement foreigreg;
 
-    @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > form > div.registration__radio-option.active > div.registration__radio-menu__group-set > div:nth-child(1) > label > div > span.form-label")
+    @FindBy(xpath = "//span[normalize-space()='FOREIGN REGISTRATION']")
     WebElement foreigregtext;
 
-    @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > form > div.registration__radio-option.active > div.registration__radio-menu__group-set > div:nth-child(2) > label > span")
+    @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > form > div.registration__radio-option.active > div.registration__radio-menu__group-set > div.registration__radio-option.active > div.registration__radio-menu__group-set > div:nth-child(1) > label > span")
+    WebElement RegisterOnline;
+
+    @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > form > div.registration__radio-option.active > div.registration__radio-menu__group-set > div.registration__radio-option.active > div.registration__radio-menu__group-set > div:nth-child(1) > label > div > span.form-label")
+    WebElement RegOnlineText;
+
+    @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > form > div.registration__radio-option.active > div.registration__radio-menu__group-set > div.registration__radio-option.active > div.registration__radio-menu__group-set > div:nth-child(2) > label > span")
+    WebElement RegisterOnPapper;
+
+    @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > form > div.registration__radio-option.active > div.registration__radio-menu__group-set > div.registration__radio-option.active > div.registration__radio-menu__group-set > div:nth-child(2) > label > div > span.form-label")
+    WebElement RegOnPapperText;
+    //
+
+    @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > form > div.registration__radio-option.active > div.registration__radio-menu__group-set > div:nth-child(2) > div > label > span")
     WebElement fundstock;
 
-    @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > form > div.registration__radio-option.active > div.registration__radio-menu__group-set > div:nth-child(2) > label > div > span.form-label")
+    @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > form > div.registration__radio-option.active > div.registration__radio-menu__group-set > div:nth-child(2) > div > label > div > span.form-label")
     WebElement fundstocktext;
 
-    @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > form > div.registration__radio-option.active > div.registration__radio-menu__group-set > div:nth-child(3) > label > span")
+    @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > form > div.registration__radio-option.active > div.registration__radio-menu__group-set > div:nth-child(3) > div > label > span")
     WebElement openreg;
 
-    @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > form > div.registration__radio-option.active > div.registration__radio-menu__group-set > div:nth-child(3) > label > div > span.form-label")
+    @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > form > div.registration__radio-option.active > div.registration__radio-menu__group-set > div:nth-child(3) > div > label > div > span.form-label")
     WebElement openregtext;
 
-    @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > form > div.registration__radio-option.active > div.registration__radio-menu__group-set > div:nth-child(4) > label > span")
+    @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > form > div.registration__radio-option.active > div.registration__radio-menu__group-set > div:nth-child(4) > div > label > span")
     WebElement kenname;
 
-    @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > form > div.registration__radio-option.active > div.registration__radio-menu__group-set > div:nth-child(4) > label > div > span.form-label")
+    @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > form > div.registration__radio-option.active > div.registration__radio-menu__group-set > div:nth-child(4) > div > label > div > span.form-label")
     WebElement kennametext;
 
     @FindBy(xpath = "//html/body/div[4]/div/div[4]/div/main/form")
@@ -322,7 +335,15 @@ public class RegisterDog {
             driver.switchTo().window(winHandle);
         }
         WebDriverWait wait = new WebDriverWait(driver,30);
-        wait.until(ExpectedConditions.urlContains("images.akc.org/pdf/"));
+        wait.until(ExpectedConditions.urlContains("/images.akc.org/"));
+    }
+
+    private void newWindow5() {
+        for(String winHandle : driver.getWindowHandles()){
+            driver.switchTo().window(winHandle);
+        }
+        WebDriverWait wait = new WebDriverWait(driver,30);
+        wait.until(ExpectedConditions.urlContains("/register/dog/foreign/"));
     }
 
     public void VerifyRegisterDog1() {
@@ -435,9 +456,9 @@ public class RegisterDog {
         this.driver.get(this.driver.getCurrentUrl()+"?test=true");
         this.regdog.click();
         this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        wait.until(ExpectedConditions.visibilityOf(enrollpure));
+        wait.until(ExpectedConditions.elementToBeClickable(enrollpure));
         this.enrollpure.click();
-        wait.until(ExpectedConditions.visibilityOf(buttoncont));
+        wait.until(ExpectedConditions.elementToBeClickable(buttoncont));
         this.buttoncont.click();
         newWindow3();
 
@@ -448,15 +469,17 @@ public class RegisterDog {
 
         this.register.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(regdog));
+        wait.until(ExpectedConditions.elementToBeClickable(regdog));
         this.regdog.click();
-        wait.until(ExpectedConditions.visibilityOf(other));
+        wait.until(ExpectedConditions.elementToBeClickable(other));
         this.other.click();
-        wait.until(ExpectedConditions.visibilityOf(foreigreg));
+        wait.until(ExpectedConditions.elementToBeClickable(foreigreg));
         this.foreigreg.click();
-        wait.until(ExpectedConditions.visibilityOf(buttoncont));
+        wait.until(ExpectedConditions.elementToBeClickable(RegisterOnline));
+        this.RegisterOnline.click();
+        wait.until(ExpectedConditions.elementToBeClickable(buttoncont));
         this.buttoncont.click();
-        newWindow4();
+        newWindow5();
 
     }
 
@@ -468,7 +491,7 @@ public class RegisterDog {
         this.regdog.click();
         wait.until(ExpectedConditions.visibilityOf(other));
         this.other.click();
-        wait.until(ExpectedConditions.visibilityOf(fundstock));
+        wait.until(ExpectedConditions.elementToBeClickable(fundstock));
         this.fundstock.click();
         wait.until(ExpectedConditions.visibilityOf(buttoncont));
         this.buttoncont.click();
@@ -502,6 +525,24 @@ public class RegisterDog {
         this.other.click();
         wait.until(ExpectedConditions.elementToBeClickable(kenname));
         this.kenname.click();
+        wait.until(ExpectedConditions.elementToBeClickable(buttoncont));
+        this.buttoncont.click();
+        newWindow4();
+
+    }
+
+    public void VerifyRegisterDog10() {
+
+        this.register.click();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(regdog));
+        this.regdog.click();
+        wait.until(ExpectedConditions.elementToBeClickable(other));
+        this.other.click();
+        wait.until(ExpectedConditions.elementToBeClickable(foreigreg));
+        this.foreigreg.click();
+        wait.until(ExpectedConditions.elementToBeClickable(RegisterOnline));
+        this.RegisterOnPapper.click();
         wait.until(ExpectedConditions.elementToBeClickable(buttoncont));
         this.buttoncont.click();
         newWindow4();

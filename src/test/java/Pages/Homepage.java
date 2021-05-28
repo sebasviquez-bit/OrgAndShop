@@ -464,7 +464,7 @@ public class Homepage {
             driver.switchTo().window(winHandle);
         }
         WebDriverWait wait = new WebDriverWait(driver, 30);
-        wait.until(ExpectedConditions.urlContains("akc.org/akc-rescue-network/"));
+        wait.until(ExpectedConditions.urlContains("/dog-breeds/rescue-network/"));
 
     }
 

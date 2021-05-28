@@ -42,7 +42,7 @@ public class SpecsBaseClass extends SuperBaseClass {
 
         driver.get(driverHelper.baseUrl);
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
         this.eyes = new Eyes();
         this.eyes.setApiKey("z9croAylAJ31BCxQ9g0BdZE0ul770cXrtqRuwWv8A8g110");    //.ORG API KEY

@@ -17,7 +17,7 @@ public class BreedsMenu {
     @FindBy(css = "#site-header > div > div.desktop-header > div > div.primary-nav > nav > a:nth-child(1)")
     WebElement menubreeds;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[1]/div[1]/div/div/a")
+    @FindBy(css = "#dog-breeds > div:nth-child(1) > div > div > a")
     WebElement viewbreeds;
 
     @FindBy(xpath = "//*[@id=\"breed-search-selectized\"]")
@@ -212,7 +212,7 @@ public class BreedsMenu {
 
         this.menubreeds.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(viewbreeds));
+        wait.until(ExpectedConditions.elementToBeClickable(viewbreeds));
         this.viewbreeds.click();
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         wait.until(ExpectedConditions.visibilityOf(viewbreedsElement));
@@ -435,7 +435,7 @@ public class BreedsMenu {
         this.allaboutpuppies.click();
         sleep(1000);
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        wait.until(ExpectedConditions.visibilityOf(preparingPuppy));
+        wait.until(ExpectedConditions.elementToBeClickable(preparingPuppy));
         this.preparingPuppy.click();
         wait.until(ExpectedConditions.visibilityOf(twoMonths));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
@@ -463,7 +463,7 @@ public class BreedsMenu {
         this.allaboutpuppies.click();
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         wait.until(ExpectedConditions.visibilityOf(preparingPuppy));
-        this.threeMonths.isDisplayed();
+        //this.threeMonths.isDisplayed();
 
 
     }
@@ -495,7 +495,7 @@ public class BreedsMenu {
         this.fordogowners.click();
         wait.until(ExpectedConditions.elementToBeClickable(breedsMoreButton));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        HiddeBanner();
+        //HiddeBanner();
         this.breedsMoreButton.isDisplayed();
         this.breedsMoreButton.click();
         wait.until(ExpectedConditions.urlContains("akc.org/dog-breed-selector/"));
@@ -510,7 +510,7 @@ public class BreedsMenu {
         this.fordogowners.click();
         sleep(1000);
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        HiddeBanner();
+        //HiddeBanner();
         JavascriptExecutor js = (JavascriptExecutor) driver;
         WebDriverWait wait = new WebDriverWait(driver, 10);
         js.executeScript("100,500");

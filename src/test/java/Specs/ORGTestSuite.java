@@ -224,6 +224,13 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
+    @Test
+    public void RegisterDogVerify10() {
+
+        registerDog.VerifyRegisterDog9();
+
+    }
+
 
     @Test
     public void RegisterLitterVerify() {
@@ -1335,13 +1342,6 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickbrowseserv() {
-
-        prodserv.Clickbrowseserv();
-
-    }
-
-    @Test
     public void Clickakcshop() {
 
         prodserv.Clickakcshop();
@@ -1986,7 +1986,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void puppiesArticle2() {
 
         breeds.puppiesArticle2();
