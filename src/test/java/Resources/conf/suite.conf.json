@@ -4,16 +4,29 @@
   "key": "szDfCvzz6f8QZE54aXkN",
 
   "capabilities": {
-    "build": ".ORG",
-    "name": "ORGTestSuite",
+    "build": "suite-build-6",
+    "name": "suite_tests",
     "browserstack.debug": true
   },
 
   "environments": {
-
     "chrome": {
-      "browser": "chrome"
+      "os": "Windows",
+      "os_version": "10",
+      "browser": "Chrome",
+      "browser_version": "latest"
+    },
+    "firefox": {
+      "os": "OS X",
+      "os_version": "Catalina",
+      "browser": "Firefox",
+      "browser_version": "latest"
+    },
+    "safari": {
+      "os": "OS X",
+      "os_version": "Big Sur",
+      "browser": "Safari",
+      "browser_version": "14.0"
     }
   }
-
 }

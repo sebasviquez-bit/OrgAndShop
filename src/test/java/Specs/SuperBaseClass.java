@@ -34,7 +34,6 @@ public class SuperBaseClass {
     ShopCollections ShopCollections;
     ShopPurchaseOrders shopPurchaseOrders;
 
-
     //helpers
     DataHelper dataHelper;
     DriverHelper driverHelper;

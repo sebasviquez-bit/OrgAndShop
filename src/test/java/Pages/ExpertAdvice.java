@@ -1,6 +1,7 @@
 package Pages;
 
 import Helpers.DriverHelper;
+import Specs.SpecsBrowserStack;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -531,7 +532,7 @@ public class ExpertAdvice {
 
         this.menuexpadv.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(akceducation));
+        wait.until(ExpectedConditions.elementToBeClickable(akceducation));
         this.akceducation.click();
         wait.until(ExpectedConditions.visibilityOf(akceducationElement));
 

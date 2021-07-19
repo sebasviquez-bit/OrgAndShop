@@ -36,7 +36,7 @@ public class SportsEvents {
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[1]/div[2]/h3")
     WebElement featurevent;
 
-    @FindBy(xpath = "//*[@id=\"sports-events\"]/div[1]/div[2]/div/div/ul/li[1]/a")
+    @FindBy(css = "#sports-events > div:nth-child(1) > div:nth-child(2) > div > div > ul > li:nth-child(1) > a")
     WebElement upcomevent;
 
     @FindBy(css = "#sports-events > div:nth-child(1) > div:nth-child(2) > div > div > ul > li:nth-child(2) > a")
@@ -51,7 +51,7 @@ public class SportsEvents {
     @FindBy(xpath = "//a[contains(@class,'menu-link')][normalize-space()='Obedience Classic']")
     WebElement obediencecla;
 
-    @FindBy(css = "#sports-events > div:nth-child(1) > div:nth-child(2) > div > div > ul > li:nth-child(6) > a")
+    @FindBy(xpath = "//a[contains(@class,'menu-link')][normalize-space()='AKC Meet the Breeds']")
     WebElement akcmeet;
 
     @FindBy(css = "#sports-events > div:nth-child(1) > div:nth-child(2) > div > div > ul > li:nth-child(7) > a")
@@ -180,7 +180,7 @@ public class SportsEvents {
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[3]/div/h3")
     WebElement resfordog;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[3]/div/div/div/ul/li[1]/a")
+    @FindBy(css = "#sports-events > div:nth-child(3) > div > div > div > ul > li:nth-child(1) > a")
     WebElement eventse;
 
     @FindBy(xpath = "//*[@id=\"sports-events\"]/div[3]/div/div/div/ul/li[2]/a")
@@ -558,7 +558,7 @@ public class SportsEvents {
 
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(upcomevent));
+        wait.until(ExpectedConditions.elementToBeClickable(upcomevent));
         this.upcomevent.click();
         wait.until(ExpectedConditions.visibilityOf(upcomeventElement));
         this.upcomeventElement.isDisplayed();
@@ -611,8 +611,11 @@ public class SportsEvents {
         WebDriverWait wait = new WebDriverWait (driver, 10);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", akcmeet);
+        wait.until(ExpectedConditions.elementToBeClickable(akcmeet));
         this.akcmeet.click();
+        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         wait.until(ExpectedConditions.visibilityOf(akcmeetElement));
+
 
     }
 

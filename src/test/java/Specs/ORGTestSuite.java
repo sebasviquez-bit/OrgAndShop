@@ -5,7 +5,10 @@ import Model.User;
 import Model.Word;
 import com.applitools.eyes.RectangleSize;
 import com.applitools.eyes.selenium.fluent.Target;
+import org.apache.tools.ant.taskdefs.Parallel;
+import org.junit.runner.RunWith;
 import org.testng.annotations.Test;
+import org.testng.xml.XmlSuite;
 
 public class ORGTestSuite extends SpecsBaseClass {
 
@@ -1314,7 +1317,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickbom() throws InterruptedException {
+    public void Clickbom()  {
 
         prodserv.Clickbom();
 
@@ -1993,7 +1996,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void puppiesArticle3() {
 
         breeds.puppiesArticle3();
@@ -2067,7 +2070,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
 
-    //@Test
+    @Test
     public void lifestyleArticle() throws InterruptedException {
 
         expertAdvice.lifestyleArticle();

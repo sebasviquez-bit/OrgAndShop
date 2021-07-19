@@ -788,6 +788,12 @@ WebDriver:
     * Reworking sendKeys to send characters one by one, this is standard compliant behavior
     * Making switchTo().window more standard compliant
     * Making getLocation and getSize standard compliant
+    -- Dear all,
+    Hope this email finds you well,
+
+    Last friday I gave an automation premier to Jaime's team
+
+    On this session we talked about different aproaches
     * Making timeout setting methods standard compliant
     * Fixing "no such alert" error mapping
     * Making findElement(s) commands standard compliant (except for link text locators)

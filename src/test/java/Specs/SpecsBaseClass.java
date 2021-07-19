@@ -38,6 +38,7 @@ public class SpecsBaseClass extends SuperBaseClass {
         //InitHelpers("https://www.akc.org/?test=true");
         //InitHelpers("https://devshop.akc.org/");
         //InitHelpers("https://shop.akc.org/?test=true");
+        //InitHelpers("https://5-7-2update-staging-akc.pantheonsite.io/");
         InitPages();
 
         driver.get(driverHelper.baseUrl);

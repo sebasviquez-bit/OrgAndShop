@@ -56,7 +56,7 @@ public class ClubsDelegates {
     @FindBy(css = "#clubs-delegates > div:nth-child(3) > div > div > div > ul > li:nth-child(2) > a")
     WebElement delegatesdir;
 
-    @FindBy(xpath = "//*[@id=\"clubs-delegates\"]/div[3]/div/div/div/ul/li[3]/a")
+    @FindBy(xpath = "//a[contains(@class,'menu-link')][normalize-space()='Delegate Meeting Dates']")
     WebElement delegatesmeet;
 
     @FindBy(css = "#clubs-delegates > div:nth-child(3) > div > div > div > ul > li:nth-child(4) > a")

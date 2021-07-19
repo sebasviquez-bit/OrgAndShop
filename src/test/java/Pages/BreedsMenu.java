@@ -71,7 +71,7 @@ public class BreedsMenu {
     @FindBy(xpath = "//*[@id=\"dog-breeds\"]/div[4]/div/div/div/ul/li[5]/a")
     WebElement fordogbreeders;
 
-    @FindBy(xpath = "//*[@id=\"dog-breeds\"]/div[4]/div/div/div/ul/li[6]/a")
+    @FindBy(css = "#dog-breeds > div:nth-child(4) > div > div > div > ul > li:nth-child(6) > a")
     WebElement fordogowners;
 
     @FindBy(xpath = "//*[@id=\"page-title\"]/h1")
@@ -171,7 +171,7 @@ public class BreedsMenu {
     WebElement BottomBanner;
 
 
-
+    //Driver
     WebDriver driver;
 
     // Constructor
@@ -264,12 +264,10 @@ public class BreedsMenu {
 
         this.menubreeds.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(comparebreeds));
-        this.comparebreeds.isDisplayed();
+        wait.until(ExpectedConditions.elementToBeClickable(comparebreeds));
         this.comparebreeds.click();
         wait.until(ExpectedConditions.visibilityOf(comparebreedsElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        this.comparebreedsElement.isDisplayed();
 
     }
 
@@ -343,11 +341,11 @@ public class BreedsMenu {
 
         this.menubreeds.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(allaboutpuppies));
+        wait.until(ExpectedConditions.elementToBeClickable(allaboutpuppies));
         this.allaboutpuppies.click();
         wait.until(ExpectedConditions.visibilityOf(allaboutpuppiesElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        this.allaboutpuppiesElement.isDisplayed();
+
 
     }
 

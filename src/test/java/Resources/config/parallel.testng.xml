@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Parallel" thread-count="3" parallel="tests">
-    <test name="SingleTestChrome">
+<suite name="Parallel" thread-count="4" parallel="tests">
+    <test name="SingleTestsEnv1">
         <parameter name="config" value="parallel.conf.json"/>
-        <parameter name="environment" value="chrome"/>
+        <parameter name="environment" value="env1"/>
         <classes>
             <class name="Specs.ORGTestSuite"/>
         </classes>
     </test>
 
-    <test name="SingleTestFirefox">
+    <test name="SingleTestsEnv2">
         <parameter name="config" value="parallel.conf.json"/>
-        <parameter name="environment" value="firefox"/>
+        <parameter name="environment" value="env2"/>
         <classes>
             <class name="Specs.ORGTestSuite"/>
         </classes>
     </test>
 
-    <test name="SingleTestSafari">
+    <test name="SingleTestsEnv3">
         <parameter name="config" value="parallel.conf.json"/>
-        <parameter name="environment" value="safari"/>
+        <parameter name="environment" value="env3"/>
         <classes>
             <class name="Specs.ORGTestSuite"/>
         </classes>

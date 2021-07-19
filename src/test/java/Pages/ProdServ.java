@@ -386,10 +386,10 @@ public class ProdServ {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(akcmag));
+        wait.until(ExpectedConditions.elementToBeClickable(akcmag));
         this.akcmag.click();
-        wait.until(ExpectedConditions.elementToBeClickable(akcmagElement));
-        this.akcmagElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(akcmagElement));
+
 
     }
 
@@ -441,7 +441,7 @@ public class ProdServ {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(regpure));
+        wait.until(ExpectedConditions.elementToBeClickable(regpure));
         this.regpure.click();
         wait.until(ExpectedConditions.visibilityOf(regpureElement));
 

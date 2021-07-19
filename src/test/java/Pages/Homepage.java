@@ -223,7 +223,7 @@ public class Homepage {
     @FindBy(css = "body > div.page-home.bgc-white.cmw > section.backdrop.trending > div > div > div.grid.grid-4-up > div:nth-child(3) > div > div.content-card__body > a")
     WebElement trendnews3;
 
-    @FindBy(css = "body > div.page-home.bgc-white.cmw > div.breed-feature > div:nth-child(1) > div > div.breed-of-the-day__body > a")
+    @FindBy(css = "body > div.page-home.bgc-white.cmw > div.breed-feature > div > div:nth-child(1) > div > div.breed-of-the-day__body > a")
     WebElement bofday;
 
     @FindBy(css = "body > div.page-home.bgc-white.cmw > div.breed-feature > div.breed-feature__col.breed-feature__content-col > div > div > div > div.tool-grid__wrap > div:nth-child(1) > a > svg")
@@ -274,7 +274,7 @@ public class Homepage {
     @FindBy(css = "#slick-slide02 > a")
     WebElement ral;
 
-    @FindBy(css = "#slick-slide03 > a")
+    @FindBy(css = "#slick-slide01 > a")
     WebElement agi;
 
     @FindBy(css = "#slick-slide04 > a")
@@ -358,7 +358,7 @@ public class Homepage {
     @FindBy(css = "body > div.site-footer.cmw > div.page-container > div.site-footer__wrap.site-footer__social.site-footer__wrap--ac.bpm-py3 > div.site-footer__wrap-inner.bpm-flex-shrink-0 > div > div > a:nth-child(1)")
     WebElement FooterIconFB;
 
-
+    //Driver
     WebDriver driver;
 
     //Constructor
@@ -675,7 +675,6 @@ public class Homepage {
 
     }
 
-
     public void CheckHomepage() throws InterruptedException {  //Video section was removed from CMS on Sprint April0720
 
         sleep(1000);
@@ -795,7 +794,7 @@ public class Homepage {
 
     public void VerifyAKCTVicon() {
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(akctvicon));
         this.akctvicon.click();
@@ -987,9 +986,9 @@ public class Homepage {
 
     public void VerifyBreedofDay() {
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(bofday));
+        wait.until(ExpectedConditions.elementToBeClickable(bofday));
         this.bofday.click();
         validbreedofday();
 
@@ -1008,7 +1007,7 @@ public class Homepage {
 
     public void VerifyAKCCanine() {
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.visibilityOf(carebut1));
         this.carebut1.click();
@@ -1030,7 +1029,7 @@ public class Homepage {
 
     public void VerifyAKCReunite() {
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(akcreun));
         this.akcreun.click();
@@ -1106,7 +1105,7 @@ public class Homepage {
     public void VerifyAgility() {
 
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(agi));
+        wait.until(ExpectedConditions.elementToBeClickable(agi));
         this.agi.click();
         validagility();
 
@@ -1460,7 +1459,7 @@ public class Homepage {
 
     public void ClickFooterTikTok() {
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.elementToBeClickable(FooterIconTikTok));
         this.FooterIconTikTok.click();

@@ -310,7 +310,7 @@ public class CanMyDogEat {
 
         this.breedsmenu.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(findmatch));
+        wait.until(ExpectedConditions.elementToBeClickable(findmatch));
         this.findmatch.click();
         wait.until(ExpectedConditions.visibilityOf(canmydog));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
