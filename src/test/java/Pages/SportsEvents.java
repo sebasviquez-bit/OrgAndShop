@@ -99,7 +99,7 @@ public class SportsEvents {
     @FindBy(xpath = "//*[@id=\"sports-events\"]/div[2]/div/div/div[1]/ul/li[3]/a")
     WebElement tittlereco;
 
-    @FindBy(css = "#sports-events > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(3) > ul > li:nth-child(1) > a")
+    @FindBy(xpath = "//a[contains(text(),'Barn Hunt')]")
     WebElement barnhunt;
 
     @FindBy(xpath = "//*[@id=\"sports-events\"]/div[2]/div/div/div[1]/ul/li[3]/ul/li[2]/a")
@@ -248,7 +248,7 @@ public class SportsEvents {
     @FindBy(css = "#page-title > div > h1")
     WebElement obedienceclaElement;
 
-    @FindBy(css = "#page-title > div > h1")
+    @FindBy(xpath = "//strong[contains(text(),'AKC Meet the Breeds')]")
     WebElement akcmeetElement;
 
     @FindBy(css = "#page-title > div > h1")
@@ -613,9 +613,11 @@ public class SportsEvents {
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView();", akcmeet);
+        js.executeScript("arguments[0].scrollIntoView();", akcnatobechamp);
         this.akcmeet.click();
+        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         wait.until(ExpectedConditions.visibilityOf(akcmeetElement));
+
 
     }
 
@@ -1155,7 +1157,7 @@ public class SportsEvents {
 
     public void Clickakccontact() {
 
-        HiddeBanner();
+        //HiddeBanner();
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(akccontact));
@@ -1166,7 +1168,7 @@ public class SportsEvents {
 
     public void Clickakcrhp() {
 
-        HiddeBanner();
+        //HiddeBanner();
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(akcrhp));

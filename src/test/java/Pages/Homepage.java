@@ -227,7 +227,7 @@ public class Homepage {
     @FindBy(css = "body > div.page-home.bgc-white.cmw > section.backdrop.trending > div > div > div.grid.grid-4-up > div:nth-child(3) > div > div.content-card__body > a")
     WebElement trendnews3;
 
-    @FindBy(css = "body > div.page-home.bgc-white.cmw > div.breed-feature > div:nth-child(1) > div > div.breed-of-the-day__body > a")
+    @FindBy(css = "body > div.page-home.bgc-white.cmw > div.breed-feature > div.breed-feature__wrapper > div:nth-child(1) > div > div.breed-of-the-day__body > a")
     WebElement bofday;
 
     @FindBy(css = "body > div.page-home.bgc-white.cmw > div.breed-feature > div.breed-feature__col.breed-feature__content-col > div > div > div > div.tool-grid__wrap > div:nth-child(1) > a > svg")
@@ -688,7 +688,7 @@ public class Homepage {
         this.topstory3.isDisplayed();
         this.topstory4.isDisplayed();
         this.akctvheader.isDisplayed();
-        //this.videoheader.isDisplayed();  This was removed from the HomePage ***
+        //this.videoheader.isDisplayed();  This were removed from the HomePage ***
         //this.videotitle1.isDisplayed();
         //this.videotitle2.isDisplayed();
         //this.videotitle3.isDisplayed();
@@ -703,7 +703,7 @@ public class Homepage {
         this.eventbutton.isDisplayed();
         this.regheader.isDisplayed();
         this.regimg.isDisplayed();
-        //this.MoreToExp.isDisplayed();
+        //this.MoreToExp.isDisplayed(); This is available only on Prod *
         this.social.isDisplayed();
         this.footer.isDisplayed();
         this.akcf2.isDisplayed();
@@ -794,7 +794,7 @@ public class Homepage {
 
     public void VerifyAKCTVicon() {
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.visibilityOf(akctvicon));
         this.akctvicon.click();
@@ -985,9 +985,9 @@ public class Homepage {
 
     public void VerifyBreedofDay() {
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(bofday));
+        wait.until(ExpectedConditions.elementToBeClickable(bofday));
         this.bofday.click();
         validbreedofday();
 
@@ -1006,7 +1006,7 @@ public class Homepage {
 
     public void VerifyAKCCanine() {
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.visibilityOf(carebut1));
         this.carebut1.click();
@@ -1028,7 +1028,7 @@ public class Homepage {
 
     public void VerifyAKCReunite() {
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(akcreun));
         this.akcreun.click();

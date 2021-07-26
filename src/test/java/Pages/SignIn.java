@@ -71,7 +71,7 @@ public class SignIn {
 
     //Methods
 
-    public void signInUser(User _testUser) throws InterruptedException {
+    public void signInUser(User _testUser) {
 
         this.iconsignin.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);

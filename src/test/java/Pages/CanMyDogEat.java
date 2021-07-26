@@ -13,13 +13,13 @@ public class CanMyDogEat {
     @FindBy(xpath = "//html/body/div[2]/div/div[1]/div/div[2]/nav/a[1]")
     WebElement breedsmenu;
 
-    @FindBy(xpath = "//*[@id=\"dog-breeds\"]/div[2]/div/div/div/ul/li[1]/a/div")
+    @FindBy(css = "#dog-breeds > div:nth-child(2) > div > div > div > ul > li:nth-child(1) > a > div")
     WebElement findmatch;
 
-    @FindBy(css = "#can-my-dog-eat-___\\? > a > strong")
+    @FindBy(css = "#can-my-dog-eat-___\\? > a")
     WebElement canmydog;
 
-    @FindBy(xpath = "//html/body/main/div/section/h1")
+    @FindBy(css = "#content > h1")
     WebElement tittle;
 
     @FindBy(xpath = "//html/body/main/div/section/div[2]/img")
@@ -310,7 +310,7 @@ public class CanMyDogEat {
 
         this.breedsmenu.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(findmatch));
+        wait.until(ExpectedConditions.elementToBeClickable(findmatch));
         this.findmatch.click();
         wait.until(ExpectedConditions.visibilityOf(canmydog));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
@@ -319,7 +319,7 @@ public class CanMyDogEat {
         this.canmydog.click();
         wait.until(ExpectedConditions.visibilityOf(tittle));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        HiddeBanner();
+        //HiddeBanner();
         this.img.isDisplayed();
         this.msg.isDisplayed();
         this.apples.isDisplayed();
@@ -420,11 +420,11 @@ public class CanMyDogEat {
         wait.until(ExpectedConditions.elementToBeClickable(findmatch));
         this.findmatch.click();
         wait.until(ExpectedConditions.elementToBeClickable(canmydog));
-        HiddeBanner();
+        //HiddeBanner();
         this.canmydog.click();
         wait.until(ExpectedConditions.visibilityOf(no1));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        HiddeBanner();
+        //HiddeBanner();
         wait.until(ExpectedConditions.elementToBeClickable(no1));
         this.no1.click();
         wait.until(ExpectedConditions.visibilityOf(otheranswer1));

@@ -1315,7 +1315,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickbom() throws InterruptedException {
+    public void Clickbom() {
 
         prodserv.Clickbom();
 

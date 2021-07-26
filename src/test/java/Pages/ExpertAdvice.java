@@ -296,8 +296,7 @@ public class ExpertAdvice {
 
         this.menuexpadv.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(artexpadv));
-        this.artexpadv.isDisplayed();
+        wait.until(ExpectedConditions.elementToBeClickable(artexpadv));
         this.artexpadv.click();
         wait.until(ExpectedConditions.visibilityOf(artexpadvElement));
 
