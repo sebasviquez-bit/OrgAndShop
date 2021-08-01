@@ -319,7 +319,7 @@ public class CompareBreeds {
         this.breedscompa.click();
         wait.until(ExpectedConditions.visibilityOf(select1));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        HiddeBanner();
+        //HiddeBanner();
         this.select1.isDisplayed();
         this.select1.click();
         wait.until(ExpectedConditions.visibilityOf(affens));

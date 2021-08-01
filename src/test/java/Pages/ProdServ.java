@@ -347,7 +347,7 @@ public class ProdServ {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(trainingprod));
+        wait.until(ExpectedConditions.elementToBeClickable(trainingprod));
         this.trainingprod.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://shop.akc.org/"));
@@ -391,7 +391,7 @@ public class ProdServ {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(akcmag));
+        wait.until(ExpectedConditions.elementToBeClickable(akcmag));
         this.akcmag.click();
         wait.until(ExpectedConditions.elementToBeClickable(akcmagElement));
         this.akcmagElement.isDisplayed();
@@ -414,7 +414,7 @@ public class ProdServ {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(breedrep));
+        wait.until(ExpectedConditions.elementToBeClickable(breedrep));
         this.breedrep.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://www.apps.akc.org/apps/store/?view=category&cde_category=BRDR"));
@@ -549,7 +549,7 @@ public class ProdServ {
 
     public void Clickcgc() {
 
-        HiddeBanner();
+        //HiddeBanner();
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(cgc));
@@ -573,7 +573,7 @@ public class ProdServ {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait (driver, 20);
-        wait.until(ExpectedConditions.visibilityOf(findtrainclub));
+        wait.until(ExpectedConditions.elementToBeClickable(findtrainclub));
         this.findtrainclub.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://webapps.akc.org"));
@@ -595,10 +595,10 @@ public class ProdServ {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(healthgen));
+        wait.until(ExpectedConditions.elementToBeClickable(healthgen));
         this.healthgen.click();
         wait.until(ExpectedConditions.visibilityOf(healthgenElement));
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
+        //this.driver.get(this.driver.getCurrentUrl() + "?test=true");
 
     }
 
@@ -722,7 +722,7 @@ public class ProdServ {
 
     public void Clickbrowseserv() {
 
-        HiddeBanner();
+        //HiddeBanner();
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(browseserv));

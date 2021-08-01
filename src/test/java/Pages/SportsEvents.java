@@ -36,10 +36,10 @@ public class SportsEvents {
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[1]/div[2]/h3")
     WebElement featurevent;
 
-    @FindBy(xpath = "//*[@id=\"sports-events\"]/div[1]/div[2]/div/div/ul/li[1]/a")
+    @FindBy(css = "#sports-events > div:nth-child(1) > div:nth-child(2) > div > div > ul > li:nth-child(1) > a")
     WebElement upcomevent;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[1]/div[2]/div/div/ul/li[2]/a")
+    @FindBy(css = "#sports-events > div:nth-child(1) > div:nth-child(2) > div > div > ul > li:nth-child(2) > a")
     WebElement natiotrack;
 
     @FindBy(css = "#sports-events > div:nth-child(1) > div:nth-child(2) > div > div > ul > li:nth-child(3) > a")
@@ -99,7 +99,7 @@ public class SportsEvents {
     @FindBy(xpath = "//*[@id=\"sports-events\"]/div[2]/div/div/div[1]/ul/li[3]/a")
     WebElement tittlereco;
 
-    @FindBy(xpath = "//a[contains(text(),'Barn Hunt')]")
+    @FindBy(css = "#sports-events > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(3) > ul > li:nth-child(1) > a")
     WebElement barnhunt;
 
     @FindBy(xpath = "//*[@id=\"sports-events\"]/div[2]/div/div/div[1]/ul/li[3]/ul/li[2]/a")
@@ -147,16 +147,16 @@ public class SportsEvents {
     @FindBy(css = "#sports-events > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(2) > a")
     WebElement sportsjun;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[2]/div/div/div[2]/ul/li[2]/ul/li[1]/a")
+    @FindBy(css = "#sports-events > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(2) > ul > li:nth-child(1) > a")
     WebElement junshow;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[2]/div/div/div[2]/ul/li[2]/ul/li[2]/a")
+    @FindBy(css = "#sports-events > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(2) > ul > li:nth-child(2) > a")
     WebElement juncomp;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[2]/div/div/div[2]/ul/li[2]/ul/li[3]/a")
+    @FindBy(css = "#sports-events > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(2) > ul > li:nth-child(3) > a")
     WebElement junperf;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[2]/div/div/div[2]/ul/li[2]/ul/li[4]/a")
+    @FindBy(css = "#sports-events > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(2) > ul > li:nth-child(4) > a")
     WebElement peewee;
 
     @FindBy(css = "#sports-events > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(3) > a")
@@ -731,7 +731,6 @@ public class SportsEvents {
 
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(obedience));
         wait.until(ExpectedConditions.elementToBeClickable(obedience));
         this.obedience.click();
         wait.until(ExpectedConditions.visibilityOf(obedienceElement));
@@ -742,7 +741,7 @@ public class SportsEvents {
 
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(rally));
+        wait.until(ExpectedConditions.elementToBeClickable(rally));
         this.rally.click();
         wait.until(ExpectedConditions.visibilityOf(rallyElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
@@ -791,7 +790,7 @@ public class SportsEvents {
 
     public void Clickdivingdog() {
 
-        HiddeBanner();
+        //HiddeBanner();
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(divingdog));
@@ -940,7 +939,6 @@ public class SportsEvents {
 
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(junshow));
         wait.until(ExpectedConditions.elementToBeClickable(junshow));
         this.junshow.click();
         wait.until(ExpectedConditions.visibilityOf(junshowElement));
@@ -969,7 +967,7 @@ public class SportsEvents {
 
     public void Clickpeewee() {
 
-        HiddeBanner();
+        //HiddeBanner();
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(peewee));
@@ -1106,7 +1104,7 @@ public class SportsEvents {
 
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(judgingres));
+        wait.until(ExpectedConditions.elementToBeClickable(judgingres));
         this.judgingres.click();
         wait.until(ExpectedConditions.visibilityOf(judgingresElement));
 

@@ -19,7 +19,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test (dataProvider = "ExistingUsers", dataProviderClass = DataHelper.class)
-    public void SuccessfulLogin(String sEmail, String sPassword) throws InterruptedException {
+    public void SuccessfulLogin(String sEmail, String sPassword) {
 
         User testUser = new User(sEmail, sPassword);
         signIn.signInUser(testUser);
@@ -27,7 +27,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void HomepageCheck() throws InterruptedException {
+    public void HomepageCheck() {
 
         homepage.CheckHomepage();
 
@@ -1660,7 +1660,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickjunperf() throws InterruptedException {
+    public void Clickjunperf() {
 
         sportsEvents.Clickjunperf();
 

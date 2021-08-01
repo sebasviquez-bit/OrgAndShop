@@ -85,11 +85,11 @@ public class Search {
     @FindBy(css = "#collection-main > ul.grid.collection-grid.gradient > li:nth-child(1) > div > div")
     WebElement productDetailDogLover;
 
-    @FindBy(css = "#page-title > h1")
+    @FindBy(css = "body > div.cmw.bgc-white.page-single-breed > div:nth-child(2) > div > div.breed-page__hero.breed-page__no-page-margin > div.breed-page__section.my4.bpm-my6.text-white.breed-page__intro__title-block > div.mb3.bpm-mb4 > div > h1")
     WebElement resultsTitle;
 
-    @FindBy(id = "anchor-panel-overview")
-    WebElement overviewTab;
+    @FindBy(css = "body > div.cmw.bgc-white.page-single-breed > div:nth-child(2) > div > div.breed-page__hero.breed-page__no-page-margin > div.breed-page__section.my4.bpm-my6.text-white.breed-page__intro__title-block > p")
+    WebElement character;
 
     @FindBy(id = "anchor-panel-puppies")
     WebElement puppiesTab;
@@ -129,7 +129,7 @@ public class Search {
         this.HeroBreedSearch.sendKeys(Keys.RETURN);
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.visibilityOf(resultsTitle));
-        wait.until(ExpectedConditions.visibilityOf(overviewTab));
+        wait.until(ExpectedConditions.visibilityOf(character));
 
     }
 

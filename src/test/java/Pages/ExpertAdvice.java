@@ -147,7 +147,7 @@ public class ExpertAdvice {
     @FindBy(css = "body > main > div > div.bgc-white.cmw > div > div > div.subscription__page-header-container > h1")
     WebElement newsletterElement;
 
-    @FindBy(css = "#page-title > div > h1")
+    @FindBy(xpath = "//h1[contains(text(),'Press Center')]")
     WebElement presscenterElement;
 
     @FindBy(css = "#page-title > div > h1")
@@ -156,7 +156,7 @@ public class ExpertAdvice {
     @FindBy(css = "#page-title > div > h1")
     WebElement governmentElement;
 
-    @FindBy(xpath = "//*[@id=\"page-title\"]/div/h1")
+    @FindBy(css = "#page-title > div > h1")
     WebElement akceducationElement;
 
     @FindBy(css = "#page-title > div > h1")
@@ -410,7 +410,7 @@ public class ExpertAdvice {
 
         this.menuexpadv.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(training));
+        wait.until(ExpectedConditions.elementToBeClickable(training));
         this.training.click();
         wait.until(ExpectedConditions.visibilityOf(trainingElement));
 
@@ -513,7 +513,7 @@ public class ExpertAdvice {
 
         this.menuexpadv.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(akccanine));
+        wait.until(ExpectedConditions.elementToBeClickable(akccanine));
         this.akccanine.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://www.caninecollege.akc.org/"));
@@ -558,7 +558,7 @@ public class ExpertAdvice {
         wait.until(ExpectedConditions.visibilityOf(newsletter));
         this.newsletter.click();
         wait.until(ExpectedConditions.visibilityOf(newsletterElement));
-        HiddeBanner();
+        //HiddeBanner();
         this.SubsFormFirstName.sendKeys("Sebas");
         this.SubsFormLastName.sendKeys("Viquez");
         this.SubsFormEmail.sendKeys("sebas.viquez@gmail.com");

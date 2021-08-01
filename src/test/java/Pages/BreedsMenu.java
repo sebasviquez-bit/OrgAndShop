@@ -474,7 +474,7 @@ public class BreedsMenu {
         this.fordogowners.click();
         wait.until(ExpectedConditions.elementToBeClickable(breedsMoreButton));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        HiddeBanner();
+        //HiddeBanner();
         this.breedsMoreButton.isDisplayed();
         this.breedsMoreButton.click();
         wait.until(ExpectedConditions.urlContains("akc.org/dog-breed-selector/"));
@@ -489,7 +489,7 @@ public class BreedsMenu {
         this.fordogowners.click();
         sleep(1000);
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        HiddeBanner();
+        //HiddeBanner();
         JavascriptExecutor js = (JavascriptExecutor) driver;
         WebDriverWait wait = new WebDriverWait(driver, 10);
         js.executeScript("100,500");

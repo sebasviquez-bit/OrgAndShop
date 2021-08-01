@@ -62,10 +62,10 @@ public class Homepage {
     @FindBy(xpath = "//html/body/div[4]/section[1]/div/div")
     WebElement articheader;
 
-    @FindBy(css = "body > div.page-home.bgc-white.cmw > div.breed-feature > div:nth-child(1) > div > div.media-wrap > img")
+    @FindBy(css = "body > div.page-home.bgc-white.cmw > div.breed-feature > div > div:nth-child(1) > div > div.breed-of-the-day__body > a")
     WebElement breedofday;
 
-    @FindBy(css = "body > div.page-home.bgc-white.cmw > div.breed-feature > div.breed-feature__col.breed-feature__content-col > div > div > div > div.tool-grid__header > div > h2")
+    @FindBy(css = "body > div.page-home.bgc-white.cmw > div.breed-feature > div > div.breed-feature__col.breed-feature__content-col > div > div > div > div.tool-grid__header > div > h2")
     WebElement toolheader;
 
     @FindBy(xpath = "//*[@id=\"cares\"]/div/div/div[1]/div[1]/h2")
@@ -230,7 +230,7 @@ public class Homepage {
     @FindBy(css = "body > div.page-home.bgc-white.cmw > div.breed-feature > div.breed-feature__wrapper > div:nth-child(1) > div > div.breed-of-the-day__body > a")
     WebElement bofday;
 
-    @FindBy(css = "body > div.page-home.bgc-white.cmw > div.breed-feature > div.breed-feature__col.breed-feature__content-col > div > div > div > div.tool-grid__wrap > div:nth-child(1) > a > svg")
+    @FindBy(css = "body > div.page-home.bgc-white.cmw > div.breed-feature > div > div.breed-feature__col.breed-feature__content-col > div > div > div > div.tool-grid__wrap > div:nth-child(1) > a")
     WebElement expbreed;
 
     @FindBy(css = "#panel-AKC\\ Canine\\ Health\\ Foundation > div > a")
@@ -674,9 +674,8 @@ public class Homepage {
     }
 
 
-    public void CheckHomepage() throws InterruptedException {  //Video section was removed from CMS on Sprint April0720
+    public void CheckHomepage() {  //Video section was removed from CMS on Sprint April0720
 
-        sleep(1000);
         this.akcicon.isDisplayed();
         this.headerhome.isDisplayed();
         this.picthome.isDisplayed();
@@ -755,7 +754,7 @@ public class Homepage {
 
     public void VerifySportsicon() {
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(sportsicon));
         this.sportsicon.click();
@@ -765,7 +764,7 @@ public class Homepage {
 
     public void VerifyAKCCareicon() {
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.visibilityOf(careicon));
         this.careicon.click();
@@ -804,7 +803,7 @@ public class Homepage {
 
     public void VerifyPetInsuIcon() {
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(PetInsuIcon));
         this.PetInsuIcon.click();
@@ -845,7 +844,7 @@ public class Homepage {
 
     public void VerifyTopstory1() {
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.visibilityOf(topsto1));
         this.topsto1.click();
@@ -856,7 +855,7 @@ public class Homepage {
 
     public void VerifyTopstory2() {
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.visibilityOf(topsto1));
         this.topsto2.click();
@@ -867,9 +866,9 @@ public class Homepage {
 
     public void VerifyTopstory3() {
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(topsto3));
+        wait.until(ExpectedConditions.elementToBeClickable(topsto3));
         this.topsto3.click();
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         wait.until(ExpectedConditions.urlContains("akc.org/"));
@@ -878,9 +877,9 @@ public class Homepage {
 
     public void VerifyTopstory4() {
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(topsto4));
+        wait.until(ExpectedConditions.elementToBeClickable(topsto4));
         this.topsto4.click();
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         wait.until(ExpectedConditions.urlContains("akc.org/"));
@@ -965,7 +964,7 @@ public class Homepage {
 
     public void VerifyTrend2() {
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.visibilityOf(trendnews2));
         this.trendnews2.click();
@@ -975,7 +974,7 @@ public class Homepage {
 
     public void VerifyTrend3() {
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.visibilityOf(trendnews3));
         this.trendnews3.click();
@@ -1016,7 +1015,7 @@ public class Homepage {
 
     public void VerifyRescueNet() {
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(rescnet));
         this.rescnet.click();
@@ -1040,9 +1039,9 @@ public class Homepage {
 
     public void VerifyHumaneFund() {
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(humanfund));
+        wait.until(ExpectedConditions.elementToBeClickable(humanfund));
         this.humanfund.click();
         wait.until(ExpectedConditions.visibilityOf(humanfundbut));
         this.humanfundbut.click();
@@ -1052,9 +1051,9 @@ public class Homepage {
 
     public void VerifyMuseumofDog() {
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(museumdog));
+        wait.until(ExpectedConditions.elementToBeClickable(museumdog));
         this.museumdog.click();
         wait.until(ExpectedConditions.visibilityOf(museumdogbut));
         this.museumdogbut.click();
@@ -1064,9 +1063,9 @@ public class Homepage {
 
     public void VerifyProtectRights() {
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(protectrigh));
+        wait.until(ExpectedConditions.elementToBeClickable(protectrigh));
         this.protectrigh.click();
         wait.until(ExpectedConditions.visibilityOf(protectrightbut));
         this.protectrightbut.click();
@@ -1085,9 +1084,9 @@ public class Homepage {
 
     public void VerifyObedience() throws InterruptedException {
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(sportsarrow));
+        wait.until(ExpectedConditions.elementToBeClickable(sportsarrow));
         this.sportsarrow.click();
         sleep(1000);
         this.sportsarrow.click();
@@ -1123,9 +1122,9 @@ public class Homepage {
 
     public void VerifyTracking() throws InterruptedException {
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(sportsarrow));
+        wait.until(ExpectedConditions.elementToBeClickable(sportsarrow));
         this.sportsarrow.click();
         sleep(1000);
         this.sportsarrow.click();
@@ -1145,9 +1144,9 @@ public class Homepage {
 
     public void VerifyHerding() throws InterruptedException {
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(sportsarrow));
+        wait.until(ExpectedConditions.elementToBeClickable(sportsarrow));
         this.sportsarrow.click();
         sleep(1000);
         this.sportsarrow.click();
@@ -1169,9 +1168,9 @@ public class Homepage {
 
     public void VerifyEarthDog() throws InterruptedException {
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(sportsarrow));
+        wait.until(ExpectedConditions.elementToBeClickable(sportsarrow));
         this.sportsarrow.click();
         sleep(1000);
         this.sportsarrow.click();
@@ -1195,9 +1194,9 @@ public class Homepage {
 
     public void VerifyFieldTrials() throws InterruptedException{
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(sportsarrow));
+        wait.until(ExpectedConditions.elementToBeClickable(sportsarrow));
         this.sportsarrow.click();
         sleep(1000);
         this.sportsarrow.click();
@@ -1223,7 +1222,7 @@ public class Homepage {
 
     public void VerifyHunting() throws InterruptedException{
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(sportsarrow));
         this.sportsarrow.click();
@@ -1253,9 +1252,9 @@ public class Homepage {
 
     public void VerifyFarmDog() throws InterruptedException {
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(sportsarrow));
+        wait.until(ExpectedConditions.elementToBeClickable(sportsarrow));
         this.sportsarrow.click();
         sleep(1000);
         this.sportsarrow.click();
@@ -1279,7 +1278,7 @@ public class Homepage {
 
     public void VerifyLureCoursing() throws InterruptedException{
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOf(sportsarrow));
         this.sportsarrow.click();
@@ -1307,7 +1306,7 @@ public class Homepage {
 
     public void VerifyCoursingAbility() throws InterruptedException{
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOf(sportsarrow));
         this.sportsarrow.click();
@@ -1337,9 +1336,9 @@ public class Homepage {
 
     public void VerifyFastCat() throws InterruptedException{
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(sportsarrow));
+        wait.until(ExpectedConditions.elementToBeClickable(sportsarrow));
         this.sportsarrow.click();
         sleep(1000);
         this.fastcat.click();
@@ -1349,9 +1348,9 @@ public class Homepage {
 
     public void VerifyCoounhound() throws InterruptedException{
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(sportsarrow));
+        wait.until(ExpectedConditions.elementToBeClickable(sportsarrow));
         this.sportsarrow.click();
         sleep(1000);
         this.sportsarrow.click();
@@ -1381,7 +1380,7 @@ public class Homepage {
 
     public void VerifyScentWork() throws InterruptedException{
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(sportsarrow));
         this.sportsarrow.click();
@@ -1395,7 +1394,7 @@ public class Homepage {
 
     public void VerifyTrickDog() throws InterruptedException{
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOf(sportsarrow));
         this.sportsarrow.click();
@@ -1429,9 +1428,9 @@ public class Homepage {
 
     public void VerifyFindEvents() {
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(findevenearbut));
+        wait.until(ExpectedConditions.elementToBeClickable(findevenearbut));
         this.findevenearbut.click();
         validfindevents();
 
@@ -1439,9 +1438,9 @@ public class Homepage {
 
     public void VerifyRegisterDogbut(){
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(regdogbut));
+        wait.until(ExpectedConditions.elementToBeClickable(regdogbut));
         this.regdogbut.click();
         validregisterdog();
 
@@ -1449,7 +1448,7 @@ public class Homepage {
 
     public void VerifyFooterSocialIcons() {
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(TickTokIcon));
         this.TickTokIcon.click();
