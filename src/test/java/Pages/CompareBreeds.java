@@ -71,7 +71,7 @@ public class CompareBreeds {
     @FindBy(css = "body > div.breed-select-wrap > div > div > div.page-layout > main > div.breed-comparison-theme-wrap > div.breed-comparison-select-and-breed-data > div.breed-comparison-wrap-table > div.breed-comparison-wrap-table-inner > div > div > div:nth-child(3)")
     WebElement personality;
 
-    @FindBy(css = "body > div.breed-results-wrap.breed-results-wrap-comparison > div:nth-child(3) > div > div > main > div.breed-results-comparison.js-breed-results-comparison > div > div:nth-child(5) > div:nth-child(1)")
+    @FindBy(css = "body > div.breed-select-wrap > div > div > div.page-layout > main > div.breed-comparison-theme-wrap > div.breed-comparison-select-and-breed-data > div.breed-comparison-wrap-table > div.breed-comparison-wrap-table-inner > div > div > div:nth-child(5) > div:nth-child(1) > span")
     WebElement perso1;
 
     @FindBy(css = "body > div.breed-results-wrap.breed-results-wrap-comparison > div:nth-child(3) > div > div > main > div.breed-results-comparison.js-breed-results-comparison > div > div:nth-child(5) > div:nth-child(2) > span")
@@ -89,7 +89,7 @@ public class CompareBreeds {
     @FindBy(css = "body > div.breed-results-wrap.breed-results-wrap-comparison > div:nth-child(3) > div > div > main > div.breed-results-comparison.js-breed-results-comparison > div > div:nth-child(7) > div:nth-child(1)")
     WebElement poprank;
 
-    @FindBy(xpath = "body > div.breed-select-wrap > div > div > div.page-layout > main > div.breed-comparison-theme-wrap > div.breed-comparison-select-and-breed-data > div.breed-comparison-wrap-table > div.breed-comparison-wrap-table-inner > div > div > div:nth-child(8) > div:nth-child(1)")
+    @FindBy(css = "body > div.breed-select-wrap > div > div > div.page-layout > main > div.breed-comparison-theme-wrap > div.breed-comparison-select-and-breed-data > div.breed-comparison-wrap-table > div.breed-comparison-wrap-table-inner > div > div > div:nth-child(8) > div:nth-child(1)")
     WebElement poprank1;
 
     @FindBy(css = "body > div.breed-select-wrap > div > div > div.page-layout > main > div.breed-comparison-theme-wrap > div.breed-comparison-select-and-breed-data > div.breed-comparison-wrap-table > div.breed-comparison-wrap-table-inner > div > div > div:nth-child(8) > div:nth-child(2)")
@@ -107,7 +107,7 @@ public class CompareBreeds {
     @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[9]")
     WebElement group;
 
-    @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[11]/div[1]/a")
+    @FindBy(css = "body > div.breed-select-wrap > div > div > div.page-layout > main > div.breed-comparison-theme-wrap > div.breed-comparison-select-and-breed-data > div.breed-comparison-wrap-table > div.breed-comparison-wrap-table-inner > div > div > div:nth-child(11) > div:nth-child(1) > a")
     WebElement group1;
 
     @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[11]/div[2]/a")
@@ -125,7 +125,7 @@ public class CompareBreeds {
     @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[12]")
     WebElement size;
 
-    @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[14]/div[1]")
+    @FindBy(css = "body > div.breed-select-wrap > div > div > div.page-layout > main > div.breed-comparison-theme-wrap > div.breed-comparison-select-and-breed-data > div.breed-comparison-wrap-table > div.breed-comparison-wrap-table-inner > div > div > div:nth-child(14) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2)")
     WebElement size1;
 
     @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[14]/div[2]")
@@ -143,7 +143,7 @@ public class CompareBreeds {
     @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[15]")
     WebElement lifexp;
 
-    @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[17]/div[1]")
+    @FindBy(css = "body > div.breed-select-wrap > div > div > div.page-layout > main > div.breed-comparison-theme-wrap > div.breed-comparison-select-and-breed-data > div.breed-comparison-wrap-table > div.breed-comparison-wrap-table-inner > div > div > div:nth-child(17) > div:nth-child(1)")
     WebElement lifexp1;
 
     @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[17]/div[2]")
@@ -161,7 +161,7 @@ public class CompareBreeds {
     @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[18]")
     WebElement charac;
 
-    @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[20]/div[1]")
+    @FindBy(css = "body > div.breed-select-wrap > div > div > div.page-layout > main > div.breed-comparison-theme-wrap > div.breed-comparison-select-and-breed-data > div.breed-comparison-wrap-table > div.breed-comparison-wrap-table-inner > div > div > div:nth-child(20) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)")
     WebElement charac1;
 
     @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[20]/div[2]")
@@ -179,7 +179,7 @@ public class CompareBreeds {
     @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[21]")
     WebElement trainab;
 
-    @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[23]/div[1]")
+    @FindBy(css = "body > div.breed-select-wrap > div > div > div.page-layout > main > div.breed-comparison-theme-wrap > div.breed-comparison-select-and-breed-data > div.breed-comparison-wrap-table > div.breed-comparison-wrap-table-inner > div > div > div:nth-child(23) > div:nth-child(1)")
     WebElement trainab1;
 
     @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[23]/div[2]")
@@ -317,35 +317,33 @@ public class CompareBreeds {
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.visibilityOf(breedscompa));
         this.breedscompa.click();
-        wait.until(ExpectedConditions.visibilityOf(select1));
+        wait.until(ExpectedConditions.elementToBeClickable(select1));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         //HiddeBanner();
-        this.select1.isDisplayed();
         this.select1.click();
-        wait.until(ExpectedConditions.visibilityOf(affens));
+        wait.until(ExpectedConditions.elementToBeClickable(affens));
         this.affens.click();
-        wait.until(ExpectedConditions.visibilityOf(affenspic));
+        wait.until(ExpectedConditions.elementToBeClickable(affenspic));
         this.affenspic.isDisplayed();
         this.select2.click();
-        wait.until(ExpectedConditions.visibilityOf(akita));
+        wait.until(ExpectedConditions.elementToBeClickable(akita));
         this.akita.click();
-        wait.until(ExpectedConditions.visibilityOf(akitapic));
-        this.akitapic.isDisplayed();
+        wait.until(ExpectedConditions.elementToBeClickable(akitapic));
         this.select3.click();
-        wait.until(ExpectedConditions.visibilityOf(beagle));
+        wait.until(ExpectedConditions.elementToBeClickable(beagle));
         this.beagle.click();
         this.beaglepic.isDisplayed();
         this.select4.click();
-        wait.until(ExpectedConditions.visibilityOf(boxer));
+        wait.until(ExpectedConditions.elementToBeClickable(boxer));
         this.boxer.click();
         this.boxerpic.isDisplayed();
         this.select5.click();
-        wait.until(ExpectedConditions.visibilityOf(bullterrier));
+        wait.until(ExpectedConditions.elementToBeClickable(bullterrier));
         this.bullterrier.click();
         this.bullterrierpic.isDisplayed();
         this.breedcompbutton.click();
         wait.until(ExpectedConditions.visibilityOf(personality));
-        //this.perso1.isDisplayed();
+        this.perso1.isDisplayed();
         //this.perso2.isDisplayed();
         //this.perso3.isDisplayed();
         //this.perso4.isDisplayed();
@@ -363,9 +361,9 @@ public class CompareBreeds {
         //this.group4.isDisplayed();
         //this.group5.isDisplayed();
         //this.size.isDisplayed();
-        this.size1.isDisplayed();
-        this.size2.isDisplayed();
-        this.size3.isDisplayed();
+        //this.size1.isDisplayed();
+        //this.size2.isDisplayed();
+        //this.size3.isDisplayed();
         this.size4.isDisplayed();
         this.size5.isDisplayed();
         this.lifexp.isDisplayed();

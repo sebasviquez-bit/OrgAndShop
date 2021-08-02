@@ -114,7 +114,7 @@ public class SportsEvents {
     @FindBy(css = "#sports-events > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(3) > ul > li:nth-child(5) > a")
     WebElement searchresc;
 
-    @FindBy(css = "#sports-events > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(3) > ul > li:nth-child(5) > a")
+    @FindBy(css = "#sports-events > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(3) > ul > li:nth-child(6) > a")
     WebElement parentclubrec;
 
     @FindBy(css = "#sports-events > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(1) > a")
@@ -541,7 +541,7 @@ public class SportsEvents {
 
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(whichsports));
+        wait.until(ExpectedConditions.elementToBeClickable(whichsports));
         this.whichsports.click();
         wait.until(ExpectedConditions.visibilityOf(whichsportsElement));
 
@@ -612,10 +612,11 @@ public class SportsEvents {
 
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(akcmeet));
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", akcnatobechamp);
         this.akcmeet.click();
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
+        //this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         wait.until(ExpectedConditions.visibilityOf(akcmeetElement));
 
 
@@ -720,7 +721,7 @@ public class SportsEvents {
 
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(agility));
+        wait.until(ExpectedConditions.elementToBeClickable(agility));
         this.agility.click();
         wait.until(ExpectedConditions.visibilityOf(agilityElement));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
@@ -816,10 +817,9 @@ public class SportsEvents {
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView();", searchresc);
+        js.executeScript("arguments[0].scrollIntoView();", parentclubrec);
         this.searchresc.click();
         wait.until(ExpectedConditions.visibilityOf(searchrescElement));
-        this.searchrescElement.isDisplayed();
 
     }
 
@@ -929,7 +929,7 @@ public class SportsEvents {
 
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(sportsjun));
+        wait.until(ExpectedConditions.elementToBeClickable(sportsjun));
         this.sportsjun.click();
         wait.until(ExpectedConditions.visibilityOf(sportsjunElement));
 
@@ -959,7 +959,7 @@ public class SportsEvents {
 
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(junperf));
+        wait.until(ExpectedConditions.elementToBeClickable(junperf));
         this.junperf.click();
         wait.until(ExpectedConditions.visibilityOf(junperfElement));
 
@@ -993,7 +993,7 @@ public class SportsEvents {
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView();", cgcstar);
+        js.executeScript("arguments[0].scrollIntoView();", fitDog);
         wait.until(ExpectedConditions.elementToBeClickable(cgcstar));
         this.cgcstar.click();
         wait.until(ExpectedConditions.visibilityOf(cgcstarElement));
@@ -1061,7 +1061,7 @@ public class SportsEvents {
 
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(downform));
+        wait.until(ExpectedConditions.elementToBeClickable(downform));
         this.downform.click();
         wait.until(ExpectedConditions.visibilityOf(downformElement));
 
@@ -1179,6 +1179,7 @@ public class SportsEvents {
 
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(juniorRes));
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", juniorRes);
         this.juniorRes.click();

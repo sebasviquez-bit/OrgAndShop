@@ -98,7 +98,7 @@ public class RegisterDog {
     @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > aside > div > nav > ul > li:nth-child(3) > a")
     WebElement transown;
 
-    @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > aside > div > nav > ul > li:nth-child(4) > a")
+    @FindBy(xpath = "//a[contains(text(),'Purchase A Pedigree')]")
     WebElement purcped;
 
     @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > aside > div > nav > ul > li:nth-child(5) > a")
@@ -234,7 +234,7 @@ public class RegisterDog {
     @FindBy(css = "body > div:nth-child(6) > div > div.page-layout > main > div.article-body > div > div > div > h2:nth-child(3)")
     WebElement certped;
 
-    @FindBy(css = "body > div:nth-child(7) > div > div.page-layout > main > div.article-body > div > div > div > p:nth-child(6) > a")
+    @FindBy(css = "body > div:nth-child(6) > div > div.page-layout > main > div.article-body > div > div > div > p:nth-child(6) > a")
     WebElement certpedbut;
 
     @FindBy(css = "body > div:nth-child(37) > div > div.page-layout > main > div.article-body > div")
@@ -365,10 +365,10 @@ public class RegisterDog {
         this.transown.isDisplayed();
         this.purcped.isDisplayed();
         this.moreinfo.isDisplayed();
-        HiddeBanner();
+        //HiddeBanner();
         this.regdog.click();
         wait.until(ExpectedConditions.visibilityOf(regpure));
-        HiddeBanner();
+        //HiddeBanner();
         this.regpuretext.isDisplayed();
         this.checkreg.isDisplayed();
         this.enrolldog.isDisplayed();

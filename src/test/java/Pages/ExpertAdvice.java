@@ -545,7 +545,7 @@ public class ExpertAdvice {
 
         this.menuexpadv.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(akclibrary));
+        wait.until(ExpectedConditions.elementToBeClickable(akclibrary));
         this.akclibrary.click();
         wait.until(ExpectedConditions.visibilityOf(akclibraryElement));
 

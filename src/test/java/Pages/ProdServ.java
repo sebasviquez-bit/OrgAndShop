@@ -84,7 +84,7 @@ public class ProdServ {
     @FindBy(css = "#product-services > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(2) > ul > li:nth-child(4) > a")
     WebElement puppyvisor;
 
-    @FindBy(xpath = "//*[@id=\"product-services\"]/div[2]/div/div/div[1]/ul/li[3]/a")
+    @FindBy(css = "#product-services > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(3) > a")
     WebElement trainserv;
 
     @FindBy(css = "#product-services > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(3) > ul > li:nth-child(1) > a")
@@ -541,7 +541,7 @@ public class ProdServ {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(trainserv));
+        wait.until(ExpectedConditions.elementToBeClickable(trainserv));
         this.trainserv.click();
         wait.until(ExpectedConditions.visibilityOf(trainservElement));
 
