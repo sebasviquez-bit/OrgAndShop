@@ -8,7 +8,7 @@ import com.applitools.eyes.RectangleSize;
 import com.applitools.eyes.selenium.fluent.Target;
 import org.testng.annotations.Test;
 
-public class ShopTestSuite extends SpecsBrowserStack {
+public class ShopTestSuite extends SpecsBaseClass {
 
 
     @Test (dataProvider = "RegisterUsers", dataProviderClass = DataHelper.class)

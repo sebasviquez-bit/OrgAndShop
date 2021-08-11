@@ -320,7 +320,6 @@ public class ClubsDelegates {
 
         this.clubdelegat.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(delegatesdir));
         wait.until(ExpectedConditions.elementToBeClickable(delegatesdir));
         this.delegatesdir.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);

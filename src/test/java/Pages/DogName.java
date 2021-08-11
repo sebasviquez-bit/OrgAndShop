@@ -14,7 +14,7 @@ public class DogName {
     @FindBy(xpath = "//html/body/div[2]/div/div[1]/div/div[2]/nav/a[1]")
     WebElement breedsmenu;
 
-    @FindBy(css = "body > div.page-home.bgc-white.cmw > div.breed-feature > div.breed-feature__col.breed-feature__content-col > div > div > div > div.tool-grid__wrap > div:nth-child(4) > a")
+    @FindBy(css = "body > div.page-home.bgc-white.cmw > div.breed-feature > div.breed-feature__wrapper > div.breed-feature__col.breed-feature__content-col > div > div > div > div.tool-grid__wrap > div:nth-child(4) > a")
     WebElement dognametool;
 
     @FindBy(xpath = "//html/body/main/div/section/div[1]/h2[2]")
@@ -194,10 +194,10 @@ public class DogName {
     public void DogNameVerify() {
 
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(dognametool));
+        wait.until(ExpectedConditions.elementToBeClickable(dognametool));
         this.dognametool.click();
         wait.until(ExpectedConditions.visibilityOf(dognameheader));
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
+        //this.driver.get(this.driver.getCurrentUrl()+"?test=true");
         this.dognameheader.isDisplayed();
         this.male.isDisplayed();
         this.female.isDisplayed();

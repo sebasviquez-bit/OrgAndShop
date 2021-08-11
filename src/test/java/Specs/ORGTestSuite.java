@@ -30,7 +30,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void HomepageCheck() throws InterruptedException {
+    public void HomepageCheck() {
 
         homepage.CheckHomepage();
 
@@ -602,7 +602,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void ObedienceVerify() {
+    public void ObedienceVerify() throws InterruptedException {
 
         homepage.VerifyObedience();
 
@@ -686,7 +686,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void FastCatVerify() throws InterruptedException {
+    public void FastCatVerify() {
 
         homepage.VerifyFastCat();
 
@@ -2082,7 +2082,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     //ProdServ Menu Articles >
 
-    //@Test
+    @Test
     public void ProdServArticle1() throws InterruptedException {
 
         prodserv.ProdServArticle1();

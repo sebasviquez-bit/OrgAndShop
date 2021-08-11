@@ -241,7 +241,7 @@ public class RegisterDog {
     @FindBy(css = "body > div:nth-child(6) > div > div.page-layout > main > div.article-body > div > div > div > h2:nth-child(3)")
     WebElement certped;
 
-    @FindBy(css = "body > div:nth-child(7) > div > div.page-layout > main > div.article-body > div > div > div > p:nth-child(6) > a")
+    @FindBy(xpath = "//body/div[5]/div[1]/div[2]/main[1]/div[3]/div[1]/div[1]/div[1]/p[5]/a[1]")
     WebElement certpedbut;
 
     @FindBy(css = "body > div:nth-child(37) > div > div.page-layout > main > div.article-body > div")

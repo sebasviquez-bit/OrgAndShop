@@ -173,7 +173,7 @@ public class ProdServ {
     @FindBy(css = "#page-title > div > h1")
     WebElement akcrescueElement;
 
-    @FindBy(css = "#page-title > h1")
+    @FindBy(xpath = "//h1[contains(text(),'AKC Breeder Referral Contacts')]")
     WebElement breedreferElement;
 
     @FindBy(xpath = "//*[@id=\"page-title\"]/div/h1")

@@ -48,7 +48,7 @@ public class ExpertAdvice {
     @FindBy(css = "#expert-advice > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(3) > a")
     WebElement puppyinfo;
 
-    @FindBy(css = "#expert-advice > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(5) > a")
+    @FindBy(css = "#expert-advice > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(4) > a")
     WebElement sports;
 
     @FindBy(css = "#expert-advice > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(5) > a")

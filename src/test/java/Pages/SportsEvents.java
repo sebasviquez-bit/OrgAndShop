@@ -248,7 +248,7 @@ public class SportsEvents {
     @FindBy(css = "#page-title > div > h1")
     WebElement obedienceclaElement;
 
-    @FindBy(css = "#page-title > div > h1")
+    @FindBy(css = "body > div.landing-page > div.content-section.content-block-list--none-spacing > div > div.content-block__text > p > em > strong")
     WebElement akcmeetElement;
 
     @FindBy(css = "#page-title > div > h1")
@@ -616,7 +616,6 @@ public class SportsEvents {
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         wait.until(ExpectedConditions.visibilityOf(akcmeetElement));
 
-
     }
 
     public void Clickakcnatobechamp() {
@@ -818,7 +817,6 @@ public class SportsEvents {
         js.executeScript("arguments[0].scrollIntoView();", searchresc);
         this.searchresc.click();
         wait.until(ExpectedConditions.visibilityOf(searchrescElement));
-        this.searchrescElement.isDisplayed();
 
     }
 

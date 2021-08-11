@@ -4,8 +4,10 @@ import com.applitools.eyes.MatchLevel;
 import com.applitools.eyes.StdoutLogHandler;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -22,14 +24,15 @@ public class SpecsBaseClass extends SuperBaseClass {
         public void InitializeTests(Method method) {
 
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("headless");
+        //options.addArguments("headless");
+        options.addArguments("disable-dev-shm-usage");
 
         //Map<String, String> mobileEmulation = new HashMap<>();
         //mobileEmulation.put("deviceName", "iPhone 8");
         //options.setExperimentalOption("mobileEmulation", mobileEmulation);
 
         //driver = getDriver(method.getNam());
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(options);
         //driver = new FirefoxDriver();
         //driver = new InternetExplorerDriver();
         //driver = new SafariDriver();
@@ -43,7 +46,7 @@ public class SpecsBaseClass extends SuperBaseClass {
 
         driver.get(driverHelper.baseUrl);
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         this.eyes = new Eyes();
         this.eyes.setApiKey("z9croAylAJ31BCxQ9g0BdZE0ul770cXrtqRuwWv8A8g110");    //.ORG API KEY
@@ -58,8 +61,9 @@ public class SpecsBaseClass extends SuperBaseClass {
 
     @AfterMethod()
         public void CleanUpDriver() {
+
             eyes.abortIfNotClosed();
-            //driver.close();
+            //driver.close(); //Enable this to run with sureFireMaven
             driver.quit();
 
         }
