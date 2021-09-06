@@ -272,14 +272,23 @@ public class Homepage {
     @FindBy(css = "#slick-slide00 > a")
     WebElement conf;
 
-    @FindBy(css = "#slick-slide06 > a")
-    WebElement obe;
+    @FindBy(css = "#slick-slide01 > a")
+    WebElement agi;
 
     @FindBy(css = "#slick-slide02 > a")
     WebElement ral;
 
-    @FindBy(css = "#slick-slide01 > a")
-    WebElement agi;
+    @FindBy(css = "#slick-slide03 > a")
+    WebElement fastcat;
+
+    @FindBy(css = "#slick-slide04 > a")
+    WebElement vhm;
+
+    @FindBy(css = "#slick-slide05 > a")
+    WebElement scentwork;
+
+    @FindBy(css = "#slick-slide06 > a")
+    WebElement obe;
 
     @FindBy(css = "#slick-slide07 > a")
     WebElement track;
@@ -305,14 +314,8 @@ public class Homepage {
     @FindBy(css = "#slick-slide014 > a")
     WebElement coursabi;
 
-    @FindBy(css = "#slick-slide03 > a")
-    WebElement fastcat;
-
     @FindBy(css = "#slick-slide015 > a")
     WebElement conhound;
-
-    @FindBy(css = "#slick-slide05 > a")
-    WebElement scentwork;
 
     @FindBy(css = "#slick-slide016 > a")
     WebElement trickdog;
@@ -580,6 +583,15 @@ public class Homepage {
         }
         WebDriverWait wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.urlContains("akc.org/sports/coursing/fast-cat/"));
+
+    }
+
+    private void virtualHomeMann () {
+        for (String winHandle : driver.getWindowHandles()) {
+            driver.switchTo().window(winHandle);
+        }
+        WebDriverWait wait = new WebDriverWait(driver, 30);
+        wait.until(ExpectedConditions.urlContains("/virtual-home-manners/"));
 
     }
 
@@ -1131,6 +1143,18 @@ public class Homepage {
         sleep(1000);
         this.track.click();
         validtracking();
+
+    }
+
+    public void VerifyVirtualHomeMann() throws InterruptedException {
+
+        //HiddeBanner();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(sportsarrow));
+        this.sportsarrow.click();
+        sleep(1000);
+        this.vhm.click();
+        virtualHomeMann();
 
     }
 

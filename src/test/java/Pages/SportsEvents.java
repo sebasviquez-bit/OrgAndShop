@@ -63,7 +63,7 @@ public class SportsEvents {
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[2]/div/h3")
     WebElement browsealldog;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[2]/div/div/div[1]/ul/li[1]/a")
+    @FindBy(css = "#sports-events > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(1) > a")
     WebElement confdogshow;
 
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[2]/div/div/div[1]/ul/li[1]/ul/li[1]/a")
@@ -649,7 +649,7 @@ public class SportsEvents {
 
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(confdogshow));
+        wait.until(ExpectedConditions.elementToBeClickable(confdogshow));
         this.confdogshow.click();
         wait.until(ExpectedConditions.visibilityOf(confdogshowElement));
         this.confdogshowElement.isDisplayed();

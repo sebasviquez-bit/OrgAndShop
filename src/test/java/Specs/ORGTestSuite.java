@@ -691,6 +691,14 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
+    public void VirtualHomeMannVerify() throws InterruptedException {
+
+        homepage.VerifyVirtualHomeMann();
+
+    }
+
+
+    @Test
     public void CoonhoundVerify() throws InterruptedException {
 
         homepage.VerifyCoounhound();
@@ -2134,10 +2142,10 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void VisualHomepageCheck() throws InterruptedException {
+    public void VisualHomepageCheck() {
 
         homepage.CheckHomepage();
-        eyes.open(driver, "AKC", "CheckHomepage", new RectangleSize(1420, 680));
+        eyes.open(driver, "AKC", "CheckHomepage", new RectangleSize(1420, 670));
         eyes.check("HomepageCheck", Target.window());
         eyes.close();
 
@@ -2157,7 +2165,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     public void VisualClickwhygetdog() {
 
         breeds.Clickwhygetdog();
-        eyes.open(driver, "AKC", "Clickwhygetdog", new RectangleSize(1430, 680));
+        eyes.open(driver, "AKC", "Clickwhygetdog", new RectangleSize(1430, 670));
         eyes.check("BreedMenu", Target.window());
         eyes.close();
 
@@ -2188,7 +2196,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
         driver.navigate().to("https://www.akc.org/expert-advice/nutrition/best-dog-food-choosing-whats-right-for-your-dog/");
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        eyes.open(driver, "AKC", "BestDogFoodArticle", new RectangleSize(1420, 680));
+        eyes.open(driver, "AKC", "BestDogFoodArticle", new RectangleSize(1430, 670));
         eyes.check("EAmenu", Target.window());
         eyes.close();
 

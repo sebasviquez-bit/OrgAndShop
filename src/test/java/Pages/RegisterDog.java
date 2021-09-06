@@ -779,7 +779,6 @@ public class RegisterDog {
         wait.until(ExpectedConditions.elementToBeClickable(purcped));
         //HiddeBanner();
         this.purcped.click();
-        wait.until(ExpectedConditions.visibilityOf(purcpedheader));
         //HiddeBanner();
         wait.until(ExpectedConditions.elementToBeClickable(certpedbut));
         this.certpedbut.click();

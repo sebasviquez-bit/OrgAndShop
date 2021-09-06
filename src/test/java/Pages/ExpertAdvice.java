@@ -420,10 +420,9 @@ public class ExpertAdvice {
 
         this.menuexpadv.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(vetcorner));
+        wait.until(ExpectedConditions.elementToBeClickable(vetcorner));
         this.vetcorner.click();
         wait.until(ExpectedConditions.visibilityOf(vetcornerElement));
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
 
     }
 

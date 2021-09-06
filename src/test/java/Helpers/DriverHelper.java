@@ -1,6 +1,7 @@
 package Helpers;
 
 import org.openqa.selenium.WebDriver;
+
 public class DriverHelper {
 
     public WebDriver driver;
