@@ -8,6 +8,7 @@ import com.applitools.eyes.RectangleSize;
 import com.applitools.eyes.selenium.fluent.Target;
 import org.testng.annotations.Test;
 
+
 public class ShopTestSuite extends SpecsBaseClass {
 
 
@@ -16,7 +17,7 @@ public class ShopTestSuite extends SpecsBaseClass {
 
         User testUser;
         testUser = new User(sUserName, sFirstName, sLastName, sPassword1, sPassword2);
-        register.registerUserShop(testUser);
+        ShopRegister.registerUserShop(testUser);
 
     }
 
@@ -24,7 +25,7 @@ public class ShopTestSuite extends SpecsBaseClass {
     public void SuccessfulLogin(String sEmail, String sPassword) throws InterruptedException {
 
         User testUser = new User(sEmail, sPassword);
-        signIn.signInUserShop(testUser);
+        ShopSignIn.signInUserShop(testUser);
 
     }
 
@@ -33,7 +34,7 @@ public class ShopTestSuite extends SpecsBaseClass {
 
         Word searchWord;
         searchWord = new Word(sWord);
-        search.ShopSearch(searchWord);
+        ShopSearch.ShopSearch(searchWord);
 
     }
 
@@ -42,7 +43,7 @@ public class ShopTestSuite extends SpecsBaseClass {
 
         Word searchWord;
         searchWord = new Word(sWord);
-        search.ShopSearchBreed(searchWord);
+        ShopSearch.ShopSearchBreed(searchWord);
 
     }
 
@@ -51,11 +52,11 @@ public class ShopTestSuite extends SpecsBaseClass {
 
         Word searchWord;
         searchWord = new Word(sWord);
-        search.ShopDogLoversSearch(searchWord);
+        ShopSearch.ShopDogLoversSearch(searchWord);
 
     }
 
-    @Test //Secondary test bar was removed in Sprint 052720 *****
+    //@Test //Secondary test bar was removed in Sprint 052720 *****
     public void SecondarySearch() throws InterruptedException {
 
         shopHomepage.SecondarySearch();
@@ -70,272 +71,284 @@ public class ShopTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void checkAKCorgLink() throws InterruptedException {
+    public void checkAKCorgLink() {
 
         shopHomepage.checkAKCorgLink();
 
     }
 
     @Test
-    public void checkPointsProgression() throws InterruptedException {
+    public void checkPointsProgression() {
 
         shopHomepage.checkPointsProgression();
 
     }
 
     @Test
-    public void checkCompetitorReports() throws InterruptedException {
+    public void checkCompetitorReports() {
 
         shopHomepage.checkCompetitorReports();
 
     }
 
     @Test
-    public void checkBreederReports() throws InterruptedException {
+    public void checkBreederReports() {
 
         shopHomepage.checkBreederReports();
 
     }
 
     @Test
-    public void checkPedigrees() throws InterruptedException {
+    public void checkPedigrees() {
 
         shopHomepage.checkPedigrees();
 
     }
 
     @Test
-    public void checkShoppingCart() throws InterruptedException {
+    public void checkShoppingCart() {
 
         shopHomepage.checkShoppingCart();
 
     }
 
      @Test
-     public void checkShopNowBanner0() throws InterruptedException {
+     public void checkHeroImage() {
 
-        shopHomepage.checkShopNowBanner0();
+        shopHomepage.checkHeroImage();
 
      }
 
     @Test
-    public void checkQuickView() {
+    public void checkFeatureCollectionsSection() {
 
-        shopHomepage.checkQuickView();
+        shopHomepage.checkFeatureCollectionsSection();
+
+    }
+
+    @Test
+    public void checkQuickShop() {
+
+        shopHomepage.checkQuickShop();
 
     }
 
      //MAIN MENUS:
 
      @Test
-     public void clickEssentialsMenu() {
+     public void GiftForHumansMenu() {
 
-         ShopEssentials.clickEssentialsMenu();
+         GiftForHumans.clickGiftForHumansMenu();
 
      }
 
     @Test
-    public void clickOnTheGoMenu() throws InterruptedException {
+    public void GearForDogsMenu() {
 
-        ShopOnTheGo.clickOnTheGoMenu();
-
-    }
-
-    @Test
-    public void clickGromingWellnessMenu() throws InterruptedException {
-
-        ShopGroomingWellness.clickGromingWellnessMenu();
+        GearForDogs.clickGearForDogsMenu();
 
     }
 
     @Test
-    public void clickTrainingMenu() throws InterruptedException {
+    public void AKCProShop()  {
 
-        ShopTraining.clickTrainingMenu();
-
-    }
-
-    @Test
-    public void clickDogLoversMenu()  {
-
-        ShopDogLovers.clickDogLoversMenu();
+        AKCProShop.clickAKCProShopMenu();
 
     }
 
     @Test
-    public void clickAKCProMenu() throws InterruptedException {
+    public void AdviseTrainingMenu() {
 
-        ShopAKCPro.clickAKCProMenu();
+        AdviseTraining.clickAdviseTrainingMenu();
 
     }
 
     @Test
-    public void clickCollectionsMenu() throws InterruptedException {
+    public void ShopByBreedMenu()  {
 
-        ShopCollections.clickCollectionsMenu();
+        ShopByBreed.clickShopByBreedMenu();
+
+    }
+
+    @Test
+    public void AKCProShopMenu() {
+
+        AKCProShop.clickAKCProShopMenu();
+
+    }
+
+    @Test
+    public void SpecialShopMenu() {
+
+        SpecialShops.SpecialShopDropDown();
 
     }
 
     //START OF ESSENTIALS SUBMENUs:
 
-    @Test
-    public void clickEatDrinkMenu()  {
 
-        ShopEssentials.clickEatDrinkMenu();
+    //these are the new GiftForHumans menu:
+
+    @Test
+    public void clickJewelryMenu()  {
+
+        GiftForHumans.clickJewelryMenu();
 
     }
 
     @Test
-    public void clickPlayMenu()  {
+    public void clickBraceletsMenu()  {
 
-        ShopEssentials.clickPlayMenu();
-
-    }
-
-    @Test
-    public void clickRestMenu() throws InterruptedException {
-
-        ShopEssentials.clickRestMenu();
+        GiftForHumans.clickBraceletsMenu();
 
     }
 
     @Test
-    public void clickWalkMenu() throws InterruptedException {
+    public void clickharmsPedants() {
 
-        ShopEssentials.clickWalkMenu();
-
-    }
-
-    @Test
-    public void clickPuppyChekList() throws InterruptedException {
-
-        ShopEssentials.clickPuppyChekList();
+        GiftForHumans.clickharmsPedants();
 
     }
 
     @Test
-    public void clickTreats()  {
+    public void clickEarings() {
 
-        ShopEssentials.clickTreats();
-
-    }
-
-    @Test
-    public void clickDogFood()  {
-
-        ShopEssentials.clickDogFood();
+        GiftForHumans.clickEarings();
 
     }
 
     @Test
-    public void clickDogBowls() throws InterruptedException {
+    public void clickJewelryChain() {
 
-        ShopEssentials.clickDogBowls();
-
-    }
-
-    @Test
-    public void clickDogBowlsPlaceMats() throws InterruptedException {
-
-        ShopEssentials.clickDogBowlsPlaceMats();
+        GiftForHumans.clickJewelryChain();
 
     }
 
     @Test
-    public void clickPlushToys() throws InterruptedException {
+    public void clickPuppyChekList() {
 
-        ShopEssentials.clickPlushToys();
+        GiftForHumans.clickRigns();
 
     }
 
     @Test
-    public void clickFetchToys() throws InterruptedException {
+    public void SportingJewelry()  {
 
-        ShopEssentials.clickFetchToys();
+        GiftForHumans.SportingJewelry();
+
+    }
+
+    //Continue:
+
+    @Test
+    public void clickMemorialJewelry() {
+
+        GiftForHumans.clickMemorialJewelry();
+
+    }
+
+    @Test
+    public void clickBreedEmbrodeiry() {
+
+        GiftForHumans.clickBreedEmbrodeiry();
+
+    }
+
+    @Test
+    public void clickBreedEmbrodeiryApparel() {
+
+        GiftForHumans.clickBreedEmbrodeiryApparel();
+
+    }
+
+    @Test
+    public void clickBreedEmbrodeiryAccesGear() {
+
+        GiftForHumans.clickBreedEmbrodeiryAccesGear();
 
     }
 
     @Test
     public void clickTugToys() throws InterruptedException {
 
-        ShopEssentials.clickTugToys();
+        GiftForHumans.clickTugToys();
 
     }
 
     @Test
     public void clickTeethingToys() throws InterruptedException {
 
-        ShopEssentials.clickTeethingToys();
+        GiftForHumans.clickTeethingToys();
 
     }
 
     @Test
     public void clickInteractiveToys() throws InterruptedException {
 
-        ShopEssentials.clickInteractiveToys();
+        GiftForHumans.clickInteractiveToys();
 
     }
 
     @Test
     public void clickDogGiftPaks() throws InterruptedException {
 
-        ShopEssentials.clickDogGiftPaks();
+        GiftForHumans.clickDogGiftPaks();
 
     }
 
     @Test
     public void clickBeds() throws InterruptedException {
 
-        ShopEssentials.clickBeds();
+        GiftForHumans.clickBeds();
 
     }
 
     @Test
     public void clickCrates() throws InterruptedException {
 
-        ShopEssentials.clickCrates();
+        GiftForHumans.clickCrates();
 
     }
 
     @Test
     public void clickCrateMats() throws InterruptedException {
 
-        ShopEssentials.clickCrateMats();
+        GiftForHumans.clickCrateMats();
 
     }
 
     @Test
     public void clickCollars() throws InterruptedException {
 
-        ShopEssentials.clickCollars();
+        GiftForHumans.clickCollars();
 
     }
 
     @Test
     public void clickLeashes() throws InterruptedException {
 
-        ShopEssentials.clickLeashes();
+        GiftForHumans.clickLeashes();
 
     }
 
     @Test
     public void clickHarnesses() throws InterruptedException {
 
-        ShopEssentials.clickHarnesses();
+        GiftForHumans.clickHarnesses();
 
     }
 
     @Test
     public void clickBreedCLS() throws InterruptedException {
 
-        ShopEssentials.clickBreedCLS();
+        GiftForHumans.clickBreedCLS();
 
     }
 
     @Test
     public void clickSideMenu()  {
 
-        ShopEssentials.clickSideMenu();
+        GiftForHumans.clickSideMenu();
 
     }
 
@@ -346,105 +359,105 @@ public class ShopTestSuite extends SpecsBaseClass {
     @Test
     public void clickCar() throws InterruptedException {
 
-        ShopOnTheGo.clickCar();
+        GearForDogs.clickCar();
 
     }
 
     @Test
     public void clickCarCovers() throws InterruptedException {
 
-        ShopOnTheGo.clickCarCovers();
+        GearForDogs.clickCarCovers();
 
     }
 
     @Test
     public void clickSeatsHarnesses() throws InterruptedException {
 
-        ShopOnTheGo.clickSeatsHarnesses();
+        GearForDogs.clickSeatsHarnesses();
 
     }
 
     @Test
     public void clickCarBarriers() throws InterruptedException {
 
-        ShopOnTheGo.clickCarBarriers();
+        GearForDogs.clickCarBarriers();
 
     }
 
     @Test
     public void clickCarRapms() throws InterruptedException {
 
-        ShopOnTheGo.clickCarRapms();
+        GearForDogs.clickCarRapms();
 
     }
 
     @Test
     public void clickTravel() throws InterruptedException {
 
-        ShopOnTheGo.clickTravel();
+        GearForDogs.clickTravel();
 
     }
 
     @Test
     public void clickTravelBolws() throws InterruptedException {
 
-        ShopOnTheGo.clickTravelBolws();
+        GearForDogs.clickTravelBolws();
 
     }
 
     @Test
     public void clickDogCarriers() throws InterruptedException {
 
-        ShopOnTheGo.clickDogCarriers();
+        GearForDogs.clickDogCarriers();
 
     }
 
     @Test
     public void clickDogStrollers() throws InterruptedException {
 
-        ShopOnTheGo.clickDogStrollers();
+        GearForDogs.clickDogStrollers();
 
     }
 
     @Test
     public void clickOutAdventure() throws InterruptedException {
 
-        ShopOnTheGo.clickOutAdventure();
+        GearForDogs.clickOutAdventure();
 
     }
 
     @Test
     public void clickClothingWear() throws InterruptedException {
 
-        ShopOnTheGo.clickClothingWear();
+        GearForDogs.clickClothingWear();
 
     }
 
     @Test
     public void clickJackCoats() throws InterruptedException {
 
-        ShopOnTheGo.clickJackCoats();
+        GearForDogs.clickJackCoats();
 
     }
 
     @Test
     public void clickDogSweaters() throws InterruptedException {
 
-        ShopOnTheGo.clickDogSweaters();
+        GearForDogs.clickDogSweaters();
 
     }
 
     @Test
     public void clickSafetyWear() throws InterruptedException {
 
-        ShopOnTheGo.clickSafetyWear();
+        GearForDogs.clickSafetyWear();
 
     }
 
     @Test
     public void clickDogAccessories() throws InterruptedException {
 
-        ShopOnTheGo.clickDogAccessories();
+        GearForDogs.clickDogAccessories();
 
     }
 
@@ -558,112 +571,112 @@ public class ShopTestSuite extends SpecsBaseClass {
     @Test
     public void clickTrainingSupplies() throws InterruptedException {
 
-        ShopTraining.clickTrainingSupplies();
+        AdviseTraining.clickTrainingSupplies();
 
     }
 
     @Test
     public void clickAgilityEquip() throws InterruptedException {
 
-        ShopTraining.clickAgilityEquip();
+        AdviseTraining.clickAgilityEquip();
 
     }
 
     @Test
     public void clickTrainingLeashes() throws InterruptedException {
 
-        ShopTraining.clickTrainingLeashes();
+        AdviseTraining.clickTrainingLeashes();
 
     }
 
     @Test
     public void clickTreatsPouches() throws InterruptedException {
 
-        ShopTraining.clickTreatsPouches();
+        AdviseTraining.clickTreatsPouches();
 
     }
 
     @Test
     public void clickPuppySupplies() throws InterruptedException {
 
-        ShopTraining.clickPuppySupplies();
+        AdviseTraining.clickPuppySupplies();
 
     }
 
     @Test
     public void clickMuzzles() throws InterruptedException {
 
-        ShopTraining.clickMuzzles();
+        AdviseTraining.clickMuzzles();
 
     }
 
     @Test
     public void clickBooksDVDs() throws InterruptedException {
 
-        ShopTraining.clickBooksDVDs();
+        AdviseTraining.clickBooksDVDs();
 
     }
 
     @Test
     public void clickBasicTraining() throws InterruptedException {
 
-        ShopTraining.clickBasicTraining();
+        AdviseTraining.clickBasicTraining();
 
     }
 
     @Test
     public void clickTrickTraining() throws InterruptedException {
 
-        ShopTraining.clickTrickTraining();
+        AdviseTraining.clickTrickTraining();
 
     }
 
     @Test
     public void clickBreedTraining() throws InterruptedException {
 
-        ShopTraining.clickBreedTraining();
+        AdviseTraining.clickBreedTraining();
 
     }
 
     @Test
     public void clickGCG() throws InterruptedException {
 
-        ShopTraining.clickGCG();
+        AdviseTraining.clickGCG();
 
     }
 
     @Test
     public void clickBooks() throws InterruptedException {
 
-        ShopTraining.clickBooks();
+        AdviseTraining.clickBooks();
 
     }
 
     @Test
     public void clickMerchandise() throws InterruptedException {
 
-        ShopTraining.clickMerchandise();
+        AdviseTraining.clickMerchandise();
 
     }
 
     @Test
     public void clickMaterialsEvaluators() throws InterruptedException {
 
-        ShopTraining.clickMaterialsEvaluators();
+        AdviseTraining.clickMaterialsEvaluators();
 
     }
 
     @Test
     public void clickTrainingServices() throws InterruptedException {
 
-        ShopTraining.clickTrainingServices();
+        AdviseTraining.clickTrainingServices();
 
     }
 
     @Test
     public void clickGoodDogHelpLine() throws InterruptedException {
 
-        ShopTraining.clickGoodDogHelpLine();
+        AdviseTraining.clickGoodDogHelpLine();
 
     }
 
@@ -674,343 +687,317 @@ public class ShopTestSuite extends SpecsBaseClass {
     @Test
     public void clickHumanApparel()  {
 
-        ShopDogLovers.clickHumanApparel();
+        ShopByBreed.clickHumanApparel();
 
     }
 
     @Test
     public void clickGraphicApparel()  {
 
-        ShopDogLovers.clickGraphicApparel();
+        ShopByBreed.clickGraphicApparel();
 
     }
 
     @Test
     public void clickBreedEmbroidery()  {
 
-        ShopDogLovers.clickBreedEmbroidery();
+        ShopByBreed.clickBreedEmbroidery();
 
     }
 
     @Test
     public void clickScarves()  {
 
-        ShopDogLovers.clickScarves();
+        ShopByBreed.clickScarves();
 
     }
 
     @Test
     public void clickHats()  {
 
-        ShopDogLovers.clickHats();
+        ShopByBreed.clickHats();
 
     }
 
     @Test
     public void clickPajamas() {
 
-        ShopDogLovers.clickPajamas();
+        ShopByBreed.clickPajamas();
 
     }
 
-    @Test
-    public void clickRobes() {
-
-        ShopDogLovers.clickRobes();
-
-    }
 
     @Test
     public void clickJewelry()  {
 
-        ShopDogLovers.clickJewelry();
+        ShopByBreed.clickJewelry();
 
     }
 
     @Test
     public void clickPins() {
 
-        ShopDogLovers.clickPins();
+        ShopByBreed.clickPins();
 
     }
 
     @Test
     public void clickRings() {
 
-        ShopDogLovers.clickRings();
+        ShopByBreed.clickRings();
 
     }
 
     @Test
     public void clickEarigns()  {
 
-        ShopDogLovers.clickEarigns();
+        ShopByBreed.clickEarigns();
 
     }
 
     @Test
     public void clickBracelets() {
 
-        ShopDogLovers.clickBracelets();
+        ShopByBreed.clickBracelets();
 
     }
 
     @Test
     public void clickJewelryChains() {
 
-        ShopDogLovers.clickJewelryChains();
+        ShopByBreed.clickJewelryChains();
 
     }
 
     @Test
     public void clickCharmsPendants()  {
 
-        ShopDogLovers.clickCharmsPendants();
+        ShopByBreed.clickCharmsPendants();
 
     }
 
     @Test
     public void clickFineJewelry()  {
 
-        ShopDogLovers.clickFineJewelry();
+        ShopByBreed.clickFineJewelry();
 
     }
 
     @Test
     public void clickSportJewlery()  {
 
-        ShopDogLovers.clickSportJewlery();
+        ShopByBreed.clickSportJewlery();
 
     }
 
     @Test
     public void clickOvalBreedPendants()  {
 
-        ShopDogLovers.clickOvalBreedPendants();
+        ShopByBreed.clickOvalBreedPendants();
 
     }
 
     @Test
     public void clickToteBags()  {
 
-        ShopDogLovers.clickToteBags();
+        ShopByBreed.clickToteBags();
 
     }
 
     @Test
     public void clickDuffelBags()  {
 
-        ShopDogLovers.clickDuffelBags();
+        ShopByBreed.clickDuffelBags();
 
     }
 
     @Test
     public void clickPrintToteBags()  {
 
-        ShopDogLovers.clickPrintToteBags();
+        ShopByBreed.clickPrintToteBags();
 
     }
 
     @Test
     public void clickHandPaintTotes()  {
 
-        ShopDogLovers.clickHandPaintTotes();
+        ShopByBreed.clickHandPaintTotes();
 
     }
 
     @Test
     public void clickEmbroToteBags()  {
 
-        ShopDogLovers.clickEmbroToteBags();
-
-    }
-
-    @Test
-    public void clickWineTotes()  {
-
-        ShopDogLovers.clickWineTotes();
+        ShopByBreed.clickEmbroToteBags();
 
     }
 
     @Test
     public void clickKitchen()  {
 
-        ShopDogLovers.clickKitchen();
+        ShopByBreed.clickKitchen();
 
     }
 
     @Test
     public void clickCoffeMugs()  {
 
-        ShopDogLovers.clickCoffeMugs();
+        ShopByBreed.clickCoffeMugs();
 
     }
 
     @Test
     public void clickTravelMugs()  {
 
-        ShopDogLovers.clickTravelMugs();
-
-    }
-
-    @Test
-    public void clickTumblers()  {
-
-        ShopDogLovers.clickTumblers();
+        ShopByBreed.clickTravelMugs();
 
     }
 
     @Test
     public void clickWineGlasses()  {
 
-        ShopDogLovers.clickWineGlasses();
+        ShopByBreed.clickWineGlasses();
 
     }
 
     @Test
     public void clickAprons()  {
 
-        ShopDogLovers.clickAprons();
+        ShopByBreed.clickAprons();
 
     }
 
     @Test
     public void clickOvenPot()  {
 
-        ShopDogLovers.clickOvenPot();
+        ShopByBreed.clickOvenPot();
 
     }
 
     @Test
     public void clickCuttingBoards()  {
 
-        ShopDogLovers.clickCuttingBoards();
+        ShopByBreed.clickCuttingBoards();
 
     }
 
     @Test
     public void clickDrinkAccesories()  {
 
-        ShopDogLovers.clickDrinkAccesories();
+        ShopByBreed.clickDrinkAccesories();
 
     }
 
     @Test
     public void clickHome()  {
 
-        ShopDogLovers.clickHome();
+        ShopByBreed.clickHome();
 
     }
 
     @Test
     public void clickDecorative()  {
 
-        ShopDogLovers.clickDecorative();
+        ShopByBreed.clickDecorative();
 
     }
 
     @Test
     public void clickCardHolders()  {
 
-        ShopDogLovers.clickCardHolders();
+        ShopByBreed.clickCardHolders();
 
     }
 
     @Test
     public void clickCustomPetArt()  {
 
-        ShopDogLovers.clickCustomPetArt();
+        ShopByBreed.clickCustomPetArt();
 
     }
 
-    @Test
-    public void clickCoasters()  {
-
-        ShopDogLovers.clickCoasters();
-
-    }
 
     @Test
     public void clickTeaTowels()  {
 
-        ShopDogLovers.clickTeaTowels();
+        ShopByBreed.clickTeaTowels();
 
     }
 
     @Test
     public void clickBlankets()  {
 
-        ShopDogLovers.clickBlankets();
+        ShopByBreed.clickBlankets();
 
     }
 
     @Test
     public void clickPillows()  {
 
-        ShopDogLovers.clickPillows();
+        ShopByBreed.clickPillows();
 
     }
 
     @Test
     public void clickHolyDecor()  {
 
-        ShopDogLovers.clickHolyDecor();
+        ShopByBreed.clickHolyDecor();
 
     }
 
     @Test
     public void clickOutdoorAcces()  {
 
-        ShopDogLovers.clickOutdoorAcces();
+        ShopByBreed.clickOutdoorAcces();
 
     }
 
     @Test
     public void clickTravelAcces()  {
 
-        ShopDogLovers.clickTravelAcces();
+        ShopByBreed.clickTravelAcces();
 
     }
 
     @Test
     public void clickKeyRings()  {
 
-        ShopDogLovers.clickKeyRings();
+        ShopByBreed.clickKeyRings();
 
     }
 
     @Test
     public void clickPhoneCases()  {
 
-        ShopDogLovers.clickPhoneCases();
+        ShopByBreed.clickPhoneCases();
 
     }
 
     @Test
     public void clickLuggageTags()  {
 
-        ShopDogLovers.clickLuggageTags();
+        ShopByBreed.clickLuggageTags();
 
     }
 
     @Test
     public void clickStationary()  {
 
-        ShopDogLovers.clickStationary();
+        ShopByBreed.clickStationary();
 
     }
 
     @Test
     public void clickUmbrellas()  {
 
-        ShopDogLovers.clickUmbrellas();
+        ShopByBreed.clickUmbrellas();
 
     }
 
     @Test
     public void clickSportsChairs()  {
 
-        ShopDogLovers.clickSportsChairs();
+        ShopByBreed.clickSportsChairs();
 
     }
 
@@ -1021,182 +1008,182 @@ public class ShopTestSuite extends SpecsBaseClass {
     @Test
     public void clickBreeders()  {
 
-        ShopAKCPro.clickBreeders();
+        AKCProShop.clickBreeders();
 
     }
 
     @Test
     public void clickIDCollLeashes()  {
 
-        ShopAKCPro.clickIDCollLeashes();
+        AKCProShop.clickIDCollLeashes();
 
     }
 
     @Test
     public void clickBooksAndDVDs()  {
 
-        ShopAKCPro.clickBooksAndDVDs();
+        AKCProShop.clickBooksAndDVDs();
 
     }
 
     @Test
     public void clickDNAKit()  {
 
-        ShopAKCPro.clickDNAKit();
+        AKCProShop.clickDNAKit();
 
     }
 
     @Test
     public void clickRulesAndPolicies()  {
 
-        ShopAKCPro.clickRulesAndPolicies();
+        AKCProShop.clickRulesAndPolicies();
 
     }
 
     @Test
     public void clickCertiPedig()  {
 
-        ShopAKCPro.clickCertiPedig();
+        AKCProShop.clickCertiPedig();
 
     }
 
     @Test
     public void clickBreederRepo()  {
 
-        ShopAKCPro.clickBreederRepo();
+        AKCProShop.clickBreederRepo();
 
     }
 
     @Test
     public void clickExhibitors()  {
 
-        ShopAKCPro.clickExhibitors();
+        AKCProShop.clickExhibitors();
 
     }
 
     @Test
     public void clickEventRuleRegula()  {
 
-        ShopAKCPro.clickEventRuleRegula();
+        AKCProShop.clickEventRuleRegula();
 
     }
 
     @Test
     public void clickCompetitorRepo()  {
 
-        ShopAKCPro.clickCompetitorRepo();
+        AKCProShop.clickCompetitorRepo();
 
     }
 
     @Test
     public void clickTitlePatches()  {
 
-        ShopAKCPro.clickTitlePatches();
+        AKCProShop.clickTitlePatches();
 
     }
 
     @Test
     public void clickFreePointProgress()  {
 
-        ShopAKCPro.clickFreePointProgress();
+        AKCProShop.clickFreePointProgress();
 
     }
 
     @Test
     public void clickJudgesClubs()  {
 
-        ShopAKCPro.clickJudgesClubs();
+        AKCProShop.clickJudgesClubs();
 
     }
 
     @Test
     public void clickBooksDVDS()  {
 
-        ShopAKCPro.clickBooksDVDS();
+        AKCProShop.clickBooksDVDS();
 
     }
 
     @Test
     public void clickEventRulesReg()  {
 
-        ShopAKCPro.clickEventRulesReg();
+        AKCProShop.clickEventRulesReg();
 
     }
 
     @Test
     public void clickRegRulesPolicies()  {
 
-        ShopAKCPro.clickRegRulesPolicies();
+        AKCProShop.clickRegRulesPolicies();
 
     }
 
     @Test
     public void clickBreedStand()  {
 
-        ShopAKCPro.clickBreedStand();
+        AKCProShop.clickBreedStand();
 
     }
 
     @Test
     public void clickGoverClubReso()  {
 
-        ShopAKCPro.clickGoverClubReso();
+        AKCProShop.clickGoverClubReso();
 
     }
 
     @Test
     public void clickDogShowResorces()  {
 
-        ShopAKCPro.clickDogShowResorces();
+        AKCProShop.clickDogShowResorces();
 
     }
 
     @Test
     public void clickTrainers()  {
 
-        ShopAKCPro.clickTrainers();
+        AKCProShop.clickTrainers();
 
     }
 
     @Test
     public void clickMaterialsCGC()  {
 
-        ShopAKCPro.clickMaterialsCGC();
+        AKCProShop.clickMaterialsCGC();
 
     }
 
     @Test
     public void clickCGCMerch()  {
 
-        ShopAKCPro.clickCGCMerch();
+        AKCProShop.clickCGCMerch();
 
     }
 
     @Test
     public void clickCGCWorkMerch()  {
 
-        ShopAKCPro.clickCGCWorkMerch();
+        AKCProShop.clickCGCWorkMerch();
 
     }
 
     @Test
     public void clickTrickDogMerch()  {
 
-        ShopAKCPro.clickTrickDogMerch();
+        AKCProShop.clickTrickDogMerch();
 
     }
 
     @Test
     public void clickTrainingBooks()  {
 
-        ShopAKCPro.clickTrainingBooks();
+        AKCProShop.clickTrainingBooks();
 
     }
 
     @Test
     public void clickAllTrainingProd()  {
 
-        ShopAKCPro.clickAllTrainingProd();
+        AKCProShop.clickAllTrainingProd();
 
     }
 
@@ -1207,67 +1194,80 @@ public class ShopTestSuite extends SpecsBaseClass {
     @Test
     public void clickCollectionsMain()  {
 
-        ShopCollections.clickCollectionsMain();
+        SpecialShops.clickCollectionsMain();
 
     }
 
     @Test
     public void clickPetTech()  {
 
-        ShopCollections.clickPetTech();
+        SpecialShops.clickPetTech();
 
     }
 
     @Test
     public void clickPetRememb()  {
 
-        ShopCollections.clickPetRememb();
+        SpecialShops.clickPetRememb();
 
     }
 
     @Test
     public void clickShopByBreed()  {
 
-        ShopCollections.clickShopByBreed();
+        SpecialShops.clickShopByBreed();
 
     }
 
     @Test
     public void clickCollectShopByBreed()  {
 
-        ShopCollections.clickCollectShopByBreed();
+        SpecialShops.clickCollectShopByBreed();
 
     }
 
-    //END OF COLLECTIONS ^
+    //END OF COLLECTIONS ^  OLD MENU
 
-     //@Test ----This button was removed----
-     public void FurYourOwnGoodCampButton() {
 
-        shopHomepage.FurYourOwnGoodCampButton();
+    //Special Shops Section:
+
+     @Test
+     public void clickFallEntertainingLook() {
+
+        shopHomepage.clickFallEntertainingLook();
 
      }
 
     @Test
-    public void ViewMoreChewyProdCampButton() {
+    public void checkNovNewArrivals() {
 
-        shopHomepage.ViewMoreChewyProdCampButton();
-
-    }
-
-    @Test
-    public void ViewMoreBeeHoundButton() {
-
-        shopHomepage.ViewMoreBeeHoundButton();
+        shopHomepage.checkNovNewArrivals();
 
     }
 
     @Test
-    public void ViewMoreNationalChamp2020() {
+    public void checkPuppyEssentials() {
 
-        shopHomepage.ViewMoreNationalChamp2020();
+        shopHomepage.checkPuppyEssentials();
 
     }
+
+    @Test
+    public void checkHolidayShop() {
+
+        shopHomepage.checkHolidayShop();
+
+    }
+
+    @Test
+    public void clickShopByBreedButton() {
+
+        shopHomepage.clickShopByBreedButton();
+
+    }
+
+    //Footer tests:
+
 
     @Test
     public void checkSubsEmail() throws InterruptedException{
@@ -1284,35 +1284,35 @@ public class ShopTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void ClickCustServ() throws InterruptedException {
+    public void ClickCustServ() {
 
         shopHomepage.ClickCustServ();
 
     }
 
     @Test
-    public void ClickAKCShopExp() throws InterruptedException {
+    public void ClickReturnsExchanges() {
 
-        shopHomepage.ClickAKCShopExp();
+        shopHomepage.ClickReturnsExchanges();
 
     }
 
     @Test
-    public void ClickPrivacyPoli() throws InterruptedException {
+    public void ClickPrivacyPoli() {
 
         shopHomepage.ClickPrivacyPoli();
 
     }
 
     @Test
-    public void ClickTermsUse() throws InterruptedException {
+    public void ClickTermsUse() {
 
         shopHomepage.ClickTermsUse();
 
     }
 
     @Test
-    public void ClickCaliPrivacyRight() throws InterruptedException {
+    public void ClickCaliPrivacyRight() {
 
         shopHomepage.ClickCaliPrivacyRight();
 
@@ -1333,21 +1333,21 @@ public class ShopTestSuite extends SpecsBaseClass {
         shopPurchaseOrders.QuickViewPurchase();
 
     }
-    //
+
 
     //---------------------------------Visual tests:
 
-    //@Test
+    @Test
     public void VisualShopHomePage() {
 
-        //driver.navigate().to("https://shop.akc.org/");
+        driver.navigate().to("https://shop.akc.org/");
         eyes.open(driver, "AKCSHOP", "ShopHomePage", new RectangleSize(1420, 680));
         eyes.check("Shop", Target.window());
         eyes.close();
 
     }
 
-    //Main Menus >
+    //Main Menus > Change URL's and update visual validations.
 
     @Test
     public void VisualShopDogBasicsMenu() {
@@ -1369,7 +1369,7 @@ public class ShopTestSuite extends SpecsBaseClass {
 
     }
 
-    //@Test
+    @Test
     public void VisualGroomingWellnessMenu() {
 
         driver.navigate().to("https://shop.akc.org/collections/grooming-wellness");
@@ -1379,7 +1379,7 @@ public class ShopTestSuite extends SpecsBaseClass {
 
     }
 
-    //@Test
+    @Test
     public void VisualTrainingMenu() {
 
         driver.navigate().to("https://shop.akc.org/collections/training");

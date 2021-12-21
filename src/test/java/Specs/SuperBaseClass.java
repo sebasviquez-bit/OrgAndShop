@@ -2,14 +2,15 @@ package Specs;
 
 import Helpers.DataHelper;
 import Helpers.DriverHelper;
-import Pages.*;
+import ORGPages.*;
+import ShopPages.*;
 import org.openqa.selenium.WebDriver;
 
 public class SuperBaseClass {
     //driver
     WebDriver driver;
 
-    //pages
+    //ORGPages
     SignIn signIn;
     Register register;
     BreedsMenu breeds;
@@ -24,24 +25,32 @@ public class SuperBaseClass {
     CanMyDogEat canMyDogEat;
     RegisterDog registerDog;
     Search search;
+
+    //ShopPages
     ShopHomepage shopHomepage;
-    ShopEssentials ShopEssentials;
-    ShopOnTheGo ShopOnTheGo;
-    ShopGroomingWellness ShopGroomingWellness;
-    ShopTraining ShopTraining;
-    ShopDogLovers ShopDogLovers;
-    ShopAKCPro ShopAKCPro;
-    ShopCollections ShopCollections;
+    GiftForHumans GiftForHumans;
+    GearForDogs GearForDogs;
+    ShopPages.ShopGroomingWellness ShopGroomingWellness;
+    AdviseTraining AdviseTraining;
+    ShopByBreed ShopByBreed;
+    AKCProShop AKCProShop;
+    SpecialShops SpecialShops;
     ShopPurchaseOrders shopPurchaseOrders;
+    ShopPages.ShopRegister ShopRegister;
+    ShopPages.ShopSearch ShopSearch;
+    ShopPages.ShopSignIn ShopSignIn;
+
+    //Retrievist
+    //Coming soon *
 
 
     //helpers
     DataHelper dataHelper;
     DriverHelper driverHelper;
 
-
     public void InitPages(){
 
+        //ORG
         signIn = new SignIn(this.driver);
         register = new Register(this.driver, driverHelper);
         breeds = new BreedsMenu(this.driver);
@@ -56,15 +65,23 @@ public class SuperBaseClass {
         canMyDogEat= new CanMyDogEat(this.driver);
         registerDog= new RegisterDog(this.driver);
         search= new Search(this.driver);
+
+        //SHOP
         shopHomepage= new ShopHomepage(this.driver);
-        ShopEssentials= new ShopEssentials(this.driver);
-        ShopOnTheGo= new ShopOnTheGo(this.driver);
+        GiftForHumans = new GiftForHumans(this.driver);
+        GearForDogs = new GearForDogs(this.driver);
         ShopGroomingWellness= new ShopGroomingWellness(this.driver);
-        ShopTraining= new ShopTraining(this.driver);
-        ShopDogLovers= new ShopDogLovers(this.driver);
-        ShopAKCPro= new ShopAKCPro(this.driver);
-        ShopCollections= new ShopCollections(this.driver);
+        AdviseTraining = new AdviseTraining(this.driver);
+        ShopByBreed = new ShopByBreed(this.driver);
+        AKCProShop = new AKCProShop(this.driver);
+        SpecialShops = new SpecialShops(this.driver);
         shopPurchaseOrders= new ShopPurchaseOrders(this.driver);
+        ShopRegister= new ShopRegister(this.driver, driverHelper);
+        ShopSearch= new ShopSearch(this.driver);
+        ShopSignIn= new ShopSignIn(this.driver);
+
+        //Retrievist
+        //Coming soon *
 
     }
 

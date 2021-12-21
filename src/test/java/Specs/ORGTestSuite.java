@@ -2041,7 +2041,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    //@Test
+    @Test
     public void dogbreedArticle() {
 
         expertAdvice.dogbreedArticle();
