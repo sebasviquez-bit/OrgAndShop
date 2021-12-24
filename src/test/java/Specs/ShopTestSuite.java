@@ -268,38 +268,40 @@ public class ShopTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
-    public void clickTugToys() throws InterruptedException {
+    //
 
-        GiftForHumans.clickTugToys();
+    @Test
+    public void clickClothingAccessories() {
+
+        GiftForHumans.clickClothingAccessories();
 
     }
 
     @Test
-    public void clickTeethingToys() throws InterruptedException {
+    public void clickApparel() {
 
-        GiftForHumans.clickTeethingToys();
-
-    }
-
-    @Test
-    public void clickInteractiveToys() throws InterruptedException {
-
-        GiftForHumans.clickInteractiveToys();
+        GiftForHumans.clickApparel();
 
     }
 
     @Test
-    public void clickDogGiftPaks() throws InterruptedException {
+    public void clickOuterWear() {
 
-        GiftForHumans.clickDogGiftPaks();
+        GiftForHumans.clickOuterWear();
 
     }
 
     @Test
-    public void clickBeds() throws InterruptedException {
+    public void clickLoungeWear() {
 
-        GiftForHumans.clickBeds();
+        GiftForHumans.clickLoungeWear();
+
+    }
+
+    @Test
+    public void clickHats() {
+
+        GiftForHumans.clickHats();
 
     }
 
@@ -709,13 +711,6 @@ public class ShopTestSuite extends SpecsBaseClass {
     public void clickScarves()  {
 
         ShopByBreed.clickScarves();
-
-    }
-
-    @Test
-    public void clickHats()  {
-
-        ShopByBreed.clickHats();
 
     }
 
