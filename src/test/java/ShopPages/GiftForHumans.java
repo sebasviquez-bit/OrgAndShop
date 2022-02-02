@@ -127,85 +127,109 @@ public class GiftForHumans {
 
     @FindBy(css = "#main-content > div > h1")
     WebElement HatsTitle;
-    //
 
-    @FindBy(css = "#essentials-play > li:nth-child(2) > a")
-    WebElement PlushToys;
+    @FindBy(css = "#main-menu-gifts-for-humans > div:nth-child(3) > ul > li:nth-child(5) > a")
+    WebElement TechAccessories;
 
-    @FindBy(css = "#collection-header > div.content > div > h1")
-    WebElement PlushToysTitle;
+    @FindBy(css = "#main-content > div > h1")
+    WebElement TechAccessoriesTitle;
 
-    @FindBy(css = "#essentials-play > li:nth-child(3) > a")
-    WebElement FetchToys;
+    @FindBy(css = "#main-menu-gifts-for-humans > div:nth-child(4) > a")
+    WebElement TotesBags;
 
-    @FindBy(css = "#collection-header > div.content > div > h1")
-    WebElement FetchToysTitle;
+    @FindBy(css = "#main-content > div > h1")
+    WebElement TotesBagsTitle;
 
-    @FindBy(css = "#essentials-play > li:nth-child(4) > a")
-    WebElement TugToys;
+    @FindBy(css = "#main-menu-gifts-for-humans > div:nth-child(4) > ul > li:nth-child(1) > a")
+    WebElement DuffleBags;
 
-    @FindBy(css = "#collection-header > div.content > div > h1")
-    WebElement TugToysTitle;
+    @FindBy(css = "#main-content > div > h1")
+    WebElement DuffleBagsTitle;
 
-    @FindBy(css = "#essentials-play > li:nth-child(5) > a")
-    WebElement TeethingToys;
+    @FindBy(css = "#main-menu-gifts-for-humans > div:nth-child(4) > ul > li:nth-child(2) > a")
+    WebElement PrintedTotes;
 
-    @FindBy(css = "#collection-header > div.content > div > h1")
-    WebElement TeethingToysTitle;
+    @FindBy(css = "#main-content > div > h1")
+    WebElement PrintedTotesTitle;
 
-    @FindBy(css = "#essentials-play > li:nth-child(6) > a")
-    WebElement InteractiveToys;
+    @FindBy(css = "#main-menu-gifts-for-humans > div:nth-child(4) > ul > li:nth-child(3) > a")
+    WebElement CustomEmbroTotes;
 
-    @FindBy(css = "#collection-header > div.content > div > h1")
-    WebElement InteractiveToysTtile;
+    @FindBy(css = "#main-content > div > h1")
+    WebElement CustomEmbroTotesTitle;
 
-    @FindBy(css = "#essentials-play > li:nth-child(7) > a")
-    WebElement DogGiftPacks;
+    @FindBy(css = "#main-menu-gifts-for-humans > div:nth-child(4) > ul > li:nth-child(4) > a")
+    WebElement LunchTotes;
 
-    @FindBy(css = "#collection-header > div.content > div > h1")
-    WebElement DogGiftPacksTitle;
+    @FindBy(css = "#main-content > div > h1")
+    WebElement LunchTotesTitle;
 
-    @FindBy(css = "#essentials-play > li:nth-child(7) > a")
-    WebElement Beds;
+    @FindBy(css = "#main-menu-gifts-for-humans > div:nth-child(5) > a")
+    WebElement HomeKitchen;
 
-    @FindBy(css = "#collection-header > div.content > div > h1")
-    WebElement BedsTitle;
+    @FindBy(css = "#main-content > div > h1")
+    WebElement HomeKitchenTitle;
 
-    @FindBy(css = "#essentials-play > li:nth-child(7) > a")
-    WebElement Crates;
+    @FindBy(css = "#main-menu-gifts-for-humans > div:nth-child(5) > ul > li:nth-child(1) > a")
+    WebElement EveryDayHome;
 
-    @FindBy(css = "#collection-header > div.content > div > h1")
-    WebElement CratesTitle;
+    @FindBy(css = "#main-content > div > h1")
+    WebElement EveryDayHomeTitle;
 
-    @FindBy(css = "#essentials-play > li:nth-child(7) > a")
-    WebElement CrateMats;
+    @FindBy(css = "#main-menu-gifts-for-humans > div:nth-child(5) > ul > li:nth-child(2) > a")
+    WebElement HolidayDecor;
 
-    @FindBy(css = "#collection-header > div.content > div > h1")
-    WebElement CrateMatsTitle;
+    @FindBy(css = "#main-content > div > h1")
+    WebElement HolidayDecorTitle;
 
-    @FindBy(css = "#essentials-walk > li:nth-child(2) > a")
-    WebElement Collars;
+    @FindBy(css = "#main-menu-gifts-for-humans > div:nth-child(5) > ul > li:nth-child(3) > a")
+    WebElement ArtWork;
 
-    @FindBy(css = "#collection-header > div.content > div > h1")
-    WebElement CollarsTitle;
+    @FindBy(css = "#main-content > div > h1")
+    WebElement ArtWorkTitle;
 
-    @FindBy(css = "#essentials-walk > li:nth-child(2) > a")
-    WebElement Leashes;
+    @FindBy(css = "#main-menu-gifts-for-humans > div:nth-child(5) > ul > li:nth-child(4) > a")
+    WebElement BlanketsThrows;
 
-    @FindBy(css = "#collection-header > div.content > div > h1")
-    WebElement LeashesTitle;
+    @FindBy(css = "#main-content > div > h1")
+    WebElement BlanketsThrowsTitle;
 
-    @FindBy(css = "#essentials-walk > li:nth-child(2) > a")
-    WebElement Harnesses;
+    @FindBy(css = "#main-menu-gifts-for-humans > div:nth-child(5) > ul > li:nth-child(5) > a")
+    WebElement Drinkware;
 
-    @FindBy(css = "#collection-header > div.content > div > h1")
-    WebElement HarnessesTitle;
+    @FindBy(css = "#main-content > div > h1")
+    WebElement DrinkwareTitle;
 
-    @FindBy(css = "#essentials-walk > li:nth-child(2) > a")
-    WebElement BreedCLS;
+    @FindBy(css = "#main-menu-gifts-for-humans > div:nth-child(5) > ul > li:nth-child(6) > a")
+    WebElement KitchenAccessories;
 
-    @FindBy(css = "#collection-header > div.content > div > h1")
-    WebElement BreedCLSTitle;
+    @FindBy(css = "#main-content > div > h1")
+    WebElement KitchenAccessoriesTitle;
+
+    @FindBy(css = "#main-menu-gifts-for-humans > div:nth-child(6) > a")
+    WebElement RemembranceMemorial;
+
+    @FindBy(css = "#main-content > div > h1")
+    WebElement RemembranceMemorialTitle;
+
+    @FindBy(css = "#main-menu-gifts-for-humans > div:nth-child(6) > ul > li:nth-child(1) > a")
+    WebElement RemebranceMemorialJewelry;
+
+    @FindBy(css = "#main-content > div > h1")
+    WebElement RemembranceMemorialJewelryTitle;
+
+    @FindBy(css = "#main-menu-gifts-for-humans > div:nth-child(6) > ul > li:nth-child(2) > a")
+    WebElement SomewhereOverThe;
+
+    @FindBy(css = "#main-content > div > h1")
+    WebElement SomewhereOverTheTitle;
+
+    @FindBy(css = "#main-menu-gifts-for-humans > div:nth-child(6) > ul > li:nth-child(3) > a")
+    WebElement MemoryBoxesUrns;
+
+    @FindBy(css = "#main-content > div > h1")
+    WebElement MemoryBoxesUrnsTitle;
+
 
 
     //------------------------//
@@ -435,71 +459,209 @@ public class GiftForHumans {
 
     }
 
-    public void clickCrates() {
+    public void clickTechAccessories() {
 
         Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-essentials-supplies > a"));
+        WebElement element = driver.findElement(By.cssSelector("#main-menu-nav > nav > a:nth-child(1)"));
         builder.moveToElement(element).build().perform();
-        this.Crates.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(CratesTitle));
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.visibilityOf(TechAccessories));
+        this.TechAccessories.click();
+        wait.until(ExpectedConditions.visibilityOf(TechAccessoriesTitle));
 
     }
 
-    public void clickCrateMats() {
+    public void clickTotesBags() {
 
         Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-essentials-supplies > a"));
+        WebElement element = driver.findElement(By.cssSelector("#main-menu-nav > nav > a:nth-child(1)"));
         builder.moveToElement(element).build().perform();
-        this.CrateMats.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(CrateMatsTitle));
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.visibilityOf(TotesBags));
+        this.TotesBags.click();
+        wait.until(ExpectedConditions.visibilityOf(TotesBagsTitle));
 
     }
 
-    public void clickCollars() {
+    public void clickDuffleBags() {
 
         Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-essentials-supplies > a"));
+        WebElement element = driver.findElement(By.cssSelector("#main-menu-nav > nav > a:nth-child(1)"));
         builder.moveToElement(element).build().perform();
-        this.Collars.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(CollarsTitle));
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.visibilityOf(DuffleBags));
+        this.DuffleBags.click();
+        wait.until(ExpectedConditions.visibilityOf(DuffleBagsTitle));
 
     }
 
-    public void clickLeashes() {
+    public void clickPrintedTotes() {
 
         Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-essentials-supplies > a"));
+        WebElement element = driver.findElement(By.cssSelector("#main-menu-nav > nav > a:nth-child(1)"));
         builder.moveToElement(element).build().perform();
-        this.Leashes.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(LeashesTitle));
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.visibilityOf(DuffleBags));
+        this.PrintedTotes.click();
+        wait.until(ExpectedConditions.visibilityOf(PrintedTotesTitle));
 
     }
 
-    public void clickHarnesses() {
+    public void clickCustomEmbroTotes() {
 
         Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-essentials-supplies > a"));
+        WebElement element = driver.findElement(By.cssSelector("#main-menu-nav > nav > a:nth-child(1)"));
         builder.moveToElement(element).build().perform();
-        this.Harnesses.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(HarnessesTitle));
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.visibilityOf(CustomEmbroTotes));
+        this.CustomEmbroTotes.click();
+        wait.until(ExpectedConditions.visibilityOf(CustomEmbroTotesTitle));
 
     }
 
-    public void clickBreedCLS() {
+    public void clickLunchTotes() {
 
         Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-essentials-supplies > a"));
+        WebElement element = driver.findElement(By.cssSelector("#main-menu-nav > nav > a:nth-child(1)"));
         builder.moveToElement(element).build().perform();
-        this.BreedCLS.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(BreedCLSTitle));
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.visibilityOf(CustomEmbroTotes));
+        this.LunchTotes.click();
+        wait.until(ExpectedConditions.visibilityOf(LunchTotesTitle));
 
     }
 
+    public void clickHomeKitchen() {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#main-menu-nav > nav > a:nth-child(1)"));
+        builder.moveToElement(element).build().perform();
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.visibilityOf(HomeKitchen));
+        this.HomeKitchen.click();
+        wait.until(ExpectedConditions.visibilityOf(HomeKitchenTitle));
+
+    }
+
+    public void clickEveryDayHome() {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#main-menu-nav > nav > a:nth-child(1)"));
+        builder.moveToElement(element).build().perform();
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.visibilityOf(EveryDayHome));
+        this.EveryDayHome.click();
+        wait.until(ExpectedConditions.visibilityOf(EveryDayHomeTitle));
+
+    }
+
+    public void clickHolidayDecor() {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#main-menu-nav > nav > a:nth-child(1)"));
+        builder.moveToElement(element).build().perform();
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.visibilityOf(HolidayDecor));
+        this.HolidayDecor.click();
+        wait.until(ExpectedConditions.visibilityOf(HolidayDecorTitle));
+
+    }
+
+    public void clickArtWork() {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#main-menu-nav > nav > a:nth-child(1)"));
+        builder.moveToElement(element).build().perform();
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.visibilityOf(ArtWork));
+        this.ArtWork.click();
+        wait.until(ExpectedConditions.visibilityOf(ArtWorkTitle));
+
+    }
+
+    public void clickBlanketsThrows() {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#main-menu-nav > nav > a:nth-child(1)"));
+        builder.moveToElement(element).build().perform();
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.visibilityOf(BlanketsThrows));
+        this.BlanketsThrows.click();
+        wait.until(ExpectedConditions.visibilityOf(BlanketsThrowsTitle));
+
+    }
+
+    public void clickDrinkware() {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#main-menu-nav > nav > a:nth-child(1)"));
+        builder.moveToElement(element).build().perform();
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.visibilityOf(Drinkware));
+        this.Drinkware.click();
+        wait.until(ExpectedConditions.visibilityOf(DrinkwareTitle));
+
+    }
+
+    public void clickKitchenAccessories() {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#main-menu-nav > nav > a:nth-child(1)"));
+        builder.moveToElement(element).build().perform();
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.visibilityOf(KitchenAccessories));
+        this.KitchenAccessories.click();
+        wait.until(ExpectedConditions.visibilityOf(KitchenAccessoriesTitle));
+
+    }
+
+    public void clickRemembranceMemorial() {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#main-menu-nav > nav > a:nth-child(1)"));
+        builder.moveToElement(element).build().perform();
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.visibilityOf(RemembranceMemorial));
+        this.RemembranceMemorial.click();
+        wait.until(ExpectedConditions.visibilityOf(RemembranceMemorialTitle));
+
+    }
+
+    public void clickRemebranceMemorialJewelry() {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#main-menu-nav > nav > a:nth-child(1)"));
+        builder.moveToElement(element).build().perform();
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.visibilityOf(RemebranceMemorialJewelry));
+        this.RemebranceMemorialJewelry.click();
+        wait.until(ExpectedConditions.visibilityOf(RemembranceMemorialJewelryTitle));
+
+    }
+
+    public void clickSomewhereOverThe() {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#main-menu-nav > nav > a:nth-child(1)"));
+        builder.moveToElement(element).build().perform();
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.visibilityOf(SomewhereOverThe));
+        this.SomewhereOverThe.click();
+        wait.until(ExpectedConditions.visibilityOf(SomewhereOverTheTitle));
+
+    }
+
+    public void clickMemoryBoxesUrns() {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#main-menu-nav > nav > a:nth-child(1)"));
+        builder.moveToElement(element).build().perform();
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.visibilityOf(MemoryBoxesUrns));
+        this.MemoryBoxesUrns.click();
+        wait.until(ExpectedConditions.visibilityOf(MemoryBoxesUrnsTitle));
+
+    }
+//
 
 }

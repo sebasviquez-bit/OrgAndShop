@@ -20,161 +20,48 @@ public class AKCProShop {
     @FindBy(css = "#shopify-section-collection-headline-tiles > div.collection-landing-page__tiles > a:nth-child(1) > div > img")
     WebElement AKCProShopPointsProgression;
 
-    @FindBy(css = "#akc-services-breeders > li:nth-child(1) > a")
-    WebElement Breeders;
+    @FindBy(css = "#main-menu-akc-pro-shop > div:nth-child(1) > a")
+    WebElement AKCBrandedGears;
 
-    @FindBy(css = "#collection-header > div > div > h1")
-    WebElement BreedersTitle;
+    @FindBy(css = "#main-content > div > h1")
+    WebElement AKCBrandedGearsTitle;
 
-    @FindBy(css = "#akc-services-breeders > li:nth-child(2) > a")
-    WebElement IDCollLeashes;
+    @FindBy(css = "#main-menu-akc-pro-shop > div:nth-child(2) > a")
+    WebElement ForBreeders;
 
-    @FindBy(css = "#collection-header > div.content > div > h1")
-    WebElement IDCollLeashesTitle;
+    @FindBy(css = "#main-content > div > h1")
+    WebElement ForBreedersTitle;
 
-    @FindBy(css = "#akc-services-breeders > li:nth-child(3) > a")
-    WebElement BooksAndDVDs;
-
-    @FindBy(css = "#collection-header > div > div > h1")
-    WebElement BooksAndDVDsTitle;
-
-    @FindBy(css = "#akc-services-breeders > li:nth-child(4) > a")
-    WebElement DNAKit;
-
-    @FindBy(css = "#ProductAdd > div > h1")
-    WebElement DNAKitTitle;
-
-    @FindBy(css = "#akc-services-breeders > li:nth-child(5) > a")
-    WebElement RulesAndPolicies;
-
-    @FindBy(css = "#collection-header > div > div > h1")
-    WebElement RulesAndPoliciesTitle;
-
-    @FindBy(css = "#akc-services-breeders > li:nth-child(6) > a")
-    WebElement CertiPedig;
-
-    @FindBy(css = "#ProductAdd > div > h1")
-    WebElement CertiPedigTitle;
-
-    @FindBy(css = "#akc-services-breeders > li:nth-child(7) > a")
-    WebElement BreederRepo;
-
-    @FindBy(css = "#ProductAdd > div > h1")
-    WebElement BreederRepoTitle;
-
-    @FindBy(css = "#akc-services-competitors > li:nth-child(1) > a")
+    @FindBy(css = "#main-menu-akc-pro-shop > div:nth-child(3) > a")
     WebElement Exhibitors;
 
-    @FindBy(css = "#collection-header > div > div > h1")
+    @FindBy(css = "#main-content > div > h1")
     WebElement ExhibitorsTitle;
 
-    @FindBy(css = "#akc-services-competitors > li:nth-child(2) > a")
-    WebElement EventRuleRegula;
+    @FindBy(css = "#main-menu-akc-pro-shop > div:nth-child(4) > a")
+    WebElement ForJudges;
 
-    @FindBy(css = "#collection-header > div > div > h1")
-    WebElement EventRuleRegulaTitle;
+    @FindBy(css = "#main-content > div > h1")
+    WebElement ForJudgesTitle;
 
-    @FindBy(css = "#akc-services-competitors > li:nth-child(3) > a")
-    WebElement CompetitorRepo;
+    @FindBy(css = "#main-menu-akc-pro-shop > div:nth-child(5) > a")
+    WebElement ForClubs;
 
-    @FindBy(css = "#ProductAdd > div > h1")
-    WebElement CompetitorRepoTitle;
+    @FindBy(css = "#main-content > div > h1")
+    WebElement ForClubsTitle;
 
-    @FindBy(css = "#exhibitors > li:nth-child(4) > a")
-    WebElement TitlePatches;
+    @FindBy(css = "#main-menu-akc-pro-shop > div:nth-child(6) > a")
+    WebElement ForTrainers;
 
-    @FindBy(css = "#collection-header > div > div > h1")
-    WebElement TitlePatchesTitle;
+    @FindBy(css = "#main-content > div > h1")
+    WebElement ForTrainersTitle;
 
-    @FindBy(css = "#akc-services-competitors > li:nth-child(4) > a")
-    WebElement FreePointProgress;
+    @FindBy(css = "#main-menu-akc-pro-shop > div:nth-child(7) > a")
+    WebElement PointsProgressionProShop;
 
-    @FindBy(css = "#ProductAdd > div > h1")
-    WebElement FreePointProgressTitle;
+    @FindBy(css = "#main-content > div > h1")
+    WebElement PointsProgressionProShopTitle;
 
-    @FindBy(css = "#akc-services-judges-clubs > li:nth-child(1) > a")
-    WebElement JudgesClubs;
-
-    @FindBy(css = "#collection-header > div > div > h1")
-    WebElement JudgesClubsTitle;
-
-    @FindBy(css = "#akc-services-judges-clubs > li:nth-child(2) > a")
-    WebElement BooksDVDS;
-
-    @FindBy(css = "#collection-header > div > div > h1")
-    WebElement BooksDVDSTitle;
-
-    @FindBy(css = "#akc-services-judges-clubs > li:nth-child(3) > a")
-    WebElement EventRulesReg;
-
-    @FindBy(css = "#collection-header > div > div > h1")
-    WebElement EventRulesRegTitle;
-
-    @FindBy(css = "#akc-services-judges-clubs > li:nth-child(4) > a")
-    WebElement RegRulesPolicies;
-
-    @FindBy(css = "#collection-header > div > div > h1")
-    WebElement RegRulesPoliciesTitle;
-
-    @FindBy(css = "#akc-services-judges-clubs > li:nth-child(5) > a")
-    WebElement BreedStand;
-
-    @FindBy(css = "#collection-header > div > div > h1")
-    WebElement BreedStandTitle;
-
-    @FindBy(css = "#akc-services-judges-clubs > li:nth-child(6) > a")
-    WebElement GoverClubReso;
-
-    @FindBy(css = "#collection-header > div > div > h1")
-    WebElement GoverClubResoTitle;
-
-    @FindBy(css = "#akc-services-judges-clubs > li:nth-child(7) > a")
-    WebElement DogShowResorces;
-
-    @FindBy(css = "#collection-header > div > div > h1")
-    WebElement DogShowResorcesTitle;
-
-    @FindBy(css = "#akc-services-trainers > li:nth-child(1) > a")
-    WebElement Trainers;
-
-    @FindBy(css = "#collection-header > div.content > div > h1")
-    WebElement TrainersTitle;
-
-    @FindBy(css = "#akc-services-trainers > li:nth-child(2) > a")
-    WebElement MaterialsCGC;
-
-    @FindBy(css = "#collection-header > div.content > div > h1")
-    WebElement MaterialsCGCTitle;
-
-    @FindBy(css = "#akc-services-trainers > li:nth-child(3) > a")
-    WebElement CGCMerch;
-
-    @FindBy(css = "#collection-header > div.content > div > h1")
-    WebElement CGCMerchTitle;
-
-    @FindBy(css = "#akc-services-trainers > li:nth-child(4) > a")
-    WebElement CGCWorkMerch;
-
-    @FindBy(css = "#collection-header > div.content > div > h1")
-    WebElement CGCWorkMerchTitle;
-
-    @FindBy(css = "#akc-services-trainers > li:nth-child(5) > a")
-    WebElement TrickDogMerch;
-
-    @FindBy(css = "#collection-header > div.content > div > h1")
-    WebElement TrickDogMerchTitle;
-
-    @FindBy(css = "#akc-services-trainers > li:nth-child(6) > a")
-    WebElement TrainingBooks;
-
-    @FindBy(css = "#collection-header > div.content > div > h1")
-    WebElement TrainingBooksTitle;
-
-    @FindBy(css = "#akc-services-trainers > li:nth-child(7) > a")
-    WebElement AllTrainingProd;
-
-    @FindBy(css = "#collection-header > div.content > div > h1")
-    WebElement AllTrainingProdTitle;
 
     //------------------------//
 
@@ -199,290 +86,90 @@ public class AKCProShop {
 
     }
 
-    public void clickBreeders() {
+    public void clickAKCBrandedGears() {
 
         Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.akc-services > a"));
+        WebElement element = driver.findElement(By.cssSelector("#main-menu-nav > nav > a:nth-child(3)"));
         builder.moveToElement(element).build().perform();
-        this.Breeders.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(BreedersTitle));
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.elementToBeClickable(AKCBrandedGears));
+        this.AKCBrandedGears.click();
+        wait.until(ExpectedConditions.visibilityOf(AKCBrandedGearsTitle));
 
     }
 
-    public void clickIDCollLeashes() {
+    public void clickForBreeders() {
 
         Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.akc-services > a"));
+        WebElement element = driver.findElement(By.cssSelector("#main-menu-nav > nav > a:nth-child(3)"));
         builder.moveToElement(element).build().perform();
-        this.IDCollLeashes.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(IDCollLeashesTitle));
-
-    }
-
-    public void clickBooksAndDVDs() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.akc-services > a"));
-        builder.moveToElement(element).build().perform();
-        this.BooksAndDVDs.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(BooksAndDVDsTitle));
-
-    }
-
-    public void clickDNAKit() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.akc-services > a"));
-        builder.moveToElement(element).build().perform();
-        this.DNAKit.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(DNAKitTitle));
-
-    }
-
-    public void clickRulesAndPolicies() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.akc-services > a"));
-        builder.moveToElement(element).build().perform();
-        this.RulesAndPolicies.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(RulesAndPoliciesTitle));
-
-    }
-
-    public void clickCertiPedig() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.akc-services > a"));
-        builder.moveToElement(element).build().perform();
-        this.CertiPedig.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(CertiPedigTitle));
-
-    }
-
-    public void clickBreederRepo() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.akc-services > a"));
-        builder.moveToElement(element).build().perform();
-        this.BreederRepo.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(BreederRepoTitle));
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.elementToBeClickable(ForBreeders));
+        this.ForBreeders.click();
+        wait.until(ExpectedConditions.visibilityOf(ForBreedersTitle));
 
     }
 
     public void clickExhibitors() {
 
         Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.akc-services > a"));
+        WebElement element = driver.findElement(By.cssSelector("#main-menu-nav > nav > a:nth-child(3)"));
         builder.moveToElement(element).build().perform();
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.elementToBeClickable(Exhibitors));
         this.Exhibitors.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.visibilityOf(ExhibitorsTitle));
 
     }
 
-    public void clickEventRuleRegula() {
+    public void clickForJudges() {
 
         Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.akc-services > a"));
+        WebElement element = driver.findElement(By.cssSelector("#main-menu-nav > nav > a:nth-child(3)"));
         builder.moveToElement(element).build().perform();
-        this.EventRuleRegula.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(EventRuleRegulaTitle));
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.elementToBeClickable(ForJudges));
+        this.ForJudges.click();
+        wait.until(ExpectedConditions.visibilityOf(ForJudgesTitle));
 
     }
 
-    public void clickCompetitorRepo() {
+    public void clickForClubs() {
 
         Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.akc-services > a"));
+        WebElement element = driver.findElement(By.cssSelector("#main-menu-nav > nav > a:nth-child(3)"));
         builder.moveToElement(element).build().perform();
-        this.CompetitorRepo.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(CompetitorRepoTitle));
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.elementToBeClickable(ForClubs));
+        this.ForClubs.click();
+        wait.until(ExpectedConditions.visibilityOf(ForClubsTitle));
 
     }
 
-    public void clickTitlePatches() {
-
-        this.AKCProShopMenu.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(TitlePatches));
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        this.TitlePatches.click();
-        wait.until(ExpectedConditions.visibilityOf(TitlePatchesTitle));
-
-    }
-
-    public void clickFreePointProgress() {
+    public void clickForTrainers() {
 
         Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.akc-services > a"));
+        WebElement element = driver.findElement(By.cssSelector("#main-menu-nav > nav > a:nth-child(3)"));
         builder.moveToElement(element).build().perform();
-        this.FreePointProgress.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(FreePointProgressTitle));
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.elementToBeClickable(ForTrainers));
+        this.ForTrainers.click();
+        wait.until(ExpectedConditions.visibilityOf(ForTrainersTitle));
 
     }
 
-    public void clickJudgesClubs() {
+    public void clickPointsProgressionProShop() {
 
         Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.akc-services > a"));
+        WebElement element = driver.findElement(By.cssSelector("#main-menu-nav > nav > a:nth-child(3)"));
         builder.moveToElement(element).build().perform();
-        this.JudgesClubs.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(JudgesClubsTitle));
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.elementToBeClickable(PointsProgressionProShop));
+        this.PointsProgressionProShop.click();
+        wait.until(ExpectedConditions.visibilityOf(PointsProgressionProShopTitle));
 
     }
 
-    public void clickBooksDVDS() {
 
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.akc-services > a"));
-        builder.moveToElement(element).build().perform();
-        this.BooksDVDS.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(BooksDVDSTitle));
-
-    }
-
-    public void clickEventRulesReg() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.akc-services > a"));
-        builder.moveToElement(element).build().perform();
-        this.EventRulesReg.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(EventRulesRegTitle));
-
-    }
-
-    public void clickRegRulesPolicies() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.akc-services > a"));
-        builder.moveToElement(element).build().perform();
-        this.RegRulesPolicies.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(RegRulesPoliciesTitle));
-
-    }
-
-    public void clickBreedStand() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.akc-services > a"));
-        builder.moveToElement(element).build().perform();
-        this.BreedStand.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(BreedStandTitle));
-
-    }
-
-    public void clickGoverClubReso() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.akc-services > a"));
-        builder.moveToElement(element).build().perform();
-        this.GoverClubReso.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(GoverClubResoTitle));
-
-    }
-
-    public void clickDogShowResorces() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.akc-services > a"));
-        builder.moveToElement(element).build().perform();
-        this.DogShowResorces.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(DogShowResorcesTitle));
-
-    }
-
-    public void clickTrainers() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.akc-services > a"));
-        builder.moveToElement(element).build().perform();
-        this.Trainers.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(TrainersTitle));
-
-    }
-
-    public void clickMaterialsCGC() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.akc-services > a"));
-        builder.moveToElement(element).build().perform();
-        this.MaterialsCGC.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(MaterialsCGCTitle));
-
-    }
-
-    public void clickCGCMerch() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.akc-services > a"));
-        builder.moveToElement(element).build().perform();
-        this.CGCMerch.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(CGCMerchTitle));
-
-    }
-
-    public void clickCGCWorkMerch() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.akc-services > a"));
-        builder.moveToElement(element).build().perform();
-        this.CGCWorkMerch.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(CGCWorkMerchTitle));
-
-    }
-
-    public void clickTrickDogMerch() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.akc-services > a"));
-        builder.moveToElement(element).build().perform();
-        this.TrickDogMerch.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(TrickDogMerchTitle));
-
-    }
-
-    public void clickTrainingBooks() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.akc-services > a"));
-        builder.moveToElement(element).build().perform();
-        this.TrainingBooks.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(TrainingBooksTitle));
-
-    }
-
-    public void clickAllTrainingProd() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.akc-services > a"));
-        builder.moveToElement(element).build().perform();
-        this.AllTrainingProd.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(AllTrainingProdTitle));
-
-    }
 
 }

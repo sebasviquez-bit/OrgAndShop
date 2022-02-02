@@ -3,6 +3,7 @@ package Specs;
 import com.applitools.eyes.StdoutLogHandler;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
+import com.applitools.eyes.visualgrid.services.VisualGridRunner;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
@@ -45,14 +46,16 @@ public class SpecsBaseClass extends SuperBaseClass {
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
         //Applitools config:
-        this.eyes = new Eyes();
+        this.eyes = new Eyes(new VisualGridRunner(7));
         //this.eyes.setApiKey("z9croAylAJ31BCxQ9g0BdZE0ul770cXrtqRuwWv8A8g110");  //.ORG API KEY
         this.eyes.setApiKey("BPfSxtkBRJAMWYb8LGUn7G0DzwYdm8JiJPyed104Df5cs110");  //SHOP API KEY
+        this.eyes.setConfiguration(VisualGridConfig.getGrid());
         this.eyes.setLogHandler(new StdoutLogHandler());
-        //this.eyes.setForceFullPageScreenshot(true);
+        this.eyes.setForceFullPageScreenshot(true);
         this.eyes.setStitchMode(StitchMode.CSS);
         //this.eyes.setMatchLevel(MatchLevel.LAYOUT);
         this.eyes.setSendDom(true); //RCA related
+        
 
     }
 

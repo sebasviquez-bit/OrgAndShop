@@ -1,9 +1,7 @@
 package ShopPages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -25,6 +23,48 @@ public class ShopByBreed {
 
     @FindBy(css = "#shopify-section-collection-breeds > div > ul > li:nth-child(188) > a")
     WebElement dogBreedYorkshireTerrier;
+
+    @FindBy(css = "#shopify-section-collection-breeds > div > div > div > div > a")
+    WebElement ChooseABreedDropdown;
+
+    @FindBy(css = "#shopify-section-collection-breeds > div > div > div > div > div > ul > li:nth-child(5)")
+    WebElement DropdownAkita;
+
+    @FindBy(css = "#main-content > div > h1")
+    WebElement AkitaProductPageTitle;
+
+    @FindBy(css = "#shopify-section-collection-breeds > div > div > div > div > div > ul > li")
+    WebElement DropdownGoldenRetriever;
+
+    @FindBy(css = "#the-chosen-input-hack-2")
+    WebElement InputCase;
+
+    @FindBy(css = "#main-content > div > h1")
+    WebElement RetrieverProductPageTitle;
+
+    @FindBy(css = "#shopify-section-collection-breeds > div > div > div > div > div > ul > li")
+    WebElement DropdownYorkShire;
+
+    @FindBy(css = "#main-content > div > h1")
+    WebElement YorkShireProductPageTitle;
+
+    @FindBy(css = "#shopify-section-collection-breeds > div > ul > li:nth-child(17) > a > img")
+    WebElement BeaglePicture;
+
+    @FindBy(css = "#main-content > div > h1")
+    WebElement BeagleProductPageTitle;
+
+    @FindBy(css = "#shopify-section-collection-breeds > div > ul > li:nth-child(43) > a > img")
+    WebElement BulldogPicture;
+
+    @FindBy(css = "#main-content > div > h1")
+    WebElement BulldogProductPageTitle;
+
+    @FindBy(css = "#shopify-section-collection-breeds > div > ul > li:nth-child(130) > a > img")
+    WebElement PapillonPicture;
+
+    @FindBy(css = "#main-content > div > h1")
+    WebElement PapillonProductPageTitle;
 
     //
 
@@ -347,504 +387,78 @@ public class ShopByBreed {
 
     }
 
+    public void ChooseABreedDropdown()  {
+
+        this.ShopByBreed.isDisplayed();
+        this.ShopByBreed.click();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(ChooseABreedDropdown));
+        this.ChooseABreedDropdown.click();
+        this.DropdownAkita.click();
+        wait.until(ExpectedConditions.visibilityOf(AkitaProductPageTitle));
+
+    }
+
+    public void ChooseABreedDropdown2()  {
+
+        this.ShopByBreed.isDisplayed();
+        this.ShopByBreed.click();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(ChooseABreedDropdown));
+        this.ChooseABreedDropdown.click();
+        this.InputCase.sendKeys("Golden");
+        this.DropdownGoldenRetriever.click();
+        wait.until(ExpectedConditions.visibilityOf(RetrieverProductPageTitle));
+
+    }
+
+    public void ChooseABreedDropdown3()  {
+
+        this.ShopByBreed.isDisplayed();
+        this.ShopByBreed.click();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(ChooseABreedDropdown));
+        this.ChooseABreedDropdown.click();
+        this.InputCase.sendKeys("YorkShire");
+        this.DropdownYorkShire.click();
+        wait.until(ExpectedConditions.visibilityOf(YorkShireProductPageTitle));
+
+    }
+
+    public void ChooseABreedBeagle()  {
+
+        this.ShopByBreed.isDisplayed();
+        this.ShopByBreed.click();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(ChooseABreedDropdown));
+        this.BeaglePicture.click();
+        wait.until(ExpectedConditions.visibilityOf(BeagleProductPageTitle));
+
+    }
+
+    public void ChooseABreedBulldog()  {
+
+        this.ShopByBreed.isDisplayed();
+        this.ShopByBreed.click();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(ChooseABreedDropdown));
+        this.BulldogPicture.click();
+        wait.until(ExpectedConditions.visibilityOf(BulldogProductPageTitle));
+
+    }
+
+    public void ChooseABreedPapillon()  {
+
+        this.ShopByBreed.isDisplayed();
+        this.ShopByBreed.click();
+        WebDriverWait wait = new WebDriverWait (driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(ChooseABreedDropdown));
+        this.PapillonPicture.click();
+        wait.until(ExpectedConditions.visibilityOf(PapillonProductPageTitle));
+
+    }
+
     //
 
-    public void clickHumanApparel() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.HumanApparel.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(HumanApparelTitle));
-
-    }
-
-    public void clickGraphicApparel() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.GraphicApparel.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(GraphicApparelTitle));
-
-    }
-
-    public void clickBreedEmbroidery() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.BreedEmbroidery.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(BreedEmbroideryTitle));
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-
-    }
-
-    public void clickScarves() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.Scarves.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(ScarvesTitle));
-
-    }
-
-    public void clickHats() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.Hats.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(HatsTitle));
-
-    }
-
-    public void clickPajamas() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.Pajamas.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(PajamasTtile));
-
-    }
-
-
-    public void clickJewelry() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.Jewelry.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(JewelryTitle));
-
-    }
-
-    public void clickPins() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.Pins.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(PinsTitle));
-
-    }
-
-    public void clickRings() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.Rigns.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(RingsTtile));
-
-    }
-
-    public void clickEarigns() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.Earings.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(EaringsTitle));
-
-    }
-
-    public void clickBracelets() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.Bracelets.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(BraceletsTitle));
-
-    }
-
-    public void clickJewelryChains() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#main-menu-nav > nav > a.main-menu__nav__category.is-open"));
-        builder.moveToElement(element).build().perform();
-        this.JewelryChains.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(JewelryChainsTitle));
-
-    }
-
-    public void clickCharmsPendants() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.CharmsPendants.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(CharmsPendantsTitle));
-
-    }
-
-    public void clickFineJewelry() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.FineJewelry.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(FineJewelryTitle));
-
-    }
-
-    public void clickSportJewlery() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.Sportjewlery.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(SportjewleryTitle));
-
-    }
-
-    public void clickOvalBreedPendants() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.OvalBreedPendants.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(OvalBreedPendantsTitle));
-
-    }
-
-    public void clickToteBags() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.ToteBags.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(ToteBagsTitle));
-
-    }
-
-    public void clickDuffelBags() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.DuffelBags.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(DuffelBagsTitle));
-
-    }
-
-    public void clickPrintToteBags() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.PrintToteBags.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(PrintToteBagsTitle));
-
-    }
-
-    public void clickHandPaintTotes() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.HandPaintTotes.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(HandPaintTotesTitle));
-
-    }
-
-    public void clickEmbroToteBags() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.EmbroToteBags.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(EmbroToteBagsTitle));
-
-    }
-
-    public void clickKitchen() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.kitchen.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(kitchenTitle));
-
-    }
-
-    public void clickCoffeMugs() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.CoffeMugs.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(CoffeMugsTitle));
-
-    }
-
-    public void clickTravelMugs() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.TravelMugs.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(TravelMugsTitle));
-
-    }
-
-    public void clickWineGlasses() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.WineGlasses.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(WineGlassesTitle));
-
-    }
-
-    public void clickAprons() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.Aprons.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(ApronsTitle));
-
-    }
-
-    public void clickOvenPot() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.OvenPot.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(OvenPotTitle));
-
-    }
-
-    public void clickCuttingBoards() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.CuttingBoards.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(CuttingBoardsTitle));
-
-    }
-
-    public void clickDrinkAccesories() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.DrinkAccesories.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(DrinkAccesoriesTitle));
-
-    }
-
-    public void clickHome() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.Home.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(HomeTitle));
-
-    }
-
-    public void clickDecorative() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.Decorative.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(DecorativeTitle));
-
-    }
-
-    public void clickCardHolders() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.CardHolders.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(CardHoldersTitle));
-
-    }
-
-    public void clickCustomPetArt() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.CustomPetsArt.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(CustomPetsArtTitle));
-
-    }
-
-
-    public void clickTeaTowels() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.TeaTowels.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(TeaTowelsTitle));
-
-    }
-
-    public void clickBlankets() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.Blankets.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(BlanketsTitle));
-
-    }
-
-    public void clickPillows() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.Pillows.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(PillowsTitle));
-
-    }
-
-    public void clickHolyDecor() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.HolyDecor.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(HolyDecorTitle));
-
-    }
-
-    public void clickOutdoorAcces() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.OutdoorAcces.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(OutdoorAccesTitle));
-
-    }
-
-    public void clickTravelAcces() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.TravelAcces.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(TravelAccesTitle));
-
-    }
-
-    public void clickKeyRings() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.KeyRings.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(KeyRingsTitle));
-
-    }
-
-    public void clickPhoneCases() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.PhoneCases.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(PhoneCasesTitle));
-
-    }
-
-    public void clickLuggageTags() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.LuggageTags.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(LuggageTagsTitle));
-
-    }
-
-    public void clickStationary() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.Stationary.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(StationaryTitle));
-
-    }
-
-    public void clickUmbrellas() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.Umbrellas.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(UmbrellasTitle));
-
-    }
-
-    public void clickSportsChairs() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.dog-lovers > a"));
-        builder.moveToElement(element).build().perform();
-        this.SportsChairs.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(SportsChairsTitle));
-
-    }
 
 }

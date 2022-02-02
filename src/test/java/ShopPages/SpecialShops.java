@@ -17,38 +17,12 @@ public class SpecialShops {
     @FindBy(css = "#main-menu-special-shops")
     WebElement SpecialShopDropdown;
 
-    @FindBy(css = "#collections-side-nav")
-    WebElement CollectionsSideNav;
+    @FindBy(css = "#main-menu-special-shops > div:nth-child(1) > a")
+    WebElement ValentinesHer;
 
-    @FindBy(css = "#menu-bar > ul > li.collections > a")
-    WebElement CollectionsMain;
-
-    @FindBy(css = "#collection-header > div.content > div > h1")
-    WebElement CollectionsMainTitle;
-
-    @FindBy(css = "#dog-lovers-pet-tech > li > a")
-    WebElement PetTech;
-
-    @FindBy(css = "#collection-header > div.content > div > h1")
-    WebElement PetTechTitle;
-
-    @FindBy(css = "#dog-lovers-pet-remembrance > li > a")
-    WebElement PetRememb;
-
-    @FindBy(css = "#collection-header > div.content > div > h1")
-    WebElement PetRemembTitle;
-
-    @FindBy(css = "#shop-by-breed > li > a")
-    WebElement ShopByBreed;
-
-    @FindBy(css = "#shopify-section-collection-breeds > div > div > h4")
-    WebElement ShopByBreedTitle;
-
-    @FindBy(css = "#clearance > li > a")
-    WebElement Clearance;
-
-    @FindBy(css = "#collection-header > div.content > div > h1")
-    WebElement ClearanceTitle;
+    @FindBy(css = "#s-739d3249-b5ef-4406-88f2-eda7d1ab81eb > a")
+    WebElement ValentinesHerCandelProduct;
+    //#s-54bc5402-7a4d-46bf-8ae3-e6761b156f21 > img
 
     //------------------------//
 
@@ -72,58 +46,15 @@ public class SpecialShops {
 
     }
 
-    public void clickCollectionsMain() {
+    public void ClickValentinesHer() {
 
         Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.collections > a"));
+        WebElement element = driver.findElement(By.cssSelector("#main-menu-nav > nav > a:nth-child(4)"));
         builder.moveToElement(element).build().perform();
-        this.CollectionsMain.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(CollectionsMainTitle));
-
-    }
-
-    public void clickPetTech() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.collections > a"));
-        builder.moveToElement(element).build().perform();
-        this.PetTech.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(PetTechTitle));
-
-    }
-
-    public void clickPetRememb() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.collections > a"));
-        builder.moveToElement(element).build().perform();
-        this.PetRememb.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(PetRemembTitle));
-
-    }
-
-    public void clickShopByBreed() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.collections > a"));
-        builder.moveToElement(element).build().perform();
-        this.ShopByBreed.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(ShopByBreedTitle));
-
-    }
-
-    public void clickCollectShopByBreed() {
-
-        Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#menu-bar > ul > li.collections > a"));
-        builder.moveToElement(element).build().perform();
-        this.Clearance.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(ClearanceTitle));
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.elementToBeClickable(ValentinesHer));
+        this.ValentinesHer.click();
+        wait.until(ExpectedConditions.visibilityOf(ValentinesHerCandelProduct));
 
     }
 

@@ -184,10 +184,7 @@ public class ShopTestSuite extends SpecsBaseClass {
 
     }
 
-    //START OF ESSENTIALS SUBMENUs:
-
-
-    //these are the new GiftForHumans menu:
+    //GiftForHumans menu:
 
     @Test
     public void clickJewelryMenu()  {
@@ -238,8 +235,6 @@ public class ShopTestSuite extends SpecsBaseClass {
 
     }
 
-    //Continue:
-
     @Test
     public void clickMemorialJewelry() {
 
@@ -267,8 +262,6 @@ public class ShopTestSuite extends SpecsBaseClass {
         GiftForHumans.clickBreedEmbrodeiryAccesGear();
 
     }
-
-    //
 
     @Test
     public void clickClothingAccessories() {
@@ -306,746 +299,353 @@ public class ShopTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void clickCrates() throws InterruptedException {
+    public void clickTechAccessories() {
 
-        GiftForHumans.clickCrates();
-
-    }
-
-    @Test
-    public void clickCrateMats() throws InterruptedException {
-
-        GiftForHumans.clickCrateMats();
+        GiftForHumans.clickTechAccessories();
 
     }
 
     @Test
-    public void clickCollars() throws InterruptedException {
+    public void clickTotesBags() {
 
-        GiftForHumans.clickCollars();
-
-    }
-
-    @Test
-    public void clickLeashes() throws InterruptedException {
-
-        GiftForHumans.clickLeashes();
+        GiftForHumans.clickTotesBags();
 
     }
 
     @Test
-    public void clickHarnesses() throws InterruptedException {
+    public void clickDuffleBags() {
 
-        GiftForHumans.clickHarnesses();
-
-    }
-
-    @Test
-    public void clickBreedCLS() throws InterruptedException {
-
-        GiftForHumans.clickBreedCLS();
+        GiftForHumans.clickDuffleBags();
 
     }
 
     @Test
-    public void clickSideMenu()  {
+    public void clickPrintedTotes() {
 
-        GiftForHumans.clickSideMenu();
+        GiftForHumans.clickPrintedTotes();
 
     }
 
-    //END OF ESSENTIALS ^
+    @Test
+    public void clickCustomEmbroTotes() {
 
-    //ON THE GO MENU:
+        GiftForHumans.clickCustomEmbroTotes();
+
+    }
 
     @Test
-    public void clickCar() throws InterruptedException {
+    public void clickLunchTotes()  {
+
+        GiftForHumans.clickLunchTotes();
+
+    }
+
+    @Test
+    public void clickHomeKitchen()  {
+
+        GiftForHumans.clickHomeKitchen();
+
+    }
+
+    @Test
+    public void clickEveryDayHome()  {
+
+        GiftForHumans.clickEveryDayHome();
+
+    }
+
+    @Test
+    public void clickHolidayDecor()  {
+
+        GiftForHumans.clickHolidayDecor();
+
+    }
+
+    @Test
+    public void clickArtWork()  {
+
+        GiftForHumans.clickArtWork();
+
+    }
+
+    @Test
+    public void clickBlanketsThrows()  {
+
+        GiftForHumans.clickBlanketsThrows();
+
+    }
+
+    @Test
+    public void clickDrinkware()  {
+
+        GiftForHumans.clickDrinkware();
+
+    }
+
+    @Test
+    public void clickKitchenAccessories()  {
+
+        GiftForHumans.clickKitchenAccessories();
+
+    }
+
+    @Test
+    public void clickRemembranceMemorial()  {
+
+        GiftForHumans.clickRemembranceMemorial();
+
+    }
+
+    @Test
+    public void clickRemebranceMemorialJewelry()  {
+
+        GiftForHumans.clickRemebranceMemorialJewelry();
+
+    }
+
+    @Test
+    public void clickSomewhereOverThe()  {
+
+        GiftForHumans.clickSomewhereOverThe();
+
+    }
+
+    @Test
+    public void clickMemoryBoxesUrns()  {
+
+        GiftForHumans.clickMemoryBoxesUrns();
+
+    }
+
+    //End of GiftsForHumansMenus ^
+
+
+    //GearForDogsMenu:
+
+    @Test
+    public void clickGiftBoxes() {
+
+        GearForDogs.clickGiftBoxes();
+
+    }
+
+    @Test
+    public void clickToysPay() {
+
+        GearForDogs.clickToysPay();
+
+    }
+
+    @Test
+    public void clickPlushTugFetch() {
+
+        GearForDogs.clickPlushTugFetch();
+
+    }
+
+    @Test
+    public void clickTeethingToys()  {
+
+        GearForDogs.clickTeethingToys();
+
+    }
+
+
+    @Test
+    public void clickInteractiveToys() {
+
+        GearForDogs.clickInteractiveToys();
+
+    }
+
+
+    @Test
+    public void clickCollarsLeashes()  {
+
+        GearForDogs.clickCollarsLeashes();
+
+    }
+
+    @Test
+    public void clickCollars()  {
+
+        GearForDogs.clickCollars();
+
+    }
+
+    @Test
+    public void clickLeashes()  {
+
+        GearForDogs.clickLeashes();
+
+    }
+
+    @Test
+    public void clickHarnesses() {
+
+        GearForDogs.clickHarnesses();
+
+    }
+
+    @Test
+    public void clickCarTravel() {
+
+        GearForDogs.clickCarTravel();
+
+    }
+
+
+    @Test
+    public void clickCar() {
 
         GearForDogs.clickCar();
 
     }
 
-    @Test
-    public void clickCarCovers() throws InterruptedException {
-
-        GearForDogs.clickCarCovers();
-
-    }
 
     @Test
-    public void clickSeatsHarnesses() throws InterruptedException {
-
-        GearForDogs.clickSeatsHarnesses();
-
-    }
-
-    @Test
-    public void clickCarBarriers() throws InterruptedException {
-
-        GearForDogs.clickCarBarriers();
-
-    }
-
-    @Test
-    public void clickCarRapms() throws InterruptedException {
-
-        GearForDogs.clickCarRapms();
-
-    }
-
-    @Test
-    public void clickTravel() throws InterruptedException {
+    public void clickTravel() {
 
         GearForDogs.clickTravel();
 
     }
 
-    @Test
-    public void clickTravelBolws() throws InterruptedException {
-
-        GearForDogs.clickTravelBolws();
-
-    }
-
-    @Test
-    public void clickDogCarriers() throws InterruptedException {
-
-        GearForDogs.clickDogCarriers();
-
-    }
-
-    @Test
-    public void clickDogStrollers() throws InterruptedException {
-
-        GearForDogs.clickDogStrollers();
-
-    }
-
-    @Test
-    public void clickOutAdventure() throws InterruptedException {
-
-        GearForDogs.clickOutAdventure();
-
-    }
-
-    @Test
-    public void clickClothingWear() throws InterruptedException {
-
-        GearForDogs.clickClothingWear();
-
-    }
-
-    @Test
-    public void clickJackCoats() throws InterruptedException {
-
-        GearForDogs.clickJackCoats();
-
-    }
-
-    @Test
-    public void clickDogSweaters() throws InterruptedException {
-
-        GearForDogs.clickDogSweaters();
-
-    }
-
-    @Test
-    public void clickSafetyWear() throws InterruptedException {
-
-        GearForDogs.clickSafetyWear();
-
-    }
-
-    @Test
-    public void clickDogAccessories() throws InterruptedException {
-
-        GearForDogs.clickDogAccessories();
-
-    }
-
-    //END OF ON THE GO MENU ^
-
-    //Start OF GROOMING:
-
-    @Test
-    public void clickGrooming() throws InterruptedException {
-
-        ShopGroomingWellness.clickGrooming();
-
-    }
-
-    @Test
-    public void clickWellness() throws InterruptedException {
-
-        ShopGroomingWellness.clickWellness();
-
-    }
-
-    @Test
-    public void clickShampoConditio() throws InterruptedException {
-
-        ShopGroomingWellness.clickShampoConditio();
-
-    }
-
-    @Test
-    public void clickNailPaw() throws InterruptedException {
-
-        ShopGroomingWellness.clickNailPaw();
-
-    }
-
-    @Test
-    public void clickSkinCoat() throws InterruptedException {
-
-        ShopGroomingWellness.clickSkinCoat();
-
-    }
-
-    @Test
-    public void clickDogDentalCare() throws InterruptedException {
-
-        ShopGroomingWellness.clickDogDentalCare();
-
-    }
-
-    @Test
-    public void clickDogEarEyeCare() throws InterruptedException {
-
-        ShopGroomingWellness.clickDogEarEyeCare();
-
-    }
-
-    @Test
-    public void clickGrommingKits() throws InterruptedException {
-
-        ShopGroomingWellness.clickGrommingKits();
-
-    }
-
-    @Test
-    public void clickClippersAccessories() throws InterruptedException {
-
-        ShopGroomingWellness.clickClippersAccessories();
-
-    }
-
-    @Test
-    public void clickAKCVetline() {
-
-        ShopGroomingWellness.clickAKCVetline();
-
-    }
-
-    @Test
-    public void clickAnxietyRelief() throws InterruptedException {
-
-        ShopGroomingWellness.clickAnxietyRelief();
-
-    }
-
-    @Test
-    public void clickInsectProtection() throws InterruptedException {
-
-        ShopGroomingWellness.clickInsectProtection();
-
-    }
-
-    @Test
-    public void clickMobilitySupport() throws InterruptedException {
-
-        ShopGroomingWellness.clickMobilitySupport();
-
-    }
-
-    @Test
-    public void clickWellnessAccess() throws InterruptedException {
-
-        ShopGroomingWellness.clickWellnessAccess();
-
-    }
-
-    //End of Grooming & Wellness subMenus -------
-
-    //Training subMenus:
-
-
-    @Test
-    public void clickTrainingSupplies() throws InterruptedException {
-
-        AdviseTraining.clickTrainingSupplies();
-
-    }
-
-    @Test
-    public void clickAgilityEquip() throws InterruptedException {
-
-        AdviseTraining.clickAgilityEquip();
-
-    }
-
-    @Test
-    public void clickTrainingLeashes() throws InterruptedException {
-
-        AdviseTraining.clickTrainingLeashes();
-
-    }
-
-    @Test
-    public void clickTreatsPouches() throws InterruptedException {
-
-        AdviseTraining.clickTreatsPouches();
-
-    }
-
-    @Test
-    public void clickPuppySupplies() throws InterruptedException {
-
-        AdviseTraining.clickPuppySupplies();
-
-    }
-
-    @Test
-    public void clickMuzzles() throws InterruptedException {
-
-        AdviseTraining.clickMuzzles();
-
-    }
-
-    @Test
-    public void clickBooksDVDs() throws InterruptedException {
-
-        AdviseTraining.clickBooksDVDs();
-
-    }
-
-    @Test
-    public void clickBasicTraining() throws InterruptedException {
-
-        AdviseTraining.clickBasicTraining();
-
-    }
-
-    @Test
-    public void clickTrickTraining() throws InterruptedException {
-
-        AdviseTraining.clickTrickTraining();
-
-    }
-
-    @Test
-    public void clickBreedTraining() throws InterruptedException {
-
-        AdviseTraining.clickBreedTraining();
-
-    }
-
-    @Test
-    public void clickGCG() throws InterruptedException {
-
-        AdviseTraining.clickGCG();
-
-    }
-
-    @Test
-    public void clickBooks() throws InterruptedException {
-
-        AdviseTraining.clickBooks();
-
-    }
-
-    @Test
-    public void clickMerchandise() throws InterruptedException {
 
-        AdviseTraining.clickMerchandise();
-
-    }
-
-    @Test
-    public void clickMaterialsEvaluators() throws InterruptedException {
-
-        AdviseTraining.clickMaterialsEvaluators();
-
-    }
-
-    @Test
-    public void clickTrainingServices() throws InterruptedException {
-
-        AdviseTraining.clickTrainingServices();
-
-    }
-
-    @Test
-    public void clickGoodDogHelpLine() throws InterruptedException {
-
-        AdviseTraining.clickGoodDogHelpLine();
-
-    }
-
-    //END OF TRAINING MENU ^
-
-    //START OF DOGLOVERS:
-
-    @Test
-    public void clickHumanApparel()  {
-
-        ShopByBreed.clickHumanApparel();
-
-    }
-
-    @Test
-    public void clickGraphicApparel()  {
-
-        ShopByBreed.clickGraphicApparel();
-
-    }
-
-    @Test
-    public void clickBreedEmbroidery()  {
-
-        ShopByBreed.clickBreedEmbroidery();
-
-    }
-
-    @Test
-    public void clickScarves()  {
-
-        ShopByBreed.clickScarves();
-
-    }
-
-    @Test
-    public void clickPajamas() {
-
-        ShopByBreed.clickPajamas();
-
-    }
-
-
-    @Test
-    public void clickJewelry()  {
-
-        ShopByBreed.clickJewelry();
-
-    }
-
-    @Test
-    public void clickPins() {
-
-        ShopByBreed.clickPins();
-
-    }
-
-    @Test
-    public void clickRings() {
-
-        ShopByBreed.clickRings();
-
-    }
-
-    @Test
-    public void clickEarigns()  {
-
-        ShopByBreed.clickEarigns();
-
-    }
-
-    @Test
-    public void clickBracelets() {
-
-        ShopByBreed.clickBracelets();
-
-    }
-
-    @Test
-    public void clickJewelryChains() {
-
-        ShopByBreed.clickJewelryChains();
-
-    }
-
-    @Test
-    public void clickCharmsPendants()  {
-
-        ShopByBreed.clickCharmsPendants();
-
-    }
-
-    @Test
-    public void clickFineJewelry()  {
-
-        ShopByBreed.clickFineJewelry();
-
-    }
-
-    @Test
-    public void clickSportJewlery()  {
-
-        ShopByBreed.clickSportJewlery();
-
-    }
-
     @Test
-    public void clickOvalBreedPendants()  {
+    public void clickOutdoorAdventure() {
 
-        ShopByBreed.clickOvalBreedPendants();
+        GearForDogs.clickOutdoorAdventure();
 
     }
 
     @Test
-    public void clickToteBags()  {
+    public void ClothingAccessories()  {
 
-        ShopByBreed.clickToteBags();
+        GearForDogs.ClothingAccessories();
 
     }
 
     @Test
-    public void clickDuffelBags()  {
+    public void ClickAccessories() {
 
-        ShopByBreed.clickDuffelBags();
+        GearForDogs.ClickAccessories();
 
     }
 
     @Test
-    public void clickPrintToteBags()  {
+    public void ClickJackets() {
 
-        ShopByBreed.clickPrintToteBags();
+        GearForDogs.ClickJackets();
 
     }
 
     @Test
-    public void clickHandPaintTotes()  {
+    public void ClickSweatersShirts() {
 
-        ShopByBreed.clickHandPaintTotes();
+        GearForDogs.ClickSweatersShirts();
 
     }
 
     @Test
-    public void clickEmbroToteBags()  {
+    public void ClickGroomingWellness() {
 
-        ShopByBreed.clickEmbroToteBags();
+        GearForDogs.ClickGroomingWellness();
 
     }
 
     @Test
-    public void clickKitchen()  {
+    public void ClickGrooming() {
 
-        ShopByBreed.clickKitchen();
+        GearForDogs.ClickGrooming();
 
     }
 
     @Test
-    public void clickCoffeMugs()  {
+    public void ClickWellness() {
 
-        ShopByBreed.clickCoffeMugs();
+        GearForDogs.ClickWellness();
 
     }
 
     @Test
-    public void clickTravelMugs()  {
+    public void AKCVetline() {
 
-        ShopByBreed.clickTravelMugs();
+        GearForDogs.ClickAKCVetline();
 
     }
 
     @Test
-    public void clickWineGlasses()  {
+    public void ClickTrainingSupplies() {
 
-        ShopByBreed.clickWineGlasses();
+        GearForDogs.ClickTrainingSupplies();
 
     }
 
     @Test
-    public void clickAprons()  {
+    public void ClickPuppyTraining() {
 
-        ShopByBreed.clickAprons();
+        GearForDogs.ClickPuppyTraining();
 
     }
 
     @Test
-    public void clickOvenPot()  {
+    public void ClickTrainingEssentials() {
 
-        ShopByBreed.clickOvenPot();
+        GearForDogs.ClickTrainingEssentials();
 
     }
 
     @Test
-    public void clickCuttingBoards()  {
+    public void ClickSportsAgilityTraining() {
 
-        ShopByBreed.clickCuttingBoards();
+        GearForDogs.ClickSportsAgilityTraining();
 
     }
 
     @Test
-    public void clickDrinkAccesories()  {
+    public void ClickDogTreats() {
 
-        ShopByBreed.clickDrinkAccesories();
+        GearForDogs.ClickDogTreats();
 
     }
 
     @Test
-    public void clickHome()  {
+    public void ClickGoodDogHelpLine() {
 
-        ShopByBreed.clickHome();
+        GearForDogs.ClickGoodDogHelpLine();
 
     }
 
     @Test
-    public void clickDecorative()  {
+    public void ClickPetTech() {
 
-        ShopByBreed.clickDecorative();
+        GearForDogs.ClickPetTech();
 
     }
 
     @Test
-    public void clickCardHolders()  {
+    public void ClickDogFood() {
 
-        ShopByBreed.clickCardHolders();
+        GearForDogs.ClickDogFood();
 
     }
 
-    @Test
-    public void clickCustomPetArt()  {
-
-        ShopByBreed.clickCustomPetArt();
-
-    }
-
-
-    @Test
-    public void clickTeaTowels()  {
-
-        ShopByBreed.clickTeaTowels();
-
-    }
-
-    @Test
-    public void clickBlankets()  {
-
-        ShopByBreed.clickBlankets();
-
-    }
-
-    @Test
-    public void clickPillows()  {
-
-        ShopByBreed.clickPillows();
-
-    }
-
-    @Test
-    public void clickHolyDecor()  {
-
-        ShopByBreed.clickHolyDecor();
-
-    }
-
-    @Test
-    public void clickOutdoorAcces()  {
-
-        ShopByBreed.clickOutdoorAcces();
-
-    }
-
-    @Test
-    public void clickTravelAcces()  {
-
-        ShopByBreed.clickTravelAcces();
-
-    }
-
-    @Test
-    public void clickKeyRings()  {
-
-        ShopByBreed.clickKeyRings();
-
-    }
-
-    @Test
-    public void clickPhoneCases()  {
-
-        ShopByBreed.clickPhoneCases();
-
-    }
+    //END OF GEAR FOR DOGS MENU ^
+    
 
-    @Test
-    public void clickLuggageTags()  {
-
-        ShopByBreed.clickLuggageTags();
-
-    }
-
-    @Test
-    public void clickStationary()  {
-
-        ShopByBreed.clickStationary();
-
-    }
-
-    @Test
-    public void clickUmbrellas()  {
-
-        ShopByBreed.clickUmbrellas();
-
-    }
-
-    @Test
-    public void clickSportsChairs()  {
-
-        ShopByBreed.clickSportsChairs();
-
-    }
-
-    //END OF DOGLOVERS MENU ^
-
-    //START OF AKCPRO:
-
-    @Test
-    public void clickBreeders()  {
-
-        AKCProShop.clickBreeders();
-
-    }
-
-    @Test
-    public void clickIDCollLeashes()  {
-
-        AKCProShop.clickIDCollLeashes();
-
-    }
-
-    @Test
-    public void clickBooksAndDVDs()  {
-
-        AKCProShop.clickBooksAndDVDs();
-
-    }
-
-    @Test
-    public void clickDNAKit()  {
-
-        AKCProShop.clickDNAKit();
-
-    }
-
-    @Test
-    public void clickRulesAndPolicies()  {
-
-        AKCProShop.clickRulesAndPolicies();
-
-    }
+    //START OF AKCPROSHOP:
 
     @Test
-    public void clickCertiPedig()  {
+    public void clickAKCBrandedGears()  {
 
-        AKCProShop.clickCertiPedig();
+        AKCProShop.clickAKCBrandedGears();
 
     }
 
     @Test
-    public void clickBreederRepo()  {
+    public void clickForBreeders()  {
 
-        AKCProShop.clickBreederRepo();
+        AKCProShop.clickForBreeders();
 
     }
 
@@ -1057,174 +657,154 @@ public class ShopTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void clickEventRuleRegula()  {
+    public void clickForJudges()  {
 
-        AKCProShop.clickEventRuleRegula();
-
-    }
-
-    @Test
-    public void clickCompetitorRepo()  {
-
-        AKCProShop.clickCompetitorRepo();
+        AKCProShop.clickForJudges();
 
     }
 
     @Test
-    public void clickTitlePatches()  {
+    public void clickForClubs()  {
 
-        AKCProShop.clickTitlePatches();
-
-    }
-
-    @Test
-    public void clickFreePointProgress()  {
-
-        AKCProShop.clickFreePointProgress();
+        AKCProShop.clickForClubs();
 
     }
 
     @Test
-    public void clickJudgesClubs()  {
+    public void clickForTrainers()  {
 
-        AKCProShop.clickJudgesClubs();
-
-    }
-
-    @Test
-    public void clickBooksDVDS()  {
-
-        AKCProShop.clickBooksDVDS();
+        AKCProShop.clickForTrainers();
 
     }
 
     @Test
-    public void clickEventRulesReg()  {
+    public void clickPointsProgressionProShop()  {
 
-        AKCProShop.clickEventRulesReg();
+        AKCProShop.clickPointsProgressionProShop();
+
+    }
+
+    //End of AKCPROSHOP ^
+
+
+    //Start of ADVISETRAINING:
+
+
+    @Test
+    public void clickAdvice() {
+
+        AdviseTraining.clickAdvice();
 
     }
 
     @Test
-    public void clickRegRulesPolicies()  {
+    public void clickVetLine() {
 
-        AKCProShop.clickRegRulesPolicies();
-
-    }
-
-    @Test
-    public void clickBreedStand()  {
-
-        AKCProShop.clickBreedStand();
+        AdviseTraining.clickVetLine();
 
     }
 
     @Test
-    public void clickGoverClubReso()  {
+    public void clickGoodDogHelpLine2() {
 
-        AKCProShop.clickGoverClubReso();
-
-    }
-
-    @Test
-    public void clickDogShowResorces()  {
-
-        AKCProShop.clickDogShowResorces();
+        AdviseTraining.clickGoodDogHelpLine2();
 
     }
 
     @Test
-    public void clickTrainers()  {
+    public void clickNewPuppyCheckList() {
 
-        AKCProShop.clickTrainers();
-
-    }
-
-    @Test
-    public void clickMaterialsCGC()  {
-
-        AKCProShop.clickMaterialsCGC();
+        AdviseTraining.clickNewPuppyCheckList();
 
     }
 
     @Test
-    public void clickCGCMerch()  {
+    public void ClickTrainingCertification() {
 
-        AKCProShop.clickCGCMerch();
-
-    }
-
-    @Test
-    public void clickCGCWorkMerch()  {
-
-        AKCProShop.clickCGCWorkMerch();
+        AdviseTraining.ClickTrainingCertification();
 
     }
 
     @Test
-    public void clickTrickDogMerch()  {
+    public void ClickSTARPuppy() {
 
-        AKCProShop.clickTrickDogMerch();
-
-    }
-
-    @Test
-    public void clickTrainingBooks()  {
-
-        AKCProShop.clickTrainingBooks();
+        AdviseTraining.ClickSTARPuppy();
 
     }
 
     @Test
-    public void clickAllTrainingProd()  {
+    public void ClickCanineGoodCitizen() {
 
-        AKCProShop.clickAllTrainingProd();
-
-    }
-
-    //END OF AKC PRO MENU TESTS ^
-
-    //Start of Collections:
-
-    @Test
-    public void clickCollectionsMain()  {
-
-        SpecialShops.clickCollectionsMain();
+        AdviseTraining.ClickCanineGoodCitizen();
 
     }
 
     @Test
-    public void clickPetTech()  {
+    public void ClickVirtualHomeManners() {
 
-        SpecialShops.clickPetTech();
-
-    }
-
-    @Test
-    public void clickPetRememb()  {
-
-        SpecialShops.clickPetRememb();
+        AdviseTraining.ClickVirtualHomeManners();
 
     }
 
     @Test
-    public void clickShopByBreed()  {
+    public void ClickTrainingSupplies2() {
 
-        SpecialShops.clickShopByBreed();
+        AdviseTraining.ClickTrainingSupplies2();
+
+    }
+
+    //END OF ADVISETRAINING MENU ^
+
+    //ShopByBreed:
+
+    @Test
+    public void ChooseABreedDropdownAkita()  {
+
+        ShopByBreed.ChooseABreedDropdown();
 
     }
 
     @Test
-    public void clickCollectShopByBreed()  {
+    public void ChooseABreedDropdownGolden()  {
 
-        SpecialShops.clickCollectShopByBreed();
+        ShopByBreed.ChooseABreedDropdown2();
 
     }
 
-    //END OF COLLECTIONS ^  OLD MENU
+    @Test
+    public void ChooseABreedDropdownYorkShire()  {
 
+        ShopByBreed.ChooseABreedDropdown3();
 
-    //Special Shops Section:
+    }
+
+    @Test
+    public void ChooseABreedBeagle()  {
+
+        ShopByBreed.ChooseABreedBeagle();
+
+    }
+
+    @Test
+    public void ChooseABreedBulldog()  {
+
+        ShopByBreed.ChooseABreedBulldog();
+
+    }
+
+    @Test
+    public void ChooseABreedPapillon()  {
+
+        ShopByBreed.ChooseABreedPapillon();
+
+    }
+
+    //END OF SHOPBYBREED ^
+
+    //START OF SPECIALSHOP >
+
+    
+
 
      @Test
      public void clickFallEntertainingLook() {
