@@ -1,5 +1,4 @@
 package Specs;
-
 import com.applitools.eyes.selenium.Eyes;
 import com.browserstack.local.Local;
 import org.json.simple.JSONObject;
@@ -19,7 +18,6 @@ import java.util.concurrent.TimeUnit;
 
 public class SpecsBrowserStack extends SuperBaseClass {
 
-    public Eyes eyes;
     //public WebDriver driver;
     private Local l;
 
@@ -28,7 +26,7 @@ public class SpecsBrowserStack extends SuperBaseClass {
     @SuppressWarnings("unchecked")
     public void setUp(String config_file, String environment) throws Exception {
         JSONParser parser = new JSONParser();
-        JSONObject config = (JSONObject) parser.parse(new FileReader("/Users/user/Documents/Automation/TestWebORG/src/test/java/Resources/conf/" + config_file));
+        JSONObject config = (JSONObject) parser.parse(new FileReader("src/test/java/Resources/conf/" + config_file));
         JSONObject envs = (JSONObject) config.get("environments");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -70,21 +68,20 @@ public class SpecsBrowserStack extends SuperBaseClass {
         driver = new RemoteWebDriver(
                 new URL("https://sebastianviquez1:szDfCvzz6f8QZE54aXkN@hub.browserstack.com/wd/hub"), capabilities);
 
-        InitPages();
         InitHelpers("https://www.akc.org/?test=true");
-        InitHelpers("https://shop.akc.org/?test=true");
         driver.get(driverHelper.baseUrl);
+        InitPages();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-        }
+    }
 
 
     @AfterMethod(alwaysRun = true)
     public void tearDown() throws Exception {
-        if (driver != null) {
-            driver.quit();
-            if (l != null) l.stop();
+        driver.quit();
+        if (l != null) {
+            l.stop();
         }
     }
 

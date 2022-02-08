@@ -18,7 +18,7 @@ public class SportsEvents {
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[1]/div[1]/h3")
     WebElement getstart;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[1]/div[1]/div/div/ul/li[1]/a")
+    @FindBy(css = "#sports-events > div:nth-child(1) > div:nth-child(1) > div > div > ul > li:nth-child(1) > a")
     WebElement introdog;
 
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[1]/div[1]/div/div/ul/li[2]/a")
@@ -30,7 +30,7 @@ public class SportsEvents {
     @FindBy(css = "#sports-events > div:nth-child(1) > div:nth-child(1) > div > div > ul > li:nth-child(4) > a")
     WebElement whichsports;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[1]/div[1]/div/div/ul/li[5]/a")
+    @FindBy(css = "#sports-events > div:nth-child(1) > div:nth-child(1) > div > div > ul > li:nth-child(5) > a")
     WebElement getstartdog;
 
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[1]/div[2]/h3")
@@ -57,7 +57,7 @@ public class SportsEvents {
     @FindBy(css = "#sports-events > div:nth-child(1) > div:nth-child(2) > div > div > ul > li:nth-child(7) > a")
     WebElement akcnatobechamp;
 
-    @FindBy(css = "#sports-events > div:nth-child(1) > div:nth-child(2) > div > div > ul > li:nth-child(8) > a")
+    @FindBy(xpath = "//body/div[@id='site-header']/div[1]/div[2]/div[4]/div[1]/div[2]/div[1]/div[1]/ul[1]/li[8]/a[1]")
     WebElement akcrallynatchamp;
 
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[2]/div/h3")
@@ -78,10 +78,10 @@ public class SportsEvents {
     @FindBy(css = "#sports-events > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(1) > ul > li:nth-child(4) > a")
     WebElement natiohand;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[2]/div/div/div[1]/ul/li[1]/ul/li[5]/a")
+    @FindBy(css = "#sports-events > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(1) > ul > li:nth-child(5) > a")
     WebElement openshow;
 
-    @FindBy(css = "#sports-events > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(2) > a")
+    @FindBy(xpath = "//*[@id=\"sports-events\"]/div[2]/div/div/div[1]/ul/li[2]/a")
     WebElement compsport;
 
     @FindBy(css = "#sports-events > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(2) > ul > li:nth-child(1) > a")
@@ -96,16 +96,16 @@ public class SportsEvents {
     @FindBy(css = "#sports-events > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(2) > ul > li:nth-child(4) > a")
     WebElement tracking;
 
-    @FindBy(xpath = "//*[@id=\"sports-events\"]/div[2]/div/div/div[1]/ul/li[3]/a")
+    @FindBy(css = "#sports-events > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(3) > a")
     WebElement tittlereco;
 
     @FindBy(xpath = "//*[@id=\"sports-events\"]/div[2]/div/div/div[1]/ul/li[3]/ul/li[1]/a")
     WebElement barnhunt;
 
-    @FindBy(xpath = "//*[@id=\"sports-events\"]/div[2]/div/div/div[1]/ul/li[3]/ul/li[2]/a")
+    @FindBy(css = "#sports-events > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(3) > ul > li:nth-child(2) > a")
     WebElement discdog;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[2]/div/div/div[1]/ul/li[3]/ul/li[3]/a")
+    @FindBy(xpath = "//a[contains(text(),'Diving Dogs')]")
     WebElement divingdog;
 
     @FindBy(css = "#sports-events > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(3) > ul > li:nth-child(4) > a")
@@ -123,7 +123,7 @@ public class SportsEvents {
     @FindBy(css = "#sports-events > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(1) > ul > li:nth-child(1) > a")
     WebElement fieldevnthound;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[2]/div/div/div[2]/ul/li[1]/ul/li[2]/a")
+    @FindBy(css = "#sports-events > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(1) > ul > li:nth-child(2) > a")
     WebElement courscat;
 
     @FindBy(xpath = "//*[@id=\"sports-events\"]/div[2]/div/div/div[2]/ul/li[1]/ul/li[3]/a")
@@ -135,7 +135,7 @@ public class SportsEvents {
     @FindBy(css = "#sports-events > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(1) > ul > li:nth-child(5) > a")
     WebElement pointbreed;
 
-    @FindBy(css = "#sports-events > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(1) > ul > li:nth-child(6) > a")
+    @FindBy(xpath = "//a[contains(text(),'Retrievers')]")
     WebElement retrievers;
 
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[4]/div[2]/div/div/div[2]/ul/li[1]/ul/li[7]/a")
@@ -207,7 +207,7 @@ public class SportsEvents {
     @FindBy(css = "#sports-events > div:nth-child(3) > div > div > div > ul > li:nth-child(9) > a")
     WebElement akcweeklywin;
 
-    @FindBy(css = "#sports-events > div:nth-child(3) > div > div > div > ul > li:nth-child(10) > a")
+    @FindBy(xpath = "//body/div[@id='site-header']/div[1]/div[2]/div[4]/div[3]/div[1]/div[1]/div[1]/ul[1]/li[10]/a[1]")
     WebElement eventcanc;
 
     @FindBy(css = "#sports-events > div:nth-child(3) > div > div > div > ul > li:nth-child(12) > a")
@@ -275,7 +275,7 @@ public class SportsEvents {
     @FindBy(css = "#page-title > div > h1")
     WebElement openshowElement;
 
-    @FindBy(xpath = "//*[@id=\"page-title\"]/h1")
+    @FindBy(css = "#page-title > h1")
     WebElement compsportElement;
 
     @FindBy(css = "#page-title > div > h1")
@@ -538,7 +538,7 @@ public class SportsEvents {
 
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(whichsports));
+        wait.until(ExpectedConditions.elementToBeClickable(whichsports));
         this.whichsports.click();
         wait.until(ExpectedConditions.visibilityOf(whichsportsElement));
 
@@ -638,7 +638,7 @@ public class SportsEvents {
         js.executeScript("arguments[0].scrollIntoView();", akcrallynatchamp);
         this.akcrallynatchamp.click();
         wait.until(ExpectedConditions.visibilityOf(akcrallynatchampElement));
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
+        //this.driver.get(this.driver.getCurrentUrl() + "?test=true");
 
     }
 
@@ -681,7 +681,7 @@ public class SportsEvents {
         wait.until(ExpectedConditions.elementToBeClickable(puppyachiev));
         this.puppyachiev.click();
         wait.until(ExpectedConditions.visibilityOf(puppyachievElement));
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
+        //this.driver.get(this.driver.getCurrentUrl() + "?test=true");
 
     }
 
@@ -699,7 +699,7 @@ public class SportsEvents {
 
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(openshow));
+        wait.until(ExpectedConditions.elementToBeClickable(openshow));
         this.openshow.click();
         wait.until(ExpectedConditions.visibilityOf(openshowElement));
 
@@ -826,6 +826,7 @@ public class SportsEvents {
         WebDriverWait wait = new WebDriverWait (driver, 10);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", parentclubrec);
+        wait.until(ExpectedConditions.elementToBeClickable(parentclubrec));
         this.parentclubrec.click();
         wait.until(ExpectedConditions.elementToBeClickable(parentclubrecElement));
 
@@ -855,7 +856,7 @@ public class SportsEvents {
 
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(courscat));
+        wait.until(ExpectedConditions.elementToBeClickable(courscat));
         this.courscat.click();
         wait.until(ExpectedConditions.visibilityOf(courscatElement));
 
@@ -1194,13 +1195,10 @@ public class SportsEvents {
 
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(whichsports));
-        this.whichsports.isDisplayed();
-        wait.until(ExpectedConditions.visibilityOf(whichsports));
+        wait.until(ExpectedConditions.elementToBeClickable(whichsports));
         this.whichsports.click();
         sleep(1000);
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        sleep(1000);
 
     }
 
@@ -1208,7 +1206,7 @@ public class SportsEvents {
 
         this.sportevent.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(retrievers));
+        wait.until(ExpectedConditions.elementToBeClickable(retrievers));
         this.retrievers.click();
         sleep(1000);
         driver.get(this.driver.getCurrentUrl() + "?test=true");

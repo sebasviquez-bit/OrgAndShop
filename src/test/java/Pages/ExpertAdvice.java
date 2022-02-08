@@ -333,10 +333,10 @@ public class ExpertAdvice {
 
         this.menuexpadv.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(health));
+        wait.until(ExpectedConditions.elementToBeClickable(health));
         this.health.click();
         wait.until(ExpectedConditions.visibilityOf(healthElement));
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
+        //this.driver.get(this.driver.getCurrentUrl() + "?test=true");
 
     }
 
@@ -367,7 +367,7 @@ public class ExpertAdvice {
         wait.until(ExpectedConditions.elementToBeClickable(news));
         this.news.click();
         wait.until(ExpectedConditions.visibilityOf(newsElement));
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
+        //this.driver.get(this.driver.getCurrentUrl() + "?test=true");
 
     }
 
@@ -438,7 +438,7 @@ public class ExpertAdvice {
 
         this.menuexpadv.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(dognamefind));
+        wait.until(ExpectedConditions.elementToBeClickable(dognamefind));
         this.dognamefind.click();
         wait.until(ExpectedConditions.visibilityOf(dognamefindElement));
 
@@ -542,7 +542,7 @@ public class ExpertAdvice {
 
         this.menuexpadv.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(akclibrary));
+        wait.until(ExpectedConditions.elementToBeClickable(akclibrary));
         this.akclibrary.click();
         wait.until(ExpectedConditions.visibilityOf(akclibraryElement));
 
@@ -604,7 +604,6 @@ public class ExpertAdvice {
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(health));
         this.health.click();
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         wait.until(ExpectedConditions.elementToBeClickable(alternativeMed));
         this.alternativeMed.click();
         wait.until(ExpectedConditions.urlContains("expert-advice/health/alternative-medicine/"));

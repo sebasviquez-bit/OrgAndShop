@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -101,7 +102,7 @@ public class RegisterDog {
     @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > aside > div > nav > ul > li:nth-child(4) > a")
     WebElement purcped;
 
-    @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > aside > div > nav > ul > li:nth-child(5) > a")
+    @FindBy(xpath = "//a[contains(text(),'More Information')]")
     WebElement moreinfo;
 
     @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > aside > div > nav > h4")
@@ -247,7 +248,7 @@ public class RegisterDog {
     @FindBy(css = "body > div:nth-child(37) > div > div.page-layout > main > div.article-body > div")
     WebElement contentBody;
 
-    @FindBy(css = "body > div:nth-child(6) > div > div.page-layout > main > div.article-body > div > div > div > p:nth-child(9) > a")
+    @FindBy(xpath = "//body/div[5]/div[1]/div[2]/main[1]/div[3]/div[1]/div[1]/div[1]/p[7]/a[1]")
     WebElement onlinesearButton;
 
     @FindBy(css = "body > div:nth-child(37) > div > div.page-layout > main > div.article-body > div > div > div > div > ul > li:nth-child(1) > span")
@@ -268,8 +269,8 @@ public class RegisterDog {
     @FindBy(xpath = "//html/body/div[5]/div/div[2]/main/div[3]/div/div/ul/li[2]/div")
     WebElement littregmenubody;
 
-    @FindBy(css = "body > div:nth-child(6) > div > div.page-layout > main > div.article-body > div > div > div > div > ul > li:nth-child(3) > span")
-    WebElement feesched;
+    @FindBy(xpath = "//h1[contains(text(),'More Information')]")
+    WebElement moreInfoTitle;
 
     @FindBy(xpath = "//html/body/div[5]/div/div[2]/main/div[3]/div/div/ul/li[3]/span/span")
     WebElement feeschedexp;
@@ -749,8 +750,6 @@ public class RegisterDog {
         wait.until(ExpectedConditions.elementToBeClickable(purcped));
         this.purcped.click();
         wait.until(ExpectedConditions.elementToBeClickable(onlinesearButton));
-        JavascriptExecutor jse = (JavascriptExecutor) driver;
-        jse.executeScript("scroll(100, 1000);");
         this.onlinesearButton.click();
         newWindow();
 
@@ -762,7 +761,7 @@ public class RegisterDog {
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(moreinfo));
         this.moreinfo.click();
-        wait.until(ExpectedConditions.visibilityOf(feesched));
+        wait.until(ExpectedConditions.visibilityOf(moreInfoTitle));
 
     }
 

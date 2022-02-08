@@ -315,11 +315,10 @@ public class BreedsMenu {
 
         this.menubreeds.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(findrespbreeder));
-        this.findrespbreeder.isDisplayed();
+        wait.until(ExpectedConditions.elementToBeClickable(findrespbreeder));
         this.findrespbreeder.click();
         wait.until(ExpectedConditions.visibilityOf(findrespbreederElement));
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
+        //this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         this.findrespbreederElement.isDisplayed();
 
     }
@@ -328,12 +327,9 @@ public class BreedsMenu {
 
         this.menubreeds.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(getstartdogsports));
-        this.getstartdogsports.isDisplayed();
+        wait.until(ExpectedConditions.elementToBeClickable(getstartdogsports));
         this.getstartdogsports.click();
         wait.until(ExpectedConditions.visibilityOf(getstartdogsportsElement));
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        this.getstartdogsportsElement.isDisplayed();
 
     }
 
@@ -344,7 +340,7 @@ public class BreedsMenu {
         wait.until(ExpectedConditions.elementToBeClickable(allaboutpuppies));
         this.allaboutpuppies.click();
         wait.until(ExpectedConditions.visibilityOf(allaboutpuppiesElement));
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
+        //this.driver.get(this.driver.getCurrentUrl() + "?test=true");
 
 
     }
@@ -380,7 +376,7 @@ public class BreedsMenu {
 
         this.menubreeds.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(findbreedclub));
+        wait.until(ExpectedConditions.elementToBeClickable(findbreedclub));
         this.findbreedclub.click();
         for (String winHandle : driver.getWindowHandles()) { driver.switchTo().window(winHandle); }
         wait.until(ExpectedConditions.urlContains("https://webapps.akc.org/club-search/"));
@@ -427,7 +423,7 @@ public class BreedsMenu {
 
         this.menubreeds.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(allaboutpuppies));
+        wait.until(ExpectedConditions.elementToBeClickable(allaboutpuppies));
         Actions actions = new Actions(driver);
         actions.moveToElement(allaboutpuppies).perform();
         this.allaboutpuppies.click();
@@ -436,7 +432,6 @@ public class BreedsMenu {
         wait.until(ExpectedConditions.elementToBeClickable(preparingPuppy));
         this.preparingPuppy.click();
         wait.until(ExpectedConditions.visibilityOf(twoMonths));
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
 
     }
 

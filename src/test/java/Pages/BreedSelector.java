@@ -438,12 +438,12 @@ public class BreedSelector {
 
         this.breedsmenu.click();
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(findmatch));
+        wait.until(ExpectedConditions.elementToBeClickable(findmatch));
         this.findmatch.click();
-        wait.until(ExpectedConditions.visibilityOf(getstarted));
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
+        wait.until(ExpectedConditions.elementToBeClickable(getstarted));
+        //this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         this.getstarted.click();
-        wait.until(ExpectedConditions.visibilityOf(currentowndog));
+        wait.until(ExpectedConditions.elementToBeClickable(currentowndog));
         Actions actions = new Actions(driver);
         actions.moveToElement(currentowndog).perform();
         assert(currentowndog.isEnabled());

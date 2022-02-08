@@ -9,43 +9,24 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.target>1.12</maven.compiler.target>
-        <maven.compiler.source>1.12</maven.compiler.source>
-        <suiteXmlFile>testng.xml</suiteXmlFile>
+        <maven.compiler.target>12</maven.compiler.target>
+        <maven.compiler.source>12</maven.compiler.source>
     </properties>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M5</version>
-                <configuration>
-                    <suiteXmlFiles>${suiteXmlFile}</suiteXmlFiles>
-                    <testFailureIgnore>true</testFailureIgnore>
-                    <threadCount>3</threadCount>
-                    <parallel>methods</parallel>
-                </configuration>
-            </plugin>
-
-        </plugins>
-    </build>
 
     <dependencies>
 
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-chrome-driver</artifactId>
+            <artifactId>selenium-java</artifactId>
             <version>3.141.59</version>
         </dependency>
 
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>6.14.3</version>
+            <version>7.4.0</version>
             <scope>test</scope>
         </dependency>
 
@@ -71,7 +52,7 @@
         <dependency>
             <groupId>com.browserstack</groupId>
             <artifactId>browserstack-local-java</artifactId>
-            <version>1.0.3</version>
+            <version>0.1.0</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->

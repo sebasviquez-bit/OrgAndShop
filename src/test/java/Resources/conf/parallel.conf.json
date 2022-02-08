@@ -4,8 +4,8 @@
   "key": "szDfCvzz6f8QZE54aXkN",
 
   "capabilities": {
-    "build": "build-13",
-    "name": "parallel_test-demo",
+    "build": "build-23",
+    "name": "parallel_tests",
     "browserstack.debug": true
   },
 
@@ -13,21 +13,19 @@
     "env1": {
       "os": "Windows",
       "os_version": "10",
-      "browser": "Chrome",
-      "browser_version": "latest"
+      "browser": "Chrome"
+
     },
     "env2": {
       "os": "OS X",
       "os_version": "Big Sur",
-      "browser": "Firefox",
-      "browser_version": "latest"
+      "browser": "Firefox"
+
     },
     "env3": {
       "os": "OS X",
       "os_version": "Mojave",
-      "browser": "Safari",
-      "browser_version": "latest"
-
+      "browser": "Chrome"
     }
   }
 }

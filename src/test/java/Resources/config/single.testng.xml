@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Single">
+<suite name="Single" parallel="methods" thread-count="4">
     <test name="SingleTest">
         <parameter name="config" value="single.conf.json"/>
-        <parameter name="environment" value="env1"/>
+        <parameter name="environment" value="chrome"/>
         <classes>
             <class name="Specs.ORGTestSuite"/>
         </classes>

@@ -17,8 +17,8 @@ public class Register {
     @FindBy(css = "#tb-links > ul > li:nth-child(5) > a")
     WebElement iconsigninShop;
 
-    @FindBy(xpath = "//*[@id=\"gigya-login-form\"]/div[3]/label/a")
-    WebElement signup;
+    @FindBy(css = "#gigya-login-form > div:nth-child(3) > div.gigya-layout-row.gigya-layout-row-login-create-account > a")
+    WebElement CreateAccount;
 
     @FindBy(xpath = "//*[@id=\"gigya-register-form\"]/div[1]/div[3]/input")
     WebElement userName;
@@ -52,9 +52,9 @@ public class Register {
     WebDriver driver;
 
     // Constructor
-    public Register(WebDriver _driver, DriverHelper _driveHelper){
+    public Register(WebDriver _driver, DriverHelper _driverHelper){
         this.driver = _driver;
-        this.driverHelper = _driveHelper;
+        this.driverHelper = _driverHelper;
         PageFactory.initElements(driver,this);
     }
 
@@ -66,8 +66,8 @@ public class Register {
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.visibilityOf(iconsignin));
         this.iconsignin.click();
-        wait.until(ExpectedConditions.visibilityOf(signup));
-        this.signup.click();
+        wait.until(ExpectedConditions.visibilityOf(CreateAccount));
+        this.CreateAccount.click();
         wait.until(ExpectedConditions.visibilityOf(userName));
         this.userName.sendKeys(_testUser.username);
         wait.until(ExpectedConditions.visibilityOf(firstName));
@@ -91,8 +91,8 @@ public class Register {
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.visibilityOf(iconsigninShop));
         this.iconsigninShop.click();
-        wait.until(ExpectedConditions.visibilityOf(signup));
-        this.signup.click();
+        wait.until(ExpectedConditions.visibilityOf(CreateAccount));
+        this.CreateAccount.click();
         wait.until(ExpectedConditions.visibilityOf(userName));
         this.userName.sendKeys(_testUser.username);
         wait.until(ExpectedConditions.visibilityOf(firstName));

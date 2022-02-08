@@ -1,17 +1,19 @@
 {
   "server": "hub-cloud.browserstack.com",
-  "user": "BROWSERSTACK_USERNAME",
-  "key": "BROWSERSTACK_ACCESS_KEY",
+  "user": "sebastianviquez1",
+  "key": "szDfCvzz6f8QZE54aXkN",
 
   "capabilities": {
-    "build": "testng-browserstack",
-    "name": "single_test",
+    "build": "browserstack2",
+    "name": "Parallel2",
     "browserstack.debug": true
   },
 
   "environments": {
     "chrome": {
-      "browser": "chrome"
+      "os": "OS X",
+      "os_version": "Mojave",
+      "browser": "Chrome"
     }
   }
 }

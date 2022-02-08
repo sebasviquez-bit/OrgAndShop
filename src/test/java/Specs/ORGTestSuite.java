@@ -5,12 +5,10 @@ import Model.User;
 import Model.Word;
 import com.applitools.eyes.RectangleSize;
 import com.applitools.eyes.selenium.fluent.Target;
-import org.apache.tools.ant.taskdefs.Parallel;
-import org.junit.runner.RunWith;
 import org.testng.annotations.Test;
-import org.testng.xml.XmlSuite;
 
 public class ORGTestSuite extends SpecsBaseClass {
+
 
     @Test (dataProvider = "RegisterUsers", dataProviderClass = DataHelper.class)
     public void SuccessfulRegister(String sUserName, String sFirstName, String sLastName, String sPassword1, String sPassword2) throws InterruptedException {
@@ -564,6 +562,8 @@ public class ORGTestSuite extends SpecsBaseClass {
     @Test
     public void AKCReuniteVerify() {
 
+        //Below line is just for testing driver thread ID
+        System.out.println("The thread ID for Chrome is "+ Thread.currentThread().getId());
         homepage.VerifyAKCReunite();
 
     }
@@ -626,7 +626,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void TrackingVerify() {
+    public void TrackingVerify() throws InterruptedException {
 
         homepage.VerifyTracking();
 
@@ -1655,7 +1655,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickjunperf() throws InterruptedException {
+    public void Clickjunperf() {
 
         sportsEvents.Clickjunperf();
 
@@ -1938,7 +1938,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickakcpac() throws InterruptedException {
+    public void Clickakcpac() {
 
         clubsDelegates.Clickakcpac();
 
@@ -1983,35 +1983,6 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     @Test
-    public void puppiesArticle1() throws InterruptedException {
-
-        breeds.puppiesArticle1();
-
-    }
-
-    //@Test
-    public void puppiesArticle2() {
-
-        breeds.puppiesArticle2();
-
-    }
-
-    //@Test
-    public void puppiesArticle3() {
-
-        breeds.puppiesArticle3();
-
-    }
-
-
-    //@Test  We need to fix this test Elements cannot be selected when running automation script on this Section*
-    public void fordogbreedersArticle1() throws InterruptedException {
-
-        breeds.fordogbreedersArticle1();
-
-    }
-
-    @Test
     public void ForDogOwnerArticle1() {
 
         breeds.ForDogOwnerArticle1();
@@ -2034,6 +2005,7 @@ public class ORGTestSuite extends SpecsBaseClass {
         expertAdvice.allcategArticle();   //This test was replaced by a Visual test below >
 
     }
+
 
     @Test
     public void dogbreedArticle() {
@@ -2059,7 +2031,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    //@Test
+    @Test
     public void HomelivingArticle() throws InterruptedException {
 
         expertAdvice.HomelivingArticle();
@@ -2082,7 +2054,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     //ProdServ Menu Articles >
 
-    @Test
+    //@Test
     public void ProdServArticle1() throws InterruptedException {
 
         prodserv.ProdServArticle1();
@@ -2092,7 +2064,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    //@Test
+    @Test
     public void ProdServArticle2() throws InterruptedException {
 
         prodserv.ProdServArticle2();
@@ -2111,7 +2083,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     //SportsEvents Menu Articles >
 
-    //@Test
+    @Test
     public void SportsEventsArticle1() throws InterruptedException {
 
         sportsEvents.SportsEventsArticle1();
@@ -2132,11 +2104,11 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
 
-    //Visual UI tests for .ORG >>>>>>>>>>>>>>>>>>>>>>>>>
+    //Visual AI tests for .ORG >>>>>>>>>>>>>>>>>>>>>>>>>
 
 
     @Test
-    public void VisualHomepageCheck() throws InterruptedException {
+    public void VisualHomepageCheck() {
 
         homepage.CheckHomepage();
         eyes.open(driver, "AKC", "CheckHomepage", new RectangleSize(1420, 680));
@@ -2145,18 +2117,18 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    //@Test
-    public void VisualClickexplorebreeds() throws InterruptedException {
+    @Test
+    public void VisualClickexplorebreeds() {
 
         breeds.Clickexplorebreeds();
-        eyes.open(driver, "AKC", "Clickexplorebreeds", new RectangleSize(1430, 680));
+        eyes.open(driver, "AKC", "Clickexplorebreeds", new RectangleSize(1430, 670));
         eyes.check("BreedMenu", Target.window());
         eyes.close();
 
     }
 
-    //@Test
-    public void VisualClickwhygetdog() throws InterruptedException {
+    @Test
+    public void VisualClickwhygetdog() {
 
         breeds.Clickwhygetdog();
         eyes.open(driver, "AKC", "Clickwhygetdog", new RectangleSize(1430, 680));
@@ -2227,8 +2199,8 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    //@Test
-    public void VisualCGC () throws InterruptedException {
+    @Test
+    public void VisualCGC () {
 
         driver.navigate().to("https://www.akc.org/products-services/training-programs/canine-good-citizen/?test=true");
         eyes.open(driver, "AKC", "CGC", new RectangleSize(1420, 680));

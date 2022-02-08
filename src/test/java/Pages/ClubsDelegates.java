@@ -62,10 +62,10 @@ public class ClubsDelegates {
     @FindBy(css = "#clubs-delegates > div:nth-child(3) > div > div > div > ul > li:nth-child(4) > a")
     WebElement boardmin;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[5]/div[3]/div/div/div/ul/li[5]/a")
+    @FindBy(css = "#clubs-delegates > div:nth-child(3) > div > div > div > ul > li:nth-child(5) > a")
     WebElement delegatestan;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[5]/div[3]/div/div/div/ul/li[6]/a")
+    @FindBy(xpath = "//*[@id=\"clubs-delegates\"]/div[3]/div/div/div/ul/li[6]/a")
     WebElement perspective;
 
     @FindBy(css= "#clubs-delegates > div:nth-child(3) > div > div > div > ul > li:nth-child(7) > a")
@@ -137,7 +137,7 @@ public class ClubsDelegates {
     @FindBy(css = "#page-title > h1")
     WebElement delegatestanElement;
 
-    @FindBy(id = "page-title")
+    @FindBy(css = "#page-title > h1")
     WebElement perspectiveElement;
 
     @FindBy(css = "#page-title > div > h1")
@@ -298,9 +298,9 @@ public class ClubsDelegates {
 
         this.clubdelegat.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(clubresources));
+        wait.until(ExpectedConditions.elementToBeClickable(clubresources));
         this.clubresources.click();
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
+        //this.driver.get(this.driver.getCurrentUrl()+"?test=true");
         wait.until(ExpectedConditions.visibilityOf(clubresourcesElement));
 
     }
@@ -352,7 +352,7 @@ public class ClubsDelegates {
 
         this.clubdelegat.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(delegatestan));
+        wait.until(ExpectedConditions.elementToBeClickable(delegatestan));
         this.delegatestan.click();
         wait.until(ExpectedConditions.visibilityOf(delegatestanElement));
 

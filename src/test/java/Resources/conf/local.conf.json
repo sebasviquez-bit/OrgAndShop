@@ -12,7 +12,9 @@
 
   "environments": {
     "chrome": {
-      "browser": "chrome"
+      "os": "Windows",
+      "os_version": "10",
+      "browser": "Chrome"
     }
   }
 }

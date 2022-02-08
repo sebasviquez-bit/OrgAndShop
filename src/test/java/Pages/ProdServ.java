@@ -364,7 +364,6 @@ public class ProdServ {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(dna));
         wait.until(ExpectedConditions.elementToBeClickable(dna));
         this.dna.click();
         wait.until(ExpectedConditions.visibilityOf(dnaElement));
@@ -397,7 +396,6 @@ public class ProdServ {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(pedigrees));
         wait.until(ExpectedConditions.elementToBeClickable(pedigrees));
         this.pedigrees.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
@@ -464,7 +462,7 @@ public class ProdServ {
         wait.until(ExpectedConditions.elementToBeClickable(enroll));
         this.enroll.click();
         wait.until(ExpectedConditions.visibilityOf(AKCCaninePartners));
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
+        //this.driver.get(this.driver.getCurrentUrl() + "?test=true");
 
     }
 
@@ -475,7 +473,7 @@ public class ProdServ {
         wait.until(ExpectedConditions.elementToBeClickable(regdown));
         this.regdown.click();
         wait.until(ExpectedConditions.visibilityOf(regdownElement));
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
+        //this.driver.get(this.driver.getCurrentUrl() + "?test=true");
 
     }
 
@@ -558,10 +556,10 @@ public class ProdServ {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(gooddog));
+        wait.until(ExpectedConditions.elementToBeClickable(gooddog));
         this.gooddog.click();
         wait.until(ExpectedConditions.visibilityOf(gooddogElement));
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
+        //this.driver.get(this.driver.getCurrentUrl() + "?test=true");
 
     }
 

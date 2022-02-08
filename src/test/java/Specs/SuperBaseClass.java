@@ -6,6 +6,7 @@ import Pages.*;
 import org.openqa.selenium.WebDriver;
 
 public class SuperBaseClass {
+
     //driver
     WebDriver driver;
 
@@ -24,15 +25,15 @@ public class SuperBaseClass {
     CanMyDogEat canMyDogEat;
     RegisterDog registerDog;
     Search search;
-    ShopHomepage shopHomepage;
-    ShopEssentials ShopEssentials;
-    ShopOnTheGo ShopOnTheGo;
-    ShopGroomingWellness ShopGroomingWellness;
-    ShopTraining ShopTraining;
-    ShopDogLovers ShopDogLovers;
-    ShopAKCPro ShopAKCPro;
-    ShopCollections ShopCollections;
-    ShopPurchaseOrders shopPurchaseOrders;
+    //ShopHomepage shopHomepage;
+    //ShopEssentials ShopEssentials;
+    //ShopOnTheGo ShopOnTheGo;
+    //ShopGroomingWellness ShopGroomingWellness;
+    //ShopTraining ShopTraining;
+    //ShopDogLovers ShopDogLovers;
+    //ShopAKCPro ShopAKCPro;
+    //ShopCollections ShopCollections;
+    //ShopPurchaseOrders shopPurchaseOrders;
 
     //helpers
     DataHelper dataHelper;
@@ -55,6 +56,9 @@ public class SuperBaseClass {
         canMyDogEat= new CanMyDogEat(this.driver);
         registerDog= new RegisterDog(this.driver);
         search= new Search(this.driver);
+
+        //OLDShopDesignPages
+        /*
         shopHomepage= new ShopHomepage(this.driver);
         ShopEssentials= new ShopEssentials(this.driver);
         ShopOnTheGo= new ShopOnTheGo(this.driver);
@@ -64,7 +68,7 @@ public class SuperBaseClass {
         ShopAKCPro= new ShopAKCPro(this.driver);
         ShopCollections= new ShopCollections(this.driver);
         shopPurchaseOrders= new ShopPurchaseOrders(this.driver);
-
+        */
     }
 
     public void InitHelpers(String baseUrl){

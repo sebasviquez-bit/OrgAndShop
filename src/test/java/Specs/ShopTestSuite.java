@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 
 public class ShopTestSuite extends SpecsBaseClass {
 
+    /*
 
     @Test (dataProvider = "RegisterUsers", dataProviderClass = DataHelper.class)
     public void SuccessfulRegister(String sUserName, String sFirstName, String sLastName, String sPassword1, String sPassword2) throws InterruptedException {
@@ -1333,7 +1334,7 @@ public class ShopTestSuite extends SpecsBaseClass {
         shopPurchaseOrders.QuickViewPurchase();
 
     }
-    //
+
 
     //---------------------------------Visual tests:
 
@@ -1894,6 +1895,6 @@ public class ShopTestSuite extends SpecsBaseClass {
         eyes.close();
 
     }
-
+*/
 
 }

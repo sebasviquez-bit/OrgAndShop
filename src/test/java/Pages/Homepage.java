@@ -1,14 +1,15 @@
 package Pages;
 
+import Helpers.DriverHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import static java.lang.Thread.sleep;
 
 
@@ -244,7 +245,7 @@ public class Homepage {
     @FindBy(css = "#panel-AKC\\ Reunite > div > a")
     WebElement akcreunbut;
 
-    @FindBy(css = "#anchor-Humane\\ Fund > div > div")
+    @FindBy(xpath = "//div[contains(text(),'Humane Fund')]")
     WebElement humanfund;
 
     @FindBy(css = "#panel-Humane\\ Fund > div > a")
@@ -277,7 +278,7 @@ public class Homepage {
     @FindBy(css = "#slick-slide01 > a")
     WebElement agi;
 
-    @FindBy(css = "#slick-slide04 > a")
+    @FindBy(css = "#slick-slide06 > a")
     WebElement track;
 
     @FindBy(css = "#slick-slide07 > a")
@@ -1007,7 +1008,6 @@ public class Homepage {
 
     public void VerifyAKCCanine() {
 
-        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.visibilityOf(carebut1));
         this.carebut1.click();
@@ -1029,7 +1029,6 @@ public class Homepage {
 
     public void VerifyAKCReunite() {
 
-        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(akcreun));
         this.akcreun.click();
@@ -1117,12 +1116,17 @@ public class Homepage {
 
     }
 
-    public void VerifyTracking() {
+    public void VerifyTracking() throws InterruptedException {
 
         //HiddeBanner();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(sportsarrow));
         this.sportsarrow.click();
+        sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
         this.track.click();
         validtracking();
 
@@ -1275,6 +1279,16 @@ public class Homepage {
         //HiddeBanner();
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(sportsarrow));
+        this.sportsarrow.click();
+        sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
         this.sportsarrow.click();
         sleep(1000);
         this.sportsarrow.click();
@@ -1453,7 +1467,7 @@ public class Homepage {
 
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         WebDriverWait wait = new WebDriverWait(driver, 30);
-        wait.until(ExpectedConditions.urlContains("https:"));
+        wait.until(ExpectedConditions.urlContains("http:"));
 
     }
 
