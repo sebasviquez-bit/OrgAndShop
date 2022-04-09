@@ -457,8 +457,6 @@ public class ShopByBreed {
         wait.until(ExpectedConditions.visibilityOf(PapillonProductPageTitle));
 
     }
-
-    //
-
+    
 
 }

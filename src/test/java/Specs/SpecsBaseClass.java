@@ -53,7 +53,7 @@ public class SpecsBaseClass extends SuperBaseClass {
         this.eyes.setLogHandler(new StdoutLogHandler());
         this.eyes.setForceFullPageScreenshot(true);
         this.eyes.setStitchMode(StitchMode.CSS);
-        //this.eyes.setMatchLevel(MatchLevel.LAYOUT);
+        //this.eyes.setMatchLevel(MatchLevel.STRICT);
         this.eyes.setSendDom(true); //RCA related
         
 

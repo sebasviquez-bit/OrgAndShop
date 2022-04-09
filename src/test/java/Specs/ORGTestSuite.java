@@ -2138,7 +2138,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
 
-    //Visual UI tests for .ORG >>>>>>>>>>>>>>>>>>>>>>>>>
+    //Visual AI tests for .ORG >>>>>>>>>>>>>>>>>>>>>>>>>
 
 
     @Test

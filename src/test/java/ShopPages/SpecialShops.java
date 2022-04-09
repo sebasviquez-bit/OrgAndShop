@@ -18,11 +18,26 @@ public class SpecialShops {
     WebElement SpecialShopDropdown;
 
     @FindBy(css = "#main-menu-special-shops > div:nth-child(1) > a")
-    WebElement ValentinesHer;
+    WebElement NewArrivals;
 
-    @FindBy(css = "#s-739d3249-b5ef-4406-88f2-eda7d1ab81eb > a")
-    WebElement ValentinesHerCandelProduct;
-    //#s-54bc5402-7a4d-46bf-8ae3-e6761b156f21 > img
+    @FindBy(css = "#isp_search_results_container > li:nth-child(44) > div.isp_product_image_wrapper > a")
+    WebElement NewArrivalsProduct;
+
+    @FindBy(css = "#main-menu-special-shops > div:nth-child(2) > a")
+    WebElement PuppyEssentials;
+
+    @FindBy(css = "#main-menu-special-shops > div:nth-child(3) > a")
+    WebElement CozzyCollection;
+
+    @FindBy(css = "#isp_search_results_container > li:nth-child(17) > div.isp_product_image_wrapper > a")
+    WebElement CozzyCollectionProduct;
+
+    @FindBy(css = "#main-menu-special-shops > div:nth-child(4) > a")
+    WebElement Chewy;
+
+    @FindBy(css = "#single_facet_Price")
+    WebElement ChewyPageSideMenuBar;
+    //
 
     //------------------------//
 
@@ -46,16 +61,53 @@ public class SpecialShops {
 
     }
 
-    public void ClickValentinesHer() {
+    public void ClickNewArrivals() {
 
         Actions builder = new Actions(driver);
-        WebElement element = driver.findElement(By.cssSelector("#main-menu-nav > nav > a:nth-child(4)"));
+        WebElement element = driver.findElement(By.cssSelector("#main-menu-nav > nav > a:nth-child(6)"));
         builder.moveToElement(element).build().perform();
         WebDriverWait wait = new WebDriverWait(driver, 5);
-        wait.until(ExpectedConditions.elementToBeClickable(ValentinesHer));
-        this.ValentinesHer.click();
-        wait.until(ExpectedConditions.visibilityOf(ValentinesHerCandelProduct));
+        wait.until(ExpectedConditions.elementToBeClickable(NewArrivals));
+        this.NewArrivals.click();
+        wait.until(ExpectedConditions.visibilityOf(NewArrivalsProduct));
 
     }
+
+    public void ClickPuppyEssentials() {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#main-menu-nav > nav > a:nth-child(6)"));
+        builder.moveToElement(element).build().perform();
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.elementToBeClickable(PuppyEssentials));
+        this.PuppyEssentials.click();
+        wait.until(ExpectedConditions.urlContains("essentials/bringing-home-a-new-puppy-essentials/"));
+
+    }
+
+    public void ClickCozzyCollection() {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#main-menu-nav > nav > a:nth-child(6)"));
+        builder.moveToElement(element).build().perform();
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.elementToBeClickable(CozzyCollection));
+        this.CozzyCollection.click();
+        wait.until(ExpectedConditions.visibilityOf(CozzyCollectionProduct));
+
+    }
+
+    public void ClickChewy() {
+
+        Actions builder = new Actions(driver);
+        WebElement element = driver.findElement(By.cssSelector("#main-menu-nav > nav > a:nth-child(6)"));
+        builder.moveToElement(element).build().perform();
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.elementToBeClickable(Chewy));
+        this.Chewy.click();
+        wait.until(ExpectedConditions.visibilityOf(ChewyPageSideMenuBar));
+
+    }
+    //
 
 }

@@ -30,7 +30,6 @@ public class SuperBaseClass {
     ShopHomepage shopHomepage;
     GiftForHumans GiftForHumans;
     GearForDogs GearForDogs;
-    ShopPages.ShopGroomingWellness ShopGroomingWellness;
     AdviseTraining AdviseTraining;
     ShopByBreed ShopByBreed;
     AKCProShop AKCProShop;
@@ -70,7 +69,6 @@ public class SuperBaseClass {
         shopHomepage= new ShopHomepage(this.driver);
         GiftForHumans = new GiftForHumans(this.driver);
         GearForDogs = new GearForDogs(this.driver);
-        ShopGroomingWellness= new ShopGroomingWellness(this.driver);
         AdviseTraining = new AdviseTraining(this.driver);
         ShopByBreed = new ShopByBreed(this.driver);
         AKCProShop = new AKCProShop(this.driver);
