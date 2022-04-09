@@ -25,15 +25,6 @@ public class SuperBaseClass {
     CanMyDogEat canMyDogEat;
     RegisterDog registerDog;
     Search search;
-    //ShopHomepage shopHomepage;
-    //ShopEssentials ShopEssentials;
-    //ShopOnTheGo ShopOnTheGo;
-    //ShopGroomingWellness ShopGroomingWellness;
-    //ShopTraining ShopTraining;
-    //ShopDogLovers ShopDogLovers;
-    //ShopAKCPro ShopAKCPro;
-    //ShopCollections ShopCollections;
-    //ShopPurchaseOrders shopPurchaseOrders;
 
     //helpers
     DataHelper dataHelper;
@@ -57,18 +48,6 @@ public class SuperBaseClass {
         registerDog= new RegisterDog(this.driver);
         search= new Search(this.driver);
 
-        //OLDShopDesignPages
-        /*
-        shopHomepage= new ShopHomepage(this.driver);
-        ShopEssentials= new ShopEssentials(this.driver);
-        ShopOnTheGo= new ShopOnTheGo(this.driver);
-        ShopGroomingWellness= new ShopGroomingWellness(this.driver);
-        ShopTraining= new ShopTraining(this.driver);
-        ShopDogLovers= new ShopDogLovers(this.driver);
-        ShopAKCPro= new ShopAKCPro(this.driver);
-        ShopCollections= new ShopCollections(this.driver);
-        shopPurchaseOrders= new ShopPurchaseOrders(this.driver);
-        */
     }
 
     public void InitHelpers(String baseUrl){

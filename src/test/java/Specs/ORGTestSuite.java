@@ -2007,7 +2007,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
 
-    @Test
+    //@Test
     public void dogbreedArticle() {
 
         expertAdvice.dogbreedArticle();
@@ -2031,7 +2031,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void HomelivingArticle() throws InterruptedException {
 
         expertAdvice.HomelivingArticle();
@@ -2042,7 +2042,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
 
-    @Test
+    //@Test
     public void lifestyleArticle() throws InterruptedException {
 
         expertAdvice.lifestyleArticle();
@@ -2064,7 +2064,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void ProdServArticle2() throws InterruptedException {
 
         prodserv.ProdServArticle2();
@@ -2083,7 +2083,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     //SportsEvents Menu Articles >
 
-    @Test
+    //@Test
     public void SportsEventsArticle1() throws InterruptedException {
 
         sportsEvents.SportsEventsArticle1();
@@ -2111,13 +2111,13 @@ public class ORGTestSuite extends SpecsBaseClass {
     public void VisualHomepageCheck() {
 
         homepage.CheckHomepage();
-        eyes.open(driver, "AKC", "CheckHomepage", new RectangleSize(1420, 680));
+        eyes.open(driver, "AKC", "CheckHomepage", new RectangleSize(1430, 680));
         eyes.check("HomepageCheck", Target.window());
         eyes.close();
 
     }
 
-    @Test
+    //@Test
     public void VisualClickexplorebreeds() {
 
         breeds.Clickexplorebreeds();
@@ -2127,7 +2127,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void VisualClickwhygetdog() {
 
         breeds.Clickwhygetdog();
@@ -2168,11 +2168,11 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    //@Test
-    public void VisualHealthArticleKennelCough () throws InterruptedException {
+    @Test
+    public void TerrierBreedPageCheck () {
 
-        driver.navigate().to("https://www.akc.org/expert-advice/health/kennel-cough-symptoms-treatment-and-prevention/?test=true");
-        eyes.open(driver, "AKC", "ArticleKennelCough", new RectangleSize(1420, 680));
+        driver.navigate().to("https://test-web.akc.org/dog-breeds/yorkshire-terrier/");
+        eyes.open(driver, "AKC", "TerrierBreedPageCheck", new RectangleSize(1420, 680));
         eyes.check("EAmenu", Target.window());
         eyes.close();
 
@@ -2180,20 +2180,20 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
     //@Test
-    public void VisualNewsArticle2020Westminster () throws InterruptedException {
+    public void BulldogBreedPageChekc () {
 
-        driver.navigate().to("https://www.akc.org/expert-advice/news/how-to-watch-westminster-2020/?test=true");
-        eyes.open(driver, "AKC", "Article2020Westminster", new RectangleSize(1420, 680));
+        driver.navigate().to("https://test-web.akc.org/dog-breeds/bulldog/");
+        eyes.open(driver, "AKC", "BulldogBreedPageChekc", new RectangleSize(1420, 680));
         eyes.check("EAmenu", Target.window());
         eyes.close();
 
     }
 
-    //@Test
-    public void VisuallifestyleArticleWhatarezoomies () throws InterruptedException {
+    @Test
+    public void AkitaBreedPageCheck () {
 
-        driver.navigate().to("https://www.akc.org/expert-advice/lifestyle/what-are-zoomies/?test=true");
-        eyes.open(driver, "AKC", "ArticleWhatarezoomies", new RectangleSize(1420, 680));
+        driver.navigate().to("https://test-web.akc.org/dog-breeds/akita/");
+        eyes.open(driver, "AKC", "AkitaBreedPageCheck", new RectangleSize(1420, 680));
         eyes.check("EAmenu", Target.window());
         eyes.close();
 

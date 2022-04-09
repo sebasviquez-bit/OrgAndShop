@@ -266,10 +266,13 @@ public class Homepage {
     @FindBy(css = "body > div.page-home.bgc-white.cmw > section.page-section.page-home__events-slider > div > div.event-slider__wrap > div.event-slider__nav-wrap > div > div > span.slider-dot-nav__arrow.slider-dot-nav__arrow--right.slick-arrow > svg")
     WebElement sportsarrow;
 
+    @FindBy(css = "body > div.page-home.bgc-white.cmw > section.page-section.page-home__events-slider > div > div.event-slider__wrap > div.event-slider__nav-wrap > div > div > span.slider-dot-nav__arrow.slider-dot-nav__arrow--left.slick-arrow")
+    WebElement Leftsportsarrow;
+
     @FindBy(css = "#slick-slide00 > a")
     WebElement conf;
 
-    @FindBy(css = "#slick-slide05 > a")
+    @FindBy(css = "#slick-slide06 > a")
     WebElement obe;
 
     @FindBy(css = "#slick-slide02 > a")
@@ -278,40 +281,40 @@ public class Homepage {
     @FindBy(css = "#slick-slide01 > a")
     WebElement agi;
 
-    @FindBy(css = "#slick-slide06 > a")
+    @FindBy(css = "#slick-slide07 > a")
     WebElement track;
 
-    @FindBy(css = "#slick-slide07 > a")
+    @FindBy(css = "#slick-slide08 > a")
     WebElement herd;
 
-    @FindBy(css = "#slick-slide08 > a")
+    @FindBy(css = "#slick-slide09 > a")
     WebElement earthdog;
 
-    @FindBy(css = "#slick-slide09 > a")
+    @FindBy(css = "#slick-slide010 > a")
     WebElement fieldtri;
 
-    @FindBy(css = "#slick-slide010 > a")
+    @FindBy(css = "#slick-slide011 > a")
     WebElement hunt;
 
-    @FindBy(css = "#slick-slide011 > a")
+    @FindBy(css = "#slick-slide012 > a")
     WebElement farmdog;
 
-    @FindBy(css = "#slick-slide012 > a")
+    @FindBy(css = "#slick-slide013 > a")
     WebElement lurecours;
 
-    @FindBy(css = "#slick-slide013 > a")
+    @FindBy(css = "#slick-slide014 > a")
     WebElement coursabi;
 
     @FindBy(css = "#slick-slide03 > a")
     WebElement fastcat;
 
-    @FindBy(css = "#slick-slide014 > a")
+    @FindBy(css = "#slick-slide015 > a")
     WebElement conhound;
 
-    @FindBy(css = "#slick-slide04 > a")
+    @FindBy(css = "#slick-slide05 > a")
     WebElement scentwork;
 
-    @FindBy(css = "#slick-slide015 > a")
+    @FindBy(css = "#slick-slide016 > a")
     WebElement trickdog;
 
     @FindBy(xpath = "//a[contains(text(),'Find Events Near You')]")
@@ -645,7 +648,7 @@ public class Homepage {
             driver.switchTo().window(winHandle);
         }
         WebDriverWait wait = new WebDriverWait(driver, 30);
-        wait.until(ExpectedConditions.urlContains("akc.org/sports/coursing/coursing-ability-test/"));
+        wait.until(ExpectedConditions.urlContains("/coursing/"));
 
     }
 
@@ -1093,6 +1096,8 @@ public class Homepage {
         sleep(1000);
         this.sportsarrow.click();
         sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
         this.obe.click();
         validobedience();
 
@@ -1127,6 +1132,8 @@ public class Homepage {
         sleep(1000);
         this.sportsarrow.click();
         sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
         this.track.click();
         validtracking();
 
@@ -1137,6 +1144,8 @@ public class Homepage {
         //HiddeBanner();
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(sportsarrow));
+        this.sportsarrow.click();
+        sleep(1000);
         this.sportsarrow.click();
         sleep(1000);
         this.sportsarrow.click();
@@ -1165,6 +1174,8 @@ public class Homepage {
         sleep(1000);
         this.sportsarrow.click();
         sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
         this.earthdog.click();
         validearthdog();
 
@@ -1175,17 +1186,19 @@ public class Homepage {
         //HiddeBanner();
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(sportsarrow));
-        this.sportsarrow.click();
+        this.Leftsportsarrow.click();
         sleep(1000);
-        this.sportsarrow.click();
+        this.Leftsportsarrow.click();
         sleep(1000);
-        this.sportsarrow.click();
+        this.Leftsportsarrow.click();
         sleep(1000);
-        this.sportsarrow.click();
+        this.Leftsportsarrow.click();
         sleep(1000);
-        this.sportsarrow.click();
+        this.Leftsportsarrow.click();
         sleep(1000);
-        this.sportsarrow.click();
+        this.Leftsportsarrow.click();
+        sleep(1000);
+        this.Leftsportsarrow.click();
         sleep(1000);
         this.fieldtri.click();
         validfieldtrials();
@@ -1197,19 +1210,17 @@ public class Homepage {
         //HiddeBanner();
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(sportsarrow));
-        this.sportsarrow.click();
+        this.Leftsportsarrow.click();
         sleep(1000);
-        this.sportsarrow.click();
+        this.Leftsportsarrow.click();
         sleep(1000);
-        this.sportsarrow.click();
+        this.Leftsportsarrow.click();
         sleep(1000);
-        this.sportsarrow.click();
+        this.Leftsportsarrow.click();
         sleep(1000);
-        this.sportsarrow.click();
+        this.Leftsportsarrow.click();
         sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
+        this.Leftsportsarrow.click();
         sleep(1000);
         this.hunt.click();
         validhunting();
@@ -1221,21 +1232,15 @@ public class Homepage {
         //HiddeBanner();
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(sportsarrow));
-        this.sportsarrow.click();
+        this.Leftsportsarrow.click();
         sleep(1000);
-        this.sportsarrow.click();
+        this.Leftsportsarrow.click();
         sleep(1000);
-        this.sportsarrow.click();
+        this.Leftsportsarrow.click();
         sleep(1000);
-        this.sportsarrow.click();
+        this.Leftsportsarrow.click();
         sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
+        this.Leftsportsarrow.click();
         sleep(1000);
         this.farmdog.click();
         validfarmdog();
@@ -1247,27 +1252,13 @@ public class Homepage {
         //HiddeBanner();
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(sportsarrow));
-        this.sportsarrow.click();
+        this.Leftsportsarrow.click();
         sleep(1000);
-        this.sportsarrow.click();
+        this.Leftsportsarrow.click();
         sleep(1000);
-        this.sportsarrow.click();
+        this.Leftsportsarrow.click();
         sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
+        this.Leftsportsarrow.click();
         sleep(1000);
         this.lurecours.click();
         validlurecoursing();
@@ -1279,31 +1270,11 @@ public class Homepage {
         //HiddeBanner();
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(sportsarrow));
-        this.sportsarrow.click();
+        this.Leftsportsarrow.click();
         sleep(1000);
-        this.sportsarrow.click();
+        this.Leftsportsarrow.click();
         sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
+        this.Leftsportsarrow.click();
         sleep(1000);
         this.coursabi.click();
         validcoursingability();
@@ -1325,27 +1296,9 @@ public class Homepage {
         //HiddeBanner();
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(sportsarrow));
-        this.sportsarrow.click();
+        this.Leftsportsarrow.click();
         sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
+        this.Leftsportsarrow.click();
         sleep(1000);
         this.conhound.click();
         validcoonhound();
@@ -1359,6 +1312,8 @@ public class Homepage {
         wait.until(ExpectedConditions.elementToBeClickable(sportsarrow));
         this.sportsarrow.click();
         sleep(1000);
+        this.sportsarrow.click();
+        sleep(1000);
         this.scentwork.click();
         validscentwork();
 
@@ -1369,31 +1324,7 @@ public class Homepage {
         //HiddeBanner();
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(sportsarrow));
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
-        sleep(1000);
-        this.sportsarrow.click();
+        this.Leftsportsarrow.click();
         sleep(1000);
         this.trickdog.click();
         validtrickdog();
@@ -1437,7 +1368,7 @@ public class Homepage {
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("scroll(0, 1800);");
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(add));
+        wait.until(ExpectedConditions.elementToBeClickable(add));
         this.add.click();
         ClickOpenAdd();
 
@@ -1457,7 +1388,7 @@ public class Homepage {
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("scroll(0, 2000);");
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(add1));
+        wait.until(ExpectedConditions.elementToBeClickable(add1));
         this.add1.click();
         ClickOpenAdd();
 
@@ -1467,7 +1398,7 @@ public class Homepage {
 
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         WebDriverWait wait = new WebDriverWait(driver, 30);
-        wait.until(ExpectedConditions.urlContains("http:"));
+        wait.until(ExpectedConditions.urlContains("https://www."));
 
     }
 

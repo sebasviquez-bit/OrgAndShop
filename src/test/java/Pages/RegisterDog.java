@@ -454,9 +454,9 @@ public class RegisterDog {
         this.register.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
         wait.until(ExpectedConditions.visibilityOf(regdog));
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
+        //this.driver.get(this.driver.getCurrentUrl()+"?test=true");
         this.regdog.click();
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
+        //this.driver.get(this.driver.getCurrentUrl()+"?test=true");
         wait.until(ExpectedConditions.elementToBeClickable(enrollpure));
         this.enrollpure.click();
         wait.until(ExpectedConditions.elementToBeClickable(buttoncont));
@@ -520,7 +520,7 @@ public class RegisterDog {
 
         this.register.click();
         WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(regdog));
+        wait.until(ExpectedConditions.elementToBeClickable(regdog));
         this.regdog.click();
         wait.until(ExpectedConditions.elementToBeClickable(other));
         this.other.click();

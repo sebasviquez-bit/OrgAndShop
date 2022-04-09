@@ -161,7 +161,7 @@ public class BreedsMenu {
     @FindBy(css = "#page-title > div > h1")
     WebElement KeneelNameRegTitle;
 
-    @FindBy(css = "#main-content > div.article-body > div.content-body > div > div > table > tbody > tr:nth-child(1) > td:nth-child(2) > p:nth-child(4) > a")
+    @FindBy(css = "#main-content > div.article-body > div > div > div.content-body__text.content-body__text-long > table > tbody > tr:nth-child(1) > td:nth-child(2) > p:nth-child(3) > a")
     WebElement breedsMoreButton;
 
     @FindBy(xpath = "//*[@id=\"main-content\"]/div[1]/div[1]/div/div/table/tbody/tr[4]/td[2]/p[3]/a")
@@ -502,12 +502,12 @@ public class BreedsMenu {
         this.fordogowners.isDisplayed();
         this.fordogowners.click();
         sleep(1000);
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
+        //this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         //HiddeBanner();
         JavascriptExecutor js = (JavascriptExecutor) driver;
         WebDriverWait wait = new WebDriverWait(driver, 10);
         js.executeScript("100,500");
-        wait.until(ExpectedConditions.elementToBeClickable(breedsMoreButton));
+        //wait.until(ExpectedConditions.elementToBeClickable(breedsMoreButton));
         this.dogHealthButton.click();
         wait.until(ExpectedConditions.urlToBe("https://www.akc.org/expert-advice/health/"));
 

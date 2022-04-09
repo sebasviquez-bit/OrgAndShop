@@ -47,22 +47,21 @@ public class SpecsBaseClass extends SuperBaseClass {
         //InitHelpers("https://www.akc.org/?test=true");
         //InitHelpers("https://devshop.akc.org/");
         //InitHelpers("https://shop.akc.org/?test=true");
-        //InitHelpers("https://5-7-2update-staging-akc.pantheonsite.io/");
         InitPages();
 
         driver.get(driverHelper.baseUrl);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-        this.eyes = new Eyes(new VisualGridRunner(7));
+        this.eyes = new Eyes();
         this.eyes.setApiKey("z9croAylAJ31BCxQ9g0BdZE0ul770cXrtqRuwWv8A8g110");    //.ORG API KEY
         //this.eyes.setApiKey("BPfSxtkBRJAMWYb8LGUn7G0DzwYdm8JiJPyed104Df5cs110");   //SHOP API KEY
-        this.eyes.setConfiguration(VisualGridConfig.getGrid());
+        //this.eyes.setConfiguration(VisualGridConfig.getGrid());
         this.eyes.setLogHandler(new StdoutLogHandler());
         this.eyes.setForceFullPageScreenshot(true);
         this.eyes.setStitchMode(StitchMode.CSS);
         //this.eyes.setMatchLevel(MatchLevel.LAYOUT);
-        this.eyes.setSendDom(false); //RCA related
+        this.eyes.setSendDom(true); //RCA related
 
     }
 
