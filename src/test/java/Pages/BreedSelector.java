@@ -9,6 +9,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
+
 public class BreedSelector {
 
     @FindBy(xpath = "//html/body/div[2]/div/div[1]/div/div[2]/nav/a[1]")
@@ -44,7 +46,7 @@ public class BreedSelector {
     @FindBy(css = "#breed-select-template > div > div > div.page-layout > main > div.breed-select-questions > div.breed-select-question.js-question.js-question-number-0 > div.breed-select-options > div.breed-select-option.js-question-option.js-option-number-2 > div")
     WebElement owndogpastlab;
 
-    @FindBy(xpath = "//*[@id=\"experience-continue\"]")
+    @FindBy(css = "#experience-continue")
     WebElement continue1;
 
     @FindBy(css = "#breed-select-template > div > div > div.page-layout > main > div.breed-select-questions > div.breed-select-question.js-question.js-question-number-2 > div.breed-select-question__title > h4")
@@ -71,7 +73,7 @@ public class BreedSelector {
     @FindBy(css = "#breed-select-template > div > div > div.page-layout > main > div.breed-select-questions > div.breed-select-question.js-question.js-question-number-2 > div.breed-select-options > div.breed-select-option.js-question-option.js-option-number-2 > div > div")
     WebElement houselargelab;
 
-    @FindBy(css = "#home-type-continue")
+    @FindBy(css = "#training-continue")
     WebElement continue2;
 
     @FindBy(css = "#breed-select-template > div > div > div.page-layout > main > div.breed-select-intro-title.mb2.bps-mb8 > div.breed-select-intro-title__title")
@@ -92,8 +94,12 @@ public class BreedSelector {
     @FindBy(css = "#breed-select-template > div > div > div.page-layout > main > div.breed-select-questions > div.breed-select-question.js-question.js-question-number-3 > div.breed-select-options > div.breed-select-option.js-question-option.js-option-number-1 > div")
     WebElement nolab;
 
-    @FindBy(css = "#apartments-continue")
+    @FindBy(css = "#home-type-continue")
     WebElement continue3;
+
+    @FindBy(css = "#children-continue")
+    WebElement KidsUnderAgecontinue;
+    //
 
     @FindBy(css = "#breed-select-template > div > div > div.page-layout > main > div.breed-select-intro-title.mb2.bps-mb8 > div.breed-select-intro-title__title")
     WebElement headbreedsel4;
@@ -302,6 +308,13 @@ public class BreedSelector {
     @FindBy(xpath = "//*[@id=\"activity-level-continue\"]")
     WebElement continue8;
 
+    @FindBy(css = "#apartments-continue")
+    WebElement continue9;
+    //
+
+    @FindBy(css = "#a268951c-b028-44ad-99ed-5af71765e083")
+    WebElement BottomBanner;
+
 
     DriverHelper driverHelper;
 
@@ -317,16 +330,13 @@ public class BreedSelector {
     public void VerifyBreedSelector1() {
 
         this.breedsmenu.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(findmatch));
-        this.findmatch.isDisplayed();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(findmatch));
         this.findmatch.click();
         wait.until(ExpectedConditions.visibilityOf(getstarted));
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        this.getstarted.isDisplayed();
+        this.HiddeBanner();
         this.getstarted.click();
         wait.until(ExpectedConditions.visibilityOf(headbreedsel1));
-        this.headbreedsel1.isDisplayed();
         this.imagepage1.isDisplayed();
         this.newtodogs.isDisplayed();
         this.newtodogslab.isDisplayed();
@@ -337,7 +347,6 @@ public class BreedSelector {
         this.newtodogs.click();
         this.continue1.click();
         wait.until(ExpectedConditions.visibilityOf(headbreedsel2));
-        this.headbreedsel2.isDisplayed();
         this.imagepage2.isDisplayed();
         this.apartment.isDisplayed();
         this.apartmentlab.isDisplayed();
@@ -346,7 +355,7 @@ public class BreedSelector {
         this.houselarge.isDisplayed();
         this.houselargelab.isDisplayed();
         this.apartment.click();
-        this.continue2.click();
+        this.continue3.click();
         wait.until(ExpectedConditions.visibilityOf(headbreedsel3));
         this.headbreedsel3.isDisplayed();
         this.imagepage3.isDisplayed();
@@ -354,8 +363,7 @@ public class BreedSelector {
         this.yeslab.isDisplayed();
         this.no.isDisplayed();
         this.nolab.isDisplayed();
-        //this.yes.click();
-        this.continue3.click();
+        this.continue9.click();
         wait.until(ExpectedConditions.visibilityOf(headbreedsel4));
         this.headbreedsel4.isDisplayed();
         this.imagepage4.isDisplayed();
@@ -365,41 +373,9 @@ public class BreedSelector {
         this.no2lab.isDisplayed();
         this.yes2.click();
         this.continue4.click();
-        wait.until(ExpectedConditions.visibilityOf(headbreedsel5));
-        this.headbreedsel5.isDisplayed();
-        this.imagepage5.isDisplayed();
-        this.onlybarks.isDisplayed();
-        this.likesvocal.isDisplayed();
-        this.minusbark.isDisplayed();
-        this.plusbark.isDisplayed();
-        this.plusbark.click();
-        this.plusbark.click();
-        this.continue5.click();
-        wait.until(ExpectedConditions.visibilityOf(headbreedsel6));
-        this.headbreedsel6.isDisplayed();
-        this.imagepage6.isDisplayed();
-        this.infreq.isDisplayed();
-        this.infreqlab.isDisplayed();
-        this.freq.isDisplayed();
-        this.freqlab.isDisplayed();
-        this.infreq.click();
-        this.continue6.click();
-        wait.until(ExpectedConditions.visibilityOf(actlevelheader));
-        this.actlevelheader.isDisplayed();
-        this.actlevelpict.isDisplayed();
-        this.hangcouch.isDisplayed();
-        this.hangcouchlab.isDisplayed();
-        this.walkaround.isDisplayed();
-        this.walkaroundlab.isDisplayed();
-        this.goingadv.isDisplayed();
-        this.goingadvlab.isDisplayed();
-        this.hangcouch.click();
-        this.continue8.click();
         wait.until(ExpectedConditions.visibilityOf(headresults));
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("scroll(0, 500);");
-        this.headresults.isDisplayed();
         this.imageresults.isDisplayed();
         this.results.isDisplayed();
         jse.executeScript("scroll(0, 900);");
@@ -420,12 +396,6 @@ public class BreedSelector {
         this.match6pict.isDisplayed();
         this.match7.isDisplayed();
         this.match7pict.isDisplayed();
-        this.match8.isDisplayed();
-        this.match8pict.isDisplayed();
-        this.match9.isDisplayed();
-        this.match9pict.isDisplayed();
-        this.match10.isDisplayed();
-        this.match10pict.isDisplayed();
         this.breedcomp.isDisplayed();
         this.breedcompdetail.isDisplayed();
         this.quizagain.isDisplayed();
@@ -437,11 +407,11 @@ public class BreedSelector {
     public void VerifyBreedSelector2() {
 
         this.breedsmenu.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(findmatch));
         this.findmatch.click();
         wait.until(ExpectedConditions.elementToBeClickable(getstarted));
-        //this.driver.get(this.driver.getCurrentUrl() + "?test=true");
+        HiddeBanner();
         this.getstarted.click();
         wait.until(ExpectedConditions.elementToBeClickable(currentowndog));
         Actions actions = new Actions(driver);
@@ -459,12 +429,31 @@ public class BreedSelector {
         this.alotoftime.isDisplayed();
         this.alotoftimelab.isDisplayed();
         this.littletime.click();
-        this.continue7.click();
+        this.continue2.click();
         wait.until(ExpectedConditions.visibilityOf(housesmall));
         this.housesmall.click();
-        this.continue2.click();
+        this.continue3.click();
+        this.continue4.click();
+        wait.until(ExpectedConditions.visibilityOf(headbreedsel5));
+        this.headbreedsel5.isDisplayed();
+        this.imagepage5.isDisplayed();
+        this.onlybarks.isDisplayed();
+        this.likesvocal.isDisplayed();
+        this.minusbark.isDisplayed();
+        this.plusbark.isDisplayed();
+        this.plusbark.click();
+        this.plusbark.click();
+        this.continue5.click();
+        wait.until(ExpectedConditions.visibilityOf(headbreedsel6));
+        this.headbreedsel6.isDisplayed();
+        this.imagepage6.isDisplayed();
+        this.infreq.isDisplayed();
+        this.infreqlab.isDisplayed();
+        this.freq.isDisplayed();
+        this.freqlab.isDisplayed();
+        this.infreq.click();
+        this.continue6.click();
         wait.until(ExpectedConditions.visibilityOf(headresults));
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         this.headresults.isDisplayed();
         this.imageresults.isDisplayed();
         this.results.isDisplayed();
@@ -485,12 +474,8 @@ public class BreedSelector {
         this.match5pict.isDisplayed();
         this.match6.isDisplayed();
         this.match6pict.isDisplayed();
-        this.match7.isDisplayed();
-        this.match7pict.isDisplayed();
-        this.match8.isDisplayed();
-        this.match8pict.isDisplayed();
-        //this.match9.isDisplayed();
-        //this.match9pict.isDisplayed();
+        //this.match7.isDisplayed();
+        //this.match7pict.isDisplayed();
         //this.match10.isDisplayed();
         //this.match10pict.isDisplayed();
         this.breedcomp.isDisplayed();
@@ -505,27 +490,27 @@ public class BreedSelector {
 
 
         this.breedsmenu.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(findmatch));
         this.findmatch.click();
         wait.until(ExpectedConditions.visibilityOf(getstarted));
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
+        HiddeBanner();
         this.getstarted.click();
         wait.until(ExpectedConditions.visibilityOf(owndogpast));
         Actions actions = new Actions(driver);
         actions.moveToElement(owndogpast).perform();
         assert(owndogpast.isEnabled());
         this.owndogpast.click();
-        wait.until(ExpectedConditions.visibilityOf(continue1));
+        wait.until(ExpectedConditions.elementToBeClickable(continue1));
         this.continue1.click();
-        wait.until(ExpectedConditions.visibilityOf(sometime));
+        wait.until(ExpectedConditions.elementToBeClickable(sometime));
         this.sometime.click();
-        wait.until(ExpectedConditions.visibilityOf(continue7));
+        wait.until(ExpectedConditions.elementToBeClickable(continue7));
         this.continue7.click();
-        wait.until(ExpectedConditions.visibilityOf(houselarge));
+        wait.until(ExpectedConditions.elementToBeClickable(houselarge));
         this.houselarge.click();
-        wait.until(ExpectedConditions.visibilityOf(continue2));
-        this.continue2.click();
+        wait.until(ExpectedConditions.elementToBeClickable(continue3));
+        this.continue3.click();
         wait.until(ExpectedConditions.visibilityOf(no2));
         this.no2.click();
         wait.until(ExpectedConditions.visibilityOf(continue4));
@@ -591,5 +576,10 @@ public class BreedSelector {
 
     }
 
+    public void HiddeBanner() {
 
+        JavascriptExecutor jse = (JavascriptExecutor)driver;
+        jse.executeScript("arguments[0].style.visibility='hidden'", BottomBanner);
+    }
 }
+

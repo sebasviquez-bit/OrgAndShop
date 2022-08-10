@@ -8,6 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
+
 public class CanMyDogEat {
 
     @FindBy(xpath = "//html/body/div[2]/div/div[1]/div/div[2]/nav/a[1]")
@@ -289,7 +291,7 @@ public class CanMyDogEat {
     @FindBy(xpath = "//html/body/main/div/section/div[16]/div[1]/img")
     WebElement resultsimg;
 
-    @FindBy(css = "body > div.bcpNotificationBar.bcpNotificationBarStickyBottom")
+    @FindBy(css = "#a268951c-b028-44ad-99ed-5af71765e083")
     WebElement BottomBanner;
 
 
@@ -309,17 +311,14 @@ public class CanMyDogEat {
     public void VerifyCanMyDogEat1() {
 
         this.breedsmenu.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(findmatch));
         this.findmatch.click();
-        wait.until(ExpectedConditions.visibilityOf(canmydog));
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
+        wait.until(ExpectedConditions.elementToBeClickable(canmydog));
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("scroll(0, 800);");
         this.canmydog.click();
         wait.until(ExpectedConditions.visibilityOf(tittle));
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        //HiddeBanner();
         this.img.isDisplayed();
         this.msg.isDisplayed();
         this.apples.isDisplayed();
@@ -416,13 +415,12 @@ public class CanMyDogEat {
 
 
         this.breedsmenu.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(findmatch));
         this.findmatch.click();
         wait.until(ExpectedConditions.elementToBeClickable(canmydog));
+        HiddeBanner();
         this.canmydog.click();
-        wait.until(ExpectedConditions.visibilityOf(no1));
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         //HiddeBanner();
         wait.until(ExpectedConditions.elementToBeClickable(no1));
         this.no1.click();

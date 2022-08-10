@@ -1,11 +1,14 @@
 package Pages;
 import Helpers.DriverHelper;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 
 public class CompareBreeds {
@@ -19,7 +22,7 @@ public class CompareBreeds {
     @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[3]/div")
     WebElement breedscompmessage;
 
-    @FindBy(css = "body > div.breed-select-wrap > div > div > div.page-layout > main > div.breed-comparison-theme-wrap > div.breed-comparison-select-and-breed-data > div.breed-comparison-wrap.js-breed-comparison-row-top > div:nth-child(1) > div.breed-comparison-select.breed-comparison-select_closed > div.breed-comparison-select__top > img")
+    @FindBy(css = "body > div.breed-select-wrap > div > div > div.page-layout > main > div.breed-comparison-theme-wrap > div.breed-comparison-select-and-breed-data > div.breed-comparison-wrap.js-breed-comparison-row-top > div:nth-child(1) > div.breed-comparison-select > div.breed-comparison-select__top")
     WebElement select1;
 
     @FindBy(css = "body > div.breed-select-wrap > div > div > div.page-layout > main > div.breed-comparison-theme-wrap > div.breed-comparison-select-and-breed-data > div.breed-comparison-wrap.js-breed-comparison-row-top > div:nth-child(1) > div.breed-comparison-select > div.breed-comparison-select__bottom > div.breed-comparison-select-breeds > div.breed-comparison-select-breeds__option.breed-comparison-select-breeds__option-23195")
@@ -298,6 +301,10 @@ public class CompareBreeds {
     @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[39]/div[5]/a")
     WebElement findpuppy5;
 
+    @FindBy(css = "#a268951c-b028-44ad-99ed-5af71765e083")
+    WebElement BottomBanner;
+    //
+
     DriverHelper driverHelper;
 
     WebDriver driver;
@@ -312,14 +319,13 @@ public class CompareBreeds {
     public void VerifyCompareBreeds() {
 
         this.breeds.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(breedscompa));
         this.breedscompa.click();
-        wait.until(ExpectedConditions.visibilityOf(select1));
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        this.select1.isDisplayed();
+        wait.until(ExpectedConditions.elementToBeClickable(select1));
+        HiddeBanner();
         this.select1.click();
-        wait.until(ExpectedConditions.visibilityOf(affens));
+        wait.until(ExpectedConditions.elementToBeClickable(affens));
         this.affens.click();
         wait.until(ExpectedConditions.visibilityOf(affenspic));
         this.affenspic.isDisplayed();
@@ -419,6 +425,12 @@ public class CompareBreeds {
         this.findpuppy4.isDisplayed();
         this.findpuppy5.isDisplayed();
 
+    }
+
+    public void HiddeBanner() {
+
+        JavascriptExecutor jse = (JavascriptExecutor)driver;
+        jse.executeScript("arguments[0].style.visibility='hidden'", BottomBanner);
     }
 
 

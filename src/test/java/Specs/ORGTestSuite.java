@@ -562,8 +562,6 @@ public class ORGTestSuite extends SpecsBaseClass {
     @Test
     public void AKCReuniteVerify() {
 
-        //Below line is just for testing driver thread ID
-        System.out.println("The thread ID for Chrome is "+ Thread.currentThread().getId());
         homepage.VerifyAKCReunite();
 
     }
@@ -747,7 +745,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void ClickAdd() {
+    public void VerifyAdd() {
 
         homepage.ClickAdd();
 
@@ -1979,8 +1977,6 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    //Breeds Menu Articles tests:
-
 
     @Test
     public void ForDogOwnerArticle1() {
@@ -1989,31 +1985,10 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
-    public void ForDogOwnerArticle2() throws InterruptedException {
-
-        breeds.ForDogOwnerArticle2();
-
-    }
-
-    //ExpertAdvice Menu Articles >
-
-
     //@Test
     public void allcategArticle() throws InterruptedException {
 
         expertAdvice.allcategArticle();   //This test was replaced by a Visual test below >
-
-    }
-
-
-    //@Test
-    public void dogbreedArticle() {
-
-        expertAdvice.dogbreedArticle();
-        eyes.open(driver, "AKC", "dogbreedArticle", new RectangleSize(1420, 680));
-        eyes.check("EAmenu", Target.window());
-        eyes.close();
 
     }
 
@@ -2052,28 +2027,6 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    //ProdServ Menu Articles >
-
-    //@Test
-    public void ProdServArticle1() throws InterruptedException {
-
-        prodserv.ProdServArticle1();
-        eyes.open(driver, "AKC", "ProdServArticle1", new RectangleSize(1420, 680));
-        eyes.check("ProdServArticle", Target.window());
-        eyes.close();
-
-    }
-
-    //@Test
-    public void ProdServArticle2() throws InterruptedException {
-
-        prodserv.ProdServArticle2();
-        eyes.open(driver, "AKC", "ProdServArticle2", new RectangleSize(1420, 680));
-        eyes.check("ProdServArticle2", Target.window());
-        eyes.close();
-
-    }
-
     @Test
     public void ProdServArticle3() {
 
@@ -2096,16 +2049,12 @@ public class ORGTestSuite extends SpecsBaseClass {
     //@Test
     public void SportsEventArticle2() throws InterruptedException {
 
-        sportsEvents.SportsEventArticle2();
+        //sportsEvents.SportsEventArticle2();
         eyes.open(driver, "AKC", "SportsEventArticle2", new RectangleSize(1420, 680));
         eyes.check("SportsEventArticle2", Target.window());
         eyes.close();
 
     }
-
-
-    //Visual AI tests for .ORG >>>>>>>>>>>>>>>>>>>>>>>>>
-
 
     @Test
     public void VisualHomepageCheck() {
@@ -2158,18 +2107,18 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     //@Test
-    public void VisualBestDogFoodArticle() {
+    public void VisualakcHumaneFund() {
 
-        driver.navigate().to("https://www.akc.org/expert-advice/nutrition/best-dog-food-choosing-whats-right-for-your-dog/");
+        driver.navigate().to("https://dev-the-akc-humane-fund.pantheonsite.io/");
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
-        eyes.open(driver, "AKC", "BestDogFoodArticle", new RectangleSize(1420, 680));
+        eyes.open(driver, "AKC", "akc-humane-fund", new RectangleSize(1420, 670));
         eyes.check("EAmenu", Target.window());
         eyes.close();
 
     }
 
     @Test
-    public void TerrierBreedPageCheck () {
+    public void TerrierBreedPageCheck() {
 
         driver.navigate().to("https://test-web.akc.org/dog-breeds/yorkshire-terrier/");
         eyes.open(driver, "AKC", "TerrierBreedPageCheck", new RectangleSize(1420, 680));
@@ -2179,8 +2128,8 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
 
-    //@Test
-    public void BulldogBreedPageChekc () {
+    @Test
+    public void BulldogBreedPageChek() {
 
         driver.navigate().to("https://test-web.akc.org/dog-breeds/bulldog/");
         eyes.open(driver, "AKC", "BulldogBreedPageChekc", new RectangleSize(1420, 680));
@@ -2199,16 +2148,15 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void VisualCGC () {
 
-        driver.navigate().to("https://www.akc.org/products-services/training-programs/canine-good-citizen/?test=true");
+        driver.navigate().to("https://www.akc.org/products-services/training-programs/canine-good-citizen/");
         eyes.open(driver, "AKC", "CGC", new RectangleSize(1420, 680));
         eyes.check("Prod&ServMenu", Target.window());
         eyes.close();
 
     }
-
 
 
 }

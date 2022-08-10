@@ -9,6 +9,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
+
 public class Register {
 
     @FindBy(css = "#site-header > div > div.desktop-header > div > div.utility-header > nav.utility-nav.sign-in-nav > a")
@@ -63,7 +65,7 @@ public class Register {
     // Registro de usuario .ORG
     public void registerUser(User _testUser) {
 
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(iconsignin));
         this.iconsignin.click();
         wait.until(ExpectedConditions.visibilityOf(CreateAccount));
@@ -88,7 +90,7 @@ public class Register {
     // Registro de usuario SHOP
     public void registerUserShop(User _testUser) {
 
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(iconsigninShop));
         this.iconsigninShop.click();
         wait.until(ExpectedConditions.visibilityOf(CreateAccount));

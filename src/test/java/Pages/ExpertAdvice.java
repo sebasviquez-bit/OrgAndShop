@@ -2,12 +2,15 @@ package Pages;
 
 import Helpers.DriverHelper;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 import static java.lang.Thread.sleep;
 
@@ -98,7 +101,7 @@ public class ExpertAdvice {
     @FindBy(css = "#page-title > h1")
     WebElement allcategElement;
 
-    @FindBy(css = "#page-title > div > h1")
+    @FindBy(css = "#i-am-a-breeder > div > span")
     WebElement dogbreedingElement;
 
     @FindBy(css = "#page-title > div > h1")
@@ -242,6 +245,9 @@ public class ExpertAdvice {
     @FindBy(css = "#subscription__modal-msg-1")
     WebElement SubsFormConfirmation;
 
+    @FindBy(css = "#a268951c-b028-44ad-99ed-5af71765e083")
+    WebElement BottomBanner;
+
 
     DriverHelper driverHelper;
 
@@ -291,7 +297,7 @@ public class ExpertAdvice {
     public void Clickartexpadv() {
 
         this.menuexpadv.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(artexpadv));
         this.artexpadv.click();
         wait.until(ExpectedConditions.visibilityOf(artexpadvElement));
@@ -301,7 +307,7 @@ public class ExpertAdvice {
     public void Clickallcateg() {
 
         this.menuexpadv.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(allcateg));
         this.allcateg.click();
         wait.until(ExpectedConditions.visibilityOf(allcategElement));
@@ -311,7 +317,7 @@ public class ExpertAdvice {
     public void Clickdogbreeding() {
 
         this.menuexpadv.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(dogbreeding));
         this.dogbreeding.click();
         wait.until(ExpectedConditions.visibilityOf(dogbreedingElement));
@@ -321,7 +327,7 @@ public class ExpertAdvice {
     public void Clickgrooming() {
 
         this.menuexpadv.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(grooming));
         this.grooming.click();
         wait.until(ExpectedConditions.visibilityOf(groomingElement));
@@ -331,7 +337,7 @@ public class ExpertAdvice {
     public void Clickhealth() {
 
         this.menuexpadv.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(health));
         this.health.click();
         wait.until(ExpectedConditions.visibilityOf(healthElement));
@@ -342,7 +348,7 @@ public class ExpertAdvice {
     public void Clickhomeliving() {
 
         this.menuexpadv.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(homeliving));
         this.homeliving.click();
         wait.until(ExpectedConditions.visibilityOf(homelivingElement));
@@ -352,7 +358,7 @@ public class ExpertAdvice {
     public void Clicklifestyle() {
 
         this.menuexpadv.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(lifestyle));
         this.lifestyle.click();
         wait.until(ExpectedConditions.visibilityOf(lifestyleElement));
@@ -362,7 +368,7 @@ public class ExpertAdvice {
     public void Clicknews() {
 
         this.menuexpadv.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(news));
         this.news.click();
         wait.until(ExpectedConditions.visibilityOf(newsElement));
@@ -373,7 +379,7 @@ public class ExpertAdvice {
     public void Clicknutrition() {
 
         this.menuexpadv.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(nutrition));
         wait.until(ExpectedConditions.elementToBeClickable(nutrition));
         this.nutrition.click();
@@ -385,7 +391,7 @@ public class ExpertAdvice {
     public void Clickpuppyinfo() {
 
         this.menuexpadv.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(puppyinfo));
         this.puppyinfo.click();
         wait.until(ExpectedConditions.visibilityOf(puppyinfoElement));
@@ -395,7 +401,7 @@ public class ExpertAdvice {
     public void Clicksports() {
 
         this.menuexpadv.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(sports));
         this.sports.click();
         wait.until(ExpectedConditions.visibilityOf(sportsElement));
@@ -405,7 +411,7 @@ public class ExpertAdvice {
     public void Clicktraining() {
 
         this.menuexpadv.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(training));
         this.training.click();
         wait.until(ExpectedConditions.visibilityOf(trainingElement));
@@ -415,7 +421,7 @@ public class ExpertAdvice {
     public void Clickvetcorner() {
 
         this.menuexpadv.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(vetcorner));
         this.vetcorner.click();
         wait.until(ExpectedConditions.visibilityOf(vetcornerElement));
@@ -426,7 +432,7 @@ public class ExpertAdvice {
     public void ClickfindmatchOnExpAdvMenu() {
 
         this.menuexpadv.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(findmatch));
         this.findmatch.click();
         wait.until(ExpectedConditions.visibilityOf(findmatchElement));
@@ -436,7 +442,7 @@ public class ExpertAdvice {
     public void Clickdognamefind() {
 
         this.menuexpadv.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(dognamefind));
         this.dognamefind.click();
         wait.until(ExpectedConditions.visibilityOf(dognamefindElement));
@@ -446,7 +452,7 @@ public class ExpertAdvice {
     public void Clickcandogeat()  {
 
         this.menuexpadv.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(candogeat));
         this.candogeat.click();
         wait.until(ExpectedConditions.visibilityOf(candogeatElement));
@@ -456,7 +462,7 @@ public class ExpertAdvice {
     public void Clickakctv() {
 
         this.menuexpadv.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(akctv));
         this.akctv.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
@@ -467,7 +473,7 @@ public class ExpertAdvice {
     public void Clickakcmag() {
 
         this.menuexpadv.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(akcmag));
         wait.until(ExpectedConditions.elementToBeClickable(akcmag));
         this.akcmag.click();
@@ -478,7 +484,7 @@ public class ExpertAdvice {
     public void Clicknewsletter() {
 
         this.menuexpadv.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(newsletter));
         this.newsletter.click();
         wait.until(ExpectedConditions.visibilityOf(newsletterElement));
@@ -488,7 +494,7 @@ public class ExpertAdvice {
     public void Clickpresscenter() {
 
         this.menuexpadv.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(presscenter));
         this.presscenter.click();
         wait.until(ExpectedConditions.visibilityOf(presscenterElement));
@@ -498,7 +504,7 @@ public class ExpertAdvice {
     public void Clickakcdetection() {
 
         this.menuexpadv.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(akcdetection));
         this.akcdetection.click();
         wait.until(ExpectedConditions.visibilityOf(akcdetectionElement));
@@ -508,7 +514,7 @@ public class ExpertAdvice {
     public void Clickakccanine() {
 
         this.menuexpadv.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(akccanine));
         this.akccanine.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
@@ -519,7 +525,7 @@ public class ExpertAdvice {
     public void Clickgovernment() {
 
         this.menuexpadv.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(government));
         this.government.click();
         wait.until(ExpectedConditions.visibilityOf(governmentElement));
@@ -530,7 +536,7 @@ public class ExpertAdvice {
     public void Clickakceducation() {
 
         this.menuexpadv.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(akceducation));
         this.akceducation.click();
         wait.until(ExpectedConditions.visibilityOf(akceducationElement));
@@ -540,7 +546,7 @@ public class ExpertAdvice {
     public void Clickakclibrary() {
 
         this.menuexpadv.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(akclibrary));
         this.akclibrary.click();
         wait.until(ExpectedConditions.visibilityOf(akclibraryElement));
@@ -550,8 +556,8 @@ public class ExpertAdvice {
     public void SubscriptionForm () {
 
         this.menuexpadv.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(newsletter));
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(newsletter));
         this.newsletter.click();
         wait.until(ExpectedConditions.visibilityOf(newsletterElement));
         this.SubsFormFirstName.sendKeys("Sebas");
@@ -559,6 +565,7 @@ public class ExpertAdvice {
         this.SubsFormEmail.sendKeys("sebas.viquez@gmail.com");
         this.SubsFormBreedName.click();
         this.SubsFormBreedAkita.click();
+        HiddeBanner();
         this.AKCNibbleBox.click();
         this.AKCNibbleTrainingBox.click();
         this.AKCPupDateBox.click();
@@ -578,7 +585,7 @@ public class ExpertAdvice {
     public void allcategArticle() {
 
         this.menuexpadv.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(allcateg));
         this.allcateg.click();
         wait.until(ExpectedConditions.visibilityOf(allcateg));
@@ -590,7 +597,7 @@ public class ExpertAdvice {
     public void dogbreedArticle() {
 
         this.menuexpadv.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(dogbreeding));
         this.dogbreeding.click();
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
@@ -600,7 +607,7 @@ public class ExpertAdvice {
     public void healthArticle() {
 
         this.menuexpadv.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(health));
         this.health.click();
         wait.until(ExpectedConditions.elementToBeClickable(alternativeMed));
@@ -612,7 +619,7 @@ public class ExpertAdvice {
     public void newsArticle() throws InterruptedException {
 
         this.menuexpadv.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(news));
         this.news.click();
         sleep(1000);
@@ -626,7 +633,7 @@ public class ExpertAdvice {
     public void HomelivingArticle() throws InterruptedException {
 
         this.menuexpadv.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(homeliving));
         this.homeliving.click();
         sleep(1000);
@@ -638,12 +645,18 @@ public class ExpertAdvice {
     public void lifestyleArticle() throws InterruptedException {
 
         this.menuexpadv.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(lifestyle));
         this.lifestyle.click();
         sleep(1000);
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         //All elements are check with Eyes method
+    }
+
+    public void HiddeBanner() {
+
+        JavascriptExecutor jse = (JavascriptExecutor)driver;
+        jse.executeScript("arguments[0].style.visibility='hidden'", BottomBanner);
     }
 
 }

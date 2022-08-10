@@ -8,6 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
+
 public class Search {
 
     @FindBy(xpath = "//*[@id='desktop-search']")
@@ -113,7 +115,7 @@ public class Search {
 
         this.search.sendKeys(_searchword.WordSearch);
         this.search.sendKeys(Keys.RETURN);
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(SearchCampImg));
         this.numresults.isDisplayed();
         this.sections.isDisplayed();
@@ -127,7 +129,7 @@ public class Search {
 
         this.HeroBreedSearch.sendKeys(_searchword.WordSearch);
         this.HeroBreedSearch.sendKeys(Keys.RETURN);
-        WebDriverWait wait = new WebDriverWait (driver, 20);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(resultsTitle));
         wait.until(ExpectedConditions.visibilityOf(Characteristics));
 
@@ -137,7 +139,7 @@ public class Search {
 
         this.HeroAsideSearch.sendKeys(_searchword.WordSearch);
         this.HeroAsideSearch.sendKeys(Keys.RETURN);
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(SearchCampImg));
         wait.until(ExpectedConditions.visibilityOf(numresults));
         wait.until(ExpectedConditions.visibilityOf(sections));
@@ -149,7 +151,7 @@ public class Search {
 
     public void ShopSearch(Word _searchword) {
 
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(ShopSearch));
         this.ShopSearch.sendKeys(_searchword.WordSearch);
         this.ShopSearch.sendKeys(Keys.RETURN);
@@ -164,7 +166,7 @@ public class Search {
 
     public void ShopSearchBreed(Word _searchword) {
 
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(dropdown));
         this.dropdown.click();
         wait.until(ExpectedConditions.visibilityOf(ShopSearchBreed));
@@ -180,7 +182,7 @@ public class Search {
     public void ShopDogLoversSearch(Word _searchword) {
 
         driver.navigate().to("https://shop.akc.org/collections/dog-lovers");
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(dropdownDogLover));
         this.driver.get(this.driver.getCurrentUrl() + "?test=true");
         this.dropdownDogLover.click();

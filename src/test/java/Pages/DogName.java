@@ -8,6 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
+
 public class DogName {
 
 
@@ -193,12 +195,10 @@ public class DogName {
 
     public void DogNameVerify() {
 
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(dognametool));
         this.dognametool.click();
         wait.until(ExpectedConditions.visibilityOf(dognameheader));
-        //this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        this.dognameheader.isDisplayed();
         this.male.isDisplayed();
         this.female.isDisplayed();
         this.all.isDisplayed();

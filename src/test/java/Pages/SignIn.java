@@ -9,7 +9,10 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
+
 import static java.lang.Thread.sleep;
+
 
 public class SignIn {
 
@@ -74,7 +77,7 @@ public class SignIn {
     public void signInUser(User _testUser) {
 
         this.iconsignin.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         //wait.until(ExpectedConditions.visibilityOf(CreateAccount));
         this.forgot.isDisplayed();
         this.signinlogo.isDisplayed();
@@ -88,7 +91,7 @@ public class SignIn {
     public void signInUserShop(User _testUser) throws InterruptedException {
 
         this.iconsigninShop.click();
-        WebDriverWait wait = new WebDriverWait (driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(signup));
         this.forgot.isDisplayed();
         this.signinlogo.isDisplayed();
