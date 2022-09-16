@@ -37,8 +37,9 @@ public class SpecsBaseClass extends SuperBaseClass {
         //driver = new SafariDriver();
 
 
-        InitHelpers("https://test-web.akc.org/");
-        //InitHelpers("https://www.akc.org/?test=true");
+        //InitHelpers("https://test-web.akc.org/");
+        InitHelpers("https://dev-web.akc.org/");
+
         InitPages();
 
         driver.get(driverHelper.baseUrl);

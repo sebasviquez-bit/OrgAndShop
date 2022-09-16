@@ -758,7 +758,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void ClickAdd1() {
 
         homepage.ClickAdd1();
@@ -2056,7 +2056,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void VisualHomepageCheck() {
 
         homepage.CheckHomepage();
@@ -2117,7 +2117,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void TerrierBreedPageCheck() {
 
         driver.navigate().to("https://test-web.akc.org/dog-breeds/yorkshire-terrier/");
@@ -2128,7 +2128,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
 
-    @Test
+    //@Test
     public void BulldogBreedPageChek() {
 
         driver.navigate().to("https://test-web.akc.org/dog-breeds/bulldog/");
@@ -2138,7 +2138,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void AkitaBreedPageCheck () {
 
         driver.navigate().to("https://test-web.akc.org/dog-breeds/akita/");

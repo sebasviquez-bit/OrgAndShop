@@ -1397,7 +1397,7 @@ public class Homepage {
 
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.urlContains("https://www."));
+        wait.until(ExpectedConditions.urlContains("http"));
 
     }
 
