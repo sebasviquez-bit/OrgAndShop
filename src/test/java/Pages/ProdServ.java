@@ -526,7 +526,7 @@ public class ProdServ {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOf(puppyvisor));
+        wait.until(ExpectedConditions.elementToBeClickable(puppyvisor));
         this.puppyvisor.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://marketplace.akc.org/"));

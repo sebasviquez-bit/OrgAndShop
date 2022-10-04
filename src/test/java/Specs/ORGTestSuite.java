@@ -2056,7 +2056,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    //@Test
+    @Test
     public void VisualHomepageCheck() {
 
         homepage.CheckHomepage();

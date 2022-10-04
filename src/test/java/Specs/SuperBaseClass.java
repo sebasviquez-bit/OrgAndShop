@@ -3,12 +3,14 @@ package Specs;
 import Helpers.DataHelper;
 import Helpers.DriverHelper;
 import Pages.*;
+import com.applitools.eyes.selenium.Eyes;
 import org.openqa.selenium.WebDriver;
 
 public class SuperBaseClass {
 
     //driver
     WebDriver driver;
+    public Eyes eyes;
 
     //pages
     SignIn signIn;

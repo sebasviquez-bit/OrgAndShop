@@ -16,7 +16,6 @@ import java.time.Duration;
 public class SpecsBaseClass extends SuperBaseClass {
 
     //public WebDriver driver;
-    public Eyes eyes;
 
     @BeforeMethod()
         public void InitializeTests(Method method) {
@@ -37,8 +36,8 @@ public class SpecsBaseClass extends SuperBaseClass {
         //driver = new SafariDriver();
 
 
-        //InitHelpers("https://test-web.akc.org/");
-        InitHelpers("https://dev-web.akc.org/");
+        InitHelpers("https://test-web.akc.org/");
+        //InitHelpers("https://dev-web.akc.org/");
 
         InitPages();
 
