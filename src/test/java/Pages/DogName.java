@@ -1,5 +1,6 @@
 package Pages;
 import Helpers.DriverHelper;
+import Model.User;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -181,6 +182,78 @@ public class DogName {
     @FindBy(xpath = "//html/body/main/div/section/div[4]/ul/li[6]/button")
     WebElement but6;
 
+
+    //New locators
+
+
+    @FindBy(css = "body > main > div > div.dog-name-archive__hero > div > h1")
+    WebElement pageTitle;
+
+    @FindBy(css = "#react-select-2-input")
+    WebElement inputBar;
+
+    @FindBy(css = "body > main > div > div.dog-name-archive__hero > div > div.dog-name-archive__search > form > button.dog-name-archive__search__box__filter-button")
+    WebElement FilterButton;
+
+    @FindBy(css = "body > main > div > div.dog-name-archive__hero > div > div.dog-name-archive__search > form > div.dog-name-archive__search__box__filters.dog-name-archive__search__box__filters--show > div:nth-child(1) > div:nth-child(2) > label > span.checkbox__visual-input")
+    WebElement OneWordFilter;
+
+    @FindBy(css = "body > main > div > div.dog-name-archive__hero > div > div.dog-name-archive__search > form > div.dog-name-archive__search__box__filters.dog-name-archive__search__box__filters--show > div.dog-name-archive__search__box__filter.dog-name-archive__search__box__filter--length > input[type=range]")
+    WebElement LenghtBarFilter;
+
+    @FindBy(css = "body > main > div > div.dog-name-archive__hero > div > div.dog-name-archive__search > form > button.button.dog-name-archive__search__box__submit")
+    WebElement FindNamesButton;
+
+    @FindBy(css = "body > main > div > form > div.dog-name-archive__results__items > div > ul > li:nth-child(1) > a")
+    WebElement AaronName;
+
+    @FindBy(css = "body > main > div > form > div.dog-name-archive__results__items > div > ul > li > a > p")
+    WebElement YodaName;
+
+
+    @FindBy(css = "body > main > div > form > div.dog-name-archive__results__items > div > ul > li:nth-child(1) > a > p")
+    WebElement AlexanderName;
+    //
+
+    @FindBy(css = "body > main > div > div.dog-name-archive__hero > div > div.dog-name-archive__search > a")
+    WebElement SurpriceMeButton;
+
+    @FindBy(css = "body > main > div > form > h2")
+    WebElement SurpriceMeNames;
+
+
+    @FindBy(css = "body > main > div > div.dog-name-archive__section.dog-name-archive__search-by-category > div.dog-name-archive__search-by-category__categories-wrap > form > div > div:nth-child(2)")
+    WebElement PupolarOption;
+
+    @FindBy(css = "body > main > div > div.dog-name-archive__section.dog-name-archive__search-by-category > div.dog-name-archive__search-by-category__categories-wrap > form > button")
+    WebElement GenerateNamesButton;
+
+    @FindBy(css = "body > main > div > div.dog-name-archive__section.dog-name-archive__search-by-category > div.dog-name-archive__search-by-category__pupdate > div > form > div > input")
+    WebElement PupDateEmailInput;
+
+    @FindBy(css = "body > main > div > form > div.dog-name-archive__results__bottom-menus > a")
+    WebElement MySavedNamesButton;
+
+    @FindBy(css = "body > main > div > form > div.dog-name-archive__results__bottom-menus > a")
+    WebElement AaronNameFavoriteIcon;
+
+    @FindBy(css = "body > main > div > div.dog-name-archive__details-overlay > div > div.dog-name-archive__details__buttons > div > a")
+    WebElement SaveToListButton;
+
+    @FindBy(css = "body > main > div > div.dog-name-archive__details-overlay > div > div.dog-name-archive__details__buttons > div > a.button.button--small.dog-name-archive__details__button.dog-name-archive__details__button--saved > svg")
+    WebElement SavedToYourList;
+
+    @FindBy(xpath = "//*[@id=\"gigya-login-form\"]/div[1]/div[3]/input")
+    WebElement userName;
+
+    @FindBy(xpath = "//*[@id=\"gigya-login-form\"]/div[1]/div[4]/input")
+    WebElement password;
+
+    @FindBy(xpath = "//*[@id=\"gigya-login-form\"]/div[3]/div/input")
+    WebElement login;
+
+
+
     DriverHelper driverHelper;
 
     WebDriver driver;
@@ -192,10 +265,9 @@ public class DogName {
     }
 
 
-
     public void DogNameVerify() {
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(dognametool));
         this.dognametool.click();
         wait.until(ExpectedConditions.visibilityOf(dognameheader));
@@ -327,5 +399,80 @@ public class DogName {
         this.but4.isDisplayed();
 
     }
+
+    //New page tests:
+
+    public void DNFTFindNamesResult() {
+
+        driver.navigate().to("https://test-web.akc.org/dog-name-finder/");
+        this.FindNamesButton.click();
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(AaronName));
+
+    }
+
+    public void DNFTSearchNames() {
+
+        driver.navigate().to("https://test-web.akc.org/dog-name-finder/");
+        this.inputBar.sendKeys("Yoda");
+        this.FindNamesButton.click();
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(YodaName));
+
+    }
+
+    public void DNFTSurpriceMe() {
+
+        driver.navigate().to("https://test-web.akc.org/dog-name-finder/");
+        this.SurpriceMeButton.click();
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(SurpriceMeNames));
+
+    }
+
+    public void DNFTFilters() {
+
+        driver.navigate().to("https://test-web.akc.org/dog-name-finder/");
+        this.FilterButton.click();
+        this.LenghtBarFilter.click();
+        this.OneWordFilter.click();
+        this.FindNamesButton.click();
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(AlexanderName));
+
+    }
+
+    public void MySavedNames() {
+
+        driver.navigate().to("https://test-web.akc.org/dog-name-finder/");
+        this.FindNamesButton.click();
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(MySavedNamesButton));
+        this.MySavedNamesButton.click();
+        this.userName.sendKeys("sxv@akc.org");
+        this.password.sendKeys("CypresHill2*");
+        this.login.click();
+        wait.until(ExpectedConditions.elementToBeClickable(MySavedNamesButton));
+        this.MySavedNamesButton.click();
+        wait.until(ExpectedConditions.elementToBeClickable(AaronName));
+
+    }
+
+    public void FavoriteName() {
+
+        driver.navigate().to("https://test-web.akc.org/dog-name-finder/");
+        this.FindNamesButton.click();
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(AaronNameFavoriteIcon));
+        this.AaronNameFavoriteIcon.click();
+        this.userName.sendKeys("sxv@akc.org");
+        this.password.sendKeys("CypresHill2*");
+        this.login.click();
+        wait.until(ExpectedConditions.elementToBeClickable(AaronNameFavoriteIcon));
+        this.AaronNameFavoriteIcon.click();
+        this.AaronName.click();
+
+    }
+
 
 }

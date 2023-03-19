@@ -311,7 +311,7 @@ public class CanMyDogEat {
     public void VerifyCanMyDogEat1() {
 
         this.breedsmenu.click();
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(findmatch));
         this.findmatch.click();
         wait.until(ExpectedConditions.elementToBeClickable(canmydog));
@@ -415,7 +415,7 @@ public class CanMyDogEat {
 
 
         this.breedsmenu.click();
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(findmatch));
         this.findmatch.click();
         wait.until(ExpectedConditions.elementToBeClickable(canmydog));
@@ -424,29 +424,29 @@ public class CanMyDogEat {
         //HiddeBanner();
         wait.until(ExpectedConditions.elementToBeClickable(no1));
         this.no1.click();
-        wait.until(ExpectedConditions.visibilityOf(otheranswer1));
+        wait.until(ExpectedConditions.elementToBeClickable(otheranswer1));
         this.no2.click();
-        wait.until(ExpectedConditions.visibilityOf(otheranswer2));
+        wait.until(ExpectedConditions.elementToBeClickable(otheranswer2));
         this.no3.click();
-        wait.until(ExpectedConditions.visibilityOf(otheranswer3));
+        wait.until(ExpectedConditions.elementToBeClickable(otheranswer3));
         this.no4.click();
-        wait.until(ExpectedConditions.visibilityOf(otheranswer4));
+        wait.until(ExpectedConditions.elementToBeClickable(otheranswer4));
         this.no5.click();
-        wait.until(ExpectedConditions.visibilityOf(otheranswer5));
+        wait.until(ExpectedConditions.elementToBeClickable(otheranswer5));
         this.no6.click();
-        wait.until(ExpectedConditions.visibilityOf(otheranswer6));
+        wait.until(ExpectedConditions.elementToBeClickable(otheranswer6));
         this.no7.click();
-        wait.until(ExpectedConditions.visibilityOf(otheranswer7));
+        wait.until(ExpectedConditions.elementToBeClickable(otheranswer7));
         this.no8.click();
-        wait.until(ExpectedConditions.visibilityOf(otheranswer8));
+        wait.until(ExpectedConditions.elementToBeClickable(otheranswer8));
         this.no9.click();
-        wait.until(ExpectedConditions.visibilityOf(otheranswer9));
+        wait.until(ExpectedConditions.elementToBeClickable(otheranswer9));
         this.no10.click();
-        wait.until(ExpectedConditions.visibilityOf(otheranswer10));
+        wait.until(ExpectedConditions.elementToBeClickable(otheranswer10));
         this.no11.click();
-        wait.until(ExpectedConditions.visibilityOf(otheranswer11));
+        wait.until(ExpectedConditions.elementToBeClickable(otheranswer11));
         this.no12.click();
-        wait.until(ExpectedConditions.visibilityOf(otheranswer12));
+        wait.until(ExpectedConditions.elementToBeClickable(otheranswer12));
         this.results.isDisplayed();
         this.resultsimg.isDisplayed();
         this.suggestion.isDisplayed();

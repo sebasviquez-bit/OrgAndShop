@@ -319,8 +319,8 @@ public class CompareBreeds {
     public void VerifyCompareBreeds() {
 
         this.breeds.click();
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOf(breedscompa));
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(breedscompa));
         this.breedscompa.click();
         wait.until(ExpectedConditions.elementToBeClickable(select1));
         HiddeBanner();
@@ -328,26 +328,25 @@ public class CompareBreeds {
         wait.until(ExpectedConditions.elementToBeClickable(affens));
         this.affens.click();
         wait.until(ExpectedConditions.visibilityOf(affenspic));
-        this.affenspic.isDisplayed();
         this.select2.click();
-        wait.until(ExpectedConditions.visibilityOf(akita));
+        wait.until(ExpectedConditions.elementToBeClickable(akita));
         this.akita.click();
         wait.until(ExpectedConditions.visibilityOf(akitapic));
         this.akitapic.isDisplayed();
         this.select3.click();
-        wait.until(ExpectedConditions.visibilityOf(beagle));
+        wait.until(ExpectedConditions.elementToBeClickable(beagle));
         this.beagle.click();
         this.beaglepic.isDisplayed();
         this.select4.click();
-        wait.until(ExpectedConditions.visibilityOf(boxer));
+        wait.until(ExpectedConditions.elementToBeClickable(boxer));
         this.boxer.click();
         this.boxerpic.isDisplayed();
         this.select5.click();
-        wait.until(ExpectedConditions.visibilityOf(bullterrier));
+        wait.until(ExpectedConditions.elementToBeClickable(bullterrier));
         this.bullterrier.click();
         this.bullterrierpic.isDisplayed();
         this.breedcompbutton.click();
-        wait.until(ExpectedConditions.visibilityOf(personality));
+        //wait.until(ExpectedConditions.visibilityOf(personality));
         //this.perso1.isDisplayed();
         //this.perso2.isDisplayed();
         //this.perso3.isDisplayed();

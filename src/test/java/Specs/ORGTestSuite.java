@@ -3,6 +3,7 @@ package Specs;
 import Helpers.DataHelper;
 import Model.User;
 import Model.Word;
+import Pages.BreedSelectorTool;
 import com.applitools.eyes.RectangleSize;
 import com.applitools.eyes.selenium.fluent.Target;
 import org.testng.annotations.Test;
@@ -83,26 +84,14 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
+    //New BreedSelectorTool Page tests
     @Test
-    public void BreedSelectorVerify1() {
+    public void VerifyBreedSelectorTool() {
 
-        breedSelector.VerifyBreedSelector1();
-
+        breedSelectorTool.VerifyBreedSelectorTool();
     }
 
-    @Test
-    public void BreedSelectorVerify2() {
 
-        breedSelector.VerifyBreedSelector2();
-
-    }
-
-    @Test
-    public void BreedSelectorVerify3() {
-
-        breedSelector.VerifyBreedSelector3();
-
-    }
 
     @Test
     public void VerifyDogName() {
@@ -110,6 +99,50 @@ public class ORGTestSuite extends SpecsBaseClass {
         dogName.DogNameVerify();
 
     }
+
+    //New DNFT
+    @Test
+    public void DNFTFindNamesResult() {
+
+        dogName.DNFTFindNamesResult();
+
+    }
+
+    @Test
+    public void DNFTSearchNames() {
+
+        dogName.DNFTSearchNames();
+
+    }
+
+    @Test
+    public void DNFTSurpriceMe() {
+
+        dogName.DNFTSurpriceMe();
+
+    }
+
+    @Test
+    public void DNFTFilters() {
+
+        dogName.DNFTFilters();
+
+    }
+
+    @Test
+    public void MySavedNames() {
+
+        dogName.MySavedNames();
+
+    }
+
+    @Test
+    public void FavoriteName() {
+
+        dogName.FavoriteName();
+
+    }
+
 
     @Test
     public void CanMyDogEatVerify1() {
@@ -783,9 +816,9 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickexplorebreeds() {
+    public void SmallBreeds() {
 
-        breeds.Clickexplorebreeds();
+        breeds.ClickExploreSmallBreeds();
 
     }
 
@@ -811,9 +844,9 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickchooseabreed() {
+    public void ClickChooseABreed() {
 
-        breeds.Clickchooseabreed();
+        breeds.ClickChooseBreed();
 
     }
 
@@ -1114,14 +1147,14 @@ public class ORGTestSuite extends SpecsBaseClass {
     @Test
     public void Clickdna() {
 
-        prodserv.Clickdna();
+        prodserv.ClickdnaHealthTest();
 
     }
 
     @Test
-    public void ClickakctvProdServ() {
+    public void ClickDNAKitActProdServ() {
 
-        prodserv.ClickakctvProdServ();
+        prodserv.ClickDNAKitActProdServ();
 
     }
 
@@ -1293,7 +1326,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void Clickakccanineretreat() {
 
         prodserv.Clickakccanineretreat();
@@ -1830,7 +1863,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void Clickformclub() {
 
         clubsDelegates.Clickformclub();
@@ -1855,6 +1888,13 @@ public class ORGTestSuite extends SpecsBaseClass {
     public void Clickclubresources() {
 
         clubsDelegates.Clickclubresources();
+
+    }
+
+    @Test
+    public void ClickCentennialsClub() {
+
+        clubsDelegates.ClickCentennialsClub(); //ONLY available on prod
 
     }
 
@@ -1977,21 +2017,6 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-
-    @Test
-    public void ForDogOwnerArticle1() {
-
-        breeds.ForDogOwnerArticle1();
-
-    }
-
-    //@Test
-    public void allcategArticle() throws InterruptedException {
-
-        expertAdvice.allcategArticle();   //This test was replaced by a Visual test below >
-
-    }
-
     @Test
     public void healthArticle() {
 
@@ -2027,12 +2052,6 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
-    public void ProdServArticle3() {
-
-        prodserv.ProdServArticle3();
-
-    }
 
     //SportsEvents Menu Articles >
 
@@ -2066,11 +2085,11 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    //@Test
-    public void VisualClickexplorebreeds() {
+    @Test
+    public void VisualExploreSmallBreeds() {
 
-        breeds.Clickexplorebreeds();
-        eyes.open(driver, "AKC", "Clickexplorebreeds", new RectangleSize(1430, 670));
+        breeds.ClickExploreSmallBreeds();
+        eyes.open(driver, "AKC", "ClickExploreSmallBreeds", new RectangleSize(1430, 670));
         eyes.check("BreedMenu", Target.window());
         eyes.close();
 
@@ -2117,7 +2136,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    //@Test
+    @Test
     public void TerrierBreedPageCheck() {
 
         driver.navigate().to("https://test-web.akc.org/dog-breeds/yorkshire-terrier/");
@@ -2128,7 +2147,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
 
-    //@Test
+    @Test
     public void BulldogBreedPageChek() {
 
         driver.navigate().to("https://test-web.akc.org/dog-breeds/bulldog/");

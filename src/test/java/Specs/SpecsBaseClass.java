@@ -6,11 +6,13 @@ import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import java.lang.reflect.Method;
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 
 public class SpecsBaseClass extends SuperBaseClass {
@@ -21,8 +23,9 @@ public class SpecsBaseClass extends SuperBaseClass {
         public void InitializeTests(Method method) {
 
         ChromeOptions options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
         //options.addArguments("headless");
-        //options.addArguments("--incognito"); //This is being use as a fix for "unknown error: cannot determine loading status" on v103. FYI
+        //options.addArguments("--incognito");
         //options.addArguments("disable-dev-shm-usage");
 
         //Map<String, String> mobileEmulation = new HashMap<>();
@@ -38,22 +41,26 @@ public class SpecsBaseClass extends SuperBaseClass {
 
         InitHelpers("https://test-web.akc.org/");
         //InitHelpers("https://dev-web.akc.org/");
+        //InitHelpers("https://test-commerce-content.pantheonsite.io/");
+
 
         InitPages();
 
         driver.get(driverHelper.baseUrl);
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 
         this.eyes = new Eyes();
         this.eyes.setApiKey("z9croAylAJ31BCxQ9g0BdZE0ul770cXrtqRuwWv8A8g110");    //.ORG API KEY
         //this.eyes.setApiKey("BPfSxtkBRJAMWYb8LGUn7G0DzwYdm8JiJPyed104Df5cs110");   //SHOP API KEY
+        //this.eyes.setApiKey("ZzXpxdWICxbN109lJ8PW50oLCrUgnqtYK11G5rWja5f108g110");   //Retrievist API KEY
         //this.eyes.setConfiguration(VisualGridConfig.getGrid());
         this.eyes.setLogHandler(new StdoutLogHandler());
         this.eyes.setForceFullPageScreenshot(true);
         this.eyes.setStitchMode(StitchMode.CSS);
         this.eyes.setMatchLevel(MatchLevel.CONTENT);
-        this.eyes.setSendDom(true); //RCA related
+        //this.eyes.setSendDom(true); //RCA related
 
     }
 

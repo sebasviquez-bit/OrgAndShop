@@ -22,11 +22,11 @@ public class SuperBaseClass {
     SportsEvents sportsEvents;
     ClubsDelegates clubsDelegates;
     CompareBreeds compareBreeds;
-    BreedSelector breedSelector;
     DogName dogName;
     CanMyDogEat canMyDogEat;
     RegisterDog registerDog;
     Search search;
+    BreedSelectorTool breedSelectorTool;
 
     //helpers
     DataHelper dataHelper;
@@ -44,11 +44,11 @@ public class SuperBaseClass {
         sportsEvents = new SportsEvents(this.driver);
         clubsDelegates = new ClubsDelegates(this.driver);
         compareBreeds = new CompareBreeds(this.driver);
-        breedSelector = new BreedSelector(this.driver);
         dogName= new DogName(this.driver);
         canMyDogEat= new CanMyDogEat(this.driver);
         registerDog= new RegisterDog(this.driver);
         search= new Search(this.driver);
+        breedSelectorTool= new BreedSelectorTool(this.driver);
 
     }
 

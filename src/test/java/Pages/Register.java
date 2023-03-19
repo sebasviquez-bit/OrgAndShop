@@ -65,8 +65,8 @@ public class Register {
     // Registro de usuario .ORG
     public void registerUser(User _testUser) {
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOf(iconsignin));
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(iconsignin));
         this.iconsignin.click();
         wait.until(ExpectedConditions.visibilityOf(CreateAccount));
         this.CreateAccount.click();
@@ -90,10 +90,10 @@ public class Register {
     // Registro de usuario SHOP
     public void registerUserShop(User _testUser) {
 
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOf(iconsigninShop));
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(iconsigninShop));
         this.iconsigninShop.click();
-        wait.until(ExpectedConditions.visibilityOf(CreateAccount));
+        wait.until(ExpectedConditions.elementToBeClickable(CreateAccount));
         this.CreateAccount.click();
         wait.until(ExpectedConditions.visibilityOf(userName));
         this.userName.sendKeys(_testUser.username);
@@ -105,7 +105,7 @@ public class Register {
         this.password1.sendKeys(_testUser.password1);
         wait.until(ExpectedConditions.visibilityOf(password2));
         this.password2.sendKeys(_testUser.password2);
-        wait.until(ExpectedConditions.visibilityOf(registrarse));
+        wait.until(ExpectedConditions.elementToBeClickable(registrarse));
         this.registrarse.click();
         wait.until(ExpectedConditions.visibilityOf(NameProfileShop));
 

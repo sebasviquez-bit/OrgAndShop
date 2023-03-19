@@ -40,14 +40,18 @@ public class ClubsDelegates {
     @FindBy(xpath = "//*[@id=\"clubs-delegates\"]/div[2]/div/div/div/ul/li[2]/a")
     WebElement formclub;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[5]/div[2]/div/div/div/ul/li[3]/a")
+    @FindBy(css = "#clubs-delegates > div:nth-child(2) > div > div > div > ul > li:nth-child(4) > a")
     WebElement clubdevelop;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[5]/div[2]/div/div/div/ul/li[4]/a")
+    @FindBy(css = "#clubs-delegates > div:nth-child(2) > div > div > div > ul > li:nth-child(5) > a")
     WebElement promoteclub;
 
-    @FindBy(css = "#clubs-delegates > div:nth-child(2) > div > div > div > ul > li:nth-child(5) > a")
+    @FindBy(css = "#clubs-delegates > div:nth-child(2) > div > div > div > ul > li:nth-child(6) > a")
     WebElement clubresources;
+
+    @FindBy(css = "#clubs-delegates > div:nth-child(2) > div > div > div > ul > li:nth-child(7) > a")
+    WebElement CentennialClubs;
+    //
 
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[5]/div[3]/div/h3")
     WebElement fordelegates;
@@ -181,7 +185,7 @@ public class ClubsDelegates {
     public void VerifyClubsDelegates() {
 
         this.clubdelegat.click();
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOf(findclub));
         this.searchallclub.isDisplayed();
         this.findanevent.isDisplayed();
@@ -219,22 +223,21 @@ public class ClubsDelegates {
     public void Clicksearchallclub() {
 
         this.clubdelegat.click();
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOf(searchallclub));
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(searchallclub));
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("scroll(253, 12);");
         this.searchallclub.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
-        wait.until(ExpectedConditions.urlContains("https://webapps.akc.org/"));
+        wait.until(ExpectedConditions.urlContains("/club-search/"));
 
     }
 
     public void Clickfindanevent() {
 
         this.clubdelegat.click();
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOf(findanevent));
-        this.findanevent.isDisplayed();
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(findanevent));
         this.findanevent.click();
         wait.until(ExpectedConditions.visibilityOf(findaneventElement));
         //this.driver.get(this.driver.getCurrentUrl()+"?test=true");
@@ -244,29 +247,29 @@ public class ClubsDelegates {
     public void Clicktrainclass() {
 
         this.clubdelegat.click();
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(trainclass));
         this.trainclass.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
-        wait.until(ExpectedConditions.urlContains("https://webapps.akc.org/"));
+        wait.until(ExpectedConditions.urlContains("/obedience-training-club/"));
 
     }
 
     public void Clickaboutclub() {
 
         this.clubdelegat.click();
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(aboutclub));
         this.aboutclub.click();
         wait.until(ExpectedConditions.visibilityOf(aboutclubElement));
 
     }
 
-    public void Clickformclub() {
+    public void Clickformclub() { //This option was removed from the menu
 
         this.clubdelegat.click();
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOf(formclub));
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(formclub));
         this.formclub.click();
         wait.until(ExpectedConditions.visibilityOf(formclubElement));
 
@@ -275,42 +278,47 @@ public class ClubsDelegates {
     public void Clickclubdevelop() {
 
         this.clubdelegat.click();
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOf(clubdevelop));
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(clubdevelop));
         this.clubdevelop.click();
         wait.until(ExpectedConditions.visibilityOf(clubdevelopElement));
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-        this.clubdevelopElement.isDisplayed();
 
     }
 
     public void Clickpromoteclub() {
 
         this.clubdelegat.click();
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOf(promoteclub));
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(promoteclub));
         this.promoteclub.click();
-        wait.until(ExpectedConditions.visibilityOf(promoteclubElement));
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
-
+        wait.until(ExpectedConditions.urlContains("/promote/"));
 
     }
 
     public void Clickclubresources() {
 
         this.clubdelegat.click();
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(clubresources));
         this.clubresources.click();
-        //this.driver.get(this.driver.getCurrentUrl()+"?test=true");
         wait.until(ExpectedConditions.visibilityOf(clubresourcesElement));
+
+    }
+
+    public void ClickCentennialsClub() {
+
+        this.clubdelegat.click();
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(CentennialClubs));  //ONLY available on prod
+        this.CentennialClubs.click();
+        wait.until(ExpectedConditions.urlContains("/centennial-clubs/"));
 
     }
 
     public void Clickdelegatespor() {
 
         this.clubdelegat.click();
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(delegatespor));
         this.delegatespor.click();
         wait.until(ExpectedConditions.visibilityOf(delegatesporElement));
@@ -320,7 +328,7 @@ public class ClubsDelegates {
     public void Clickdelegatesdir() {
 
         this.clubdelegat.click();
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(delegatesdir));
         this.delegatesdir.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
@@ -331,7 +339,7 @@ public class ClubsDelegates {
     public void Clickdelegatesmeet() {
 
         this.clubdelegat.click();
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(delegatesmeet));
         this.delegatesmeet.click();
         wait.until(ExpectedConditions.visibilityOf(delegatesmeetElement));
@@ -341,10 +349,9 @@ public class ClubsDelegates {
     public void Clickboardmin() {
 
         this.clubdelegat.click();
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(boardmin));
         this.boardmin.click();
-        this.driver.get(this.driver.getCurrentUrl()+"?test=true");
         wait.until(ExpectedConditions.visibilityOf(boardminElement));
 
     }
@@ -352,7 +359,7 @@ public class ClubsDelegates {
     public void Clickdelegatestan() {
 
         this.clubdelegat.click();
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(delegatestan));
         this.delegatestan.click();
         wait.until(ExpectedConditions.visibilityOf(delegatestanElement));
@@ -362,7 +369,7 @@ public class ClubsDelegates {
     public void Clickperspective() {
 
         this.clubdelegat.click();
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(perspective));
         this.perspective.click();
         wait.until(ExpectedConditions.visibilityOf(perspectiveElement));
@@ -372,7 +379,7 @@ public class ClubsDelegates {
     public void Clickakcgazette() {
 
         this.clubdelegat.click();
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(akcgazette));
         this.akcgazette.click();
         wait.until(ExpectedConditions.visibilityOf(akcgazetteElement));
@@ -382,7 +389,7 @@ public class ClubsDelegates {
     public void Clickrolakcdel() {
 
         this.clubdelegat.click();
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(rolakcdel));
         this.rolakcdel.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
@@ -393,29 +400,29 @@ public class ClubsDelegates {
     public void Clickimportance() {
 
         this.clubdelegat.click();
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOf(importance));
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(importance));
         this.importance.click();
-        wait.until(ExpectedConditions.urlMatches("http://images.akc.org/pdf/The_Importance_of_Your_AKC_Delegate_2018.pdf"));
+        wait.until(ExpectedConditions.urlMatches("https://images.akc.org/pdf/The_Importance_of_Your_AKC_Delegate_2018.pdf"));
 
     }
 
     public void Clicklegisla() {
 
         this.clubdelegat.click();
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(legisla));
         this.legisla.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
-        wait.until(ExpectedConditions.urlContains("https://cqrcengage.com/akc/lac"));
+        wait.until(ExpectedConditions.urlContains("https://www.votervoice.net/"));
 
     }
 
     public void Clicklegislaalarm() {
 
         this.clubdelegat.click();
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOf(legislaalarm));
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(legislaalarm));
         this.legislaalarm.click();
         wait.until(ExpectedConditions.visibilityOf(legislaalarmElement));
 
@@ -424,8 +431,8 @@ public class ClubsDelegates {
     public void Clickakcpac() {
 
         this.clubdelegat.click();
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOf(akcpac));
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(akcpac));
         this.akcpac.click();
         wait.until(ExpectedConditions.visibilityOf(akcpacElement));
 
@@ -434,7 +441,7 @@ public class ClubsDelegates {
     public void Clickgovernrelat() {
 
         this.clubdelegat.click();
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(governrelat));
         this.governrelat.click();
         wait.until(ExpectedConditions.visibilityOf(governrelatElement));
@@ -444,7 +451,7 @@ public class ClubsDelegates {
     public void Clickovercollec() {
 
         this.clubdelegat.click();
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(overcollec));
         this.overcollec.click();
         wait.until(ExpectedConditions.visibilityOf(overcollecElement));
@@ -454,7 +461,7 @@ public class ClubsDelegates {
     public void Clickclubarchives() {
 
         this.clubdelegat.click();
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(clubarchives));
         this.clubarchives.click();
         wait.until(ExpectedConditions.visibilityOf(clubarchivesElement));
@@ -464,7 +471,7 @@ public class ClubsDelegates {
     public void Clicksearchlib() {
 
         this.clubdelegat.click();
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(searchlib));
         this.searchlib.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
@@ -475,7 +482,7 @@ public class ClubsDelegates {
     public void Clickhowtovisit() {
 
         this.clubdelegat.click();
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(howtovisit));
         this.howtovisit.click();
         wait.until(ExpectedConditions.visibilityOf(howtovisitElement));

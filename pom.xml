@@ -11,8 +11,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.target>16</maven.compiler.target>
-        <maven.compiler.source>16</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
     </properties>
 
     <dependencies>
@@ -20,13 +20,13 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.4.0</version>
+            <version>4.8.1</version>
         </dependency>
 
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.6.1</version>
+            <version>7.7.0</version>
             <scope>test</scope>
         </dependency>
 
@@ -39,8 +39,8 @@
         <!-- Applitools SDK -->
         <dependency>
             <groupId>com.applitools</groupId>
-            <artifactId>eyes-selenium-java3</artifactId>
-            <version>5.0.0</version>
+            <artifactId>eyes-selenium-java4</artifactId>
+            <version>4.14.0</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
