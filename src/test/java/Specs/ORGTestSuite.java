@@ -5,6 +5,7 @@ import Model.User;
 import Model.Word;
 import Pages.BreedSelectorTool;
 import com.applitools.eyes.RectangleSize;
+import com.applitools.eyes.selenium.capture.FullPageCaptureAlgorithm;
 import com.applitools.eyes.selenium.fluent.Target;
 import org.testng.annotations.Test;
 
@@ -2079,7 +2080,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     public void VisualHomepageCheck() {
 
         homepage.CheckHomepage();
-        eyes.open(driver, "AKC", "CheckHomepage", new RectangleSize(1430, 680));
+        eyes.open(driver, "AKC", "CheckHomepage");
         eyes.check("HomepageCheck", Target.window());
         eyes.close();
 
@@ -2089,7 +2090,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     public void VisualExploreSmallBreeds() {
 
         breeds.ClickExploreSmallBreeds();
-        eyes.open(driver, "AKC", "ClickExploreSmallBreeds", new RectangleSize(1430, 670));
+        eyes.open(driver, "AKC", "ClickExploreSmallBreeds");
         eyes.check("BreedMenu", Target.window());
         eyes.close();
 
@@ -2140,7 +2141,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     public void TerrierBreedPageCheck() {
 
         driver.navigate().to("https://test-web.akc.org/dog-breeds/yorkshire-terrier/");
-        eyes.open(driver, "AKC", "TerrierBreedPageCheck", new RectangleSize(1420, 680));
+        eyes.open(driver, "AKC", "TerrierBreedPageCheck");
         eyes.check("EAmenu", Target.window());
         eyes.close();
 

@@ -660,7 +660,7 @@ public class ProdServ {
         wait.until(ExpectedConditions.elementToBeClickable(akcreunite));
         this.akcreunite.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
-        wait.until(ExpectedConditions.urlContains("akcreunite.org/"));
+        wait.until(ExpectedConditions.urlContains("/akcreunite.org/"));
 
     }
 
