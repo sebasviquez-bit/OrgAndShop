@@ -4,6 +4,7 @@ import Model.User;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -14,8 +15,11 @@ import java.time.Duration;
 public class DogName {
 
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[1]/div/div[2]/nav/a[1]")
-    WebElement breedsmenu;
+    @FindBy(css = "#site-header > div > div.desktop-header > div > div.primary-nav > nav > a:nth-child(2)")
+    WebElement ExpertAdvicemenu;
+
+    @FindBy(css = "#expert-advice > div:nth-child(3) > div > div > div > ul > li:nth-child(2) > a")
+    WebElement EAmenuDNF;
 
     @FindBy(css = "body > div.page-home.bgc-white.cmw > div.breed-feature > div.breed-feature__wrapper > div.breed-feature__col.breed-feature__content-col > div > div > div > div.tool-grid__wrap > div:nth-child(4) > a")
     WebElement dognametool;
@@ -267,7 +271,7 @@ public class DogName {
 
     public void DogNameVerify() {
 
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(dognametool));
         this.dognametool.click();
         wait.until(ExpectedConditions.visibilityOf(dognameheader));
@@ -404,19 +408,23 @@ public class DogName {
 
     public void DNFTFindNamesResult() {
 
-        driver.navigate().to("https://test-web.akc.org/dog-name-finder/");
+        //driver.navigate().to("https://test-web.akc.org/dog-name-finder/");
+        this.ExpertAdvicemenu.click();
+        this.EAmenuDNF.click();
         this.FindNamesButton.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(AaronName));
 
     }
 
     public void DNFTSearchNames() {
 
-        driver.navigate().to("https://test-web.akc.org/dog-name-finder/");
+        this.ExpertAdvicemenu.click();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(EAmenuDNF));
+        this.EAmenuDNF.click();
         this.inputBar.sendKeys("Yoda");
         this.FindNamesButton.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(YodaName));
 
     }
@@ -425,7 +433,7 @@ public class DogName {
 
         driver.navigate().to("https://test-web.akc.org/dog-name-finder/");
         this.SurpriceMeButton.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(SurpriceMeNames));
 
     }
@@ -437,7 +445,7 @@ public class DogName {
         this.LenghtBarFilter.click();
         this.OneWordFilter.click();
         this.FindNamesButton.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(AlexanderName));
 
     }
@@ -446,7 +454,7 @@ public class DogName {
 
         driver.navigate().to("https://test-web.akc.org/dog-name-finder/");
         this.FindNamesButton.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(MySavedNamesButton));
         this.MySavedNamesButton.click();
         this.userName.sendKeys("sxv@akc.org");
@@ -462,7 +470,7 @@ public class DogName {
 
         driver.navigate().to("https://test-web.akc.org/dog-name-finder/");
         this.FindNamesButton.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(AaronNameFavoriteIcon));
         this.AaronNameFavoriteIcon.click();
         this.userName.sendKeys("sxv@akc.org");

@@ -319,7 +319,7 @@ public class CompareBreeds {
     public void VerifyCompareBreeds() {
 
         this.breeds.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(breedscompa));
         this.breedscompa.click();
         wait.until(ExpectedConditions.elementToBeClickable(select1));

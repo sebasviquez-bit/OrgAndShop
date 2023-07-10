@@ -198,10 +198,10 @@ public class Homepage {
     @FindBy(css = "#right-content-2 > a:nth-child(2) > img")
     WebElement akctvimg2;
 
-    @FindBy(css = "#right-content-2 > a:nth-child(3) > img")
+    @FindBy(css = "#right-content-2 > a:nth-child(3)")
     WebElement akctvimg3;
 
-    @FindBy(css = "#right-content-2 > a:nth-child(4) > img")
+    @FindBy(css = "#right-content-2 > a:nth-child(4)")
     WebElement akctvimg4;
 
     @FindBy(css = "body > div.page-home.bgc-white.cmw > div.featured-content-preview.featured-content-preview--dark > div.featured-content-preview__content.featured-content-preview__inner.slick-initialized.slick-slider")
@@ -381,7 +381,7 @@ public class Homepage {
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("https://marketplace.akc.org/"));
 
     }
@@ -390,7 +390,7 @@ public class Homepage {
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("https://shop.akc.org/"));
 
     }
@@ -399,7 +399,7 @@ public class Homepage {
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("https://akc.tv/"));
 
     }
@@ -408,7 +408,7 @@ public class Homepage {
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("https://akc.tv/"));
 
     }
@@ -417,7 +417,7 @@ public class Homepage {
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("https://channelstore.roku.com/"));
 
     }
@@ -426,7 +426,7 @@ public class Homepage {
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("https://apps.apple.com/us/app/akc-tv"));
 
     }
@@ -435,7 +435,7 @@ public class Homepage {
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("https://www.amazon.com/gp/"));
 
     }
@@ -444,7 +444,7 @@ public class Homepage {
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("https://"));
         //this.driver.get(this.driver.getCurrentUrl() + "?test=true");
 
@@ -454,7 +454,7 @@ public class Homepage {
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("akc.org/dog-breeds/"));
 
     }
@@ -463,7 +463,7 @@ public class Homepage {
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("akcchf.org"));
 
     }
@@ -472,7 +472,7 @@ public class Homepage {
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("/akc-rescue-network/"));
 
     }
@@ -481,7 +481,7 @@ public class Homepage {
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("akcreunite"));
 
     }
@@ -490,7 +490,7 @@ public class Homepage {
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("akchumanefund.org/"));
 
     }
@@ -499,7 +499,7 @@ public class Homepage {
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("museum"));
 
     }
@@ -508,7 +508,7 @@ public class Homepage {
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("akc.org/clubs-delegates/government-relations/"));
 
     }
@@ -517,7 +517,7 @@ public class Homepage {
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("akc.org/sports/conformation/"));
 
     }
@@ -526,7 +526,7 @@ public class Homepage {
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("akc.org/sports/obedience/"));
 
     }
@@ -535,7 +535,7 @@ public class Homepage {
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("akc.org/sports/rally/"));
 
     }
@@ -544,7 +544,7 @@ public class Homepage {
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("akc.org/sports/agility/"));
 
     }
@@ -553,7 +553,7 @@ public class Homepage {
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("akc.org/sports/tracking/"));
 
     }
@@ -562,7 +562,7 @@ public class Homepage {
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("akc.org/sports/herding/"));
 
     }
@@ -571,7 +571,7 @@ public class Homepage {
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("akc.org/sports/earthdog/"));
 
     }
@@ -580,7 +580,7 @@ public class Homepage {
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("akc.org/sports/pointing-breeds/"));
 
     }
@@ -589,7 +589,7 @@ public class Homepage {
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("akc.org/sports/coursing/fast-cat/"));
 
     }
@@ -598,7 +598,7 @@ public class Homepage {
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("akc.org/sports/field-events-hounds/coonhound/"));
 
     }
@@ -607,7 +607,7 @@ public class Homepage {
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("akc.org/sports/akc-scent-work/"));
 
     }
@@ -616,7 +616,7 @@ public class Homepage {
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("akc.org/sports/trick-dog/about-trick-dog/"));
 
     }
@@ -625,7 +625,7 @@ public class Homepage {
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("akc.org/sports/field-events-hounds/basset-hound-field-trials/"));
 
     }
@@ -634,7 +634,7 @@ public class Homepage {
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("akc.org/sports/herding/farm-dog-certified-test/"));
 
     }
@@ -643,7 +643,7 @@ public class Homepage {
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("akc.org/sports/coursing/lure-coursing/"));
 
     }
@@ -652,7 +652,7 @@ public class Homepage {
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("/coursing/"));
 
     }
@@ -661,7 +661,7 @@ public class Homepage {
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("apps.akc.org/apps/event_calendar/"));
 
     }
@@ -670,7 +670,7 @@ public class Homepage {
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("akc.org/register/"));
 
     }
@@ -679,14 +679,14 @@ public class Homepage {
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("https://"));
 
     }
 
     public void CheckHomepage()  {  //Video section was removed from CMS on Sprint April0720
 
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(akcicon));
         this.headerhome.isDisplayed();
         this.picthome.isDisplayed();
@@ -722,7 +722,7 @@ public class Homepage {
 
     public void Verifytopmenu() {
 
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(eventsearch));
         this.findpuppy.isDisplayed();
         this.regdog.isDisplayed();
@@ -738,7 +738,7 @@ public class Homepage {
 
     public void VerifyAKCAbouticon() { //THIS ICON WAS REMOVED FROM HOMEPAGE
 
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(aboutakcicon));
         this.aboutakcicon.click();
         wait.until(ExpectedConditions.visibilityOf(aboutval));
@@ -747,7 +747,7 @@ public class Homepage {
 
     public void VerifyTrainingicon() {
 
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(trainicon));
         this.trainicon.click();
         wait.until(ExpectedConditions.visibilityOf(trainval));
@@ -756,7 +756,7 @@ public class Homepage {
 
     public void VerifyRegistericon() {
 
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(registericon));
         this.registericon.click();
         wait.until(ExpectedConditions.visibilityOf(regisval));
@@ -766,7 +766,7 @@ public class Homepage {
     public void VerifySportsicon() {
 
         //HiddeBanner();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(sportsicon));
         this.sportsicon.click();
         valid2();
@@ -776,7 +776,7 @@ public class Homepage {
     public void VerifyAKCCareicon() {  //THIS ICON WAS REMOVED FROM HOMEPAGE 02/13/21
 
         HiddeBanner();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(careicon));
         this.careicon.click();
         wait.until(ExpectedConditions.visibilityOf(akccareval));
@@ -785,7 +785,7 @@ public class Homepage {
 
     public void VerifyFindPuppiesicon() {
 
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(findpuppyicon));
         this.findpuppyicon.click();
         valid1();
@@ -794,7 +794,7 @@ public class Homepage {
 
     public void VerifyShopicon() {
 
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(shopicon));
         this.shopicon.click();
         valid2();
@@ -804,7 +804,7 @@ public class Homepage {
     public void VerifyAKCTVicon() {
 
         //HiddeBanner();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(akctvicon));
         this.akctvicon.click();
         valid3();
@@ -814,7 +814,7 @@ public class Homepage {
     public void VerifyPetInsuIcon() {
 
         //HiddeBanner();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(PetInsuIcon));
         this.PetInsuIcon.click();
         validPetInsurance();
@@ -823,7 +823,7 @@ public class Homepage {
 
     public void UsabillaFeedback() {
 
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(FeedbackBut));
         assert(FeedbackBut.isEnabled());
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("body > div.usabilla_live_button_container > iframe")));
@@ -832,7 +832,7 @@ public class Homepage {
 
     public void SpecificFeedback() {
 
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(FeedbackBut));
         this.FeedbackBut.click();
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("body > div.usabilla_scroller_area > iframe")));
@@ -843,7 +843,7 @@ public class Homepage {
 
     public void GeneralFeedback() {
 
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(FeedbackBut));
         this.FeedbackBut.click();
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("body > div.usabilla_scroller_area > iframe")));
@@ -855,7 +855,7 @@ public class Homepage {
     public void VerifyTopstory1() {
 
         //HiddeBanner();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(topsto1));
         this.topsto1.click();
         wait.until(ExpectedConditions.urlContains("akc.org/"));
@@ -865,7 +865,7 @@ public class Homepage {
     public void VerifyTopstory2() {
 
         //HiddeBanner();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(topsto1));
         this.topsto2.click();
         wait.until(ExpectedConditions.urlContains("akc.org/"));
@@ -875,7 +875,7 @@ public class Homepage {
     public void VerifyTopstory3() {
 
         //HiddeBanner();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(topsto3));
         this.topsto3.click();
         wait.until(ExpectedConditions.urlContains("akc.org/"));
@@ -885,7 +885,7 @@ public class Homepage {
     public void VerifyTopstory4() {
 
         //HiddeBanner();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         JavascriptExecutor jse = (JavascriptExecutor) driver;
         jse.executeScript("scroll(400, 1200)");
         wait.until(ExpectedConditions.elementToBeClickable(topsto4));
@@ -898,7 +898,7 @@ public class Homepage {
 
         JavascriptExecutor jse = (JavascriptExecutor) driver;
         jse.executeScript("scroll(0, 1200)");
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("/html[1]/body[1]/div[4]/div[4]/div[1]/div[1]/iframe[1]")));
 
     }
@@ -907,7 +907,7 @@ public class Homepage {
 
         JavascriptExecutor jse = (JavascriptExecutor) driver;
         jse.executeScript("scroll(0, 1200)");
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("/html[1]/body[1]/div[4]/div[4]/div[1]/div[1]/iframe[1]")));
         this.akctvimg1.click();
         validAKCTv();
@@ -919,7 +919,7 @@ public class Homepage {
 
         JavascriptExecutor jse = (JavascriptExecutor) driver;
         jse.executeScript("scroll(0, 1200)");
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("/html[1]/body[1]/div[4]/div[4]/div[1]/div[1]/iframe[1]")));
         this.akctvimg2.click();
         validroku();
@@ -930,7 +930,7 @@ public class Homepage {
 
         JavascriptExecutor jse = (JavascriptExecutor) driver;
         jse.executeScript("scroll(0, 1200)");
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("/html[1]/body[1]/div[4]/div[4]/div[1]/div[1]/iframe[1]")));
         wait.until(ExpectedConditions.elementToBeClickable(akctvimg3));
         this.akctvimg3.click();
@@ -942,7 +942,7 @@ public class Homepage {
 
         JavascriptExecutor jse = (JavascriptExecutor) driver;
         jse.executeScript("scroll(0, 1200)");
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("/html[1]/body[1]/div[4]/div[4]/div[1]/div[1]/iframe[1]")));
         this.akctvimg4.click();
         validamazon();
@@ -964,7 +964,7 @@ public class Homepage {
 
     public void VerifyTrend1() {
 
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(trendnews1));
         this.trendnews1.click();
         wait.until(ExpectedConditions.urlContains("akc.org/expert-advice/"));
@@ -974,7 +974,7 @@ public class Homepage {
     public void VerifyTrend2() {
 
         //HiddeBanner();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(trendnews2));
         this.trendnews2.click();
         validmagazine();
@@ -984,7 +984,7 @@ public class Homepage {
     public void VerifyTrend3() {
 
         //HiddeBanner();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(trendnews3));
         this.trendnews3.click();
         wait.until(ExpectedConditions.urlContains("akc.org/expert-advice/"));
@@ -994,7 +994,7 @@ public class Homepage {
     public void VerifyBreedofDay() {
 
         //HiddeBanner();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(bofday));
         this.bofday.click();
         validbreedofday();
@@ -1005,7 +1005,7 @@ public class Homepage {
 
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("scroll(0,2400);");
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(expbreed));
         this.expbreed.click();
         validbreedofday();
@@ -1014,7 +1014,7 @@ public class Homepage {
 
     public void VerifyAKCCanine() {
 
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(carebut1));
         this.carebut1.click();
         validakccanine();
@@ -1024,7 +1024,7 @@ public class Homepage {
     public void VerifyRescueNet() {
 
         //HiddeBanner();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(rescnet));
         this.rescnet.click();
         wait.until(ExpectedConditions.elementToBeClickable(rescnetbut));
@@ -1035,7 +1035,7 @@ public class Homepage {
 
     public void VerifyAKCReunite() {
 
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(akcreun));
         this.akcreun.click();
         wait.until(ExpectedConditions.elementToBeClickable(akcreunbut));
@@ -1047,7 +1047,7 @@ public class Homepage {
     public void VerifyHumaneFund() {
 
         //HiddeBanner();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(humanfund));
         this.humanfund.click();
         wait.until(ExpectedConditions.elementToBeClickable(humanfundbut));
@@ -1059,7 +1059,7 @@ public class Homepage {
     public void VerifyMuseumofDog() {
 
         //HiddeBanner();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(museumdog));
         this.museumdog.click();
         wait.until(ExpectedConditions.elementToBeClickable(museumdogbut));
@@ -1071,7 +1071,7 @@ public class Homepage {
     public void VerifyProtectRights() {
 
         //HiddeBanner();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(protectrigh));
         this.protectrigh.click();
         wait.until(ExpectedConditions.elementToBeClickable(protectrightbut));
@@ -1082,7 +1082,7 @@ public class Homepage {
 
     public void VerifyConformation() {
 
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(conf));
         this.conf.click();
         validconformation();
@@ -1093,7 +1093,7 @@ public class Homepage {
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", akccareval);
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(sportsarrow));
         this.sportsarrow.click();
         sleep(1000);
@@ -1110,7 +1110,7 @@ public class Homepage {
 
     public void VerifyRally() {
 
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(ral));
         this.ral.click();
         validrally();
@@ -1119,7 +1119,7 @@ public class Homepage {
 
     public void VerifyAgility() {
 
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(agi));
         this.agi.click();
         validagility();
@@ -1130,7 +1130,7 @@ public class Homepage {
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", akccareval);
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(sportsarrow));
         this.sportsarrow.click();
         sleep(1000);
@@ -1149,7 +1149,7 @@ public class Homepage {
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", akccareval);
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(sportsarrow));
         this.sportsarrow.click();
         sleep(1000);
@@ -1170,7 +1170,7 @@ public class Homepage {
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", akccareval);
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(sportsarrow));
         this.sportsarrow.click();
         sleep(1000);
@@ -1193,7 +1193,7 @@ public class Homepage {
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", akccareval);
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(sportsarrow));
         this.Leftsportsarrow.click();
         sleep(1000);
@@ -1218,7 +1218,7 @@ public class Homepage {
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", akccareval);
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(sportsarrow));
         this.Leftsportsarrow.click();
         sleep(1000);
@@ -1241,7 +1241,7 @@ public class Homepage {
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", akccareval);
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(sportsarrow));
         this.Leftsportsarrow.click();
         sleep(1000);
@@ -1262,7 +1262,7 @@ public class Homepage {
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", akccareval);
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(sportsarrow));
         this.Leftsportsarrow.click();
         sleep(1000);
@@ -1281,7 +1281,7 @@ public class Homepage {
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", akccareval);
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(sportsarrow));
         this.Leftsportsarrow.click();
         sleep(1000);
@@ -1297,7 +1297,7 @@ public class Homepage {
     public void VerifyFastCat() {
 
         //HiddeBanner();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(fastcat));
         this.fastcat.click();
         validfastcat();
@@ -1308,7 +1308,7 @@ public class Homepage {
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", akccareval);
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(sportsarrow));
         this.Leftsportsarrow.click();
         sleep(1000);
@@ -1323,7 +1323,7 @@ public class Homepage {
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", akccareval);
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(sportsarrow));
         this.sportsarrow.click();
         sleep(1000);
@@ -1338,7 +1338,7 @@ public class Homepage {
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", akccareval);
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(sportsarrow));
         this.Leftsportsarrow.click();
         sleep(1000);
@@ -1350,7 +1350,7 @@ public class Homepage {
     public void VerifyFindEvents() {
 
         //HiddeBanner();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(findevenearbut));
         this.findevenearbut.click();
         validfindevents();
@@ -1360,7 +1360,7 @@ public class Homepage {
     public void VerifyRegisterDogbut(){
 
         //HiddeBanner();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(regdogbut));
         this.regdogbut.click();
         validregisterdog();
@@ -1374,7 +1374,7 @@ public class Homepage {
 
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("scroll(0, 1500);");
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(add));
 
     }
@@ -1383,7 +1383,7 @@ public class Homepage {
 
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("scroll(0, 1800);");
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(add));
         //this.add.click();
         //ClickOpenAdd();
@@ -1394,7 +1394,7 @@ public class Homepage {
 
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("scroll(0, 2000);");
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(add1));
 
     }
@@ -1403,7 +1403,7 @@ public class Homepage {
 
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("scroll(0, 2000);");
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(add1));
         this.add1.click();
         ClickOpenAdd();
@@ -1413,7 +1413,7 @@ public class Homepage {
     public void ClickOpenAdd() {
 
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("http"));
 
     }
@@ -1421,7 +1421,7 @@ public class Homepage {
     public void ClickFooterTikTok() {
 
         //HiddeBanner();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(FooterIconTikTok));
         this.FooterIconTikTok.click();
         for (String winHandle : driver.getWindowHandles()) { driver.switchTo().window(winHandle);}

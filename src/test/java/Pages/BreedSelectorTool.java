@@ -14,11 +14,15 @@ import java.time.Duration;
 
 public class BreedSelectorTool {
 
-    @FindBy(css = "body > div:nth-child(6) > div > div > div > a")
+    @FindBy(css = "body > div:nth-child(7) > div > div > div > a")
     WebElement LetsGoButton;
 
-    @FindBy(css = "body > div:nth-child(6) > div > form > div.breed-selector-tool__question__scrollable > div.breed-selector-tool__question__choices > div:nth-child(2) > label")
+    @FindBy(css = "body > div:nth-child(7) > div > form > div.breed-selector-tool__question__scrollable > div.breed-selector-tool__question__choices > div.breed-selector-tool__question__choice.breed-selector-tool__question__choice--selected > label > span.checkbox__visual-input")
     WebElement EasyTrainable;
+
+    @FindBy(css = "body > div:nth-child(7) > div > form > div.breed-selector-tool__question__scrollable > div.breed-selector-tool__question__choices > div:nth-child(1) > label > span.checkbox__visual-input")
+    WebElement HighlyTrainable;
+    //
 
     @FindBy(css = "body > div:nth-child(6) > div > form > div.breed-selector-tool__question__scrollable > div.breed-selector-tool__question__choices > div:nth-child(3) > label")
     WebElement Trainable;
@@ -112,7 +116,7 @@ public class BreedSelectorTool {
     public void VerifyBreedSelectorTool() {
 
         driver.navigate().to("https://test-web.akc.org/breed-selector-tool/");
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(LetsGoButton));
         this.HiddeBanner();
         this.LetsGoButton.click();
@@ -156,6 +160,17 @@ public class BreedSelectorTool {
         wait.until(ExpectedConditions.elementToBeClickable(BreedNameResult));
         wait.until(ExpectedConditions.elementToBeClickable(FindPuppies));
 
+    }
+
+    public void VerifyBreedSelectorTool2 () {
+
+        driver.navigate().to("https://test-web.akc.org/breed-selector-tool/");
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(LetsGoButton));
+        this.HiddeBanner();
+        this.LetsGoButton.click();
+        this.HighlyTrainable.click();
+        //New path...
     }
 
     public void HiddeBanner() {

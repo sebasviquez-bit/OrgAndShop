@@ -316,7 +316,7 @@ public class RegisterDog {
 
     private void newWindow() {
         for(String winHandle : driver.getWindowHandles()) { driver.switchTo().window(winHandle);}
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("https://www.apps.akc.org/"));
     }
 
@@ -324,7 +324,7 @@ public class RegisterDog {
         for(String winHandle : driver.getWindowHandles()){
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("/register/information/canine-partners/enroll/"));
     }
 
@@ -332,7 +332,7 @@ public class RegisterDog {
         for(String winHandle : driver.getWindowHandles()){
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("https://images.akc.org/pdf/"));
     }
 
@@ -340,7 +340,7 @@ public class RegisterDog {
         for(String winHandle : driver.getWindowHandles()){
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("/images.akc.org/"));
     }
 
@@ -348,13 +348,13 @@ public class RegisterDog {
         for(String winHandle : driver.getWindowHandles()){
             driver.switchTo().window(winHandle);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("/register/dog/foreign/"));
     }
 
     public void VerifyRegisterDog1() {
 
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(register));
         this.register.click();
         wait.until(ExpectedConditions.visibilityOf(registerimg));
@@ -407,7 +407,7 @@ public class RegisterDog {
     public void VerifyRegisterDog2() {
 
         this.register.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(regdog));
         this.regdog.click();
         //HiddeBanner();
@@ -424,7 +424,7 @@ public class RegisterDog {
     public void VerifyRegisterDog3() {
 
         this.register.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(regdog));
         this.regdog.click();
         //HiddeBanner();
@@ -442,7 +442,7 @@ public class RegisterDog {
     public void VerifyRegisterDog4() {
 
         this.register.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(regdog));
         this.regdog.click();
         wait.until(ExpectedConditions.elementToBeClickable(enrolldog));
@@ -459,7 +459,7 @@ public class RegisterDog {
     public void VerifyRegisterDog5() {
 
         this.register.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(regdog));
         HiddeBanner();
         this.regdog.click();
@@ -476,7 +476,7 @@ public class RegisterDog {
     public void VerifyRegisterDog6() {
 
         this.register.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(regdog));
         HiddeBanner();
         this.regdog.click();
@@ -497,7 +497,7 @@ public class RegisterDog {
     public void VerifyRegisterDog7() {
 
         this.register.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(regdog));
         HiddeBanner();
         this.regdog.click();
@@ -515,7 +515,7 @@ public class RegisterDog {
     public void VerifyRegisterDog8() {
 
         this.register.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(regdog));
         HiddeBanner();
         this.regdog.click();
@@ -533,7 +533,7 @@ public class RegisterDog {
     public void VerifyRegisterDog9() {
 
         this.register.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(regdog));
         HiddeBanner();
         this.regdog.click();
@@ -551,7 +551,7 @@ public class RegisterDog {
     public void VerifyRegisterDog10() {
 
         this.register.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(regdog));
         this.regdog.click();
         wait.until(ExpectedConditions.elementToBeClickable(other));
@@ -570,7 +570,7 @@ public class RegisterDog {
     public void VerifyRegisterLitter() {
 
         this.register.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(reglitt));
         HiddeBanner();
         this.reglitt.click();
@@ -611,7 +611,7 @@ public class RegisterDog {
     public void VerifyRegisterLitter2() {
 
         this.register.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(reglitt));
         HiddeBanner();
         this.reglitt.click();
@@ -629,7 +629,7 @@ public class RegisterDog {
     public void VerifyRegisterLitter3() {
 
         this.register.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(reglitt));
         HiddeBanner();
         this.reglitt.click();
@@ -647,7 +647,7 @@ public class RegisterDog {
     public void VerifyRegisterLitter4() {
 
         this.register.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(reglitt));
         HiddeBanner();
         this.reglitt.click();
@@ -665,7 +665,7 @@ public class RegisterDog {
     public void VerifyRegisterLitter5() {
 
         this.register.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(reglitt));
         HiddeBanner();
         this.reglitt.click();
@@ -683,7 +683,7 @@ public class RegisterDog {
     public void VerifyRegisterLitter6() {
 
         this.register.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(reglitt));
         HiddeBanner();
         this.reglitt.click();
@@ -701,7 +701,7 @@ public class RegisterDog {
     public void VerifyRegisterLitter7() {
 
         this.register.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(reglitt));
         HiddeBanner();
         this.reglitt.click();
@@ -719,7 +719,7 @@ public class RegisterDog {
     public void VerifyRegisterLitter8() {
 
         this.register.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(reglitt));
         HiddeBanner();
         this.reglitt.click();
@@ -737,7 +737,7 @@ public class RegisterDog {
     public void VerifyRegisterLitter9() {
 
         this.register.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(reglitt));
         HiddeBanner();
         this.reglitt.click();
@@ -755,7 +755,7 @@ public class RegisterDog {
     public void VerifyTransOwner() {
 
         this.register.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(transown));
         //HiddeBanner();
         this.transown.click();
@@ -769,7 +769,7 @@ public class RegisterDog {
     public void VerifyPurchPedig() {
 
         this.register.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(purcped));
         HiddeBanner();
         this.purcped.click();
@@ -784,7 +784,7 @@ public class RegisterDog {
     public void VerifyPurchPedig2() {
 
         this.register.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(purcped));
         HiddeBanner();
         this.purcped.click();
@@ -798,7 +798,7 @@ public class RegisterDog {
     public void VerifyMoreInformation() {
 
         this.register.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);;
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(moreinfo));
         //HiddeBanner();
         this.moreinfo.click();
