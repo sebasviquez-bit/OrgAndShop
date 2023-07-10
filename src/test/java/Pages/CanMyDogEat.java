@@ -311,7 +311,7 @@ public class CanMyDogEat {
     public void VerifyCanMyDogEat1() {
 
         this.breedsmenu.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(findmatch));
         this.findmatch.click();
         wait.until(ExpectedConditions.elementToBeClickable(canmydog));
@@ -369,7 +369,7 @@ public class CanMyDogEat {
         this.eggsimg.isDisplayed();
         this.yes12.isDisplayed();
         this.no12.isDisplayed();
-        this.yes1.click();
+        this.yes1.click();  //fix this locator
         this.answer1.isDisplayed();
         this.expla1.isDisplayed();
         this.yes2.click();
@@ -415,7 +415,7 @@ public class CanMyDogEat {
 
 
         this.breedsmenu.click();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(findmatch));
         this.findmatch.click();
         wait.until(ExpectedConditions.elementToBeClickable(canmydog));

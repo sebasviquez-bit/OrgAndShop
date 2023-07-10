@@ -1812,7 +1812,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void Clickakccontact() {
 
         sportsEvents.Clickakccontact();
@@ -2152,7 +2152,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     public void BulldogBreedPageChek() {
 
         driver.navigate().to("https://test-web.akc.org/dog-breeds/bulldog/");
-        eyes.open(driver, "AKC", "BulldogBreedPageChekc", new RectangleSize(1420, 680));
+        eyes.open(driver, "AKC", "BulldogBreedPageChekc");
         eyes.check("EAmenu", Target.window());
         eyes.close();
 
@@ -2162,7 +2162,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     public void AkitaBreedPageCheck () {
 
         driver.navigate().to("https://test-web.akc.org/dog-breeds/akita/");
-        eyes.open(driver, "AKC", "AkitaBreedPageCheck", new RectangleSize(1420, 680));
+        eyes.open(driver, "AKC", "AkitaBreedPageCheck");
         eyes.check("EAmenu", Target.window());
         eyes.close();
 

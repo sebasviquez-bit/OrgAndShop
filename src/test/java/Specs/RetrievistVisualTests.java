@@ -65,6 +65,16 @@ public class RetrievistVisualTests extends SpecsBaseClass {
         eyes.close();
 
     }
-    //
+
+    @Test
+    public void RetrievistDealsProd () {
+
+        driver.navigate().to("https://retrievist.akc.org/products/");
+        eyes.open(driver, "Retrievist", "productsProd");
+        eyes.check("productsProd", Target.window());
+        eyes.close();
+
+    }
+
 
 }
