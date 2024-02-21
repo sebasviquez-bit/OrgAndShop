@@ -408,11 +408,14 @@ public class DogName {
 
     public void DNFTFindNamesResult() {
 
-        //driver.navigate().to("https://test-web.akc.org/dog-name-finder/");
-        this.ExpertAdvicemenu.click();
+        ExpertAdvicemenu.click();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(EAmenuDNF));
+        Actions action = new Actions(this.driver);
+        action.moveToElement(EAmenuDNF).perform();
+        action.moveToElement(EAmenuDNF).click();
         this.EAmenuDNF.click();
         this.FindNamesButton.click();
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(AaronName));
 
     }

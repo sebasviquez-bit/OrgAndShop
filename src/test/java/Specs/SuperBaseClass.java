@@ -4,7 +4,9 @@ import Helpers.DataHelper;
 import Helpers.DriverHelper;
 import Pages.*;
 import com.applitools.eyes.selenium.Eyes;
+import io.percy.selenium.Percy;
 import org.openqa.selenium.WebDriver;
+
 
 public class SuperBaseClass {
 

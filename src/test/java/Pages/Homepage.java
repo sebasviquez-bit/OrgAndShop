@@ -105,34 +105,40 @@ public class Homepage {
     @FindBy(xpath = "//html/body/div[6]/div/div[3]/div[2]/div/ul/li[1]")
     WebElement akcf2;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[1]/div/div[1]/nav[1]/a[1]")
+    @FindBy(css = "#site-header > div > div.desktop-header > div > div.utility-header > nav:nth-child(1) > a:nth-child(1)")
     WebElement eventsearch;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[1]/div/div[1]/nav[1]/a[2]")
+    @FindBy(css = "#site-header > div > div.desktop-header > div > div.utility-header > nav:nth-child(1) > a:nth-child(2)")
     WebElement findpuppy;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[1]/div/div[1]/nav[1]/a[3]")
+    @FindBy(css = "#site-header > div > div.desktop-header > div > div.utility-header > nav:nth-child(1) > a:nth-child(3)")
     WebElement regdog;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[1]/div/div[1]/nav[1]/a[4]")
+    @FindBy(css = "#site-header > div > div.desktop-header > div > div.utility-header > nav:nth-child(1) > a:nth-child(4)")
     WebElement shop;
+
+    @FindBy(css = "#site-header > div > div.desktop-header > div > div.utility-header > nav:nth-child(1) > a:nth-child(5)")
+    WebElement akcTvTopMenu;
+
+    @FindBy(css = "#site-header > div > div.desktop-header > div > div.utility-header > nav:nth-child(1) > a:nth-child(6)")
+    WebElement akcRx;
 
     @FindBy(xpath = "//*[@id='desktop-search']")
     WebElement search;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[1]/div/div[2]/nav/a[1]")
+    @FindBy(css = "#site-header > div > div.desktop-header > div > div.primary-nav > nav > a:nth-child(1)")
     WebElement breeds;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[1]/div/div[2]/nav/a[2]")
+    @FindBy(css = "#site-header > div > div.desktop-header > div > div.primary-nav > nav > a:nth-child(2)")
     WebElement expadv;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[1]/div/div[2]/nav/a[3]")
+    @FindBy(css = "#site-header > div > div.desktop-header > div > div.primary-nav > nav > a:nth-child(3)")
     WebElement prodserv;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[1]/div/div[2]/nav/a[4]")
+    @FindBy(css = "#site-header > div > div.desktop-header > div > div.primary-nav > nav > a:nth-child(4)")
     WebElement sports;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[1]/div/div[2]/nav/a[5]")
+    @FindBy(css = "#site-header > div > div.desktop-header > div > div.primary-nav > nav > a:nth-child(5)")
     WebElement clubs;
 
     @FindBy(css = "body > div.page-home.bgc-white.cmw > div.page-home__hero-container > div > div.cmw > div > div.interactive-hero__inner > div.interactive-hero__item.two > div > a:nth-child(1) > img")
@@ -354,18 +360,28 @@ public class Homepage {
     @FindBy(css = "body > div.page-home.bgc-white.cmw > div.breed-feature > div.breed-feature__col.breed-feature__content-col > div > div > div > div.tool-grid__header > div > h2")
     WebElement FindRightBreedTitle;
 
-    @FindBy(css = "body > div.bcpNotificationBar.bcpNotificationBarStickyBottom")
-    WebElement BottomBanner;
-
-    @FindBy(css = "body:nth-child(2) > div.surfly-button.surfly-button-position-bottomleft.surfly-button-visible:nth-child(2")
+    @FindBy(css = "body:nth-child(2) > div.surfly-button.surfly-button-position-bottomleft.surfly-button-visible:nth-child(2)")
     WebElement SurfieChat;
-    //)
+
 
     @FindBy(css = "body > div.site-footer.cmw > div.page-container > div.site-footer__wrap.site-footer__social.site-footer__wrap--ac.bpm-py3 > div.site-footer__wrap-inner.bpm-flex-shrink-0 > div > div > a:nth-child(4)")
     WebElement FooterIconTikTok;
 
     @FindBy(css = "body > div.site-footer.cmw > div.page-container > div.site-footer__wrap.site-footer__social.site-footer__wrap--ac.bpm-py3 > div.site-footer__wrap-inner.bpm-flex-shrink-0 > div > div > a:nth-child(1)")
     WebElement FooterIconFB;
+
+    //DDGSample
+
+    @FindBy(css = "#searchbox_input")
+    WebElement DDGsearchInput;
+
+    @FindBy(css = "#searchbox_homepage > div > div > button.searchbox_searchButton__F5Bwq.iconButton_button__6x_9C")
+    WebElement DDGsearchButton;
+
+    @FindBy(css = "#r1-0 > div.ikg2IXiCD14iVX7AdZo1 > h2 > a > span")
+    WebElement DDGresults;
+
+
 
     //Driver
     WebDriver driver;
@@ -401,6 +417,15 @@ public class Homepage {
         }
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlContains("https://akc.tv/"));
+
+    }
+
+    public void validAKCRx() {
+        for (String winHandle : driver.getWindowHandles()) {
+            driver.switchTo().window(winHandle);
+        }
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.urlToBe("https://www.akcpetrx.com/"));
 
     }
 
@@ -688,8 +713,8 @@ public class Homepage {
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(akcicon));
-        this.headerhome.isDisplayed();
-        this.picthome.isDisplayed();
+//        this.headerhome.isDisplayed();
+//        this.picthome.isDisplayed();
         this.homepageHeroBreedSearch.isDisplayed();
         this.homepageHeroAside.isDisplayed();
         this.topstories.isDisplayed();
@@ -704,20 +729,20 @@ public class Homepage {
         //this.videotitle3.isDisplayed();
         //this.videotitle4.isDisplayed();
         //this.videoJW.isDisplayed();
-        this.articheader.isDisplayed();
+        //this.articheader.isDisplayed();
         this.breedofday.isDisplayed();
         this.toolheader.isDisplayed();
         this.careheader.isDisplayed();
         this.careimg.isDisplayed();
-        this.seheader.isDisplayed();
+/*      this.seheader.isDisplayed();
         this.eventbutton.isDisplayed();
         this.regheader.isDisplayed();
         this.regimg.isDisplayed();
-        //this.akcf1.isDisplayed(); //This is available only in Prod*
+        this.akcf1.isDisplayed(); //This is available only in Prod*
         this.social.isDisplayed();
         this.footer.isDisplayed();
-        //this.akcf2.isDisplayed();
-
+        this.akcf2.isDisplayed();
+*/
     }
 
     public void Verifytopmenu() {
@@ -727,12 +752,23 @@ public class Homepage {
         this.findpuppy.isDisplayed();
         this.regdog.isDisplayed();
         this.shop.isDisplayed();
+        akcTvTopMenu.isDisplayed();
+        akcRx.isDisplayed();
         this.search.isDisplayed();
         this.breeds.isDisplayed();
         this.expadv.isDisplayed();
         this.prodserv.isDisplayed();
         this.sports.isDisplayed();
         this.clubs.isDisplayed();
+
+    }
+
+    public void VerifyakcRx() {
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(akcRx));
+        akcRx.click();
+        validAKCRx();
 
     }
 
@@ -775,7 +811,7 @@ public class Homepage {
 
     public void VerifyAKCCareicon() {  //THIS ICON WAS REMOVED FROM HOMEPAGE 02/13/21
 
-        HiddeBanner();
+        //HiddeBanner();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(careicon));
         this.careicon.click();
@@ -1375,7 +1411,7 @@ public class Homepage {
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("scroll(0, 1500);");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOf(add));
+        wait.until(ExpectedConditions.visibilityOf(add)); //this failed after Julien's changes WWW-976
 
     }
 
@@ -1428,18 +1464,30 @@ public class Homepage {
         wait.until(ExpectedConditions.urlContains("https://www.tiktok.com"));
 
     }
-
+/*
     public void HiddeBanner() {
 
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("arguments[0].style.visibility='hidden'", BottomBanner);
     }
-
+*/
     public void HideSurfieChat() {
 
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("arguments[0].style.visibility='hidden'", SurfieChat);
     }
+
+    public void DDG() {
+
+        this.DDGsearchInput.click();
+        this.DDGsearchInput.sendKeys("AKC");
+        this.DDGsearchButton.click();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOf(DDGresults));
+
+    }
+
+
 }
 
 

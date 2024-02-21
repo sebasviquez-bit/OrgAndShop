@@ -16,8 +16,10 @@ public class ProdServ {
     @FindBy(css = "#site-header > div > div.desktop-header > div > div.primary-nav > nav > a:nth-child(3)")
     WebElement produservi;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[1]/div/h3")
+    @FindBy(css = "#product-services > div:nth-child(1) > div > a")
     WebElement products;
+
+    //#product-services > div:nth-child(1) > div > a
 
     @FindBy(css = "#product-services > div:nth-child(1) > div > div > div > ul > li:nth-child(1) > a")
     WebElement shopdog;
@@ -34,10 +36,10 @@ public class ProdServ {
     @FindBy(xpath = "//*[@id=\"product-services\"]/div[1]/div/div/div/ul/li[1]/ul/li[4]/a")
     WebElement doggift;
 
-    @FindBy(css = "#product-services > div:nth-child(1) > div > div > div > ul > li:nth-child(2) > a")
+    @FindBy(css = "#product-services > div:nth-child(1) > div > div > div > ul > li:nth-child(3) > a")
     WebElement dnaHealthTest;
 
-    @FindBy(css = "#product-services > div:nth-child(1) > div > div > div > ul > li:nth-child(3) > a")
+    @FindBy(css = "#product-services > div:nth-child(1) > div > div > div > ul > li:nth-child(4) > a")
     WebElement DNAKitAct;
 
     @FindBy(css = "#product-services > div:nth-child(1) > div > div > div > ul > li:nth-child(4) > a")
@@ -52,7 +54,7 @@ public class ProdServ {
     @FindBy(css = "#product-services > div:nth-child(1) > div > div > div > ul > li:nth-child(7) > a")
     WebElement akccomp;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[2]/div/h3")
+    @FindBy(css = "#product-services > div:nth-child(2) > div > a")
     WebElement services;
 
     @FindBy(css = "#product-services > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(1) > a")
@@ -97,13 +99,13 @@ public class ProdServ {
     @FindBy(css = "#product-services > div:nth-child(2) > div > div > div:nth-child(1) > ul > li:nth-child(3) > ul > li:nth-child(3) > a")
     WebElement findtrainclub;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[2]/div/div/div[2]/ul/li[3]/a")
+    @FindBy(css = "#product-services > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(3) > a")
     WebElement akccaninecolle;
 
     @FindBy(css = "#product-services > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(1) > a")
     WebElement healthgen;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[2]/div/div/div[2]/ul/li[1]/ul/li[1]/a")
+    @FindBy(css = "#product-services > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(1) > ul > li:nth-child(1) > a")
     WebElement findgroom;
 
     @FindBy(css = "#product-services > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(1) > ul > li:nth-child(5) > a")
@@ -127,7 +129,7 @@ public class ProdServ {
     @FindBy(css = "#product-services > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(2) > a")
     WebElement breedprog;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[2]/div/div/div[2]/ul/li[2]/ul/li[1]/a")
+    @FindBy(css = "#product-services > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(2) > ul > li:nth-child(3) > a")
     WebElement bom;
 
     @FindBy(css = "#product-services > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(2) > ul > li:nth-child(4) > a")
@@ -142,7 +144,7 @@ public class ProdServ {
     @FindBy(css = "#product-services > div:nth-child(2) > div > div > div:nth-child(2) > ul > li:nth-child(4) > a")
     WebElement browseserv;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[3]/div[3]/div/div/a/img")
+    @FindBy(css = "#product-services > div:nth-child(3) > div > a")
     WebElement akcshop;
 
     @FindBy(css = "#page-title > div > h1")
@@ -366,8 +368,7 @@ public class ProdServ {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.elementToBeClickable(dnaHealthTest));
-        this.dnaHealthTest.click();
+        wait.until(ExpectedConditions.elementToBeClickable(dnaHealthTest)).click();
         wait.until(ExpectedConditions.visibilityOf(dnaElement));
 
     }
@@ -668,8 +669,7 @@ public class ProdServ {
 
         this.produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.elementToBeClickable(breedprog));
-        this.breedprog.click();
+        wait.until(ExpectedConditions.elementToBeClickable(breedprog)).click();
         wait.until(ExpectedConditions.visibilityOf(breedprogElement));
 
     }
@@ -727,5 +727,24 @@ public class ProdServ {
 
     }
 
+    public void ClickProducts() {
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(products)).click();
+        wait.until(ExpectedConditions.urlContains("/products-services/"));
+
+    }
+
+    public void ClickServices() {
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi));
+        this.produservi.click();
+        this.services.click();
+        wait.until(ExpectedConditions.urlContains("/products-services/"));
+
+
+    }
 
 }

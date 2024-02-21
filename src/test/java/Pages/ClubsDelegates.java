@@ -16,22 +16,22 @@ public class ClubsDelegates {
     @FindBy(css = "#site-header > div > div.desktop-header > div > div.primary-nav > nav > a:nth-child(5)")
     WebElement clubdelegat;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[5]/div[1]/div[1]/h3")
+    @FindBy(css = "#clubs-delegates > div:nth-child(1) > div:nth-child(1) > h3")
     WebElement findclub;
 
     @FindBy(css = "#clubs-delegates > div:nth-child(1) > div:nth-child(1) > div > div > ul > li:nth-child(1) > a")
     WebElement searchallclub;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[5]/div[1]/div[1]/div/div/ul/li[2]/a")
+    @FindBy(css = "#clubs-delegates > div:nth-child(1) > div:nth-child(1) > div > div > ul > li:nth-child(2) > a")
     WebElement findanevent;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[5]/div[1]/div[2]/h3")
+    @FindBy(css = "#clubs-delegates > div:nth-child(1) > div:nth-child(2) > h3")
     WebElement clubsoffer;
 
     @FindBy(css = "#clubs-delegates > div:nth-child(1) > div:nth-child(2) > div > div > ul > li > a")
     WebElement trainclass;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[5]/div[2]/div/h3")
+    @FindBy(css = "#clubs-delegates > div:nth-child(2) > div > h3")
     WebElement clubs;
 
     @FindBy(css = "#clubs-delegates > div:nth-child(2) > div > div > div > ul > li:nth-child(1) > a")
@@ -53,7 +53,7 @@ public class ClubsDelegates {
     WebElement CentennialClubs;
     //
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[5]/div[3]/div/h3")
+    @FindBy(css = "#clubs-delegates > div:nth-child(3) > div > h3")
     WebElement fordelegates;
 
     @FindBy(css = "#clubs-delegates > div:nth-child(3) > div > div > div > ul > li:nth-child(1) > a")
@@ -98,7 +98,7 @@ public class ClubsDelegates {
     @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[5]/div[4]/div[1]/div/div/ul/li[4]/a")
     WebElement governrelatio;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[5]/div[4]/div[2]/h3")
+    @FindBy(css = "#clubs-delegates > div:nth-child(4) > div:nth-child(2) > h3")
     WebElement akclibrary;
 
     @FindBy(css = "#clubs-delegates > div:nth-child(4) > div:nth-child(2) > div > div > ul > li:nth-child(1) > a")
@@ -186,7 +186,7 @@ public class ClubsDelegates {
 
         this.clubdelegat.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOf(findclub));
+        wait.until(ExpectedConditions.visibilityOf(findclub)); //fix this
         this.searchallclub.isDisplayed();
         this.findanevent.isDisplayed();
         this.clubsoffer.isDisplayed();
@@ -237,7 +237,7 @@ public class ClubsDelegates {
 
         this.clubdelegat.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.elementToBeClickable(findanevent));
+        wait.until(ExpectedConditions.elementToBeClickable(findanevent)); //fix this
         this.findanevent.click();
         wait.until(ExpectedConditions.visibilityOf(findaneventElement));
         //this.driver.get(this.driver.getCurrentUrl()+"?test=true");
@@ -490,3 +490,4 @@ public class ClubsDelegates {
     }
 
 }
+

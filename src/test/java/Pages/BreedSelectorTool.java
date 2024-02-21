@@ -14,7 +14,7 @@ import java.time.Duration;
 
 public class BreedSelectorTool {
 
-    @FindBy(css = "body > div:nth-child(7) > div > div > div > a")
+    @FindBy(css = "body > div:nth-child(13) > div > div > div > a")
     WebElement LetsGoButton;
 
     @FindBy(css = "body > div:nth-child(7) > div > form > div.breed-selector-tool__question__scrollable > div.breed-selector-tool__question__choices > div.breed-selector-tool__question__choice.breed-selector-tool__question__choice--selected > label > span.checkbox__visual-input")
@@ -177,6 +177,7 @@ public class BreedSelectorTool {
 
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("arguments[0].style.visibility='hidden'", BottomBanner);
+
     }
 
 }

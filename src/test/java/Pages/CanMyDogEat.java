@@ -12,10 +12,10 @@ import java.time.Duration;
 
 public class CanMyDogEat {
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[1]/div/div[2]/nav/a[1]")
+    @FindBy(css = "#site-header > div > div.desktop-header > div > div.primary-nav > nav > a:nth-child(1)")
     WebElement breedsmenu;
 
-    @FindBy(xpath = "//*[@id=\"dog-breeds\"]/div[2]/div/div/div/ul/li[1]/a/div")
+    @FindBy(css = "#dog-breeds > div:nth-child(2) > div > div > div > ul > li:nth-child(1) > a > div")
     WebElement findmatch;
 
     @FindBy(css = "#can-my-dog-eat-___\\? > a > strong")
@@ -419,7 +419,7 @@ public class CanMyDogEat {
         wait.until(ExpectedConditions.elementToBeClickable(findmatch));
         this.findmatch.click();
         wait.until(ExpectedConditions.elementToBeClickable(canmydog));
-        HiddeBanner();
+        //HiddeBanner();
         this.canmydog.click();
         //HiddeBanner();
         wait.until(ExpectedConditions.elementToBeClickable(no1));

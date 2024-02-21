@@ -22,10 +22,10 @@ public class BreedsMenu {
     @FindBy(css = "#dog-breeds > div:nth-child(1) > div > div > a")
     WebElement viewbreeds;
 
-    @FindBy(xpath = "//*[@id=\"breed-search-selectized\"]")
+    @FindBy(xpath = "//select[@id='breed-search']")
     WebElement searchbreeds;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[1]/div[1]/div/div/form")
+    @FindBy(css = "#dog-breeds > div:nth-child(1) > div > div > form > div:nth-child(1) > div > div.selectize-input.items.full.has-options.has-items > div")
     WebElement searchbreedsDrop;
 
     @FindBy(xpath = "//*[@id='breed_group-selectized']")
@@ -37,19 +37,19 @@ public class BreedsMenu {
     @FindBy(css = "#dog-breeds > div:nth-child(2) > div > div > div > ul > li:nth-child(1) > a > div")
     WebElement findmatch;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[1]/div[2]/div/div/div/ul/li[2]/a/div")
+    @FindBy(css = "#dog-breeds > div:nth-child(2) > div > div > div > ul > li:nth-child(2) > a > div")
     WebElement comparebreeds;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[1]/div[2]/div/div/div/ul/li[3]/a/div")
+    @FindBy(css = "#dog-breeds > div:nth-child(2) > div > div > div > ul > li:nth-child(3) > a > div")
     WebElement findapuppy;
 
-    @FindBy(xpath = "//*[@id=\"dog-breeds\"]/div[3]/div/div/div/ul/li[1]/a")
+    @FindBy(css = "#dog-breeds > div:nth-child(3) > div > div > div > ul > li:nth-child(1) > a")
     WebElement chooseabreed;
 
     @FindBy(css = "#dog-breeds > div:nth-child(3) > div > div > div > ul > li:nth-child(2) > a")
     WebElement whygetdog;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[1]/div[3]/div/div/div/ul/li[3]/a")
+    @FindBy(css = "#dog-breeds > div:nth-child(3) > div > div > div > ul > li:nth-child(3) > a")
     WebElement findrespbreeder;
 
     @FindBy(xpath = "//*[@id=\"dog-breeds\"]/div[3]/div/div/div/ul/li[4]/a")
@@ -58,19 +58,19 @@ public class BreedsMenu {
     @FindBy(css = "#dog-breeds > div:nth-child(3) > div > div > div > ul > li:nth-child(5) > a")
     WebElement allaboutpuppies;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[1]/div[4]/div/div/div/ul/li[1]/a")
+    @FindBy(css = "#dog-breeds > div:nth-child(4) > div > div > div > ul > li:nth-child(1) > a")
     WebElement findpurebreed;
 
     @FindBy(css = "#dog-breeds > div:nth-child(4) > div > div > div > ul > li:nth-child(2) > a")
     WebElement menuregdog;
 
-    @FindBy(xpath = "//html/body/div[2]/div/div[2]/div[1]/div[4]/div/div/div/ul/li[3]/a")
+    @FindBy(css = "#dog-breeds > div:nth-child(4) > div > div > div > ul > li:nth-child(3) > a")
     WebElement findbreedclub;
 
-    @FindBy(xpath = "//*[@id=\"dog-breeds\"]/div[4]/div/div/div/ul/li[4]/a")
+    @FindBy(css = "#dog-breeds > div:nth-child(4) > div > div > div > ul > li:nth-child(4) > a")
     WebElement mostpopdogs;
 
-    @FindBy(xpath = "//*[@id=\"dog-breeds\"]/div[4]/div/div/div/ul/li[5]/a")
+    @FindBy(css = "#dog-breeds > div:nth-child(4) > div > div > div > ul > li:nth-child(5) > a")
     WebElement fordogbreeders;
 
     @FindBy(css = "#dog-breeds > div:nth-child(4) > div > div > div > ul > li:nth-child(6) > a")
@@ -190,7 +190,7 @@ public class BreedsMenu {
         this.searchbreeds.isDisplayed();
         this.explorebreeds.isDisplayed();
         this.findmatch.isDisplayed();
-        this.comparebreeds.isDisplayed();
+        this.comparebreeds.isDisplayed(); //fix this locator
         this.findapuppy.isDisplayed();
         this.chooseabreed.isDisplayed();
         this.whygetdog.isDisplayed();
@@ -224,10 +224,8 @@ public class BreedsMenu {
 
         this.menubreeds.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.elementToBeClickable(searchbreeds));
-        this.searchbreeds.click();
-        wait.until(ExpectedConditions.elementToBeClickable(searchbreedsDrop));
-        this.searchbreedsDrop.click();
+        wait.until(ExpectedConditions.elementToBeClickable(searchbreeds)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(searchbreedsDrop)).click();
         wait.until(ExpectedConditions.visibilityOf(searchbreedsElement));
 
     }
@@ -248,8 +246,7 @@ public class BreedsMenu {
 
         this.menubreeds.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.elementToBeClickable(findmatch));
-        this.findmatch.click();
+        wait.until(ExpectedConditions.elementToBeClickable(findmatch)).click();
         wait.until(ExpectedConditions.visibilityOf(findmatchElement));
 
     }

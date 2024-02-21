@@ -7,7 +7,12 @@ import Pages.BreedSelectorTool;
 import com.applitools.eyes.RectangleSize;
 import com.applitools.eyes.selenium.capture.FullPageCaptureAlgorithm;
 import com.applitools.eyes.selenium.fluent.Target;
+import com.helger.css.decl.CSSSelector;
+import io.percy.selenium.Percy;
 import org.testng.annotations.Test;
+
+import static java.lang.Thread.sleep;
+
 
 public class ORGTestSuite extends SpecsBaseClass {
 
@@ -33,6 +38,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     public void HomepageCheck() {
 
         homepage.CheckHomepage();
+        //percy.snapshot("HomePage");
 
     }
 
@@ -40,6 +46,13 @@ public class ORGTestSuite extends SpecsBaseClass {
     public void TopMenu() {
 
         homepage.Verifytopmenu();
+
+    }
+
+    @Test
+    public void ACKRx() {
+
+        homepage.VerifyakcRx();
 
     }
 
@@ -94,10 +107,10 @@ public class ORGTestSuite extends SpecsBaseClass {
 
 
 
-    @Test
+    //@Test
     public void VerifyDogName() {
 
-        dogName.DogNameVerify();
+        dogName.DogNameVerify(); //old tool
 
     }
 
@@ -123,7 +136,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void DNFTFilters() {
 
         dogName.DNFTFilters();
@@ -445,21 +458,21 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void UsabillaFeedback() {
 
         homepage.UsabillaFeedback();
 
     }
 
-    @Test
+    //@Test
     public void SpecificFeedback() {
 
         homepage.SpecificFeedback();
 
     }
 
-    @Test
+    //@Test
     public void GeneralFeedback() {
 
         homepage.GeneralFeedback();
@@ -502,28 +515,28 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void VerifyAKCTVimg1() {
 
         homepage.VerifyAKCTVimg1();
 
     }
 
-    @Test
+    //@Test
     public void AKCTVimgVerify2() {
 
         homepage.VerifyAKCTVimg2();
 
     }
 
-    @Test
+    //@Test
     public void AKCTVimgVerify3() {
 
         homepage.VerifyAKCTVimg3();
 
     }
 
-    @Test
+    //@Test
     public void AKCTVimgVerify4() {
 
         homepage.VerifyAKCTVimg4();
@@ -657,7 +670,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
 
-    @Test
+    //@Test
     public void TrackingVerify() throws InterruptedException {
 
         homepage.VerifyTracking();
@@ -665,7 +678,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
 
-    @Test
+    //@Test
     public void HerdingVerify() throws InterruptedException {
 
         homepage.VerifyHerding();
@@ -673,7 +686,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
 
-    @Test
+    //@Test
     public void EarthDogVerify() throws InterruptedException {
 
         homepage.VerifyEarthDog();
@@ -681,7 +694,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
 
-    @Test
+    //@Test
     public void FieldTrialsVerify() throws InterruptedException {
 
         homepage.VerifyFieldTrials();
@@ -689,28 +702,28 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
 
-    @Test
+    //@Test
     public void HuntingVerify() throws InterruptedException {
 
         homepage.VerifyHunting();
 
     }
 
-    @Test
+    //@Test
     public void FarmDogVerify() throws InterruptedException {
 
         homepage.VerifyFarmDog();
 
     }
 
-    @Test
+    //@Test
     public void LureCoursingVerify() throws InterruptedException {
 
         homepage.VerifyLureCoursing();
 
     }
 
-    @Test
+    //@Test
     public void CoursingAbilityVerify() throws InterruptedException {
 
         homepage.VerifyCoursingAbility();
@@ -724,21 +737,21 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void CoonhoundVerify() throws InterruptedException {
 
         homepage.VerifyCoounhound();
 
     }
 
-    @Test
+    //@Test
     public void ScentWorkVerify() throws InterruptedException {
 
         homepage.VerifyScentWork();
 
     }
 
-    @Test
+    //@Test
     public void TrickDogVerify() throws InterruptedException {
 
         homepage.VerifyTrickDog();
@@ -753,13 +766,12 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void ClickFooterTikTok() {
 
         homepage.ClickFooterTikTok();
 
     }
-    //
 
 
     @Test
@@ -778,14 +790,14 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void VerifyAdd() {
 
         homepage.ClickAdd();
 
     }
 
-    @Test
+    //@Test
     public void VerifyAdd1() {
 
         homepage.VerifyAdd1();
@@ -830,7 +842,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void Clickcomparebreeds() {
 
         breeds.Clickcomparebreeds();
@@ -851,28 +863,28 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void Clickwhygetdog() {
 
         breeds.Clickwhygetdog();
 
     }
 
-    @Test
+    //@Test
     public void Clickfindrespbreeder() {
 
         breeds.Clickfindrespbreeder();
 
     }
 
-    @Test
+    //@Test
     public void Clickgetstartdogsports() {
 
         breeds.Clickgetstartdogsports();
 
     }
 
-    @Test
+    //@Test
     public void Clickallaboutpuppies() {
 
         breeds.Clickallaboutpuppies();
@@ -886,35 +898,35 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void Clickmenuregdog() {
 
         breeds.Clickmenuregdog();
 
     }
 
-    @Test
+    //@Test
     public void Clickfindbreedclub() {
 
         breeds.Clickfindbreedclub();
 
     }
 
-    @Test
+    //@Test
     public void Clickmostpopdogs() {
 
         breeds.Clickmostpopdogs();
 
     }
 
-    @Test
+    //@Test
     public void Clickfordogbreeders() {
 
         breeds.Clickfordogbreeders();
 
     }
 
-    @Test
+    //@Test
     public void Clickfordogowners() {
 
         breeds.Clickfordogowners();
@@ -939,77 +951,77 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void Clickdogbreeding() {
 
         expertAdvice.Clickdogbreeding();
 
     }
 
-    @Test
+    //@Test
     public void Clickgrooming(){
 
         expertAdvice.Clickgrooming();
 
     }
 
-    @Test
+    //@Test
     public void Clickhealth() {
 
         expertAdvice.Clickhealth();
 
     }
 
-    @Test
+    //@Test
     public void Clickhomeliving() {
 
         expertAdvice.Clickhomeliving();
 
     }
 
-    @Test
+    //@Test
     public void Clicklifestyle() {
 
         expertAdvice.Clicklifestyle();
 
     }
 
-    @Test
+    //@Test
     public void Clicknews() {
 
         expertAdvice.Clicknews();
 
     }
 
-    @Test
+    //@Test
     public void Clicknutrition() {
 
         expertAdvice.Clicknutrition();
 
     }
 
-    @Test
+    //@Test
     public void Clickpuppyinfo()  {
 
         expertAdvice.Clickpuppyinfo();
 
     }
 
-    @Test
+    //@Test
     public void Clicksports() {
 
         expertAdvice.Clicksports();
 
     }
 
-    @Test
+    //@Test
     public void Clicktraining() {
 
         expertAdvice.Clicktraining();
 
     }
 
-    @Test
+    //@Test
     public void Clickvetcorner() {
 
         expertAdvice.Clickvetcorner();
@@ -1044,63 +1056,63 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void Clickakcmag() {
 
         expertAdvice.Clickakcmag();
 
     }
 
-    @Test
+    //@Test
     public void Clicknewsletter() {
 
         expertAdvice.Clicknewsletter();
 
     }
 
-    @Test
+    //@Test
     public void Clickpresscenter() {
 
         expertAdvice.Clickpresscenter();
 
     }
 
-    @Test
+    //@Test
     public void Clickakcdetection() {
 
         expertAdvice.Clickakcdetection();
 
     }
 
-    @Test
+    //@Test
     public void Clickakccanine() {
 
         expertAdvice.Clickakccanine();
 
     }
 
-    @Test
+    //@Test
     public void Clickgovernment() {
 
         expertAdvice.Clickgovernment();
 
     }
 
-    @Test
+    //@Test
     public void Clickakceducation() {
 
         expertAdvice.Clickakceducation();
 
     }
 
-    @Test
+    //@Test
     public void Clickakclibrary() {
 
         expertAdvice.Clickakclibrary();
 
     }
 
-    @Test
+    //@Test
     public void SubscriptionForm() {
 
         expertAdvice.SubscriptionForm();
@@ -1117,28 +1129,28 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void Clickbreedspecif() {
 
         prodserv.Clickbreedspecif();
 
     }
 
-    @Test
+    //@Test
     public void Clicktoystreats() {
 
         prodserv.Clicktoystreats();
 
     }
 
-    @Test
+    //@Test
     public void Clicktrainingprod() {
 
         prodserv.Clicktrainingprod();
 
     }
 
-    @Test
+    //@Test
     public void Clickdoggift()  {
 
         prodserv.Clickdoggift();
@@ -1152,35 +1164,35 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void ClickDNAKitActProdServ() {
 
         prodserv.ClickDNAKitActProdServ();
 
     }
 
-    @Test
+    //@Test
     public void ClickakcmagProdServ() {
 
         prodserv.ClickakcmagProdServ();
 
     }
 
-    @Test
+    //@Test
     public void Clickpedigrees() {
 
         prodserv.Clickpedigrees();
 
     }
 
-    @Test
+    //@Test
     public void Clickbreedrep() {
 
         prodserv.Clickbreedrep();
 
     }
 
-    @Test
+    //@Test
     public void Clickakccomp() {
 
         prodserv.Clickakccomp();
@@ -1194,28 +1206,28 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void Clickregpure() {
 
         prodserv.Clickregpure();
 
     }
 
-    @Test
+    //@Test
     public void reglitter() {
 
         prodserv.reglitter();
 
     }
 
-    @Test
+    //@Test
     public void Clickenroll() {
 
         prodserv.Clickenroll();
 
     }
 
-    @Test
+    //@Test
     public void Clickregdown() {
 
         prodserv.Clickregdown();
@@ -1223,34 +1235,34 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
     @Test
-    public void Clickfinddog() {
+    public void Clickfinddog() { //AKCMarketplace
 
         prodserv.Clickfinddog();
 
     }
 
-    @Test
+    //@Test
     public void Clickfinpuppy() {
 
         prodserv.Clickfinpuppy();
 
     }
 
-    @Test
+    //@Test
     public void Clickakcrescue() {
 
         prodserv.Clickakcrescue();
 
     }
 
-    @Test
+    //@Test
     public void Clickbreedrefer() {
 
         prodserv.Clickbreedrefer();
 
     }
 
-    @Test
+    //@Test
     public void Clickpuppyvisor() {
 
         prodserv.Clickpuppyvisor();
@@ -1264,28 +1276,28 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void Clickcgc() {
 
         prodserv.Clickcgc();
 
     }
 
-    @Test
+    //@Test
     public void Clickgooddog() {
 
         prodserv.Clickgooddog();
 
     }
 
-    @Test
+    //@Test
     public void Clickfindtrainclub() {
 
         prodserv.Clickfindtrainclub();
 
     }
 
-    @Test
+    //@Test
     public void Clickakccaninecolle() {
 
         prodserv.Clickakccaninecolle();
@@ -1299,28 +1311,28 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void Clickfindgroom() {
 
         prodserv.Clickfindgroom();
 
     }
 
-    @Test
+    //@Test
     public void Clickakcsafe() {
 
         prodserv.Clickakcsafe();
 
     }
 
-    @Test
+    //@Test
     public void Clickakcpet() {
 
         prodserv.Clickakcpet();
 
     }
 
-    @Test
+    //@Test
     public void Clickakcvete() {
 
         prodserv.Clickakcvete();
@@ -1334,7 +1346,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void Clickakcreunite() {
 
         prodserv.Clickakcreunite();
@@ -1348,40 +1360,56 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void Clickbom()  {
 
         prodserv.Clickbom();
 
     }
 
-    @Test
+    //@Test
     public void Clickbwh() {
 
         prodserv.Clickbwh();
 
     }
 
-    @Test
+    //@Test
     public void Clickbez() {
 
         prodserv.Clickbez();
 
     }
 
-    @Test
+    //@Test
     public void Clickseall() {
 
         prodserv.Clickseall();
 
     }
 
-    @Test
+    //@Test
     public void Clickakcshop() {
 
         prodserv.Clickakcshop();
 
     }
+
+    @Test
+    public void ClickProducts() {
+
+        prodserv.ClickProducts();
+
+    }
+
+    //@Test
+    public void ClickServices() {
+
+        prodserv.ClickServices();
+
+    }
+
+
 
     //Test for SportsEvents Menu click action:
 
@@ -1392,28 +1420,28 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void Clickcanpartenro() {
 
         sportsEvents.Clickcanpartenro();
 
     }
 
-    @Test
+    //@Test
     public void Clicktitleabrev() {
 
         sportsEvents.Clicktitleabrev();
 
     }
 
-    @Test
+    //@Test
     public void Clickwhichsports() {
 
         sportsEvents.Clickwhichsports();
 
     }
 
-    @Test
+    //@Test
     public void Clickgetstartdog() {
 
         sportsEvents.Clickgetstartdog();
@@ -1427,49 +1455,49 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void Clicknatiotrack() {
 
         sportsEvents.Clicknatiotrack();
 
     }
 
-    @Test
+    //@Test
     public void Clicknatiochamp() {
 
         sportsEvents.Clicknatiochamp();
 
     }
 
-    @Test
+    //@Test
     public void Clickakcagility() {
 
         sportsEvents.Clickakcagility();
 
     }
 
-    @Test
+    //@Test
     public void Clickobediencecla() {
 
         sportsEvents.Clickobediencecla();
 
     }
 
-    @Test
+    //@Test
     public void Clickakcmeet() {
 
         sportsEvents.Clickakcmeet();
 
     }
 
-    @Test
+    //@Test
     public void Clickakcnatobechamp() {
 
         sportsEvents.Clickakcnatobechamp();
 
     }
 
-    @Test
+    //@Test
     public void Clickakcrallynatchamp() {
 
         sportsEvents.Clickakcrallynatchamp();
@@ -1483,35 +1511,35 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void Clickmatchshow() {
 
         sportsEvents.Clickmatchshow();
 
     }
 
-    @Test
+    //@Test
     public void Clickfourtosix() {
 
         sportsEvents.Clickfourtosix();
 
     }
 
-    @Test
+    //@Test
     public void Clickpuppyachiev() {
 
         sportsEvents.Clickpuppyachiev();
 
     }
 
-    @Test
+    //@Test
     public void Clicknatiohand() {
 
         sportsEvents.Clicknatiohand();
 
     }
 
-    @Test
+    //@Test
     public void Clickopenshow() {
 
         sportsEvents.Clickopenshow();
@@ -1532,21 +1560,21 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void Clickobedience() {
 
         sportsEvents.Clickobedience();
 
     }
 
-    @Test
+    //@Test
     public void Clickrally() {
 
         sportsEvents.Clickrally();
 
     }
 
-    @Test
+    //@Test
     public void Clicktracking() {
 
         sportsEvents.Clicktracking();
@@ -1560,42 +1588,42 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void Clickbarnhunt() {
 
         sportsEvents.Clickbarnhunt();
 
     }
 
-    @Test
+    //@Test
     public void Clickdiscdog() {
 
         sportsEvents.Clickdiscdog();
 
     }
 
-    @Test
+    //@Test
     public void Clickdivingdog() {
 
         sportsEvents.Clickdivingdog();
 
     }
 
-    @Test
+    //@Test
     public void Clickflyball() {
 
         sportsEvents.Clickflyball();
 
     }
 
-    @Test
+    //@Test
     public void Clicksearchresc() {
 
         sportsEvents.Clicksearchresc();
 
     }
 
-    @Test
+    //@Test
     public void Clickparentclubrec() {
 
         sportsEvents.Clickparentclubrec();
@@ -1609,56 +1637,56 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void Clickfieldevnthound() {
 
         sportsEvents.Clickfieldevnthound();
 
     }
 
-    @Test
+    //@Test
     public void Clickcourscat() {
 
         sportsEvents.Clickcourscat();
 
     }
 
-    @Test
+    //@Test
     public void Clickearthdog() {
 
         sportsEvents.Clickearthdog();
 
     }
 
-    @Test
+    //@Test
     public void Clickherding() {
 
         sportsEvents.Clickherding();
 
     }
 
-    @Test
+    //@Test
     public void Clickpointbreed() {
 
         sportsEvents.Clickpointbreed();
 
     }
 
-    @Test
+    //@Test
     public void Clickretrievers() {
 
         sportsEvents.Clickretrievers();
 
     }
 
-    @Test
+    //@Test
     public void ClickscentWork() {
 
         sportsEvents.ClickscentWork();
 
     }
 
-    @Test
+    //@Test
     public void Clickspaniels() {
 
         sportsEvents.Clickspaniels();
@@ -1672,7 +1700,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void Clickjunshow() {
 
         sportsEvents.Clickjunshow();
@@ -1686,14 +1714,14 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void Clickjunperf() {
 
         sportsEvents.Clickjunperf();
 
     }
 
-    @Test
+    //@Test
     public void Clickpeewee() {
 
         sportsEvents.Clickpeewee();
@@ -1707,35 +1735,35 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void Clickcgcstar() {
 
         sportsEvents.Clickcgcstar();
 
     }
 
-    @Test
+    //@Test
     public void ClicktrickVirtual() {
 
         sportsEvents.ClicktrickVirtual();
 
     }
 
-    @Test
+    //@Test
     public void ClicktherapyDog() {
 
         sportsEvents.ClicktherapyDog();
 
     }
 
-    @Test
+    //@Test
     public void ClickfitDog() {
 
         sportsEvents.ClickfitDog();
 
     }
 
-    @Test
+    //@Test
     public void ClicktempTest() {
 
         sportsEvents.ClicktempTest();
@@ -1749,35 +1777,35 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void Clickdownform() {
 
         sportsEvents.Clickdownform();
 
     }
 
-    @Test
+    //@Test
     public void Clickrulesreg() {
 
         sportsEvents.Clickrulesreg();
 
     }
 
-    @Test
+    //@Test
     public void Clickoem() {
 
         sportsEvents.Clickoem();
 
     }
 
-    @Test
+    //@Test
     public void Clickpointaward() {
 
         sportsEvents.Clickpointaward();
 
     }
 
-    @Test
+    //@Test
     public void Clickjudgingres() {
 
         sportsEvents.Clickjudgingres();
@@ -1791,21 +1819,21 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void Clickjudgeseduc() {
 
         sportsEvents.Clickjudgeseduc();
 
     }
 
-    @Test
+    //@Test
     public void Clickakcweeklywin() {
 
         sportsEvents.Clickakcweeklywin();
 
     }
 
-    @Test
+    //@Test
     public void Clickeventcanc() {
 
         sportsEvents.Clickeventcanc();
@@ -1819,14 +1847,14 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void Clickakcrhp() {
 
         sportsEvents.Clickakcrhp();
 
     }
 
-    @Test
+    //@Test
     public void ClickjuniorRes() {
 
         sportsEvents.ClickjuniorRes();
@@ -1850,14 +1878,14 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void Clicktrainclass() {
 
         clubsDelegates.Clicktrainclass();
 
     }
 
-    @Test
+    //@Test
     public void Clickaboutclub() {
 
         clubsDelegates.Clickaboutclub();
@@ -1871,161 +1899,161 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    @Test
+    //@Test
     public void Clickclubdevelop()  {
 
         clubsDelegates.Clickclubdevelop();
 
     }
 
-    @Test
+    //@Test
     public void Clickpromoteclub() {
 
         clubsDelegates.Clickpromoteclub();
 
     }
 
-    @Test
+    //@Test
     public void Clickclubresources() {
 
         clubsDelegates.Clickclubresources();
 
     }
 
-    @Test
+    //@Test
     public void ClickCentennialsClub() {
 
         clubsDelegates.ClickCentennialsClub(); //ONLY available on prod
 
     }
 
-    @Test
+    //@Test
     public void Clickdelegatespor() {
 
         clubsDelegates.Clickdelegatespor();
 
     }
 
-    @Test
+    //@Test
     public void Clickdelegatesdir() {
 
         clubsDelegates.Clickdelegatesdir();
 
     }
 
-    @Test
+    //@Test
     public void Clickdelegatesmeet() {
 
         clubsDelegates.Clickdelegatesmeet();
 
     }
 
-    @Test
+    //@Test
     public void Clickboardmin() {
 
         clubsDelegates.Clickboardmin();
 
     }
 
-    @Test
+    //@Test
     public void Clickdelegatestan() {
 
         clubsDelegates.Clickdelegatestan();
 
     }
 
-    @Test
+    //@Test
     public void Clickperspective() {
 
         clubsDelegates.Clickperspective();
 
     }
 
-    @Test
+    //@Test
     public void Clickakcgazette() {
 
         clubsDelegates.Clickakcgazette();
 
     }
 
-    @Test
+    //@Test
     public void Clickrolakcdel() {
 
         clubsDelegates.Clickrolakcdel();
 
     }
 
-    @Test
+    //@Test
     public void Clickimportance()  {
 
         clubsDelegates.Clickimportance();
 
     }
 
-    @Test
+    //@Test
     public void Clicklegisla()  {
 
         clubsDelegates.Clicklegisla();
 
     }
 
-    @Test
+    //@Test
     public void Clicklegislaalarm() {
 
         clubsDelegates.Clicklegislaalarm();
 
     }
 
-    @Test
+    //@Test
     public void Clickakcpac() {
 
         clubsDelegates.Clickakcpac();
 
     }
 
-    @Test
+    //@Test
     public void Clickgovernrelat() {
 
         clubsDelegates.Clickgovernrelat();
 
     }
 
-    @Test
+    //@Test
     public void Clickovercollec() {
 
         clubsDelegates.Clickovercollec();
 
     }
 
-    @Test
+    //@Test
     public void Clickclubarchives() {
 
         clubsDelegates.Clickclubarchives();
 
     }
 
-    @Test
+    //@Test
     public void Clicksearchlib() {
 
         clubsDelegates.Clicksearchlib();
 
     }
 
-    @Test
+    //@Test
     public void Clickhowtovisit() {
 
         clubsDelegates.Clickhowtovisit();
 
     }
 
-    @Test
+    //@Test
     public void healthArticle() {
 
         expertAdvice.healthArticle();
 
     }
 
-    @Test
+    //@Test
     public void newsArticle() throws InterruptedException {
 
         expertAdvice.newsArticle();
@@ -2158,7 +2186,7 @@ public class ORGTestSuite extends SpecsBaseClass {
 
     }
 
-    //@Test
+    @Test
     public void AkitaBreedPageCheck () {
 
         driver.navigate().to("https://test-web.akc.org/dog-breeds/akita/");
@@ -2177,6 +2205,16 @@ public class ORGTestSuite extends SpecsBaseClass {
         eyes.close();
 
     }
+
+    //@Test
+    public void PercyTest () throws InterruptedException {
+
+        percy.snapshot("EA");
+        //sleep(10000);
+
+    }
+
+
 
 
 }

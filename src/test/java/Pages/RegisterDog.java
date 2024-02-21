@@ -34,7 +34,7 @@ public class RegisterDog {
     @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > form > div:nth-child(1) > div.registration__radio-menu__group-trigger > label > div > span.form-description")
     WebElement regalittext;
 
-    @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > form > div:nth-child(2) > div.registration__radio-menu__group-trigger > label > span")
+    @FindBy(xpath = "/html/body/div[4]/div/div[4]/div/main/form/div[2]/div[1]/label/span")
     WebElement mylitt;
 
     @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > form > div:nth-child(2) > div.registration__radio-menu__group-trigger > label > div > span.form-label")
@@ -70,6 +70,9 @@ public class RegisterDog {
     @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > form > div.registration__radio-option.active > div.registration__radio-menu__group-set.registration__radio-menu__group-set--tight > div:nth-child(2) > label > span")
     WebElement freshext;
 
+    @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > form > div.registration__radio-option.active > div.registration__radio-menu__group-set.registration__radio-menu__group-set--tight > div.registration__radio-option.active > div.registration__radio-menu__group-set > div:nth-child(1) > label > span")
+    WebElement freshRegisterOnline;
+
     @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > form > div.registration__radio-option.active > div.registration__radio-menu__group-set.registration__radio-menu__group-set--tight > div:nth-child(2) > label > div > span")
     WebElement freshexttext;
 
@@ -103,7 +106,7 @@ public class RegisterDog {
     @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > aside > div > nav > ul > li:nth-child(4) > a")
     WebElement purcped;
 
-    @FindBy(xpath = "//a[contains(text(),'More Information')]")
+    @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > aside > div > nav > ul > li:nth-child(6) > a")
     WebElement moreinfo;
 
     @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > aside > div > nav > h4")
@@ -227,7 +230,7 @@ public class RegisterDog {
     @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > div.article-body > div > div > div")
     WebElement transownbody;
 
-    @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > div.article-body > div > div > div > p:nth-child(7) > a")
+    @FindBy(css = "body > div.registration.cmw.bgc-white > div > div.registration__content.pb4.bpm-pb6 > div > main > div.article-body > div > div > div > p:nth-child(5) > a")
     WebElement transownbut;
 
     @FindBy(xpath = "//html/body/div[5]/div/div/main/div[2]/div/div[2]/app-root/main/div/app-login/div/div[2]/div/img")
@@ -674,9 +677,11 @@ public class RegisterDog {
         this.mylitt.click();
         wait.until(ExpectedConditions.elementToBeClickable(freshext));
         this.freshext.click();
+        wait.until(ExpectedConditions.elementToBeClickable(freshRegisterOnline));
+        this.freshRegisterOnline.click();
         wait.until(ExpectedConditions.elementToBeClickable(buttoncont));
         this.buttoncont.click();
-        newWindow4();
+        wait.until(ExpectedConditions.urlContains("apps.akc.org/registration-litter/register"));
 
     }
 
@@ -800,7 +805,7 @@ public class RegisterDog {
         this.register.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(moreinfo));
-        //HiddeBanner();
+        HiddeBanner();
         this.moreinfo.click();
         wait.until(ExpectedConditions.visibilityOf(moreInfoTitle));
 

@@ -451,7 +451,7 @@ public class ExpertAdvice {
         this.menuexpadv.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(candogeat));
-        this.candogeat.click();
+        this.candogeat.click(); //fix this
         wait.until(ExpectedConditions.visibilityOf(candogeatElement));
 
     }

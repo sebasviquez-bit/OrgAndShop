@@ -70,7 +70,7 @@ public class CompareBreeds {
     @FindBy(css = "body > div.breed-select-wrap > div > div > div.page-layout > main > div.breed-comparison-wrap-button > a")
     WebElement breedcompbutton;
 
-    @FindBy(css = "body > div.breed-select-wrap > div > div > div.page-layout > main > div.breed-comparison-theme-wrap > div.breed-comparison-select-and-breed-data > div.breed-comparison-wrap-table > div.breed-comparison-wrap-table-inner > div > div > div:nth-child(3)")
+    @FindBy(xpath = "//body/div[11]/div[1]/div[1]/div[2]/main[1]/div[4]/div[2]/div[2]/div[2]/div[1]/div[1]/div[3]")
     WebElement personality;
 
     @FindBy(css = "body > div.breed-results-wrap.breed-results-wrap-comparison > div:nth-child(3) > div > div > main > div.breed-results-comparison.js-breed-results-comparison > div > div:nth-child(5) > div:nth-child(1)")
@@ -88,25 +88,25 @@ public class CompareBreeds {
     @FindBy(css = "body > div.breed-results-wrap.breed-results-wrap-comparison > div:nth-child(3) > div > div > main > div.breed-results-comparison.js-breed-results-comparison > div > div:nth-child(5) > div:nth-child(5) > span")
     WebElement perso5;
 
-    @FindBy(css = "body > div.breed-results-wrap.breed-results-wrap-comparison > div:nth-child(3) > div > div > main > div.breed-results-comparison.js-breed-results-comparison > div > div:nth-child(7) > div:nth-child(1)")
+    @FindBy(xpath = "//body/div[11]/div[1]/div[1]/div[2]/main[1]/div[4]/div[2]/div[2]/div[2]/div[1]/div[1]/div[6]")
     WebElement poprank;
 
-    @FindBy(xpath = "body > div.breed-select-wrap > div > div > div.page-layout > main > div.breed-comparison-theme-wrap > div.breed-comparison-select-and-breed-data > div.breed-comparison-wrap-table > div.breed-comparison-wrap-table-inner > div > div > div:nth-child(8) > div:nth-child(1)")
+    @FindBy(css = "body > div.breed-select-wrap > div > div > div.page-layout > main > div.breed-comparison-theme-wrap > div.breed-comparison-select-and-breed-data > div.breed-comparison-wrap-table > div.breed-comparison-wrap-table-inner > div > div > div:nth-child(8) > div:nth-child(1)")
     WebElement poprank1;
 
     @FindBy(css = "body > div.breed-select-wrap > div > div > div.page-layout > main > div.breed-comparison-theme-wrap > div.breed-comparison-select-and-breed-data > div.breed-comparison-wrap-table > div.breed-comparison-wrap-table-inner > div > div > div:nth-child(8) > div:nth-child(2)")
     WebElement poprank2;
 
-    @FindBy(xpath = "body > div.breed-select-wrap > div > div > div.page-layout > main > div.breed-comparison-theme-wrap > div.breed-comparison-select-and-breed-data > div.breed-comparison-wrap-table > div.breed-comparison-wrap-table-inner > div > div > div:nth-child(8) > div:nth-child(3)")
+    @FindBy(css = "body > div.breed-select-wrap > div > div > div.page-layout > main > div.breed-comparison-theme-wrap > div.breed-comparison-select-and-breed-data > div.breed-comparison-wrap-table > div.breed-comparison-wrap-table-inner > div > div > div:nth-child(8) > div:nth-child(3)")
     WebElement poprank3;
 
-    @FindBy(xpath = "body > div.breed-select-wrap > div > div > div.page-layout > main > div.breed-comparison-theme-wrap > div.breed-comparison-select-and-breed-data > div.breed-comparison-wrap-table > div.breed-comparison-wrap-table-inner > div > div > div:nth-child(8) > div:nth-child(4)")
+    @FindBy(css = "body > div.breed-select-wrap > div > div > div.page-layout > main > div.breed-comparison-theme-wrap > div.breed-comparison-select-and-breed-data > div.breed-comparison-wrap-table > div.breed-comparison-wrap-table-inner > div > div > div:nth-child(8) > div:nth-child(4)")
     WebElement poprank4;
 
-    @FindBy(xpath = "body > div.breed-select-wrap > div > div > div.page-layout > main > div.breed-comparison-theme-wrap > div.breed-comparison-select-and-breed-data > div.breed-comparison-wrap-table > div.breed-comparison-wrap-table-inner > div > div > div:nth-child(8) > div:nth-child(4)")
+    @FindBy(css = "body > div.breed-select-wrap > div > div > div.page-layout > main > div.breed-comparison-theme-wrap > div.breed-comparison-select-and-breed-data > div.breed-comparison-wrap-table > div.breed-comparison-wrap-table-inner > div > div > div:nth-child(8) > div:nth-child(4)")
     WebElement poprank5;
 
-    @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[9]")
+    @FindBy(xpath = "//body/div[11]/div[1]/div[1]/div[2]/main[1]/div[4]/div[2]/div[2]/div[2]/div[1]/div[1]/div[9]")
     WebElement group;
 
     @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[11]/div[1]/a")
@@ -124,7 +124,7 @@ public class CompareBreeds {
     @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[11]/div[5]/a")
     WebElement group5;
 
-    @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[12]")
+    @FindBy(xpath = "//body/div[11]/div[1]/div[1]/div[2]/main[1]/div[4]/div[2]/div[2]/div[2]/div[1]/div[1]/div[12]")
     WebElement size;
 
     @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[14]/div[1]")
@@ -142,7 +142,7 @@ public class CompareBreeds {
     @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[14]/div[5]")
     WebElement size5;
 
-    @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[15]")
+    @FindBy(xpath = "/html[1]/body[1]/div[11]/div[1]/div[1]/div[2]/main[1]/div[4]/div[2]/div[2]/div[2]/div[1]/div[1]/div[14]/div[1]/div[1]")
     WebElement lifexp;
 
     @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[17]/div[1]")
@@ -160,7 +160,7 @@ public class CompareBreeds {
     @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[17]/div[5]")
     WebElement lifexp5;
 
-    @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[18]")
+    @FindBy(xpath = "//body/div[11]/div[1]/div[1]/div[2]/main[1]/div[4]/div[2]/div[2]/div[2]/div[1]/div[1]/div[18]")
     WebElement charac;
 
     @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[20]/div[1]")
@@ -178,7 +178,7 @@ public class CompareBreeds {
     @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[20]/div[5]")
     WebElement charac5;
 
-    @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[21]")
+    @FindBy(xpath = "//body/div[11]/div[1]/div[1]/div[2]/main[1]/div[4]/div[2]/div[2]/div[2]/div[1]/div[1]/div[21]")
     WebElement trainab;
 
     @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[23]/div[1]")
@@ -196,7 +196,7 @@ public class CompareBreeds {
     @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[23]/div[5]")
     WebElement trainab5;
 
-    @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[24]")
+    @FindBy(xpath = "//body/div[11]/div[1]/div[1]/div[2]/main[1]/div[4]/div[2]/div[2]/div[2]/div[1]/div[1]/div[24]")
     WebElement coatlength;
 
     @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[26]/div[1]")
@@ -214,7 +214,7 @@ public class CompareBreeds {
     @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[26]/div[5]")
     WebElement coatlength5;
 
-    @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[27]")
+    @FindBy(xpath = "//body/div[11]/div[1]/div[1]/div[2]/main[1]/div[4]/div[2]/div[2]/div[2]/div[1]/div[1]/div[27]")
     WebElement groom;
 
     @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[29]/div[1]")
@@ -232,7 +232,7 @@ public class CompareBreeds {
     @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[29]/div[5]")
     WebElement groom5;
 
-    @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[30]")
+    @FindBy(xpath = "//body/div[11]/div[1]/div[1]/div[2]/main[1]/div[4]/div[2]/div[2]/div[2]/div[1]/div[1]/div[30]")
     WebElement shedd;
 
     @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[32]/div[1]")
@@ -250,7 +250,7 @@ public class CompareBreeds {
     @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[32]/div[5]")
     WebElement shedd5;
 
-    @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[33]")
+    @FindBy(xpath = "//body/div[11]/div[1]/div[1]/div[2]/main[1]/div[4]/div[2]/div[2]/div[2]/div[1]/div[1]/div[33]")
     WebElement actlev;
 
     @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[35]/div[1]")
@@ -268,7 +268,7 @@ public class CompareBreeds {
     @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[35]/div[5]")
     WebElement actlev5;
 
-    @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[36]")
+    @FindBy(xpath = "//body/div[11]/div[1]/div[1]/div[2]/main[1]/div[4]/div[2]/div[2]/div[2]/div[1]/div[1]/div[36]")
     WebElement barking;
 
     @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[38]/div[1]")
@@ -286,7 +286,7 @@ public class CompareBreeds {
     @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[38]/div[5]")
     WebElement barking5;
 
-    @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[39]/div[1]/a")
+    @FindBy(css = "body > div.breed-select-wrap > div > div > div.page-layout > main > div.breed-comparison-theme-wrap > div.breed-comparison-select-and-breed-data > div.breed-comparison-wrap-table > div.breed-comparison-wrap-table-inner > div > div > div:nth-child(39) > div:nth-child(1) > a")
     WebElement findpuppy1;
 
     @FindBy(xpath = "//html/body/div[5]/div/div/div[2]/main/div[4]/div[2]/div[2]/div[2]/div/div/div[39]/div[2]/a")
@@ -320,109 +320,35 @@ public class CompareBreeds {
 
         this.breeds.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.elementToBeClickable(breedscompa));
-        this.breedscompa.click();
-        wait.until(ExpectedConditions.elementToBeClickable(select1));
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView();", breedscompa);
+        wait.until(ExpectedConditions.elementToBeClickable(breedscompa)).click();
         HiddeBanner();
-        this.select1.click();
-        wait.until(ExpectedConditions.elementToBeClickable(affens));
-        this.affens.click();
-        wait.until(ExpectedConditions.visibilityOf(affenspic));
-        this.select2.click();
-        wait.until(ExpectedConditions.elementToBeClickable(akita));
-        this.akita.click();
-        wait.until(ExpectedConditions.visibilityOf(akitapic));
-        this.akitapic.isDisplayed();
-        this.select3.click();
-        wait.until(ExpectedConditions.elementToBeClickable(beagle));
-        this.beagle.click();
-        this.beaglepic.isDisplayed();
-        this.select4.click();
-        wait.until(ExpectedConditions.elementToBeClickable(boxer));
-        this.boxer.click();
-        this.boxerpic.isDisplayed();
-        this.select5.click();
-        wait.until(ExpectedConditions.elementToBeClickable(bullterrier));
-        this.bullterrier.click();
-        this.bullterrierpic.isDisplayed();
-        this.breedcompbutton.click();
-        //wait.until(ExpectedConditions.visibilityOf(personality));
-        //this.perso1.isDisplayed();
-        //this.perso2.isDisplayed();
-        //this.perso3.isDisplayed();
-        //this.perso4.isDisplayed();
-        //this.perso5.isDisplayed();
-        //this.poprank.isDisplayed();
-        //this.poprank1.isDisplayed();
-        //this.poprank2.isDisplayed();
-        //this.poprank3.isDisplayed();
-        //this.poprank4.isDisplayed();
-        //this.poprank5.isDisplayed();
-        //this.group.isDisplayed();
-        //this.group1.isDisplayed();
-        //this.group2.isDisplayed();
-        //this.group3.isDisplayed();
-        this.group4.isDisplayed();
-        this.group5.isDisplayed();
-        this.size.isDisplayed();
-        this.size1.isDisplayed();
-        this.size2.isDisplayed();
-        this.size3.isDisplayed();
-        this.size4.isDisplayed();
-        this.size5.isDisplayed();
-        this.lifexp.isDisplayed();
-        this.lifexp1.isDisplayed();
-        this.lifexp2.isDisplayed();
-        this.lifexp3.isDisplayed();
-        this.lifexp4.isDisplayed();
-        this.lifexp5.isDisplayed();
-        this.charac.isDisplayed();
-        this.charac1.isDisplayed();
-        this.charac2.isDisplayed();
-        this.charac3.isDisplayed();
-        this.charac4.isDisplayed();
-        this.charac5.isDisplayed();
-        this.trainab.isDisplayed();
-        this.trainab1.isDisplayed();
-        this.trainab2.isDisplayed();
-        this.trainab3.isDisplayed();
-        this.trainab4.isDisplayed();
-        this.trainab5.isDisplayed();
-        this.coatlength.isDisplayed();
-        this.coatlength1.isDisplayed();
-        this.coatlength2.isDisplayed();
-        this.coatlength3.isDisplayed();
-        this.coatlength4.isDisplayed();
-        this.coatlength5.isDisplayed();
-        this.groom.isDisplayed();
-        this.groom1.isDisplayed();
-        this.groom2.isDisplayed();
-        this.groom3.isDisplayed();
-        this.groom4.isDisplayed();
-        this.groom5.isDisplayed();
-        this.shedd.isDisplayed();
-        this.shedd1.isDisplayed();
-        this.shedd2.isDisplayed();
-        this.shedd3.isDisplayed();
-        this.shedd4.isDisplayed();
-        this.shedd5.isDisplayed();
-        this.actlev.isDisplayed();
-        this.actlev1.isDisplayed();
-        this.actlev2.isDisplayed();
-        this.actlev3.isDisplayed();
-        this.actlev4.isDisplayed();
-        this.actlev5.isDisplayed();
-        this.barking.isDisplayed();
-        this.barking1.isDisplayed();
-        this.barking2.isDisplayed();
-        this.barking3.isDisplayed();
-        this.barking4.isDisplayed();
-        this.barking5.isDisplayed();
-        this.findpuppy1.isDisplayed();
-        this.findpuppy2.isDisplayed();
-        this.findpuppy3.isDisplayed();
-        this.findpuppy4.isDisplayed();
-        this.findpuppy5.isDisplayed();
+        wait.until(ExpectedConditions.elementToBeClickable(select1)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(affens)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(select2)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(akita)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(select3)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(beagle)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(select4)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(boxer)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(select5)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(bullterrier)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(breedcompbutton)).click();
+        wait.until(ExpectedConditions.visibilityOf(personality));
+        wait.until(ExpectedConditions.visibilityOf(poprank));
+        wait.until(ExpectedConditions.visibilityOf(group));
+        wait.until(ExpectedConditions.visibilityOf(size));
+        wait.until(ExpectedConditions.visibilityOf(lifexp));
+        wait.until(ExpectedConditions.visibilityOf(charac));
+        wait.until(ExpectedConditions.visibilityOf(trainab));
+        wait.until(ExpectedConditions.visibilityOf(coatlength));
+        wait.until(ExpectedConditions.visibilityOf(groom));
+        //js.executeScript("arguments[0].scrollIntoView();", shedd);
+        wait.until(ExpectedConditions.visibilityOf(shedd));
+        wait.until(ExpectedConditions.visibilityOf(actlev));
+        wait.until(ExpectedConditions.visibilityOf(barking));
+        wait.until(ExpectedConditions.visibilityOf(findpuppy1));
 
     }
 
