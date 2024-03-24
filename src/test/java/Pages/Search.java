@@ -117,11 +117,11 @@ public class Search {
         search.sendKeys(Keys.RETURN);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(SearchCampImg));
-        numresults.isDisplayed();
-        sections.isDisplayed();
-        resultsimg.isDisplayed();
-        firstresult.isDisplayed();
-        frbody.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(numresults));
+        wait.until(ExpectedConditions.visibilityOf(sections));
+        wait.until(ExpectedConditions.visibilityOf(resultsimg));
+        wait.until(ExpectedConditions.visibilityOf(firstresult));
+        wait.until(ExpectedConditions.visibilityOf(frbody));
 
     }
 
@@ -156,7 +156,7 @@ public class Search {
         ShopSearch.sendKeys(_searchword.WordSearch);
         ShopSearch.sendKeys(Keys.RETURN);
         wait.until(ExpectedConditions.visibilityOf(ShopResultTitle));
-        //ShopResultTitle.isDisplayed();
+        //wait.until(ExpectedConditions.visibilityOf(ShopResultTitle));
         wait.until(ExpectedConditions.visibilityOf(ShopResultSearchBar));
         wait.until(ExpectedConditions.visibilityOf(ShopResultSections));
         wait.until(ExpectedConditions.visibilityOf(ShopResultImage));
@@ -167,12 +167,12 @@ public class Search {
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(dropdown));
-        dropdown.click();
+        wait.until(ExpectedConditions.elementToBeClickable(dropdown)).click();
         wait.until(ExpectedConditions.visibilityOf(ShopSearchBreed));
         ShopSearchBreed.sendKeys(_searchword.WordSearch);
         ShopSearchBreed.sendKeys(Keys.RETURN);
         wait.until(ExpectedConditions.visibilityOf(ShopSearchBreedTitle));
-        //ShopSearchBreedTitle.isDisplayed();
+        //wait.until(ExpectedConditions.visibilityOf(ShopSearchBreedTitle));
         wait.until(ExpectedConditions.visibilityOf(ChooseBreedTitle));
         wait.until(ExpectedConditions.visibilityOf(ShopSearchBreedImage));
 
@@ -183,7 +183,7 @@ public class Search {
         driver.navigate().to("https://shop.akc.org/collections/dog-lovers");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(dropdownDogLover));
-        dropdownDogLover.click();
+        wait.until(ExpectedConditions.elementToBeClickable(dropdownDogLover)).click();
         wait.until(ExpectedConditions.visibilityOf(ShopDogLoversSearch));
         ShopDogLoversSearch.sendKeys(_searchword.WordSearch);
         ShopDogLoversSearch.sendKeys(Keys.RETURN);

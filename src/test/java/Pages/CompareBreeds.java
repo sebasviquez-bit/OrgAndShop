@@ -318,8 +318,8 @@ public class CompareBreeds {
 
     public void VerifyCompareBreeds() {
 
-        breeds.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(breeds)).click();
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", breedscompa);
         wait.until(ExpectedConditions.elementToBeClickable(breedscompa)).click();

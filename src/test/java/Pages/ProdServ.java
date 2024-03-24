@@ -260,50 +260,49 @@ public class ProdServ {
     public void VerifyProdServ() {
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.elementToBeClickable(produservi));
-        produservi.click();
-        products.isDisplayed();
-        shopdog.isDisplayed();
-        breedspecif.isDisplayed();
-        toystreats.isDisplayed();
-        trainingprod.isDisplayed();
-        doggift.isDisplayed();
-        dnaHealthTest.isDisplayed();
-        DNAKitAct.isDisplayed();
-        akcmag.isDisplayed();
-        pedigrees.isDisplayed();
-        breedrep.isDisplayed();
-        akccomp.isDisplayed();
-        services.isDisplayed();
-        regdog.isDisplayed();
-        regpure.isDisplayed();
-        reglitter.isDisplayed();
-        enroll.isDisplayed();
-        regdown.isDisplayed();
-        finddog.isDisplayed();
-        finpuppy.isDisplayed();
-        akcrescue.isDisplayed();
-        breedrefer.isDisplayed();
-        puppyvisor.isDisplayed();
-        trainserv.isDisplayed();
-        cgc.isDisplayed();
-        gooddog.isDisplayed();
-        findtrainclub.isDisplayed();
-        akccaninecolle.isDisplayed();
-        healthgen.isDisplayed();
-        findgroom.isDisplayed();
-        akcsafe.isDisplayed();
-        akcpet.isDisplayed();
-        akcvete.isDisplayed();
-        akccanineretreat.isDisplayed();
-        akcreunite.isDisplayed();
-        breedprog.isDisplayed();
-        bom.isDisplayed();
-        bwh.isDisplayed();
-        bez.isDisplayed();
-        seall.isDisplayed();
-        browseserv.isDisplayed();
-        akcshop.isDisplayed();
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
+        wait.until(ExpectedConditions.visibilityOf(products));
+        wait.until(ExpectedConditions.visibilityOf(shopdog));
+        wait.until(ExpectedConditions.visibilityOf(breedspecif));
+        wait.until(ExpectedConditions.visibilityOf(toystreats));
+        wait.until(ExpectedConditions.visibilityOf(trainingprod));
+        wait.until(ExpectedConditions.visibilityOf(doggift));
+        wait.until(ExpectedConditions.visibilityOf(dnaHealthTest));
+        wait.until(ExpectedConditions.visibilityOf(DNAKitAct));
+        wait.until(ExpectedConditions.visibilityOf(akcmag));
+        wait.until(ExpectedConditions.visibilityOf(pedigrees));
+        wait.until(ExpectedConditions.visibilityOf(breedrep));
+        wait.until(ExpectedConditions.visibilityOf(akccomp));
+        wait.until(ExpectedConditions.visibilityOf(services));
+        wait.until(ExpectedConditions.visibilityOf(regdog));
+        wait.until(ExpectedConditions.visibilityOf(regpure));
+        wait.until(ExpectedConditions.visibilityOf(reglitter));
+        wait.until(ExpectedConditions.visibilityOf(enroll));
+        wait.until(ExpectedConditions.visibilityOf(regdown));
+        wait.until(ExpectedConditions.visibilityOf(finddog));
+        wait.until(ExpectedConditions.visibilityOf(finpuppy));
+        wait.until(ExpectedConditions.visibilityOf(akcrescue));
+        wait.until(ExpectedConditions.visibilityOf(breedrefer));
+        wait.until(ExpectedConditions.visibilityOf(puppyvisor));
+        wait.until(ExpectedConditions.visibilityOf(trainserv));
+        wait.until(ExpectedConditions.visibilityOf(cgc));
+        wait.until(ExpectedConditions.visibilityOf(gooddog));
+        wait.until(ExpectedConditions.visibilityOf(findtrainclub));
+        wait.until(ExpectedConditions.visibilityOf(akccaninecolle));
+        wait.until(ExpectedConditions.visibilityOf(healthgen));
+        wait.until(ExpectedConditions.visibilityOf(findgroom));
+        wait.until(ExpectedConditions.visibilityOf(akcsafe));
+        wait.until(ExpectedConditions.visibilityOf(akcpet));
+        wait.until(ExpectedConditions.visibilityOf(akcvete));
+        wait.until(ExpectedConditions.visibilityOf(akccanineretreat));
+        wait.until(ExpectedConditions.visibilityOf(akcreunite));
+        wait.until(ExpectedConditions.visibilityOf(breedprog));
+        wait.until(ExpectedConditions.visibilityOf(bom));
+        wait.until(ExpectedConditions.visibilityOf(bwh));
+        wait.until(ExpectedConditions.visibilityOf(bez));
+        wait.until(ExpectedConditions.visibilityOf(seall));
+        wait.until(ExpectedConditions.visibilityOf(browseserv));
+        wait.until(ExpectedConditions.visibilityOf(akcshop));
 
     }
 
@@ -311,10 +310,10 @@ public class ProdServ {
 
     public void Clickshopdog() {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.elementToBeClickable(shopdog));
-        shopdog.click();
+        wait.until(ExpectedConditions.elementToBeClickable(shopdog)).click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://shop.akc.org/"));
 
@@ -322,10 +321,10 @@ public class ProdServ {
 
     public void Clickbreedspecif() {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.visibilityOf(breedspecif));
-        breedspecif.click();
+        wait.until(ExpectedConditions.elementToBeClickable(breedspecif)).click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://shop.akc.org/"));
 
@@ -333,10 +332,10 @@ public class ProdServ {
 
     public void Clicktoystreats() {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.elementToBeClickable(toystreats));
-        toystreats.click();
+        wait.until(ExpectedConditions.elementToBeClickable(toystreats)).click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://shop.akc.org/"));
 
@@ -344,10 +343,10 @@ public class ProdServ {
 
     public void Clicktrainingprod() {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.elementToBeClickable(trainingprod));
-        trainingprod.click();
+        wait.until(ExpectedConditions.elementToBeClickable(trainingprod)).click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://shop.akc.org/"));
 
@@ -355,10 +354,10 @@ public class ProdServ {
 
     public void Clickdoggift() {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.elementToBeClickable(doggift));
-        doggift.click();
+        wait.until(ExpectedConditions.elementToBeClickable(doggift)).click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlToBe("https://shop.akc.org/collections/gear-for-dogs-gift-boxes"));
 
@@ -366,8 +365,8 @@ public class ProdServ {
 
     public void ClickdnaHealthTest() {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.elementToBeClickable(dnaHealthTest)).click();
         wait.until(ExpectedConditions.visibilityOf(dnaElement));
 
@@ -375,10 +374,10 @@ public class ProdServ {
 
     public void ClickDNAKitActProdServ() {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.elementToBeClickable(DNAKitAct));
-        DNAKitAct.click();
+        wait.until(ExpectedConditions.elementToBeClickable(DNAKitAct)).click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://dna.akc.org/"));
 
@@ -386,10 +385,10 @@ public class ProdServ {
 
     public void ClickakcmagProdServ() {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.elementToBeClickable(akcmag));
-        akcmag.click();
+        wait.until(ExpectedConditions.elementToBeClickable(akcmag)).click();
         wait.until(ExpectedConditions.visibilityOf(akcmagElement));
 
 
@@ -397,10 +396,10 @@ public class ProdServ {
 
     public void Clickpedigrees() {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.elementToBeClickable(pedigrees));
-        pedigrees.click();
+        wait.until(ExpectedConditions.elementToBeClickable(pedigrees)).click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://www.apps.akc.org/"));
 
@@ -408,10 +407,10 @@ public class ProdServ {
 
     public void Clickbreedrep() {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.elementToBeClickable(breedrep));
-        breedrep.click();
+        wait.until(ExpectedConditions.elementToBeClickable(breedrep)).click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://www.apps.akc.org/apps/store/?view=category&cde_category=BRDR"));
 
@@ -419,10 +418,10 @@ public class ProdServ {
 
     public void Clickakccomp() {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.elementToBeClickable(akccomp));
-        akccomp.click();
+        wait.until(ExpectedConditions.elementToBeClickable(akccomp)).click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://www.apps.akc.org/apps/"));
 
@@ -430,40 +429,40 @@ public class ProdServ {
 
     public void Clickregdog() {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.elementToBeClickable(regdog));
-        regdog.click();
+        wait.until(ExpectedConditions.elementToBeClickable(regdog)).click();
         wait.until(ExpectedConditions.visibilityOf(regdogElement));
 
     }
 
     public void Clickregpure() {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.elementToBeClickable(regpure));
-        regpure.click();
+        wait.until(ExpectedConditions.elementToBeClickable(regpure)).click();
         wait.until(ExpectedConditions.visibilityOf(regpureElement));
 
     }
 
     public void reglitter() {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.elementToBeClickable(reglitter));
-        reglitter.click();
+        wait.until(ExpectedConditions.elementToBeClickable(reglitter)).click();
         wait.until(ExpectedConditions.visibilityOf(reglitterRadiobutton));
 
     }
 
     public void Clickenroll() {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.elementToBeClickable(enroll));
-        enroll.click();
+        wait.until(ExpectedConditions.elementToBeClickable(enroll)).click();
         wait.until(ExpectedConditions.visibilityOf(AKCCaninePartners));
         //driver.get(driver.getCurrentUrl() + "?test=true");
 
@@ -471,10 +470,10 @@ public class ProdServ {
 
     public void Clickregdown() {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.elementToBeClickable(regdown));
-        regdown.click();
+        wait.until(ExpectedConditions.elementToBeClickable(regdown)).click();
         wait.until(ExpectedConditions.visibilityOf(regdownElement));
         //driver.get(driver.getCurrentUrl() + "?test=true");
 
@@ -482,10 +481,10 @@ public class ProdServ {
 
     public void Clickfinddog() {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.elementToBeClickable(finddog));
-        finddog.click();
+        wait.until(ExpectedConditions.elementToBeClickable(finddog)).click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://marketplace.akc.org/"));
 
@@ -493,10 +492,10 @@ public class ProdServ {
 
     public void Clickfinpuppy() {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.elementToBeClickable(finpuppy));
-        finpuppy.click();
+        wait.until(ExpectedConditions.elementToBeClickable(finpuppy)).click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://marketplace"));
 
@@ -504,10 +503,10 @@ public class ProdServ {
 
     public void Clickakcrescue() {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.elementToBeClickable(akcrescue));
-        akcrescue.click();
+        wait.until(ExpectedConditions.elementToBeClickable(akcrescue)).click();
         wait.until(ExpectedConditions.visibilityOf(akcrescueElement));
         driver.get(driver.getCurrentUrl() + "?test=true");
 
@@ -515,20 +514,20 @@ public class ProdServ {
 
     public void Clickbreedrefer() {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.elementToBeClickable(breedrefer));
-        breedrefer.click();
+        wait.until(ExpectedConditions.elementToBeClickable(breedrefer)).click();
         wait.until(ExpectedConditions.visibilityOf(breedreferElement));
 
     }
 
     public void Clickpuppyvisor() {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.elementToBeClickable(puppyvisor));
-        puppyvisor.click();
+        wait.until(ExpectedConditions.elementToBeClickable(puppyvisor)).click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://marketplace.akc.org/"));
 
@@ -537,30 +536,30 @@ public class ProdServ {
 
     public void Clicktrainserv() {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.elementToBeClickable(trainserv));
-        trainserv.click();
+        wait.until(ExpectedConditions.elementToBeClickable(trainserv)).click();
         wait.until(ExpectedConditions.visibilityOf(trainservElement));
 
     }
 
     public void Clickcgc() {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.elementToBeClickable(cgc));
-        cgc.click();
+        wait.until(ExpectedConditions.elementToBeClickable(cgc)).click();
         wait.until(ExpectedConditions.visibilityOf(cgcElement));
 
     }
 
     public void Clickgooddog() {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.elementToBeClickable(gooddog));
-        gooddog.click();
+        wait.until(ExpectedConditions.elementToBeClickable(gooddog)).click();
         wait.until(ExpectedConditions.visibilityOf(gooddogElement));
         //driver.get(driver.getCurrentUrl() + "?test=true");
 
@@ -568,10 +567,10 @@ public class ProdServ {
 
     public void Clickfindtrainclub() {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.elementToBeClickable(findtrainclub));
-        findtrainclub.click();
+        wait.until(ExpectedConditions.elementToBeClickable(findtrainclub)).click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("/www.apps.akc.org/"));
 
@@ -579,10 +578,10 @@ public class ProdServ {
 
     public void Clickakccaninecolle() {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.elementToBeClickable(akccaninecolle));
-        akccaninecolle.click();
+        wait.until(ExpectedConditions.elementToBeClickable(akccaninecolle)).click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://www.caninecollege.akc.org/"));
 
@@ -590,10 +589,10 @@ public class ProdServ {
 
     public void Clickhealthgen() {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.elementToBeClickable(healthgen));
-        healthgen.click();
+        wait.until(ExpectedConditions.elementToBeClickable(healthgen)).click();
         wait.until(ExpectedConditions.visibilityOf(healthgenElement));
         //driver.get(driver.getCurrentUrl() + "?test=true");
 
@@ -601,10 +600,10 @@ public class ProdServ {
 
     public void Clickfindgroom() {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.elementToBeClickable(findgroom));
-        findgroom.click();
+        wait.until(ExpectedConditions.elementToBeClickable(findgroom)).click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://marketplace.akc.org/"));
 
@@ -612,10 +611,10 @@ public class ProdServ {
 
     public void Clickakcsafe() {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.elementToBeClickable(akcsafe));
-        akcsafe.click();
+        wait.until(ExpectedConditions.elementToBeClickable(akcsafe)).click();
         wait.until(ExpectedConditions.visibilityOf(akcsafeElement));
         //driver.get(driver.getCurrentUrl() + "?test=true");
 
@@ -623,10 +622,10 @@ public class ProdServ {
 
     public void Clickakcpet() {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.elementToBeClickable(akcpet));
-        akcpet.click();
+        wait.until(ExpectedConditions.elementToBeClickable(akcpet)).click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://www.akcpetinsurance.com/"));
 
@@ -634,10 +633,10 @@ public class ProdServ {
 
     public void Clickakcvete() {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.elementToBeClickable(akcvete));
-        akcvete.click();
+        wait.until(ExpectedConditions.elementToBeClickable(akcvete)).click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("apps.akc.org/"));
 
@@ -645,10 +644,10 @@ public class ProdServ {
 
     public void Clickakccanineretreat() {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.elementToBeClickable(akccanineretreat)); //This was removed from the ProdServMneu
-        akccanineretreat.click();
+        wait.until(ExpectedConditions.elementToBeClickable(akccanineretreat)).click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://akccanineretreat.com/"));
 
@@ -656,10 +655,10 @@ public class ProdServ {
 
     public void Clickakcreunite()  {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.elementToBeClickable(akcreunite));
-        akcreunite.click();
+        wait.until(ExpectedConditions.elementToBeClickable(akcreunite)).click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("/akcreunite.org/"));
 
@@ -667,8 +666,8 @@ public class ProdServ {
 
     public void Clickbreedprog() {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.elementToBeClickable(breedprog)).click();
         wait.until(ExpectedConditions.visibilityOf(breedprogElement));
 
@@ -676,10 +675,10 @@ public class ProdServ {
 
     public void Clickbom() {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.elementToBeClickable(bom));
-        bom.click();
+        wait.until(ExpectedConditions.elementToBeClickable(bom)).click();
         wait.until(ExpectedConditions.visibilityOf(bomElement));
         driver.get(driver.getCurrentUrl() + "?test=true");
 
@@ -687,20 +686,20 @@ public class ProdServ {
 
     public void Clickbwh() {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.elementToBeClickable(bwh));
-        bwh.click();
+        wait.until(ExpectedConditions.elementToBeClickable(bwh)).click();
         wait.until(ExpectedConditions.visibilityOf(bwhElement));
 
     }
 
     public void Clickbez() {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.elementToBeClickable(bez));
-        bez.click();
+        wait.until(ExpectedConditions.elementToBeClickable(bez)).click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://www.apps.akc.org/"));
 
@@ -708,10 +707,10 @@ public class ProdServ {
 
     public void Clickseall() {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.elementToBeClickable(seall));
-        seall.click();
+        wait.until(ExpectedConditions.elementToBeClickable(seall)).click();
         wait.until(ExpectedConditions.visibilityOf(seallElement));
 
     }
@@ -719,10 +718,10 @@ public class ProdServ {
 
     public void Clickakcshop() {
 
-        produservi.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
         wait.until(ExpectedConditions.elementToBeClickable(akcshop));
-        akcshop.click();
+        wait.until(ExpectedConditions.elementToBeClickable(akcshop)).click();
         wait.until(ExpectedConditions.urlContains("https://shop.akc.org/"));
 
     }
@@ -740,8 +739,8 @@ public class ProdServ {
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(produservi));
-        produservi.click();
-        services.click();
+        wait.until(ExpectedConditions.elementToBeClickable(produservi)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(services)).click();
         wait.until(ExpectedConditions.urlContains("/products-services/"));
 
 

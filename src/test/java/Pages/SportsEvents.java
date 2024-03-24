@@ -433,212 +433,212 @@ public class SportsEvents {
 
     public void VerifySportsEvents() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.visibilityOf(getstart));
-        introdog.isDisplayed();
-        canpartenro.isDisplayed();
-        titleabrev.isDisplayed();
-        whichsports.isDisplayed();
-        getstartdog.isDisplayed();
-        featurevent.isDisplayed();
-        upcomevent.isDisplayed();
-        natiotrack.isDisplayed();
-        natiochamp.isDisplayed();
-        akcagility.isDisplayed();
-        obediencecla.isDisplayed();
-        akcmeet.isDisplayed();
-        akcnatobechamp.isDisplayed();
-        akcrallynatchamp.isDisplayed();
-        browsealldog.isDisplayed();
-        confdogshow.isDisplayed();
-        matchshow.isDisplayed();
-        fourtosix.isDisplayed();
-        puppyachiev.isDisplayed();
-        natiohand.isDisplayed();
-        openshow.isDisplayed();
-        compsport.isDisplayed();
-        agility.isDisplayed();
-        obedience.isDisplayed();
-        rally.isDisplayed();
-        tracking.isDisplayed();
-        tittlereco.isDisplayed();
-        barnhunt.isDisplayed();
-        discdog.isDisplayed();
-        divingdog.isDisplayed();
-        flyball.isDisplayed();
-        searchresc.isDisplayed();
-        parentclubrec.isDisplayed();
-        perfsport.isDisplayed();
-        fieldevnthound.isDisplayed();
-        courscat.isDisplayed();
-        earthdog.isDisplayed();
-        herding.isDisplayed();
-        pointbreed.isDisplayed();
-        retrievers.isDisplayed();
-        scentWork.isDisplayed();
-        spaniels.isDisplayed();
-        sportsjun.isDisplayed();
-        junshow.isDisplayed();
-        juncomp.isDisplayed();
-        junperf.isDisplayed();
-        peewee.isDisplayed();
-        akcfamdog.isDisplayed();
-        cgcstar.isDisplayed();
-        trickVirtual.isDisplayed();
-        therapyDog.isDisplayed();
-        fitDog.isDisplayed();
-        tempTest.isDisplayed();
-        resfordog.isDisplayed();
-        eventse.isDisplayed();
-        downform.isDisplayed();
-        rulesreg.isDisplayed();
-        oem.isDisplayed();
-        pointaward.isDisplayed();
-        judgingres.isDisplayed();
-        judgesdirec.isDisplayed();
-        judgeseduc.isDisplayed();
-        akcweeklywin.isDisplayed();
-        eventcanc.isDisplayed();
-        akccontact.isDisplayed();
-        akcrhp.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(introdog));
+        wait.until(ExpectedConditions.visibilityOf(canpartenro));
+        wait.until(ExpectedConditions.visibilityOf(titleabrev));
+        wait.until(ExpectedConditions.visibilityOf(whichsports));
+        wait.until(ExpectedConditions.visibilityOf(getstartdog));
+        wait.until(ExpectedConditions.visibilityOf(featurevent));
+        wait.until(ExpectedConditions.visibilityOf(upcomevent));
+        wait.until(ExpectedConditions.visibilityOf(natiotrack));
+        wait.until(ExpectedConditions.visibilityOf(natiochamp));
+        wait.until(ExpectedConditions.visibilityOf(akcagility));
+        wait.until(ExpectedConditions.visibilityOf(obediencecla));
+        wait.until(ExpectedConditions.visibilityOf(akcmeet));
+        wait.until(ExpectedConditions.visibilityOf(akcnatobechamp));
+        wait.until(ExpectedConditions.visibilityOf(akcrallynatchamp));
+        wait.until(ExpectedConditions.visibilityOf(browsealldog));
+        wait.until(ExpectedConditions.visibilityOf(confdogshow));
+        wait.until(ExpectedConditions.visibilityOf(matchshow));
+        wait.until(ExpectedConditions.visibilityOf(fourtosix));
+        wait.until(ExpectedConditions.visibilityOf(puppyachiev));
+        wait.until(ExpectedConditions.visibilityOf(natiohand));
+        wait.until(ExpectedConditions.visibilityOf(openshow));
+        wait.until(ExpectedConditions.visibilityOf(compsport));
+        wait.until(ExpectedConditions.visibilityOf(agility));
+        wait.until(ExpectedConditions.visibilityOf(obedience));
+        wait.until(ExpectedConditions.visibilityOf(rally));
+        wait.until(ExpectedConditions.visibilityOf(tracking));
+        wait.until(ExpectedConditions.visibilityOf(tittlereco));
+        wait.until(ExpectedConditions.visibilityOf(barnhunt));
+        wait.until(ExpectedConditions.visibilityOf(discdog));
+        wait.until(ExpectedConditions.visibilityOf(divingdog));
+        wait.until(ExpectedConditions.visibilityOf(flyball));
+        wait.until(ExpectedConditions.visibilityOf(searchresc));
+        wait.until(ExpectedConditions.visibilityOf(parentclubrec));
+        wait.until(ExpectedConditions.visibilityOf(perfsport));
+        wait.until(ExpectedConditions.visibilityOf(fieldevnthound));
+        wait.until(ExpectedConditions.visibilityOf(courscat));
+        wait.until(ExpectedConditions.visibilityOf(earthdog));
+        wait.until(ExpectedConditions.visibilityOf(herding));
+        wait.until(ExpectedConditions.visibilityOf(pointbreed));
+        wait.until(ExpectedConditions.visibilityOf(retrievers));
+        wait.until(ExpectedConditions.visibilityOf(scentWork));
+        wait.until(ExpectedConditions.visibilityOf(spaniels));
+        wait.until(ExpectedConditions.visibilityOf(sportsjun));
+        wait.until(ExpectedConditions.visibilityOf(junshow));
+        wait.until(ExpectedConditions.visibilityOf(juncomp));
+        wait.until(ExpectedConditions.visibilityOf(junperf));
+        wait.until(ExpectedConditions.visibilityOf(peewee));
+        wait.until(ExpectedConditions.visibilityOf(akcfamdog));
+        wait.until(ExpectedConditions.visibilityOf(cgcstar));
+        wait.until(ExpectedConditions.visibilityOf(trickVirtual));
+        wait.until(ExpectedConditions.visibilityOf(therapyDog));
+        wait.until(ExpectedConditions.visibilityOf(fitDog));
+        wait.until(ExpectedConditions.visibilityOf(tempTest));
+        wait.until(ExpectedConditions.visibilityOf(resfordog));
+        wait.until(ExpectedConditions.visibilityOf(eventse));
+        wait.until(ExpectedConditions.visibilityOf(downform));
+        wait.until(ExpectedConditions.visibilityOf(rulesreg));
+        wait.until(ExpectedConditions.visibilityOf(oem));
+        wait.until(ExpectedConditions.visibilityOf(pointaward));
+        wait.until(ExpectedConditions.visibilityOf(judgingres));
+        wait.until(ExpectedConditions.visibilityOf(judgesdirec));
+        wait.until(ExpectedConditions.visibilityOf(judgeseduc));
+        wait.until(ExpectedConditions.visibilityOf(akcweeklywin));
+        wait.until(ExpectedConditions.visibilityOf(eventcanc));
+        wait.until(ExpectedConditions.visibilityOf(akccontact));
+        wait.until(ExpectedConditions.visibilityOf(akcrhp));
 
     }
 
 
     public void Clickintrodog() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(introdog));
-        introdog.click();
+        wait.until(ExpectedConditions.elementToBeClickable(introdog)).click();
         wait.until(ExpectedConditions.visibilityOf(introdogElement));
 
     }
 
     public void Clickcanpartenro() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(canpartenro));
-        canpartenro.click();
+        wait.until(ExpectedConditions.elementToBeClickable(canpartenro)).click();
         wait.until(ExpectedConditions.visibilityOf(AKCCaninePartnersTitle));
 
     }
 
     public void Clicktitleabrev() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(titleabrev));
-        titleabrev.click();
+        wait.until(ExpectedConditions.elementToBeClickable(titleabrev)).click();
         wait.until(ExpectedConditions.visibilityOf(titleabrevElement));
 
     }
 
     public void Clickwhichsports() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(whichsports));
-        whichsports.click();
+        wait.until(ExpectedConditions.elementToBeClickable(whichsports)).click();
         wait.until(ExpectedConditions.visibilityOf(whichsportsElement));
 
     }
 
     public void Clickgetstartdog() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(getstartdog));
-        getstartdog.click();
+        wait.until(ExpectedConditions.elementToBeClickable(getstartdog)).click();
         wait.until(ExpectedConditions.visibilityOf(getstartdogElement));
 
     }
 
     public void Clickupcomevent() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(upcomevent));
-        upcomevent.click();
+        wait.until(ExpectedConditions.elementToBeClickable(upcomevent)).click();
         wait.until(ExpectedConditions.visibilityOf(upcomeventElement));
-        upcomeventElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(upcomeventElement));
 
     }
 
     public void Clicknatiotrack() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(natiotrack));
-        natiotrack.click();
+        wait.until(ExpectedConditions.elementToBeClickable(natiotrack)).click();
         wait.until(ExpectedConditions.visibilityOf(natiotrackElement));
 
     }
 
     public void Clicknatiochamp() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(natiochamp));
-        natiochamp.click();
+        wait.until(ExpectedConditions.elementToBeClickable(natiochamp)).click();
         wait.until(ExpectedConditions.visibilityOf(natiochampElement));
 
     }
 
     public void Clickakcagility() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(akcagility));
-        akcagility.click();
+        wait.until(ExpectedConditions.elementToBeClickable(akcagility)).click();
         wait.until(ExpectedConditions.visibilityOf(akcagilityElement));
 
     }
 
     public void Clickobediencecla() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(obediencecla));
-        obediencecla.click();
+        wait.until(ExpectedConditions.elementToBeClickable(obediencecla)).click();
         wait.until(ExpectedConditions.visibilityOf(obedienceclaElement));
 
     }
 
     public void Clickakcmeet() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", akcmeet);
         wait.until(ExpectedConditions.elementToBeClickable(akcmeet));
-        akcmeet.click();
+        wait.until(ExpectedConditions.elementToBeClickable(akcmeet)).click();
         wait.until(ExpectedConditions.visibilityOf(akcmeetElement));
 
     }
 
     public void Clickakcnatobechamp() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", akcnatobechamp);
         wait.until(ExpectedConditions.elementToBeClickable(akcnatobechamp));
-        akcnatobechamp.click();
+        wait.until(ExpectedConditions.elementToBeClickable(akcnatobechamp)).click();
         wait.until(ExpectedConditions.visibilityOf(akcnatobechampElement));
 
     }
 
     public void Clickakcrallynatchamp() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", akcrallynatchamp);
         wait.until(ExpectedConditions.elementToBeClickable(akcrallynatchamp));
-        akcrallynatchamp.click();
+        wait.until(ExpectedConditions.elementToBeClickable(akcrallynatchamp)).click();
         wait.until(ExpectedConditions.visibilityOf(akcrallynatchampElement));
         //driver.get(driver.getCurrentUrl() + "?test=true");
 
@@ -646,40 +646,40 @@ public class SportsEvents {
 
     public void Clickconfdogshow() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(confdogshow));
-        confdogshow.click();
+        wait.until(ExpectedConditions.elementToBeClickable(confdogshow)).click();
         wait.until(ExpectedConditions.visibilityOf(confdogshowElement));
 
     }
 
     public void Clickmatchshow() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(matchshow));
-        matchshow.click();
+        wait.until(ExpectedConditions.elementToBeClickable(matchshow)).click();
         wait.until(ExpectedConditions.visibilityOf(matchshowElement));
 
     }
 
     public void Clickfourtosix() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(fourtosix));
-        fourtosix.click();
+        wait.until(ExpectedConditions.elementToBeClickable(fourtosix)).click();
         wait.until(ExpectedConditions.visibilityOf(fourtosixElement));
 
     }
 
     public void Clickpuppyachiev() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(puppyachiev));
-        puppyachiev.click();
+        wait.until(ExpectedConditions.elementToBeClickable(puppyachiev)).click();
         wait.until(ExpectedConditions.visibilityOf(puppyachievElement));
         //driver.get(driver.getCurrentUrl() + "?test=true");
 
@@ -687,308 +687,308 @@ public class SportsEvents {
 
     public void Clicknatiohand() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(natiohand));
-        natiohand.click();
+        wait.until(ExpectedConditions.elementToBeClickable(natiohand)).click();
         wait.until(ExpectedConditions.visibilityOf(natiohandElement));
 
     }
 
     public void Clickopenshow() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(openshow));
-        openshow.click();
+        wait.until(ExpectedConditions.elementToBeClickable(openshow)).click();
         wait.until(ExpectedConditions.visibilityOf(openshowElement));
 
     }
 
     public void Clickcompsport() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(compsport));
-        compsport.click();
+        wait.until(ExpectedConditions.elementToBeClickable(compsport)).click();
         wait.until(ExpectedConditions.visibilityOf(compsportElement));
 
     }
 
     public void Clickagility() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(agility));
-        agility.click();
+        wait.until(ExpectedConditions.elementToBeClickable(agility)).click();
         wait.until(ExpectedConditions.visibilityOf(agilityElement));
 
     }
 
     public void Clickobedience() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(obedience));
-        obedience.click();
+        wait.until(ExpectedConditions.elementToBeClickable(obedience)).click();
         wait.until(ExpectedConditions.visibilityOf(obedienceElement));
 
     }
 
     public void Clickrally() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(rally));
-        rally.click();
+        wait.until(ExpectedConditions.elementToBeClickable(rally)).click();
         wait.until(ExpectedConditions.visibilityOf(rallyElement));
 
     }
 
     public void Clicktracking() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(tracking));
-        tracking.click();
+        wait.until(ExpectedConditions.elementToBeClickable(tracking)).click();
         wait.until(ExpectedConditions.visibilityOf(trackingElement));
 
     }
 
     public void Clicktittlereco() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(tittlereco));
-        tittlereco.click();
+        wait.until(ExpectedConditions.elementToBeClickable(tittlereco)).click();
         wait.until(ExpectedConditions.visibilityOf(tittlerecoElement));
 
     }
 
     public void Clickbarnhunt() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(barnhunt));
-        barnhunt.click();
+        wait.until(ExpectedConditions.elementToBeClickable(barnhunt)).click();
         wait.until(ExpectedConditions.visibilityOf(barnhuntElement));
 
     }
 
     public void Clickdiscdog() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(discdog));
-        discdog.click();
+        wait.until(ExpectedConditions.elementToBeClickable(discdog)).click();
         wait.until(ExpectedConditions.visibilityOf(discdogElement));
 
     }
 
     public void Clickdivingdog() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(divingdog));
-        divingdog.click();
+        wait.until(ExpectedConditions.elementToBeClickable(divingdog)).click();
         wait.until(ExpectedConditions.visibilityOf(divingdogElement));
 
     }
 
     public void Clickflyball() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", flyball);
         wait.until(ExpectedConditions.elementToBeClickable(flyball));
-        flyball.click();
+        wait.until(ExpectedConditions.elementToBeClickable(flyball)).click();
         wait.until(ExpectedConditions.visibilityOf(flyballElement));
 
     }
 
     public void Clicksearchresc() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", searchresc);
         wait.until(ExpectedConditions.visibilityOf(searchresc));
-        searchresc.click();
+        wait.until(ExpectedConditions.elementToBeClickable(searchresc)).click();
         wait.until(ExpectedConditions.visibilityOf(searchrescElement));
 
     }
 
     public void Clickparentclubrec() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", parentclubrec);
         wait.until(ExpectedConditions.elementToBeClickable(parentclubrec));
-        parentclubrec.click();
+        wait.until(ExpectedConditions.elementToBeClickable(parentclubrec)).click();
         wait.until(ExpectedConditions.elementToBeClickable(parentclubrecElement));
 
     }
 
     public void Clickperfsport() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(perfsport));
-        perfsport.click();
+        wait.until(ExpectedConditions.elementToBeClickable(perfsport)).click();
         wait.until(ExpectedConditions.visibilityOf(perfsportElement));
 
     }
 
     public void Clickfieldevnthound() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(fieldevnthound));
-        fieldevnthound.click();
+        wait.until(ExpectedConditions.elementToBeClickable(fieldevnthound)).click();
         wait.until(ExpectedConditions.visibilityOf(fieldevnthoundElement));
 
     }
 
     public void Clickcourscat() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(courscat));
-        courscat.click();
+        wait.until(ExpectedConditions.elementToBeClickable(courscat)).click();
         wait.until(ExpectedConditions.visibilityOf(courscatElement));
 
     }
 
     public void Clickearthdog() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(earthdog));
-        earthdog.click();
+        wait.until(ExpectedConditions.elementToBeClickable(earthdog)).click();
         wait.until(ExpectedConditions.visibilityOf(earthdogElement));
 
     }
 
     public void Clickherding() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(herding));
-        herding.click();
+        wait.until(ExpectedConditions.elementToBeClickable(herding)).click();
         wait.until(ExpectedConditions.visibilityOf(herdingElement));
 
     }
 
     public void Clickpointbreed() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(pointbreed));
-        pointbreed.click();
+        wait.until(ExpectedConditions.elementToBeClickable(pointbreed)).click();
         wait.until(ExpectedConditions.visibilityOf(pointbreedElement));
 
     }
 
     public void Clickretrievers() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(retrievers));
-        retrievers.click();
+        wait.until(ExpectedConditions.elementToBeClickable(retrievers)).click();
         wait.until(ExpectedConditions.visibilityOf(retrieversElement));
 
     }
 
     public void ClickscentWork() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(scentWork));
-        scentWork.click();
+        wait.until(ExpectedConditions.elementToBeClickable(scentWork)).click();
         wait.until(ExpectedConditions.visibilityOf(scentWorkElement));
 
     }
 
     public void Clickspaniels() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(spaniels));
-        spaniels.click();
+        wait.until(ExpectedConditions.elementToBeClickable(spaniels)).click();
         wait.until(ExpectedConditions.visibilityOf(spanielsElement));
 
     }
 
     public void Clicksportsjun() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(sportsjun)); //fix this
-        sportsjun.click();
+        wait.until(ExpectedConditions.elementToBeClickable(sportsjun)).click();
         wait.until(ExpectedConditions.visibilityOf(sportsjunElement));
 
     }
 
     public void Clickjunshow() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(junshow));
-        junshow.click();
+        wait.until(ExpectedConditions.elementToBeClickable(junshow)).click();
         wait.until(ExpectedConditions.visibilityOf(junshowElement));
 
     }
 
     public void Clickjuncomp() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(juncomp));
-        juncomp.click();
+        wait.until(ExpectedConditions.elementToBeClickable(juncomp)).click();
         wait.until(ExpectedConditions.visibilityOf(juncompElement));
 
     }
 
     public void Clickjunperf() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(junperf));
-        junperf.click();
+        wait.until(ExpectedConditions.elementToBeClickable(junperf)).click();
         wait.until(ExpectedConditions.visibilityOf(junperfElement));
 
     }
 
     public void Clickpeewee() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(peewee));
-        peewee.click();
+        wait.until(ExpectedConditions.elementToBeClickable(peewee)).click();
         wait.until(ExpectedConditions.visibilityOf(peeweeElement));
 
     }
 
     public void Clickakcfamdog() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(akcfamdog));
-        akcfamdog.click();
+        wait.until(ExpectedConditions.elementToBeClickable(akcfamdog)).click();
         wait.until(ExpectedConditions.visibilityOf(akcfamdogElement));
 
     }
 
     public void Clickcgcstar() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(cgcstar));
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", cgcstar);
-        cgcstar.click();
+        wait.until(ExpectedConditions.elementToBeClickable(cgcstar)).click();
         wait.until(ExpectedConditions.visibilityOf(cgcstarElement));
 
 
@@ -996,56 +996,56 @@ public class SportsEvents {
 
     public void ClicktrickVirtual() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", trickVirtual);
         wait.until(ExpectedConditions.elementToBeClickable(trickVirtual));
-        trickVirtual.click();
+        wait.until(ExpectedConditions.elementToBeClickable(trickVirtual)).click();
         wait.until(ExpectedConditions.visibilityOf(trickVirtualElement));
 
     }
 
     public void ClicktherapyDog() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(therapyDog));
-        therapyDog.click();
+        wait.until(ExpectedConditions.elementToBeClickable(therapyDog)).click();
         wait.until(ExpectedConditions.visibilityOf(therapyDogElement));
 
     }
 
     public void ClickfitDog() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", fitDog);
         wait.until(ExpectedConditions.elementToBeClickable(fitDog));
-        fitDog.click();
+        wait.until(ExpectedConditions.elementToBeClickable(fitDog)).click();
         wait.until(ExpectedConditions.visibilityOf(fitDogElement));
 
     }
 
     public void ClicktempTest() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", tempTest);
-        tempTest.click();
+        wait.until(ExpectedConditions.elementToBeClickable(tempTest)).click();
         wait.until(ExpectedConditions.elementToBeClickable(tempTestElement));
-        tempTestElement.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(tempTestElement));
 
     }
 
     public void Clickeventse() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(eventse));
-        eventse.click();
+        wait.until(ExpectedConditions.elementToBeClickable(eventse)).click();
         for (String winHandle : driver.getWindowHandles()) { driver.switchTo().window(winHandle); }
         wait.until(ExpectedConditions.urlContains("https://webapps.akc.org/"));
 
@@ -1053,30 +1053,30 @@ public class SportsEvents {
 
     public void Clickdownform() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(downform));
-        downform.click();
+        wait.until(ExpectedConditions.elementToBeClickable(downform)).click();
         wait.until(ExpectedConditions.visibilityOf(downformElement));
 
     }
 
     public void Clickrulesreg() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(rulesreg));
-        rulesreg.click();
+        wait.until(ExpectedConditions.elementToBeClickable(rulesreg)).click();
         wait.until(ExpectedConditions.visibilityOf(rulesregElement));
 
     }
 
     public void Clickoem() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(oem));
-        oem.click();
+        wait.until(ExpectedConditions.elementToBeClickable(oem)).click();
         for (String winHandle : driver.getWindowHandles()) { driver.switchTo().window(winHandle); }
         wait.until(ExpectedConditions.urlContains("https://www.apps.akc.org/"));
 
@@ -1084,11 +1084,11 @@ public class SportsEvents {
 
     public void Clickpointaward() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         //wait.until(ExpectedConditions.visibilityOf(pointaward));
         wait.until(ExpectedConditions.elementToBeClickable(pointaward));
-        pointaward.click();
+        wait.until(ExpectedConditions.elementToBeClickable(pointaward)).click();
         for (String winHandle : driver.getWindowHandles()) { driver.switchTo().window(winHandle); }
         wait.until(ExpectedConditions.urlContains("https://www.apps.akc.org/"));
 
@@ -1096,20 +1096,20 @@ public class SportsEvents {
 
     public void Clickjudgingres() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(judgingres));
-        judgingres.click();
+        wait.until(ExpectedConditions.elementToBeClickable(judgingres)).click();
         wait.until(ExpectedConditions.visibilityOf(judgingresElement));
 
     }
 
     public void Clickjudgesdirec() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(judgesdirec));
-        judgesdirec.click();
+        wait.until(ExpectedConditions.elementToBeClickable(judgesdirec)).click();
         for (String winHandle : driver.getWindowHandles()) { driver.switchTo().window(winHandle); }
         wait.until(ExpectedConditions.urlContains("https://www.apps.akc.org/"));
 
@@ -1117,10 +1117,10 @@ public class SportsEvents {
 
     public void Clickjudgeseduc() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(judgeseduc));
-        judgeseduc.click();
+        wait.until(ExpectedConditions.elementToBeClickable(judgeseduc)).click();
         for (String winHandle : driver.getWindowHandles()) { driver.switchTo().window(winHandle); }
         wait.until(ExpectedConditions.urlContains("https://www.caninecollege.akc.org/"));
 
@@ -1128,10 +1128,10 @@ public class SportsEvents {
 
     public void Clickakcweeklywin() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(akcweeklywin));
-        akcweeklywin.click();
+        wait.until(ExpectedConditions.elementToBeClickable(akcweeklywin)).click();
         for (String winHandle : driver.getWindowHandles()) { driver.switchTo().window(winHandle); }
         wait.until(ExpectedConditions.urlContains("https://www.akcwinners.com/"));
 
@@ -1139,46 +1139,46 @@ public class SportsEvents {
 
     public void Clickeventcanc() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(eventcanc));
-        eventcanc.click();
+        wait.until(ExpectedConditions.elementToBeClickable(eventcanc)).click();
         wait.until(ExpectedConditions.visibilityOf(eventcancElement));
 
     }
 
     public void Clickakccontact() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", akccontact);
         wait.until(ExpectedConditions.elementToBeClickable(akccontact));
-        akccontact.click();
+        wait.until(ExpectedConditions.elementToBeClickable(akccontact)).click();
         wait.until(ExpectedConditions.visibilityOf(akccontactElement));
 
     }
 
     public void Clickakcrhp() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", akcrhp);
         wait.until(ExpectedConditions.elementToBeClickable(akcrhp));
-        akcrhp.click();
+        wait.until(ExpectedConditions.elementToBeClickable(akcrhp)).click();
         wait.until(ExpectedConditions.visibilityOf(akcrhpElement));
 
     }
 
     public void ClickjuniorRes() {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", juniorRes);
         wait.until(ExpectedConditions.elementToBeClickable(juniorRes));
-        juniorRes.click();
+        wait.until(ExpectedConditions.elementToBeClickable(juniorRes)).click();
         wait.until(ExpectedConditions.visibilityOf(juniorResElement));
         //driver.get(driver.getCurrentUrl() + "?test=true");
 
@@ -1188,11 +1188,10 @@ public class SportsEvents {
 
     public void SportsEventsArticle1() throws InterruptedException {
 
-        sportevent.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(sportevent)).click();
         wait.until(ExpectedConditions.elementToBeClickable(whichsports));
-        whichsports.click();
-        sleep(1000);
+        wait.until(ExpectedConditions.elementToBeClickable(whichsports)).click();
 
     }
 

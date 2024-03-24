@@ -273,134 +273,134 @@ public class DogName {
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(dognametool));
-        dognametool.click();
+        wait.until(ExpectedConditions.elementToBeClickable(dognametool)).click();
         wait.until(ExpectedConditions.visibilityOf(dognameheader));
-        male.isDisplayed();
-        female.isDisplayed();
-        all.isDisplayed();
-        a.isDisplayed();
-        b.isDisplayed();
-        c.isDisplayed();
-        d.isDisplayed();
-        e.isDisplayed();
-        f.isDisplayed();
-        g.isDisplayed();
-        h.isDisplayed();
-        i.isDisplayed();
-        j.isDisplayed();
-        k.isDisplayed();
-        l.isDisplayed();
-        m.isDisplayed();
-        n.isDisplayed();
-        o.isDisplayed();
-        p.isDisplayed();
-        q.isDisplayed();
-        r.isDisplayed();
-        s.isDisplayed();
-        t.isDisplayed();
-        u.isDisplayed();
-        v.isDisplayed();
-        w.isDisplayed();
-        x.isDisplayed();
-        y.isDisplayed();
-        z.isDisplayed();
-        clear.isDisplayed();
-        listnamesheader.isDisplayed();
-        listnames.isDisplayed();
-        pict.isDisplayed();
-        box.isDisplayed();
-        allcat.isDisplayed();
-        baby.isDisplayed();
-        celebrity.isDisplayed();
-        cute.isDisplayed();
-        disney.isDisplayed();
-        fancy.isDisplayed();
-        mostpop.isDisplayed();
-        presi.isDisplayed();
-        techy.isDisplayed();
-        television.isDisplayed();
-        trendy.isDisplayed();
-        unisex.isDisplayed();
-        videogame.isDisplayed();
-        but1.isDisplayed();
-        but2.isDisplayed();
-        but3.isDisplayed();
-        but4.isDisplayed();
-        but5.isDisplayed();
-        but6.isDisplayed();
-        a.click();
-        but3.isDisplayed();
-        b.click();
-        but3.isDisplayed();
-        c.click();
-        but3.isDisplayed();
-        d.click();
-        but2.isDisplayed();
-        e.click();
-        f.click();
-        g.click();
-        but2.isDisplayed();
-        h.click();
-        but2.isDisplayed();
-        i.click();
-        j.click();
-        but2.isDisplayed();
-        k.click();
-        but2.isDisplayed();
-        l.click();
-        but2.isDisplayed();
-        m.click();
-        but3.isDisplayed();
-        n.click();
-        o.click();
-        p.click();
-        q.click();
-        r.click();
-        but2.isDisplayed();
-        s.click();
-        but3.isDisplayed();
-        t.click();
-        but2.isDisplayed();
-        u.click();
-        v.click();
-        w.click();
-        x.click();
-        y.click();
-        z.click();
-        clear.click();
-        male.click();
-        but6.isDisplayed();
-        female.click();
-        but6.isDisplayed();
-        all.click();
-        baby.click();
-        but3.isDisplayed();
-        allcat.click();
-        but6.isDisplayed();
-        celebrity.click();
-        but2.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(male));
+        wait.until(ExpectedConditions.visibilityOf(female));
+        wait.until(ExpectedConditions.visibilityOf(all));
+        wait.until(ExpectedConditions.visibilityOf(a));
+        wait.until(ExpectedConditions.visibilityOf(b));
+        wait.until(ExpectedConditions.visibilityOf(c));
+        wait.until(ExpectedConditions.visibilityOf(d));
+        wait.until(ExpectedConditions.visibilityOf(e));
+        wait.until(ExpectedConditions.visibilityOf(f));
+        wait.until(ExpectedConditions.visibilityOf(g));
+        wait.until(ExpectedConditions.visibilityOf(h));
+        wait.until(ExpectedConditions.visibilityOf(i));
+        wait.until(ExpectedConditions.visibilityOf(j));
+        wait.until(ExpectedConditions.visibilityOf(k));
+        wait.until(ExpectedConditions.visibilityOf(l));
+        wait.until(ExpectedConditions.visibilityOf(m));
+        wait.until(ExpectedConditions.visibilityOf(n));
+        wait.until(ExpectedConditions.visibilityOf(o));
+        wait.until(ExpectedConditions.visibilityOf(p));
+        wait.until(ExpectedConditions.visibilityOf(q));
+        wait.until(ExpectedConditions.visibilityOf(r));
+        wait.until(ExpectedConditions.visibilityOf(s));
+        wait.until(ExpectedConditions.visibilityOf(t));
+        wait.until(ExpectedConditions.visibilityOf(u));
+        wait.until(ExpectedConditions.visibilityOf(v));
+        wait.until(ExpectedConditions.visibilityOf(w));
+        wait.until(ExpectedConditions.visibilityOf(x));
+        wait.until(ExpectedConditions.visibilityOf(y));
+        wait.until(ExpectedConditions.visibilityOf(z));
+        wait.until(ExpectedConditions.visibilityOf(clear));
+        wait.until(ExpectedConditions.visibilityOf(listnamesheader));
+        wait.until(ExpectedConditions.visibilityOf(listnames));
+        wait.until(ExpectedConditions.visibilityOf(pict));
+        wait.until(ExpectedConditions.visibilityOf(box));
+        wait.until(ExpectedConditions.visibilityOf(allcat));
+        wait.until(ExpectedConditions.visibilityOf(baby));
+        wait.until(ExpectedConditions.visibilityOf(celebrity));
+        wait.until(ExpectedConditions.visibilityOf(cute));
+        wait.until(ExpectedConditions.visibilityOf(disney));
+        wait.until(ExpectedConditions.visibilityOf(fancy));
+        wait.until(ExpectedConditions.visibilityOf(mostpop));
+        wait.until(ExpectedConditions.visibilityOf(presi));
+        wait.until(ExpectedConditions.visibilityOf(techy));
+        wait.until(ExpectedConditions.visibilityOf(television));
+        wait.until(ExpectedConditions.visibilityOf(trendy));
+        wait.until(ExpectedConditions.visibilityOf(unisex));
+        wait.until(ExpectedConditions.visibilityOf(videogame));
+        wait.until(ExpectedConditions.visibilityOf(but1));
+        wait.until(ExpectedConditions.visibilityOf(but2));
+        wait.until(ExpectedConditions.visibilityOf(but3));
+        wait.until(ExpectedConditions.visibilityOf(but4));
+        wait.until(ExpectedConditions.visibilityOf(but5));
+        wait.until(ExpectedConditions.visibilityOf(but6));
+        wait.until(ExpectedConditions.elementToBeClickable(a)).click();
+        wait.until(ExpectedConditions.visibilityOf(but3));
+        wait.until(ExpectedConditions.elementToBeClickable(b)).click();
+        wait.until(ExpectedConditions.visibilityOf(but3));
+        wait.until(ExpectedConditions.elementToBeClickable(c)).click();
+        wait.until(ExpectedConditions.visibilityOf(but3));
+        wait.until(ExpectedConditions.elementToBeClickable(d)).click();
+        wait.until(ExpectedConditions.visibilityOf(but2));
+        wait.until(ExpectedConditions.elementToBeClickable(e)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(f)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(g)).click();
+        wait.until(ExpectedConditions.visibilityOf(but2));
+        wait.until(ExpectedConditions.elementToBeClickable(h)).click();
+        wait.until(ExpectedConditions.visibilityOf(but2));
+        wait.until(ExpectedConditions.elementToBeClickable(i)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(j)).click();
+        wait.until(ExpectedConditions.visibilityOf(but2));
+        wait.until(ExpectedConditions.elementToBeClickable(k)).click();
+        wait.until(ExpectedConditions.visibilityOf(but2));
+        wait.until(ExpectedConditions.elementToBeClickable(l)).click();
+        wait.until(ExpectedConditions.visibilityOf(but2));
+        wait.until(ExpectedConditions.elementToBeClickable(m)).click();
+        wait.until(ExpectedConditions.visibilityOf(but3));
+        wait.until(ExpectedConditions.elementToBeClickable(n)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(o)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(p)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(q)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(r)).click();
+        wait.until(ExpectedConditions.visibilityOf(but2));
+        wait.until(ExpectedConditions.elementToBeClickable(s)).click();
+        wait.until(ExpectedConditions.visibilityOf(but3));
+        wait.until(ExpectedConditions.elementToBeClickable(t)).click();
+        wait.until(ExpectedConditions.visibilityOf(but2));
+        wait.until(ExpectedConditions.elementToBeClickable(u)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(v)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(w)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(x)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(y)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(z)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(clear)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(male)).click();
+        wait.until(ExpectedConditions.visibilityOf(but6));
+        wait.until(ExpectedConditions.elementToBeClickable(female)).click();
+        wait.until(ExpectedConditions.visibilityOf(but6));
+        wait.until(ExpectedConditions.elementToBeClickable(all)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(baby)).click();
+        wait.until(ExpectedConditions.visibilityOf(but3));
+        wait.until(ExpectedConditions.elementToBeClickable(allcat)).click();
+        wait.until(ExpectedConditions.visibilityOf(but6));
+        wait.until(ExpectedConditions.elementToBeClickable(celebrity)).click();
+        wait.until(ExpectedConditions.visibilityOf(but2));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#sidebar-left-contents > div.mid-blackboard > ul > li:nth-child(4) > a")));
-        cute.isDisplayed();
-        cute.click();
-        but3.isDisplayed();
-        disney.click();
-        but4.isDisplayed();
-        fancy.click();
-        but4.isDisplayed();
-        mostpop.click();
-        but3.isDisplayed();
-        presi.click();
-        but3.isDisplayed();
-        techy.click();
-        but2.isDisplayed();
-        television.click();
-        but4.isDisplayed();
-        trendy.click();
-        but3.isDisplayed();
-        unisex.click();
-        but6.isDisplayed();
-        videogame.click();
-        but4.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(cute));
+        wait.until(ExpectedConditions.elementToBeClickable(cute)).click();
+        wait.until(ExpectedConditions.visibilityOf(but3));
+        wait.until(ExpectedConditions.elementToBeClickable(disney)).click();
+        wait.until(ExpectedConditions.visibilityOf(but4));
+        wait.until(ExpectedConditions.elementToBeClickable(fancy)).click();
+        wait.until(ExpectedConditions.visibilityOf(but4));
+        wait.until(ExpectedConditions.elementToBeClickable(mostpop)).click();
+        wait.until(ExpectedConditions.visibilityOf(but3));
+        wait.until(ExpectedConditions.elementToBeClickable(presi)).click();
+        wait.until(ExpectedConditions.visibilityOf(but3));
+        wait.until(ExpectedConditions.elementToBeClickable(techy)).click();
+        wait.until(ExpectedConditions.visibilityOf(but2));
+        wait.until(ExpectedConditions.elementToBeClickable(television)).click();
+        wait.until(ExpectedConditions.visibilityOf(but4));
+        wait.until(ExpectedConditions.elementToBeClickable(trendy)).click();
+        wait.until(ExpectedConditions.visibilityOf(but3));
+        wait.until(ExpectedConditions.elementToBeClickable(unisex)).click();
+        wait.until(ExpectedConditions.visibilityOf(but6));
+        wait.until(ExpectedConditions.elementToBeClickable(videogame)).click();
+        wait.until(ExpectedConditions.visibilityOf(but4));
 
     }
 
@@ -408,80 +408,80 @@ public class DogName {
 
     public void DNFTFindNamesResult() {
 
-        ExpertAdvicemenu.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(ExpertAdvicemenu)).click();
         wait.until(ExpectedConditions.elementToBeClickable(EAmenuDNF));
         Actions action = new Actions(driver);
         action.moveToElement(EAmenuDNF).perform();
         action.moveToElement(EAmenuDNF).click();
-        EAmenuDNF.click();
-        FindNamesButton.click();
+        wait.until(ExpectedConditions.elementToBeClickable(EAmenuDNF)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(FindNamesButton)).click();
         wait.until(ExpectedConditions.elementToBeClickable(AaronName));
 
     }
 
     public void DNFTSearchNames() {
 
-        ExpertAdvicemenu.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(ExpertAdvicemenu)).click();
         wait.until(ExpectedConditions.elementToBeClickable(EAmenuDNF));
-        EAmenuDNF.click();
+        wait.until(ExpectedConditions.elementToBeClickable(EAmenuDNF)).click();
         inputBar.sendKeys("Yoda");
-        FindNamesButton.click();
+        wait.until(ExpectedConditions.elementToBeClickable(FindNamesButton)).click();
         wait.until(ExpectedConditions.elementToBeClickable(YodaName));
 
     }
 
     public void DNFTSurpriceMe() {
 
-        driver.navigate().to("https://test-web.akc.org/dog-name-finder/");
-        SurpriceMeButton.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        driver.navigate().to("https://test-web.akc.org/dog-name-finder/");
+        wait.until(ExpectedConditions.elementToBeClickable(SurpriceMeButton)).click();
         wait.until(ExpectedConditions.elementToBeClickable(SurpriceMeNames));
 
     }
 
     public void DNFTFilters() {
 
-        driver.navigate().to("https://test-web.akc.org/dog-name-finder/");
-        FilterButton.click();
-        LenghtBarFilter.click();
-        OneWordFilter.click();
-        FindNamesButton.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        driver.navigate().to("https://test-web.akc.org/dog-name-finder/");
+        wait.until(ExpectedConditions.elementToBeClickable(FilterButton)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(LenghtBarFilter)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(OneWordFilter)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(FindNamesButton)).click();
         wait.until(ExpectedConditions.elementToBeClickable(AlexanderName));
 
     }
 
     public void MySavedNames() {
 
-        driver.navigate().to("https://test-web.akc.org/dog-name-finder/");
-        FindNamesButton.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        driver.navigate().to("https://test-web.akc.org/dog-name-finder/");
+        wait.until(ExpectedConditions.elementToBeClickable(FindNamesButton)).click();
         wait.until(ExpectedConditions.elementToBeClickable(MySavedNamesButton));
-        MySavedNamesButton.click();
+        wait.until(ExpectedConditions.elementToBeClickable(MySavedNamesButton)).click();
         userName.sendKeys("sxv@akc.org");
         password.sendKeys("CypresHill2*");
-        login.click();
+        wait.until(ExpectedConditions.elementToBeClickable(login)).click();
         wait.until(ExpectedConditions.elementToBeClickable(MySavedNamesButton));
-        MySavedNamesButton.click();
+        wait.until(ExpectedConditions.elementToBeClickable(MySavedNamesButton)).click();
         wait.until(ExpectedConditions.elementToBeClickable(AaronName));
 
     }
 
     public void FavoriteName() {
 
-        driver.navigate().to("https://test-web.akc.org/dog-name-finder/");
-        FindNamesButton.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        driver.navigate().to("https://test-web.akc.org/dog-name-finder/");
+        wait.until(ExpectedConditions.elementToBeClickable(FindNamesButton)).click();
         wait.until(ExpectedConditions.elementToBeClickable(AaronNameFavoriteIcon));
-        AaronNameFavoriteIcon.click();
+        wait.until(ExpectedConditions.elementToBeClickable(AaronNameFavoriteIcon)).click();
         userName.sendKeys("sxv@akc.org");
         password.sendKeys("CypresHill2*");
-        login.click();
+        wait.until(ExpectedConditions.elementToBeClickable(login)).click();
         wait.until(ExpectedConditions.elementToBeClickable(AaronNameFavoriteIcon));
-        AaronNameFavoriteIcon.click();
-        AaronName.click();
+        wait.until(ExpectedConditions.elementToBeClickable(AaronNameFavoriteIcon)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(AaronName)).click();
 
     }
 

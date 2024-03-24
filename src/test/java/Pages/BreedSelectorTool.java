@@ -116,29 +116,29 @@ public class BreedSelectorTool {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(LetsGoButton));
         HiddeBanner();
-        LetsGoButton.click();
+        wait.until(ExpectedConditions.elementToBeClickable(LetsGoButton)).click();
         HideBanner1();
-        EasyTrainable.click();
-        Trainable.click();
+        wait.until(ExpectedConditions.elementToBeClickable(EasyTrainable)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(Trainable)).click();
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("scroll(0, 500);");
-        ContinueButton.click();
+        wait.until(ExpectedConditions.elementToBeClickable(ContinueButton)).click();
         HideBanner1();
-        VeryHighEnergy.click();
-        Moderate.click();
-        ContinueButton.click();
+        wait.until(ExpectedConditions.elementToBeClickable(VeryHighEnergy)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(Moderate)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(ContinueButton)).click();
         jse.executeScript("scroll(0, 500);");
-        NoPreference.click();
-        ContinueButton.click();
-        EveryDay.click();
-        ContinueButton.click();
-        VeryVocal.click();
-        SomeBarking.click();
-        ContinueButton.click();
-        Large.click();
-        Medium.click();
-        ContinueButton.click();
-        OwnDogYes.click();
+        wait.until(ExpectedConditions.elementToBeClickable(NoPreference)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(ContinueButton)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(EveryDay)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(ContinueButton)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(VeryVocal)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(SomeBarking)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(ContinueButton)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(Large)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(Medium)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(ContinueButton)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(OwnDogYes)).click();
         wait.until(ExpectedConditions.elementToBeClickable(ChildrenHomeNo)).click();
         wait.until(ExpectedConditions.elementToBeClickable(AnimalsHomeYes)).click();
         wait.until(ExpectedConditions.elementToBeClickable(Cat)).click();
@@ -160,8 +160,8 @@ public class BreedSelectorTool {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(LetsGoButton));
         HiddeBanner();
-        LetsGoButton.click();
-        HighlyTrainable.click();
+        wait.until(ExpectedConditions.elementToBeClickable(LetsGoButton)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(HighlyTrainable)).click();
         //New path...
     }
 

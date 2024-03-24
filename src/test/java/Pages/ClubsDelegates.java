@@ -184,50 +184,50 @@ public class ClubsDelegates {
 
     public void VerifyClubsDelegates() {
 
-        clubdelegat.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(clubdelegat)).click();;
         wait.until(ExpectedConditions.visibilityOf(findclub)); //fix this
-        searchallclub.isDisplayed();
-        findanevent.isDisplayed();
-        clubsoffer.isDisplayed();
-        trainclass.isDisplayed();
-        clubs.isDisplayed();
-        aboutclub.isDisplayed();
-        formclub.isDisplayed();
-        clubdevelop.isDisplayed();
-        promoteclub.isDisplayed();
-        clubresources.isDisplayed();
-        fordelegates.isDisplayed();
-        delegatespor.isDisplayed();
-        delegatesdir.isDisplayed();
-        delegatesmeet.isDisplayed();
-        boardmin.isDisplayed();
-        delegatestan.isDisplayed();
-        perspective.isDisplayed();
-        akcgazette.isDisplayed();
-        rolakcdel.isDisplayed();
-        importance.isDisplayed();
-        governrelat.isDisplayed();
-        legisla.isDisplayed();
-        legislaalarm.isDisplayed();
-        akcpac.isDisplayed();
-        governrelat.isDisplayed();
-        akclibrary.isDisplayed();
-        overcollec.isDisplayed();
-        clubarchives.isDisplayed();
-        searchlib.isDisplayed();
-        howtovisit.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(searchallclub));
+        wait.until(ExpectedConditions.visibilityOf(findanevent));
+        wait.until(ExpectedConditions.visibilityOf(clubsoffer));
+        wait.until(ExpectedConditions.visibilityOf(trainclass));
+        wait.until(ExpectedConditions.visibilityOf(clubs));
+        wait.until(ExpectedConditions.visibilityOf(aboutclub));
+        wait.until(ExpectedConditions.visibilityOf(formclub));
+        wait.until(ExpectedConditions.visibilityOf(clubdevelop));
+        wait.until(ExpectedConditions.visibilityOf(promoteclub));
+        wait.until(ExpectedConditions.visibilityOf(clubresources));
+        wait.until(ExpectedConditions.visibilityOf(fordelegates));
+        wait.until(ExpectedConditions.visibilityOf(delegatespor));
+        wait.until(ExpectedConditions.visibilityOf(delegatesdir));
+        wait.until(ExpectedConditions.visibilityOf(delegatesmeet));
+        wait.until(ExpectedConditions.visibilityOf(boardmin));
+        wait.until(ExpectedConditions.visibilityOf(delegatestan));
+        wait.until(ExpectedConditions.visibilityOf(perspective));
+        wait.until(ExpectedConditions.visibilityOf(akcgazette));
+        wait.until(ExpectedConditions.visibilityOf(rolakcdel));
+        wait.until(ExpectedConditions.visibilityOf(importance));
+        wait.until(ExpectedConditions.visibilityOf(governrelat));
+        wait.until(ExpectedConditions.visibilityOf(legisla));
+        wait.until(ExpectedConditions.visibilityOf(legislaalarm));
+        wait.until(ExpectedConditions.visibilityOf(akcpac));
+        wait.until(ExpectedConditions.visibilityOf(governrelat));
+        wait.until(ExpectedConditions.visibilityOf(akclibrary));
+        wait.until(ExpectedConditions.visibilityOf(overcollec));
+        wait.until(ExpectedConditions.visibilityOf(clubarchives));
+        wait.until(ExpectedConditions.visibilityOf(searchlib));
+        wait.until(ExpectedConditions.visibilityOf(howtovisit));
 
     }
 
     public void Clicksearchallclub() {
 
-        clubdelegat.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(clubdelegat)).click();
         wait.until(ExpectedConditions.elementToBeClickable(searchallclub));
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("scroll(253, 12);");
-        searchallclub.click();
+        wait.until(ExpectedConditions.elementToBeClickable(searchallclub)).click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("/club-search/"));
 
@@ -235,10 +235,10 @@ public class ClubsDelegates {
 
     public void Clickfindanevent() {
 
-        clubdelegat.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.elementToBeClickable(findanevent)); //fix this
-        findanevent.click();
+        wait.until(ExpectedConditions.elementToBeClickable(clubdelegat)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(findanevent)); //fix this selector
+        wait.until(ExpectedConditions.elementToBeClickable(findanevent)).click();
         wait.until(ExpectedConditions.visibilityOf(findaneventElement));
         //driver.get(driver.getCurrentUrl()+"?test=true");
 
@@ -246,10 +246,10 @@ public class ClubsDelegates {
 
     public void Clicktrainclass() {
 
-        clubdelegat.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(clubdelegat)).click();
         wait.until(ExpectedConditions.elementToBeClickable(trainclass));
-        trainclass.click();
+        wait.until(ExpectedConditions.elementToBeClickable(trainclass)).click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("/obedience-training-club/"));
 
@@ -257,80 +257,80 @@ public class ClubsDelegates {
 
     public void Clickaboutclub() {
 
-        clubdelegat.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(clubdelegat)).click();
         wait.until(ExpectedConditions.elementToBeClickable(aboutclub));
-        aboutclub.click();
+        wait.until(ExpectedConditions.elementToBeClickable(aboutclub)).click();
         wait.until(ExpectedConditions.visibilityOf(aboutclubElement));
 
     }
 
     public void Clickformclub() { //This option was removed from the menu
 
-        clubdelegat.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(clubdelegat)).click();
         wait.until(ExpectedConditions.elementToBeClickable(formclub));
-        formclub.click();
+        wait.until(ExpectedConditions.elementToBeClickable(formclub)).click();
         wait.until(ExpectedConditions.visibilityOf(formclubElement));
 
     }
 
     public void Clickclubdevelop() {
 
-        clubdelegat.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(clubdelegat)).click();
         wait.until(ExpectedConditions.elementToBeClickable(clubdevelop));
-        clubdevelop.click();
+        wait.until(ExpectedConditions.elementToBeClickable(clubdevelop)).click();
         wait.until(ExpectedConditions.visibilityOf(clubdevelopElement));
 
     }
 
     public void Clickpromoteclub() {
 
-        clubdelegat.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(clubdelegat)).click();
         wait.until(ExpectedConditions.elementToBeClickable(promoteclub));
-        promoteclub.click();
+        wait.until(ExpectedConditions.elementToBeClickable(promoteclub)).click();
         wait.until(ExpectedConditions.urlContains("/promote/"));
 
     }
 
     public void Clickclubresources() {
 
-        clubdelegat.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(clubdelegat)).click();
         wait.until(ExpectedConditions.elementToBeClickable(clubresources));
-        clubresources.click();
+        wait.until(ExpectedConditions.elementToBeClickable(clubresources)).click();
         wait.until(ExpectedConditions.visibilityOf(clubresourcesElement));
 
     }
 
     public void ClickCentennialsClub() {
 
-        clubdelegat.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(clubdelegat)).click();
         wait.until(ExpectedConditions.elementToBeClickable(CentennialClubs));  //ONLY available on prod
-        CentennialClubs.click();
+        wait.until(ExpectedConditions.elementToBeClickable(CentennialClubs)).click();
         wait.until(ExpectedConditions.urlContains("/centennial-clubs/"));
 
     }
 
     public void Clickdelegatespor() {
 
-        clubdelegat.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(clubdelegat)).click();
         wait.until(ExpectedConditions.elementToBeClickable(delegatespor));
-        delegatespor.click();
+        wait.until(ExpectedConditions.elementToBeClickable(delegatespor)).click();
         wait.until(ExpectedConditions.visibilityOf(delegatesporElement));
 
     }
 
     public void Clickdelegatesdir() {
 
-        clubdelegat.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(clubdelegat)).click();
         wait.until(ExpectedConditions.elementToBeClickable(delegatesdir));
-        delegatesdir.click();
+        wait.until(ExpectedConditions.elementToBeClickable(delegatesdir)).click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://www.apps.akc.org/"));
 
@@ -338,60 +338,60 @@ public class ClubsDelegates {
 
     public void Clickdelegatesmeet() {
 
-        clubdelegat.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(clubdelegat)).click();
         wait.until(ExpectedConditions.elementToBeClickable(delegatesmeet));
-        delegatesmeet.click();
+        wait.until(ExpectedConditions.elementToBeClickable(delegatesmeet)).click();
         wait.until(ExpectedConditions.visibilityOf(delegatesmeetElement));
 
     }
 
     public void Clickboardmin() {
 
-        clubdelegat.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(clubdelegat)).click();
         wait.until(ExpectedConditions.elementToBeClickable(boardmin));
-        boardmin.click();
+        wait.until(ExpectedConditions.elementToBeClickable(boardmin)).click();
         wait.until(ExpectedConditions.visibilityOf(boardminElement));
 
     }
 
     public void Clickdelegatestan() {
 
-        clubdelegat.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(clubdelegat)).click();
         wait.until(ExpectedConditions.elementToBeClickable(delegatestan));
-        delegatestan.click();
+        wait.until(ExpectedConditions.elementToBeClickable(delegatestan)).click();
         wait.until(ExpectedConditions.visibilityOf(delegatestanElement));
 
     }
 
     public void Clickperspective() {
 
-        clubdelegat.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(clubdelegat)).click();
         wait.until(ExpectedConditions.elementToBeClickable(perspective));
-        perspective.click();
+        wait.until(ExpectedConditions.elementToBeClickable(perspective)).click();
         wait.until(ExpectedConditions.visibilityOf(perspectiveElement));
 
     }
 
     public void Clickakcgazette() {
 
-        clubdelegat.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(clubdelegat)).click();
         wait.until(ExpectedConditions.elementToBeClickable(akcgazette));
-        akcgazette.click();
+        wait.until(ExpectedConditions.elementToBeClickable(akcgazette)).click();
         wait.until(ExpectedConditions.visibilityOf(akcgazetteElement));
 
     }
 
     public void Clickrolakcdel() {
 
-        clubdelegat.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(clubdelegat)).click();
         wait.until(ExpectedConditions.elementToBeClickable(rolakcdel));
-        rolakcdel.click();
+        wait.until(ExpectedConditions.elementToBeClickable(rolakcdel)).click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://www.youtube.com/"));
 
@@ -399,20 +399,20 @@ public class ClubsDelegates {
 
     public void Clickimportance() {
 
-        clubdelegat.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(clubdelegat)).click();
         wait.until(ExpectedConditions.elementToBeClickable(importance));
-        importance.click();
+        wait.until(ExpectedConditions.elementToBeClickable(importance)).click();
         wait.until(ExpectedConditions.urlMatches("https://images.akc.org/pdf/The_Importance_of_Your_AKC_Delegate_2018.pdf"));
 
     }
 
     public void Clicklegisla() {
 
-        clubdelegat.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(clubdelegat)).click();
         wait.until(ExpectedConditions.elementToBeClickable(legisla));
-        legisla.click();
+        wait.until(ExpectedConditions.elementToBeClickable(legisla)).click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://www.votervoice.net/"));
 
@@ -420,60 +420,60 @@ public class ClubsDelegates {
 
     public void Clicklegislaalarm() {
 
-        clubdelegat.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(clubdelegat)).click();
         wait.until(ExpectedConditions.elementToBeClickable(legislaalarm));
-        legislaalarm.click();
+        wait.until(ExpectedConditions.elementToBeClickable(legislaalarm)).click();
         wait.until(ExpectedConditions.visibilityOf(legislaalarmElement));
 
     }
 
     public void Clickakcpac() {
 
-        clubdelegat.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(clubdelegat)).click();
         wait.until(ExpectedConditions.elementToBeClickable(akcpac));
-        akcpac.click();
+        wait.until(ExpectedConditions.elementToBeClickable(akcpac)).click();
         wait.until(ExpectedConditions.visibilityOf(akcpacElement));
 
     }
 
     public void Clickgovernrelat() {
 
-        clubdelegat.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(clubdelegat)).click();
         wait.until(ExpectedConditions.elementToBeClickable(governrelat));
-        governrelat.click();
+        wait.until(ExpectedConditions.elementToBeClickable(governrelat)).click();
         wait.until(ExpectedConditions.visibilityOf(governrelatElement));
 
     }
 
     public void Clickovercollec() {
 
-        clubdelegat.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(clubdelegat)).click();
         wait.until(ExpectedConditions.elementToBeClickable(overcollec));
-        overcollec.click();
+        wait.until(ExpectedConditions.elementToBeClickable(overcollec)).click();
         wait.until(ExpectedConditions.visibilityOf(overcollecElement));
 
     }
 
     public void Clickclubarchives() {
 
-        clubdelegat.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(clubdelegat)).click();
         wait.until(ExpectedConditions.elementToBeClickable(clubarchives));
-        clubarchives.click();
+        wait.until(ExpectedConditions.elementToBeClickable(clubarchives)).click();
         wait.until(ExpectedConditions.visibilityOf(clubarchivesElement));
 
     }
 
     public void Clicksearchlib() {
 
-        clubdelegat.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(clubdelegat)).click();
         wait.until(ExpectedConditions.elementToBeClickable(searchlib));
-        searchlib.click();
+        wait.until(ExpectedConditions.elementToBeClickable(searchlib)).click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("/a40015.eos-intl.net/"));
 
@@ -481,10 +481,10 @@ public class ClubsDelegates {
 
     public void Clickhowtovisit() {
 
-        clubdelegat.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(clubdelegat)).click();
         wait.until(ExpectedConditions.elementToBeClickable(howtovisit));
-        howtovisit.click();
+        wait.until(ExpectedConditions.elementToBeClickable(howtovisit)).click();
         wait.until(ExpectedConditions.visibilityOf(howtovisitElement));
 
     }

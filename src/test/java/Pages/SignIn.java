@@ -76,38 +76,38 @@ public class SignIn {
 
     public void signInUser(User _testUser) {
 
-        iconsignin.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(iconsignin)).click();
         //wait.until(ExpectedConditions.visibilityOf(CreateAccount));
-        forgot.isDisplayed();
-        signinlogo.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(forgot));
+        wait.until(ExpectedConditions.visibilityOf(signinlogo));
         userName.sendKeys(_testUser.username);
         password.sendKeys(_testUser.password);
-        ingresar.click();
+        wait.until(ExpectedConditions.elementToBeClickable(ingresar)).click();
         wait.until(ExpectedConditions.visibilityOf(iconsignin));
 
     }
 
-    public void signInUserShop(User _testUser) throws InterruptedException {
+    public void signInUserShop(User _testUser) throws InterruptedException {  //this was a test for shop prod
 
-        iconsigninShop.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(iconsigninShop)).click();
         wait.until(ExpectedConditions.visibilityOf(signup));
-        forgot.isDisplayed();
-        signinlogo.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(forgot));
+        wait.until(ExpectedConditions.visibilityOf(signinlogo));
         userName.sendKeys(_testUser.username);
         password.sendKeys(_testUser.password);
-        ingresar.click();
+        wait.until(ExpectedConditions.elementToBeClickable(ingresar)).click();
         wait.until(ExpectedConditions.visibilityOf(iconsigninShop));
         sleep(1000);
-        logoutShop.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(logoutShop));
         Actions action = new Actions(driver);
         action.moveToElement(iconsigninShop).perform();
         action.moveToElement(iconsigninShop).click();
         sleep(1000);
-        logoutShop.click();
+        wait.until(ExpectedConditions.elementToBeClickable(logoutShop)).click();
         sleep(1000);
-        iconsigninShop.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(iconsigninShop));
 
     }
 

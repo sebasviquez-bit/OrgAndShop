@@ -67,9 +67,9 @@ public class Register {
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(iconsignin));
-        iconsignin.click();
+        wait.until(ExpectedConditions.elementToBeClickable(iconsignin)).click();
         wait.until(ExpectedConditions.visibilityOf(CreateAccount));
-        CreateAccount.click();
+        wait.until(ExpectedConditions.elementToBeClickable(CreateAccount)).click();
         wait.until(ExpectedConditions.visibilityOf(userName));
         userName.sendKeys(_testUser.username);
         wait.until(ExpectedConditions.visibilityOf(firstName));
@@ -81,9 +81,9 @@ public class Register {
         wait.until(ExpectedConditions.visibilityOf(password2));
         password2.sendKeys(_testUser.password2);
         wait.until(ExpectedConditions.visibilityOf(registrarse));
-        registrarse.click();
+        wait.until(ExpectedConditions.elementToBeClickable(registrarse)).click();
         wait.until(ExpectedConditions.visibilityOf(iconsignin));
-        iconsignin.isDisplayed();
+        wait.until(ExpectedConditions.visibilityOf(iconsignin));
 
     }
 
@@ -92,9 +92,9 @@ public class Register {
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(iconsigninShop));
-        iconsigninShop.click();
+        wait.until(ExpectedConditions.elementToBeClickable(iconsigninShop)).click();
         wait.until(ExpectedConditions.elementToBeClickable(CreateAccount));
-        CreateAccount.click();
+        wait.until(ExpectedConditions.elementToBeClickable(CreateAccount)).click();
         wait.until(ExpectedConditions.visibilityOf(userName));
         userName.sendKeys(_testUser.username);
         wait.until(ExpectedConditions.visibilityOf(firstName));
@@ -106,7 +106,7 @@ public class Register {
         wait.until(ExpectedConditions.visibilityOf(password2));
         password2.sendKeys(_testUser.password2);
         wait.until(ExpectedConditions.elementToBeClickable(registrarse));
-        registrarse.click();
+        wait.until(ExpectedConditions.elementToBeClickable(registrarse)).click();
         wait.until(ExpectedConditions.visibilityOf(NameProfileShop));
 
     }
