@@ -255,39 +255,39 @@ public class ExpertAdvice {
 
     // Constructor
     public ExpertAdvice(WebDriver _driver){
-        this.driver = _driver;
+        driver = _driver;
         PageFactory.initElements(driver,this);
     }
 
 
     public void VerifyExpAdv(){
 
-        this.menuexpadv.click();
-        this.artexpadv.isDisplayed();
-        this.allcateg.isDisplayed();
-        this.dogbreeding.isDisplayed();
-        this.grooming.isDisplayed();
-        this.health.isDisplayed();
-        this.homeliving.isDisplayed();
-        //this.lifestyle.isDisplayed(); this was removed on test and prod
-        this.news.isDisplayed();
-        this.nutrition.isDisplayed();
-        this.puppyinfo.isDisplayed();
-        this.sports.isDisplayed();
-        this.training.isDisplayed();
-        this.vetcorner.isDisplayed();
-        this.findmatch.isDisplayed();
-        this.dognamefind.isDisplayed();
-        this.candogeat.isDisplayed();
-        this.akctv.isDisplayed();
-        this.akcmag.isDisplayed();
-        this.newsletter.isDisplayed();
-        this.presscenter.isDisplayed();
-        this.akcdetection.isDisplayed();
-        this.akccanine.isDisplayed();
-        this.government.isDisplayed();
-        this.akceducation.isDisplayed();
-        this.akclibrary.isDisplayed();
+        menuexpadv.click();
+        artexpadv.isDisplayed();
+        allcateg.isDisplayed();
+        dogbreeding.isDisplayed();
+        grooming.isDisplayed();
+        health.isDisplayed();
+        homeliving.isDisplayed();
+        //lifestyle.isDisplayed(); this was removed on test and prod
+        news.isDisplayed();
+        nutrition.isDisplayed();
+        puppyinfo.isDisplayed();
+        sports.isDisplayed();
+        training.isDisplayed();
+        vetcorner.isDisplayed();
+        findmatch.isDisplayed();
+        dognamefind.isDisplayed();
+        candogeat.isDisplayed();
+        akctv.isDisplayed();
+        akcmag.isDisplayed();
+        newsletter.isDisplayed();
+        presscenter.isDisplayed();
+        akcdetection.isDisplayed();
+        akccanine.isDisplayed();
+        government.isDisplayed();
+        akceducation.isDisplayed();
+        akclibrary.isDisplayed();
     }
 
 
@@ -296,172 +296,172 @@ public class ExpertAdvice {
 
     public void Clickartexpadv() {
 
-        this.menuexpadv.click();
+        menuexpadv.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(artexpadv));
-        this.artexpadv.click();
+        artexpadv.click();
         wait.until(ExpectedConditions.visibilityOf(artexpadvElement));
 
     }
 
     public void Clickallcateg() {
 
-        this.menuexpadv.click();
+        menuexpadv.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(allcateg));
-        this.allcateg.click();
+        allcateg.click();
         wait.until(ExpectedConditions.visibilityOf(allcategElement));
 
     }
 
     public void Clickdogbreeding() {
 
-        this.menuexpadv.click();
+        menuexpadv.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(dogbreeding));
-        this.dogbreeding.click();
+        dogbreeding.click();
         wait.until(ExpectedConditions.visibilityOf(dogbreedingElement));
 
     }
 
     public void Clickgrooming() {
 
-        this.menuexpadv.click();
+        menuexpadv.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(grooming));
-        this.grooming.click();
+        grooming.click();
         wait.until(ExpectedConditions.visibilityOf(groomingElement));
 
     }
 
     public void Clickhealth() {
 
-        this.menuexpadv.click();
+        menuexpadv.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(health));
-        this.health.click();
+        health.click();
         wait.until(ExpectedConditions.visibilityOf(healthElement));
-        //this.driver.get(this.driver.getCurrentUrl() + "?test=true");
+        //driver.get(driver.getCurrentUrl() + "?test=true");
 
     }
 
     public void Clickhomeliving() {
 
-        this.menuexpadv.click();
+        menuexpadv.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(homeliving));
-        this.homeliving.click();
+        homeliving.click();
         wait.until(ExpectedConditions.visibilityOf(homelivingElement));
 
     }
 
     public void Clicklifestyle() {
 
-        this.menuexpadv.click();
+        menuexpadv.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(lifestyle));
-        this.lifestyle.click();
+        lifestyle.click();
         wait.until(ExpectedConditions.visibilityOf(lifestyleElement));
 
     }
 
     public void Clicknews() {
 
-        this.menuexpadv.click();
+        menuexpadv.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(news));
-        this.news.click();
+        news.click();
         wait.until(ExpectedConditions.visibilityOf(newsElement));
-        //this.driver.get(this.driver.getCurrentUrl() + "?test=true");
+        //driver.get(driver.getCurrentUrl() + "?test=true");
 
     }
 
     public void Clicknutrition() {
 
-        this.menuexpadv.click();
+        menuexpadv.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(nutrition));
-        this.nutrition.click();
+        nutrition.click();
         wait.until(ExpectedConditions.visibilityOf(nutritionElement));
 
     }
 
     public void Clickpuppyinfo() {
 
-        this.menuexpadv.click();
+        menuexpadv.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(puppyinfo));
-        this.puppyinfo.click();
+        puppyinfo.click();
         wait.until(ExpectedConditions.visibilityOf(puppyinfoElement));
 
     }
 
     public void Clicksports() {
 
-        this.menuexpadv.click();
+        menuexpadv.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(sports));
-        this.sports.click();
+        sports.click();
         wait.until(ExpectedConditions.visibilityOf(sportsElement));
 
     }
 
     public void Clicktraining() {
 
-        this.menuexpadv.click();
+        menuexpadv.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(training));
-        this.training.click();
+        training.click();
         wait.until(ExpectedConditions.visibilityOf(trainingElement));
 
     }
 
     public void Clickvetcorner() {
 
-        this.menuexpadv.click();
+        menuexpadv.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(vetcorner));
-        this.vetcorner.click();
+        vetcorner.click();
         wait.until(ExpectedConditions.visibilityOf(vetcornerElement));
 
     }
 
     public void ClickfindmatchOnExpAdvMenu() {
 
-        this.menuexpadv.click();
+        menuexpadv.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(findmatch));
-        this.findmatch.click();
+        findmatch.click();
         wait.until(ExpectedConditions.visibilityOf(findmatchElement));
 
     }
 
     public void Clickdognamefind() {
 
-        this.menuexpadv.click();
+        menuexpadv.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(dognamefind));
-        this.dognamefind.click();
+        dognamefind.click();
         wait.until(ExpectedConditions.visibilityOf(dognamefindElement));
 
     }
 
     public void Clickcandogeat()  {
 
-        this.menuexpadv.click();
+        menuexpadv.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(candogeat));
-        this.candogeat.click(); //fix this
+        candogeat.click(); //fix this
         wait.until(ExpectedConditions.visibilityOf(candogeatElement));
 
     }
 
     public void Clickakctv() {
 
-        this.menuexpadv.click();
+        menuexpadv.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(akctv));
-        this.akctv.click();
+        akctv.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlToBe("https://akc.tv/"));
 
@@ -469,50 +469,52 @@ public class ExpertAdvice {
 
     public void Clickakcmag() {
 
-        this.menuexpadv.click();
+        menuexpadv.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(akcmag));
-        this.akcmag.click();
+        akcmag.click();
         wait.until(ExpectedConditions.visibilityOf(akcmagElement));
 
     }
 
     public void Clicknewsletter() {
 
-        this.menuexpadv.click();
+        menuexpadv.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(newsletter));
-        this.newsletter.click();
+        newsletter.click();
         wait.until(ExpectedConditions.visibilityOf(newsletterElement));
 
     }
 
     public void Clickpresscenter() {
 
-        this.menuexpadv.click();
+        menuexpadv.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(presscenter));
-        this.presscenter.click();
+        presscenter.click();
         wait.until(ExpectedConditions.visibilityOf(presscenterElement));
 
     }
 
     public void Clickakcdetection() {
 
-        this.menuexpadv.click();
+        menuexpadv.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(akcdetection));
-        this.akcdetection.click();
+        akcdetection.click();
         wait.until(ExpectedConditions.visibilityOf(akcdetectionElement));
+
+
 
     }
 
     public void Clickakccanine() {
 
-        this.menuexpadv.click();
+        menuexpadv.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(akccanine));
-        this.akccanine.click();
+        akccanine.click();
         for (String winHandle : driver.getWindowHandles()) driver.switchTo().window(winHandle);
         wait.until(ExpectedConditions.urlContains("https://www.caninecollege"));
 
@@ -520,56 +522,56 @@ public class ExpertAdvice {
 
     public void Clickgovernment() {
 
-        this.menuexpadv.click();
+        menuexpadv.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(government));
-        this.government.click();
+        government.click();
         wait.until(ExpectedConditions.visibilityOf(governmentElement));
 
     }
 
     public void Clickakceducation() {
 
-        this.menuexpadv.click();
+        menuexpadv.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(akceducation));
-        this.akceducation.click();
+        akceducation.click();
         wait.until(ExpectedConditions.visibilityOf(akceducationElement));
 
     }
 
     public void Clickakclibrary() {
 
-        this.menuexpadv.click();
+        menuexpadv.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(akclibrary));
-        this.akclibrary.click();
+        akclibrary.click();
         wait.until(ExpectedConditions.visibilityOf(akclibraryElement));
 
     }
 
     public void SubscriptionForm () {
 
-        this.menuexpadv.click();
+        menuexpadv.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(newsletter));
-        this.newsletter.click();
+        newsletter.click();
         wait.until(ExpectedConditions.visibilityOf(newsletterElement));
-        this.SubsFormFirstName.sendKeys("Sebas");
-        this.SubsFormLastName.sendKeys("Viquez");
-        this.SubsFormEmail.sendKeys("sebas.viquez@gmail.com");
-        this.SubsFormBreedName.click();
-        this.SubsFormBreedAkita.click();
+        SubsFormFirstName.sendKeys("Sebas");
+        SubsFormLastName.sendKeys("Viquez");
+        SubsFormEmail.sendKeys("sebas.viquez@gmail.com");
+        SubsFormBreedName.click();
+        SubsFormBreedAkita.click();
         HiddeBanner();
-        this.AKCNibbleBox.click();
-        this.AKCNibbleTrainingBox.click();
-        this.AKCPupDateBox.click();
-        this.AKCPupDateDogBreedBox.click();
-        this.SubsFormBreedAkita.click();
-        this.AKCPupDateDogsDateBirthBox.sendKeys("01/01/2020");
-        this.SubsFormFamilyDogBox.click();
-        this.SubsFormSubmitButton.click();
-        this.SubsFormConfirmation.isDisplayed();
+        AKCNibbleBox.click();
+        AKCNibbleTrainingBox.click();
+        AKCPupDateBox.click();
+        AKCPupDateDogBreedBox.click();
+        SubsFormBreedAkita.click();
+        AKCPupDateDogsDateBirthBox.sendKeys("01/01/2020");
+        SubsFormFamilyDogBox.click();
+        SubsFormSubmitButton.click();
+        SubsFormConfirmation.isDisplayed();
 
     }
 
@@ -579,63 +581,63 @@ public class ExpertAdvice {
 
     public void allcategArticle() {
 
-        this.menuexpadv.click();
+        menuexpadv.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(allcateg));
-        this.allcateg.click();
+        allcateg.click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("body > div:nth-child(6) > div.page-container > div.page-layout > main > div.my4 > form")));
 
     }
 
     public void dogbreedArticle() {
 
-        this.menuexpadv.click();
+        menuexpadv.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(dogbreeding));
-        this.dogbreeding.click();
+        dogbreeding.click();
 
     }
 
     public void healthArticle() {
 
-        this.menuexpadv.click();
+        menuexpadv.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(health));
-        this.health.click();
+        health.click();
         wait.until(ExpectedConditions.elementToBeClickable(alternativeMed));
-        this.alternativeMed.click();
+        alternativeMed.click();
         wait.until(ExpectedConditions.urlContains("expert-advice/health/alternative-medicine/"));
 
     }
 
     public void newsArticle() throws InterruptedException {
 
-        this.menuexpadv.click();
+        menuexpadv.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(news));
-        this.news.click();
+        news.click();
         wait.until(ExpectedConditions.visibilityOf(editorPick));
-        this.editorPick.click();
+        editorPick.click();
         wait.until(ExpectedConditions.urlContains("/expert-advice/news/?editor_pick%5B%5D=editor-pick"));
 
     }
 
     public void HomelivingArticle() throws InterruptedException {
 
-        this.menuexpadv.click();
+        menuexpadv.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(homeliving));
-        this.homeliving.click();
+        homeliving.click();
         //All elements are check with Eyes Applitools
 
     }
 
     public void lifestyleArticle() throws InterruptedException {
 
-        this.menuexpadv.click();
+        menuexpadv.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(lifestyle));
-        this.lifestyle.click();
+        lifestyle.click();
         //All elements are check with Eyes method
     }
 

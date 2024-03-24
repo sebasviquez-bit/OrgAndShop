@@ -294,14 +294,14 @@ public class CanMyDogEat {
     @FindBy(css = "#a268951c-b028-44ad-99ed-5af71765e083")
     WebElement BottomBanner;
 
-
-    DriverHelper driverHelper;
+    @FindBy(css = "body > div.fancybox-overlay.fancybox-overlay-fixed > div > div > a.fancybox-item.fancybox-close")
+    WebElement PupUpBanner;
 
     WebDriver driver;
 
     // Constructor
     public CanMyDogEat(WebDriver _driver) {
-        this.driver = _driver;
+        driver = _driver;
         PageFactory.initElements(driver, this);
 
 
@@ -310,146 +310,145 @@ public class CanMyDogEat {
 
     public void VerifyCanMyDogEat1() {
 
-        this.breedsmenu.click();
+        //HideBanner1();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.elementToBeClickable(findmatch));
-        this.findmatch.click();
-        wait.until(ExpectedConditions.elementToBeClickable(canmydog));
+        wait.until(ExpectedConditions.elementToBeClickable(breedsmenu)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(findmatch)).click();
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("scroll(0, 800);");
-        this.canmydog.click();
+        wait.until(ExpectedConditions.elementToBeClickable(canmydog));
         wait.until(ExpectedConditions.visibilityOf(tittle));
-        this.img.isDisplayed();
-        this.msg.isDisplayed();
-        this.apples.isDisplayed();
-        this.applesimg.isDisplayed();
-        this.yes1.isDisplayed();
-        this.no1.isDisplayed();
-        this.cheese.isDisplayed();
-        this.cheeseimg.isDisplayed();
-        this.yes2.isDisplayed();
-        this.no2.isDisplayed();
-        this.almonds.isDisplayed();
-        this.almpondsimg.isDisplayed();
-        this.yes3.isDisplayed();
-        this.no3.isDisplayed();
-        this.carrots.isDisplayed();
-        this.carrotsimg.isDisplayed();
-        this.yes4.isDisplayed();
-        this.no4.isDisplayed();
-        this.avoca.isDisplayed();
-        this.avocaimg.isDisplayed();
-        this.yes5.isDisplayed();
-        this.no5.isDisplayed();
-        this.grapes.isDisplayed();
-        this.grapesimg.isDisplayed();
-        this.yes6.isDisplayed();
-        this.no6.isDisplayed();
-        this.peanut.isDisplayed();
-        this.peanutimg.isDisplayed();
-        this.yes7.isDisplayed();
-        this.no7.isDisplayed();
-        this.bananana.isDisplayed();
-        this.bananasimg.isDisplayed();
-        this.yes8.isDisplayed();
-        this.no8.isDisplayed();
-        this.tomato.isDisplayed();
-        this.tomatoimg.isDisplayed();
-        this.yes9.isDisplayed();
-        this.no9.isDisplayed();
-        this.onions.isDisplayed();
-        this.onionsaimg.isDisplayed();
-        this.yes10.isDisplayed();
-        this.no10.isDisplayed();
-        this.pinea.isDisplayed();
-        this.pineaimg.isDisplayed();
-        this.yes11.isDisplayed();
-        this.no11.isDisplayed();
-        this.eggs.isDisplayed();
-        this.eggsimg.isDisplayed();
-        this.yes12.isDisplayed();
-        this.no12.isDisplayed();
-        this.yes1.click();  //fix this locator
-        this.answer1.isDisplayed();
-        this.expla1.isDisplayed();
-        this.yes2.click();
-        this.answer2.isDisplayed();
-        this.expla2.isDisplayed();
-        this.yes3.click();
-        this.answer3.isDisplayed();
-        this.expla3.isDisplayed();
-        this.yes4.click();
-        this.answer4.isDisplayed();
-        this.expla4.isDisplayed();
-        this.yes5.click();
-        this.answer5.click();
-        this.expla5.click();
-        this.yes6.click();
-        this.answer6.isDisplayed();
-        this.expla6.isDisplayed();
-        this.yes7.click();
-        this.answer7.isDisplayed();
-        this.expla7.isDisplayed();
-        this.yes8.click();
-        this.answer8.isDisplayed();
-        this.expla8.isDisplayed();
-        this.yes9.click();
-        this.answer9.isDisplayed();
-        this.expla9.isDisplayed();
-        this.yes10.click();
-        this.answer10.isDisplayed();
-        this.expla10.isDisplayed();
-        this.yes11.click();
-        this.answer11.isDisplayed();
-        this.expla11.isDisplayed();
-        this.yes12.click();
-        this.answer11.isDisplayed();
-        this.expla12.isDisplayed();
-        this.results.isDisplayed();
-        this.resultsimg.isDisplayed();
-        this.suggestion.isDisplayed();
+        img.isDisplayed();
+        msg.isDisplayed();
+        apples.isDisplayed();
+        applesimg.isDisplayed();
+        yes1.isDisplayed();
+        no1.isDisplayed();
+        cheese.isDisplayed();
+        cheeseimg.isDisplayed();
+        yes2.isDisplayed();
+        no2.isDisplayed();
+        almonds.isDisplayed();
+        almpondsimg.isDisplayed();
+        yes3.isDisplayed();
+        no3.isDisplayed();
+        carrots.isDisplayed();
+        carrotsimg.isDisplayed();
+        yes4.isDisplayed();
+        no4.isDisplayed();
+        avoca.isDisplayed();
+        avocaimg.isDisplayed();
+        yes5.isDisplayed();
+        no5.isDisplayed();
+        grapes.isDisplayed();
+        grapesimg.isDisplayed();
+        yes6.isDisplayed();
+        no6.isDisplayed();
+        peanut.isDisplayed();
+        peanutimg.isDisplayed();
+        yes7.isDisplayed();
+        no7.isDisplayed();
+        bananana.isDisplayed();
+        bananasimg.isDisplayed();
+        yes8.isDisplayed();
+        no8.isDisplayed();
+        tomato.isDisplayed();
+        tomatoimg.isDisplayed();
+        yes9.isDisplayed();
+        no9.isDisplayed();
+        onions.isDisplayed();
+        onionsaimg.isDisplayed();
+        yes10.isDisplayed();
+        no10.isDisplayed();
+        pinea.isDisplayed();
+        pineaimg.isDisplayed();
+        yes11.isDisplayed();
+        no11.isDisplayed();
+        eggs.isDisplayed();
+        eggsimg.isDisplayed();
+        yes12.isDisplayed();
+        no12.isDisplayed();
+        yes1.click();  //fix this locator
+        answer1.isDisplayed();
+        expla1.isDisplayed();
+        yes2.click();
+        answer2.isDisplayed();
+        expla2.isDisplayed();
+        yes3.click();
+        answer3.isDisplayed();
+        expla3.isDisplayed();
+        yes4.click();
+        answer4.isDisplayed();
+        expla4.isDisplayed();
+        yes5.click();
+        answer5.click();
+        expla5.click();
+        yes6.click();
+        answer6.isDisplayed();
+        expla6.isDisplayed();
+        yes7.click();
+        answer7.isDisplayed();
+        expla7.isDisplayed();
+        yes8.click();
+        answer8.isDisplayed();
+        expla8.isDisplayed();
+        yes9.click();
+        answer9.isDisplayed();
+        expla9.isDisplayed();
+        yes10.click();
+        answer10.isDisplayed();
+        expla10.isDisplayed();
+        yes11.click();
+        answer11.isDisplayed();
+        expla11.isDisplayed();
+        yes12.click();
+        answer11.isDisplayed();
+        expla12.isDisplayed();
+        results.isDisplayed();
+        resultsimg.isDisplayed();
+        suggestion.isDisplayed();
 
     }
 
     public void VerifyCanMyDogEat2() {
 
 
-        this.breedsmenu.click();
+        breedsmenu.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(findmatch));
-        this.findmatch.click();
+        findmatch.click();
         wait.until(ExpectedConditions.elementToBeClickable(canmydog));
         //HiddeBanner();
-        this.canmydog.click();
+        canmydog.click();
         //HiddeBanner();
         wait.until(ExpectedConditions.elementToBeClickable(no1));
-        this.no1.click();
+        no1.click();
         wait.until(ExpectedConditions.elementToBeClickable(otheranswer1));
-        this.no2.click();
+        no2.click();
         wait.until(ExpectedConditions.elementToBeClickable(otheranswer2));
-        this.no3.click();
+        no3.click();
         wait.until(ExpectedConditions.elementToBeClickable(otheranswer3));
-        this.no4.click();
+        no4.click();
         wait.until(ExpectedConditions.elementToBeClickable(otheranswer4));
-        this.no5.click();
+        no5.click();
         wait.until(ExpectedConditions.elementToBeClickable(otheranswer5));
-        this.no6.click();
+        no6.click();
         wait.until(ExpectedConditions.elementToBeClickable(otheranswer6));
-        this.no7.click();
+        no7.click();
         wait.until(ExpectedConditions.elementToBeClickable(otheranswer7));
-        this.no8.click();
+        no8.click();
         wait.until(ExpectedConditions.elementToBeClickable(otheranswer8));
-        this.no9.click();
+        no9.click();
         wait.until(ExpectedConditions.elementToBeClickable(otheranswer9));
-        this.no10.click();
+        no10.click();
         wait.until(ExpectedConditions.elementToBeClickable(otheranswer10));
-        this.no11.click();
+        no11.click();
         wait.until(ExpectedConditions.elementToBeClickable(otheranswer11));
-        this.no12.click();
+        no12.click();
         wait.until(ExpectedConditions.elementToBeClickable(otheranswer12));
-        this.results.isDisplayed();
-        this.resultsimg.isDisplayed();
-        this.suggestion.isDisplayed();
+        results.isDisplayed();
+        resultsimg.isDisplayed();
+        suggestion.isDisplayed();
 
     }
 
@@ -457,6 +456,13 @@ public class CanMyDogEat {
 
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("arguments[0].style.visibility='hidden'", BottomBanner);
+    }
+
+    public void HideBanner1() {
+
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
+        jse.executeScript("arguments[0].style.visibility='hidden'", PupUpBanner);
+
     }
 
 }

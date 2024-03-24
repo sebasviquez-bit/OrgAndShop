@@ -14,15 +14,14 @@ import java.time.Duration;
 
 public class BreedSelectorTool {
 
-    @FindBy(css = "body > div:nth-child(13) > div > div > div > a")
+    @FindBy(xpath = "//a[contains(text(),\"Let's Go\")]")
     WebElement LetsGoButton;
 
-    @FindBy(css = "body > div:nth-child(7) > div > form > div.breed-selector-tool__question__scrollable > div.breed-selector-tool__question__choices > div.breed-selector-tool__question__choice.breed-selector-tool__question__choice--selected > label > span.checkbox__visual-input")
+    @FindBy(css = "body > div:nth-child(6) > div > form > div.breed-selector-tool__question__scrollable > div.breed-selector-tool__question__choices > div:nth-child(2) > label > span.checkbox__visual-input")
     WebElement EasyTrainable;
 
     @FindBy(css = "body > div:nth-child(7) > div > form > div.breed-selector-tool__question__scrollable > div.breed-selector-tool__question__choices > div:nth-child(1) > label > span.checkbox__visual-input")
     WebElement HighlyTrainable;
-    //
 
     @FindBy(css = "body > div:nth-child(6) > div > form > div.breed-selector-tool__question__scrollable > div.breed-selector-tool__question__choices > div:nth-child(3) > label")
     WebElement Trainable;
@@ -96,19 +95,17 @@ public class BreedSelectorTool {
     @FindBy(css = "body > div:nth-child(6) > div > div > div.breed-selector-tool__results__content > div > div.breed-selector-tool__results__content-wrap__breed-main-info > div.breed-selector-tool__results__content-wrap__breed-main-info__button > a")
     WebElement FindPuppies;
 
-
-    //
-
     @FindBy(css = "#a268951c-b028-44ad-99ed-5af71765e083")
     WebElement BottomBanner;
 
-    DriverHelper driverHelper;
+    @FindBy(css = "body > div.fancybox-overlay.fancybox-overlay-fixed")
+    WebElement PupUpBanner;
 
     WebDriver driver;
 
     // Constructor
     public BreedSelectorTool(WebDriver _driver) {
-        this.driver = _driver;
+        driver = _driver;
         PageFactory.initElements(driver, this);
 
     }
@@ -118,43 +115,38 @@ public class BreedSelectorTool {
         driver.navigate().to("https://test-web.akc.org/breed-selector-tool/");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(LetsGoButton));
-        this.HiddeBanner();
-        this.LetsGoButton.click();
-        this.EasyTrainable.click();
-        this.Trainable.click();
-        this.ContinueButton.click();
-        this.VeryHighEnergy.click();
-        this.Moderate.click();
-        this.ContinueButton.click();
+        HiddeBanner();
+        LetsGoButton.click();
+        HideBanner1();
+        EasyTrainable.click();
+        Trainable.click();
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("scroll(0, 500);");
-        this.NoPreference.click();
-        this.ContinueButton.click();
-        this.EveryDay.click();
-        this.ContinueButton.click();
-        this.VeryVocal.click();
-        this.SomeBarking.click();
-        this.ContinueButton.click();
-        this.Large.click();
-        this.Medium.click();
-        this.ContinueButton.click();
-        this.OwnDogYes.click();
-        wait.until(ExpectedConditions.elementToBeClickable(ChildrenHomeNo));
-        this.ChildrenHomeNo.click();
-        wait.until(ExpectedConditions.elementToBeClickable(AnimalsHomeYes));
-        this.AnimalsHomeYes.click();
-        wait.until(ExpectedConditions.elementToBeClickable(Cat));
-        this.Cat.click();
-        wait.until(ExpectedConditions.elementToBeClickable(SmallYardHouse));
-        this.SmallYardHouse.click();
-        wait.until(ExpectedConditions.elementToBeClickable(Time1to5h));
-        this.Time1to5h.click();
-        wait.until(ExpectedConditions.elementToBeClickable(ActivityLevelAdventure));
-        this.ActivityLevelAdventure.click();
-        wait.until(ExpectedConditions.elementToBeClickable(AllergenDogNo));
-        this.AllergenDogNo.click();
-        wait.until(ExpectedConditions.elementToBeClickable(SeeResults));
-        this.SeeResults.click();
+        ContinueButton.click();
+        HideBanner1();
+        VeryHighEnergy.click();
+        Moderate.click();
+        ContinueButton.click();
+        jse.executeScript("scroll(0, 500);");
+        NoPreference.click();
+        ContinueButton.click();
+        EveryDay.click();
+        ContinueButton.click();
+        VeryVocal.click();
+        SomeBarking.click();
+        ContinueButton.click();
+        Large.click();
+        Medium.click();
+        ContinueButton.click();
+        OwnDogYes.click();
+        wait.until(ExpectedConditions.elementToBeClickable(ChildrenHomeNo)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(AnimalsHomeYes)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(Cat)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(SmallYardHouse)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(Time1to5h)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(ActivityLevelAdventure)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(AllergenDogNo)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(SeeResults)).click();
         wait.until(ExpectedConditions.visibilityOf(Top5Match));
         wait.until(ExpectedConditions.elementToBeClickable(ChangeMyAnswers));
         wait.until(ExpectedConditions.elementToBeClickable(BreedNameResult));
@@ -167,9 +159,9 @@ public class BreedSelectorTool {
         driver.navigate().to("https://test-web.akc.org/breed-selector-tool/");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(LetsGoButton));
-        this.HiddeBanner();
-        this.LetsGoButton.click();
-        this.HighlyTrainable.click();
+        HiddeBanner();
+        LetsGoButton.click();
+        HighlyTrainable.click();
         //New path...
     }
 
@@ -179,6 +171,14 @@ public class BreedSelectorTool {
         jse.executeScript("arguments[0].style.visibility='hidden'", BottomBanner);
 
     }
+
+    public void HideBanner1() {
+
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
+        jse.executeScript("arguments[0].style.visibility='hidden'", PupUpBanner);
+
+    }
+
 
 }
 

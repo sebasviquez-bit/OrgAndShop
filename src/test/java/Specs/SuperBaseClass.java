@@ -37,27 +37,27 @@ public class SuperBaseClass {
 
     public void InitPages(){
 
-        signIn = new SignIn(this.driver);
-        register = new Register(this.driver, driverHelper);
-        breeds = new BreedsMenu(this.driver);
-        homepage = new Homepage(this.driver);
-        expertAdvice = new ExpertAdvice(this.driver);
-        prodserv = new ProdServ(this.driver);
-        sportsEvents = new SportsEvents(this.driver);
-        clubsDelegates = new ClubsDelegates(this.driver);
-        compareBreeds = new CompareBreeds(this.driver);
-        dogName= new DogName(this.driver);
-        canMyDogEat= new CanMyDogEat(this.driver);
-        registerDog= new RegisterDog(this.driver);
-        search= new Search(this.driver);
-        breedSelectorTool= new BreedSelectorTool(this.driver);
-
+        signIn = new SignIn(driver);
+        register = new Register(driver, driverHelper);
+        breeds = new BreedsMenu(driver);
+        homepage = new Homepage(driver);
+        expertAdvice = new ExpertAdvice(driver);
+        prodserv = new ProdServ(driver);
+        sportsEvents = new SportsEvents(driver);
+        clubsDelegates = new ClubsDelegates(driver);
+        compareBreeds = new CompareBreeds(driver);
+        dogName= new DogName(driver);
+        canMyDogEat= new CanMyDogEat(driver);
+        registerDog= new RegisterDog(driver);
+        search= new Search(driver);
+        breedSelectorTool= new BreedSelectorTool(driver);
     }
 
     public void InitHelpers(String baseUrl){
 
         dataHelper = new DataHelper();
         driverHelper = new DriverHelper(driver, baseUrl);
+
     }
 
 }

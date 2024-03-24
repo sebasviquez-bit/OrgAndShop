@@ -68,7 +68,7 @@ public class SignIn {
 
     //Constructor
     public SignIn(WebDriver _driver){
-        this.driver = _driver;
+        driver = _driver;
         PageFactory.initElements(driver,this);
     }
 
@@ -76,38 +76,38 @@ public class SignIn {
 
     public void signInUser(User _testUser) {
 
-        this.iconsignin.click();
+        iconsignin.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         //wait.until(ExpectedConditions.visibilityOf(CreateAccount));
-        this.forgot.isDisplayed();
-        this.signinlogo.isDisplayed();
-        this.userName.sendKeys(_testUser.username);
-        this.password.sendKeys(_testUser.password);
-        this.ingresar.click();
+        forgot.isDisplayed();
+        signinlogo.isDisplayed();
+        userName.sendKeys(_testUser.username);
+        password.sendKeys(_testUser.password);
+        ingresar.click();
         wait.until(ExpectedConditions.visibilityOf(iconsignin));
 
     }
 
     public void signInUserShop(User _testUser) throws InterruptedException {
 
-        this.iconsigninShop.click();
+        iconsigninShop.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(signup));
-        this.forgot.isDisplayed();
-        this.signinlogo.isDisplayed();
-        this.userName.sendKeys(_testUser.username);
-        this.password.sendKeys(_testUser.password);
-        this.ingresar.click();
+        forgot.isDisplayed();
+        signinlogo.isDisplayed();
+        userName.sendKeys(_testUser.username);
+        password.sendKeys(_testUser.password);
+        ingresar.click();
         wait.until(ExpectedConditions.visibilityOf(iconsigninShop));
         sleep(1000);
-        this.logoutShop.isDisplayed();
-        Actions action = new Actions(this.driver);
+        logoutShop.isDisplayed();
+        Actions action = new Actions(driver);
         action.moveToElement(iconsigninShop).perform();
         action.moveToElement(iconsigninShop).click();
         sleep(1000);
-        this.logoutShop.click();
+        logoutShop.click();
         sleep(1000);
-        this.iconsigninShop.isDisplayed();
+        iconsigninShop.isDisplayed();
 
     }
 

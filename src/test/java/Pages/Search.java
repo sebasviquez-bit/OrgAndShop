@@ -104,7 +104,7 @@ public class Search {
 
     //Constructor
     public Search(WebDriver _driver) {
-        this.driver = _driver;
+        driver = _driver;
         PageFactory.initElements(driver, this);
 
     }
@@ -113,22 +113,22 @@ public class Search {
 
     public void SearchPage(Word _searchword) {
 
-        this.search.sendKeys(_searchword.WordSearch);
-        this.search.sendKeys(Keys.RETURN);
+        search.sendKeys(_searchword.WordSearch);
+        search.sendKeys(Keys.RETURN);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(SearchCampImg));
-        this.numresults.isDisplayed();
-        this.sections.isDisplayed();
-        this.resultsimg.isDisplayed();
-        this.firstresult.isDisplayed();
-        this.frbody.isDisplayed();
+        numresults.isDisplayed();
+        sections.isDisplayed();
+        resultsimg.isDisplayed();
+        firstresult.isDisplayed();
+        frbody.isDisplayed();
 
     }
 
     public void HeroBreedSearch(Word _searchword) {
 
-        this.HeroBreedSearch.sendKeys(_searchword.WordSearch);
-        this.HeroBreedSearch.sendKeys(Keys.RETURN);
+        HeroBreedSearch.sendKeys(_searchword.WordSearch);
+        HeroBreedSearch.sendKeys(Keys.RETURN);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(resultsTitle));
         wait.until(ExpectedConditions.visibilityOf(Characteristics));
@@ -137,8 +137,8 @@ public class Search {
 
     public void HeroAsideSearch(Word _searchword) {
 
-        this.HeroAsideSearch.sendKeys(_searchword.WordSearch);
-        this.HeroAsideSearch.sendKeys(Keys.RETURN);
+        HeroAsideSearch.sendKeys(_searchword.WordSearch);
+        HeroAsideSearch.sendKeys(Keys.RETURN);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(SearchCampImg));
         wait.until(ExpectedConditions.visibilityOf(numresults));
@@ -153,10 +153,10 @@ public class Search {
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(ShopSearch));
-        this.ShopSearch.sendKeys(_searchword.WordSearch);
-        this.ShopSearch.sendKeys(Keys.RETURN);
+        ShopSearch.sendKeys(_searchword.WordSearch);
+        ShopSearch.sendKeys(Keys.RETURN);
         wait.until(ExpectedConditions.visibilityOf(ShopResultTitle));
-        //this.ShopResultTitle.isDisplayed();
+        //ShopResultTitle.isDisplayed();
         wait.until(ExpectedConditions.visibilityOf(ShopResultSearchBar));
         wait.until(ExpectedConditions.visibilityOf(ShopResultSections));
         wait.until(ExpectedConditions.visibilityOf(ShopResultImage));
@@ -167,12 +167,12 @@ public class Search {
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(dropdown));
-        this.dropdown.click();
+        dropdown.click();
         wait.until(ExpectedConditions.visibilityOf(ShopSearchBreed));
-        this.ShopSearchBreed.sendKeys(_searchword.WordSearch);
-        this.ShopSearchBreed.sendKeys(Keys.RETURN);
+        ShopSearchBreed.sendKeys(_searchword.WordSearch);
+        ShopSearchBreed.sendKeys(Keys.RETURN);
         wait.until(ExpectedConditions.visibilityOf(ShopSearchBreedTitle));
-        //this.ShopSearchBreedTitle.isDisplayed();
+        //ShopSearchBreedTitle.isDisplayed();
         wait.until(ExpectedConditions.visibilityOf(ChooseBreedTitle));
         wait.until(ExpectedConditions.visibilityOf(ShopSearchBreedImage));
 
@@ -183,10 +183,10 @@ public class Search {
         driver.navigate().to("https://shop.akc.org/collections/dog-lovers");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(dropdownDogLover));
-        this.dropdownDogLover.click();
+        dropdownDogLover.click();
         wait.until(ExpectedConditions.visibilityOf(ShopDogLoversSearch));
-        this.ShopDogLoversSearch.sendKeys(_searchword.WordSearch);
-        this.ShopDogLoversSearch.sendKeys(Keys.RETURN);
+        ShopDogLoversSearch.sendKeys(_searchword.WordSearch);
+        ShopDogLoversSearch.sendKeys(Keys.RETURN);
         wait.until(ExpectedConditions.visibilityOf(productDetailDogLover));
 
     }

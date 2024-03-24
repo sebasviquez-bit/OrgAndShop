@@ -103,6 +103,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     public void VerifyBreedSelectorTool() {
 
         breedSelectorTool.VerifyBreedSelectorTool();
+
     }
 
 
@@ -169,6 +170,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     public void CanMyDogEatVerify2() {
 
         canMyDogEat.VerifyCanMyDogEat2();
+
 
     }
 
@@ -257,15 +259,17 @@ public class ORGTestSuite extends SpecsBaseClass {
     }
 
 
-    @Test
+    @Test(groups = {"Regression"})
     public void RegisterDogVerify8() {
 
         registerDog.VerifyRegisterDog8();
 
+
+
     }
 
 
-    @Test
+    @Test(groups = {"Regression"})
     public void RegisterDogVerify9() {
 
         registerDog.VerifyRegisterDog9();
@@ -275,7 +279,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     @Test
     public void RegisterDogVerify10() {
 
-        registerDog.VerifyRegisterDog9();
+        registerDog.VerifyRegisterDog10();
 
     }
 
@@ -2158,7 +2162,7 @@ public class ORGTestSuite extends SpecsBaseClass {
     public void VisualakcHumaneFund() {
 
         driver.navigate().to("https://dev-the-akc-humane-fund.pantheonsite.io/");
-        this.driver.get(this.driver.getCurrentUrl() + "?test=true");
+        driver.get(driver.getCurrentUrl() + "?test=true");
         eyes.open(driver, "AKC", "akc-humane-fund", new RectangleSize(1420, 670));
         eyes.check("EAmenu", Target.window());
         eyes.close();

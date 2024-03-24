@@ -55,8 +55,8 @@ public class Register {
 
     // Constructor
     public Register(WebDriver _driver, DriverHelper _driverHelper){
-        this.driver = _driver;
-        this.driverHelper = _driverHelper;
+        driver = _driver;
+        driverHelper = _driverHelper;
         PageFactory.initElements(driver,this);
     }
 
@@ -67,23 +67,23 @@ public class Register {
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(iconsignin));
-        this.iconsignin.click();
+        iconsignin.click();
         wait.until(ExpectedConditions.visibilityOf(CreateAccount));
-        this.CreateAccount.click();
+        CreateAccount.click();
         wait.until(ExpectedConditions.visibilityOf(userName));
-        this.userName.sendKeys(_testUser.username);
+        userName.sendKeys(_testUser.username);
         wait.until(ExpectedConditions.visibilityOf(firstName));
-        this.firstName.sendKeys(_testUser.firstName);
+        firstName.sendKeys(_testUser.firstName);
         wait.until(ExpectedConditions.visibilityOf(lastName));
-        this.lastName.sendKeys(_testUser.lastName);
+        lastName.sendKeys(_testUser.lastName);
         wait.until(ExpectedConditions.visibilityOf(password1));
-        this.password1.sendKeys(_testUser.password1);
+        password1.sendKeys(_testUser.password1);
         wait.until(ExpectedConditions.visibilityOf(password2));
-        this.password2.sendKeys(_testUser.password2);
+        password2.sendKeys(_testUser.password2);
         wait.until(ExpectedConditions.visibilityOf(registrarse));
-        this.registrarse.click();
+        registrarse.click();
         wait.until(ExpectedConditions.visibilityOf(iconsignin));
-        this.iconsignin.isDisplayed();
+        iconsignin.isDisplayed();
 
     }
 
@@ -92,21 +92,21 @@ public class Register {
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(iconsigninShop));
-        this.iconsigninShop.click();
+        iconsigninShop.click();
         wait.until(ExpectedConditions.elementToBeClickable(CreateAccount));
-        this.CreateAccount.click();
+        CreateAccount.click();
         wait.until(ExpectedConditions.visibilityOf(userName));
-        this.userName.sendKeys(_testUser.username);
+        userName.sendKeys(_testUser.username);
         wait.until(ExpectedConditions.visibilityOf(firstName));
-        this.firstName.sendKeys(_testUser.firstName);
+        firstName.sendKeys(_testUser.firstName);
         wait.until(ExpectedConditions.visibilityOf(lastName));
-        this.lastName.sendKeys(_testUser.lastName);
+        lastName.sendKeys(_testUser.lastName);
         wait.until(ExpectedConditions.visibilityOf(password1));
-        this.password1.sendKeys(_testUser.password1);
+        password1.sendKeys(_testUser.password1);
         wait.until(ExpectedConditions.visibilityOf(password2));
-        this.password2.sendKeys(_testUser.password2);
+        password2.sendKeys(_testUser.password2);
         wait.until(ExpectedConditions.elementToBeClickable(registrarse));
-        this.registrarse.click();
+        registrarse.click();
         wait.until(ExpectedConditions.visibilityOf(NameProfileShop));
 
     }

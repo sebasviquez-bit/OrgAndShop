@@ -264,7 +264,7 @@ public class DogName {
 
     // Constructor
     public DogName(WebDriver _driver){
-        this.driver = _driver;
+        driver = _driver;
         PageFactory.initElements(driver,this);
     }
 
@@ -273,134 +273,134 @@ public class DogName {
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(dognametool));
-        this.dognametool.click();
+        dognametool.click();
         wait.until(ExpectedConditions.visibilityOf(dognameheader));
-        this.male.isDisplayed();
-        this.female.isDisplayed();
-        this.all.isDisplayed();
-        this.a.isDisplayed();
-        this.b.isDisplayed();
-        this.c.isDisplayed();
-        this.d.isDisplayed();
-        this.e.isDisplayed();
-        this.f.isDisplayed();
-        this.g.isDisplayed();
-        this.h.isDisplayed();
-        this.i.isDisplayed();
-        this.j.isDisplayed();
-        this.k.isDisplayed();
-        this.l.isDisplayed();
-        this.m.isDisplayed();
-        this.n.isDisplayed();
-        this.o.isDisplayed();
-        this.p.isDisplayed();
-        this.q.isDisplayed();
-        this.r.isDisplayed();
-        this.s.isDisplayed();
-        this.t.isDisplayed();
-        this.u.isDisplayed();
-        this.v.isDisplayed();
-        this.w.isDisplayed();
-        this.x.isDisplayed();
-        this.y.isDisplayed();
-        this.z.isDisplayed();
-        this.clear.isDisplayed();
-        this.listnamesheader.isDisplayed();
-        this.listnames.isDisplayed();
-        this.pict.isDisplayed();
-        this.box.isDisplayed();
-        this.allcat.isDisplayed();
-        this.baby.isDisplayed();
-        this.celebrity.isDisplayed();
-        this.cute.isDisplayed();
-        this.disney.isDisplayed();
-        this.fancy.isDisplayed();
-        this.mostpop.isDisplayed();
-        this.presi.isDisplayed();
-        this.techy.isDisplayed();
-        this.television.isDisplayed();
-        this.trendy.isDisplayed();
-        this.unisex.isDisplayed();
-        this.videogame.isDisplayed();
-        this.but1.isDisplayed();
-        this.but2.isDisplayed();
-        this.but3.isDisplayed();
-        this.but4.isDisplayed();
-        this.but5.isDisplayed();
-        this.but6.isDisplayed();
-        this.a.click();
-        this.but3.isDisplayed();
-        this.b.click();
-        this.but3.isDisplayed();
-        this.c.click();
-        this.but3.isDisplayed();
-        this.d.click();
-        this.but2.isDisplayed();
-        this.e.click();
-        this.f.click();
-        this.g.click();
-        this.but2.isDisplayed();
-        this.h.click();
-        this.but2.isDisplayed();
-        this.i.click();
-        this.j.click();
-        this.but2.isDisplayed();
-        this.k.click();
-        this.but2.isDisplayed();
-        this.l.click();
-        this.but2.isDisplayed();
-        this.m.click();
-        this.but3.isDisplayed();
-        this.n.click();
-        this.o.click();
-        this.p.click();
-        this.q.click();
-        this.r.click();
-        this.but2.isDisplayed();
-        this.s.click();
-        this.but3.isDisplayed();
-        this.t.click();
-        this.but2.isDisplayed();
-        this.u.click();
-        this.v.click();
-        this.w.click();
-        this.x.click();
-        this.y.click();
-        this.z.click();
-        this.clear.click();
-        this.male.click();
-        this.but6.isDisplayed();
-        this.female.click();
-        this.but6.isDisplayed();
-        this.all.click();
-        this.baby.click();
-        this.but3.isDisplayed();
-        this.allcat.click();
-        this.but6.isDisplayed();
-        this.celebrity.click();
-        this.but2.isDisplayed();
+        male.isDisplayed();
+        female.isDisplayed();
+        all.isDisplayed();
+        a.isDisplayed();
+        b.isDisplayed();
+        c.isDisplayed();
+        d.isDisplayed();
+        e.isDisplayed();
+        f.isDisplayed();
+        g.isDisplayed();
+        h.isDisplayed();
+        i.isDisplayed();
+        j.isDisplayed();
+        k.isDisplayed();
+        l.isDisplayed();
+        m.isDisplayed();
+        n.isDisplayed();
+        o.isDisplayed();
+        p.isDisplayed();
+        q.isDisplayed();
+        r.isDisplayed();
+        s.isDisplayed();
+        t.isDisplayed();
+        u.isDisplayed();
+        v.isDisplayed();
+        w.isDisplayed();
+        x.isDisplayed();
+        y.isDisplayed();
+        z.isDisplayed();
+        clear.isDisplayed();
+        listnamesheader.isDisplayed();
+        listnames.isDisplayed();
+        pict.isDisplayed();
+        box.isDisplayed();
+        allcat.isDisplayed();
+        baby.isDisplayed();
+        celebrity.isDisplayed();
+        cute.isDisplayed();
+        disney.isDisplayed();
+        fancy.isDisplayed();
+        mostpop.isDisplayed();
+        presi.isDisplayed();
+        techy.isDisplayed();
+        television.isDisplayed();
+        trendy.isDisplayed();
+        unisex.isDisplayed();
+        videogame.isDisplayed();
+        but1.isDisplayed();
+        but2.isDisplayed();
+        but3.isDisplayed();
+        but4.isDisplayed();
+        but5.isDisplayed();
+        but6.isDisplayed();
+        a.click();
+        but3.isDisplayed();
+        b.click();
+        but3.isDisplayed();
+        c.click();
+        but3.isDisplayed();
+        d.click();
+        but2.isDisplayed();
+        e.click();
+        f.click();
+        g.click();
+        but2.isDisplayed();
+        h.click();
+        but2.isDisplayed();
+        i.click();
+        j.click();
+        but2.isDisplayed();
+        k.click();
+        but2.isDisplayed();
+        l.click();
+        but2.isDisplayed();
+        m.click();
+        but3.isDisplayed();
+        n.click();
+        o.click();
+        p.click();
+        q.click();
+        r.click();
+        but2.isDisplayed();
+        s.click();
+        but3.isDisplayed();
+        t.click();
+        but2.isDisplayed();
+        u.click();
+        v.click();
+        w.click();
+        x.click();
+        y.click();
+        z.click();
+        clear.click();
+        male.click();
+        but6.isDisplayed();
+        female.click();
+        but6.isDisplayed();
+        all.click();
+        baby.click();
+        but3.isDisplayed();
+        allcat.click();
+        but6.isDisplayed();
+        celebrity.click();
+        but2.isDisplayed();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#sidebar-left-contents > div.mid-blackboard > ul > li:nth-child(4) > a")));
-        this.cute.isDisplayed();
-        this.cute.click();
-        this.but3.isDisplayed();
-        this.disney.click();
-        this.but4.isDisplayed();
-        this.fancy.click();
-        this.but4.isDisplayed();
-        this.mostpop.click();
-        this.but3.isDisplayed();
-        this.presi.click();
-        this.but3.isDisplayed();
-        this.techy.click();
-        this.but2.isDisplayed();
-        this.television.click();
-        this.but4.isDisplayed();
-        this.trendy.click();
-        this.but3.isDisplayed();
-        this.unisex.click();
-        this.but6.isDisplayed();
-        this.videogame.click();
-        this.but4.isDisplayed();
+        cute.isDisplayed();
+        cute.click();
+        but3.isDisplayed();
+        disney.click();
+        but4.isDisplayed();
+        fancy.click();
+        but4.isDisplayed();
+        mostpop.click();
+        but3.isDisplayed();
+        presi.click();
+        but3.isDisplayed();
+        techy.click();
+        but2.isDisplayed();
+        television.click();
+        but4.isDisplayed();
+        trendy.click();
+        but3.isDisplayed();
+        unisex.click();
+        but6.isDisplayed();
+        videogame.click();
+        but4.isDisplayed();
 
     }
 
@@ -411,23 +411,23 @@ public class DogName {
         ExpertAdvicemenu.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(EAmenuDNF));
-        Actions action = new Actions(this.driver);
+        Actions action = new Actions(driver);
         action.moveToElement(EAmenuDNF).perform();
         action.moveToElement(EAmenuDNF).click();
-        this.EAmenuDNF.click();
-        this.FindNamesButton.click();
+        EAmenuDNF.click();
+        FindNamesButton.click();
         wait.until(ExpectedConditions.elementToBeClickable(AaronName));
 
     }
 
     public void DNFTSearchNames() {
 
-        this.ExpertAdvicemenu.click();
+        ExpertAdvicemenu.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(EAmenuDNF));
-        this.EAmenuDNF.click();
-        this.inputBar.sendKeys("Yoda");
-        this.FindNamesButton.click();
+        EAmenuDNF.click();
+        inputBar.sendKeys("Yoda");
+        FindNamesButton.click();
         wait.until(ExpectedConditions.elementToBeClickable(YodaName));
 
     }
@@ -435,7 +435,7 @@ public class DogName {
     public void DNFTSurpriceMe() {
 
         driver.navigate().to("https://test-web.akc.org/dog-name-finder/");
-        this.SurpriceMeButton.click();
+        SurpriceMeButton.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(SurpriceMeNames));
 
@@ -444,10 +444,10 @@ public class DogName {
     public void DNFTFilters() {
 
         driver.navigate().to("https://test-web.akc.org/dog-name-finder/");
-        this.FilterButton.click();
-        this.LenghtBarFilter.click();
-        this.OneWordFilter.click();
-        this.FindNamesButton.click();
+        FilterButton.click();
+        LenghtBarFilter.click();
+        OneWordFilter.click();
+        FindNamesButton.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(AlexanderName));
 
@@ -456,15 +456,15 @@ public class DogName {
     public void MySavedNames() {
 
         driver.navigate().to("https://test-web.akc.org/dog-name-finder/");
-        this.FindNamesButton.click();
+        FindNamesButton.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(MySavedNamesButton));
-        this.MySavedNamesButton.click();
-        this.userName.sendKeys("sxv@akc.org");
-        this.password.sendKeys("CypresHill2*");
-        this.login.click();
+        MySavedNamesButton.click();
+        userName.sendKeys("sxv@akc.org");
+        password.sendKeys("CypresHill2*");
+        login.click();
         wait.until(ExpectedConditions.elementToBeClickable(MySavedNamesButton));
-        this.MySavedNamesButton.click();
+        MySavedNamesButton.click();
         wait.until(ExpectedConditions.elementToBeClickable(AaronName));
 
     }
@@ -472,16 +472,16 @@ public class DogName {
     public void FavoriteName() {
 
         driver.navigate().to("https://test-web.akc.org/dog-name-finder/");
-        this.FindNamesButton.click();
+        FindNamesButton.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(AaronNameFavoriteIcon));
-        this.AaronNameFavoriteIcon.click();
-        this.userName.sendKeys("sxv@akc.org");
-        this.password.sendKeys("CypresHill2*");
-        this.login.click();
+        AaronNameFavoriteIcon.click();
+        userName.sendKeys("sxv@akc.org");
+        password.sendKeys("CypresHill2*");
+        login.click();
         wait.until(ExpectedConditions.elementToBeClickable(AaronNameFavoriteIcon));
-        this.AaronNameFavoriteIcon.click();
-        this.AaronName.click();
+        AaronNameFavoriteIcon.click();
+        AaronName.click();
 
     }
 

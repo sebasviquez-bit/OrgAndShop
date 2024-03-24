@@ -311,14 +311,14 @@ public class CompareBreeds {
 
     // Constructor
     public CompareBreeds(WebDriver _driver) {
-        this.driver = _driver;
+        driver = _driver;
         PageFactory.initElements(driver, this);
 
     }
 
     public void VerifyCompareBreeds() {
 
-        this.breeds.click();
+        breeds.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", breedscompa);

@@ -178,31 +178,31 @@ public class BreedsMenu {
 
     // Constructor
     public BreedsMenu(WebDriver _driver) {
-        this.driver = _driver;
+        driver = _driver;
         PageFactory.initElements(driver, this);
     }
 
     public void Verifybreedsmenu() {
 
-        this.menubreeds.click();
+        menubreeds.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(viewbreeds));
-        this.searchbreeds.isDisplayed();
-        this.explorebreeds.isDisplayed();
-        this.findmatch.isDisplayed();
-        this.comparebreeds.isDisplayed(); //fix this locator
-        this.findapuppy.isDisplayed();
-        this.chooseabreed.isDisplayed();
-        this.whygetdog.isDisplayed();
-        this.findrespbreeder.isDisplayed();
-        this.getstartdogsports.isDisplayed();
-        this.allaboutpuppies.isDisplayed();
-        this.findpurebreed.isDisplayed();
-        this.menuregdog.isDisplayed();
-        this.findbreedclub.isDisplayed();
-        this.mostpopdogs.isDisplayed();
-        this.fordogbreeders.isDisplayed();
-        this.fordogowners.isDisplayed();
+        searchbreeds.isDisplayed();
+        explorebreeds.isDisplayed();
+        findmatch.isDisplayed();
+        comparebreeds.isDisplayed(); //fix this locator
+        findapuppy.isDisplayed();
+        chooseabreed.isDisplayed();
+        whygetdog.isDisplayed();
+        findrespbreeder.isDisplayed();
+        getstartdogsports.isDisplayed();
+        allaboutpuppies.isDisplayed();
+        findpurebreed.isDisplayed();
+        menuregdog.isDisplayed();
+        findbreedclub.isDisplayed();
+        mostpopdogs.isDisplayed();
+        fordogbreeders.isDisplayed();
+        fordogowners.isDisplayed();
 
     }
 
@@ -212,17 +212,17 @@ public class BreedsMenu {
 
     public void Clickviewbreeds() {
 
-        this.menubreeds.click();
+        menubreeds.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(viewbreeds));
-        this.viewbreeds.click();
+        viewbreeds.click();
         wait.until(ExpectedConditions.visibilityOf(viewbreedsElement));
 
     }
 
     public void Clicksearchbreeds() {
 
-        this.menubreeds.click();
+        menubreeds.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(searchbreeds)).click();
         wait.until(ExpectedConditions.elementToBeClickable(searchbreedsDrop)).click();
@@ -232,19 +232,19 @@ public class BreedsMenu {
 
     public void ClickExploreSmallBreeds() {
 
-        this.menubreeds.click();
+        menubreeds.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(explorebreeds));
-        this.explorebreeds.click();
+        explorebreeds.click();
         wait.until(ExpectedConditions.elementToBeClickable(explorebreedsDrop));
-        this.explorebreedsDrop.click();
+        explorebreedsDrop.click();
         wait.until(ExpectedConditions.visibilityOf(explorebreedsElement));
 
     }
 
     public void Clickfindmatch() {
 
-        this.menubreeds.click();
+        menubreeds.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(findmatch)).click();
         wait.until(ExpectedConditions.visibilityOf(findmatchElement));
@@ -253,20 +253,20 @@ public class BreedsMenu {
 
     public void Clickcomparebreeds() {
 
-        this.menubreeds.click();
+        menubreeds.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(comparebreeds));
-        this.comparebreeds.click();
+        comparebreeds.click();
         wait.until(ExpectedConditions.visibilityOf(comparebreedsElement));
 
     }
 
     public void Clickfindapuppy() {
 
-        this.menubreeds.click();
+        menubreeds.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(findapuppy));
-        this.findapuppy.click();
+        findapuppy.click();
         for (String winHandle : driver.getWindowHandles()) {driver.switchTo().window(winHandle);}
         wait.until(ExpectedConditions.urlContains("https://marketplace.akc.org/"));
 
@@ -274,62 +274,62 @@ public class BreedsMenu {
 
     public void ClickChooseBreed() {
 
-        this.menubreeds.click();
+        menubreeds.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(chooseabreed));
-        this.chooseabreed.click();
+        chooseabreed.click();
         wait.until(ExpectedConditions.visibilityOf(chooseabreedElement));
 
     }
 
     public void Clickwhygetdog() {
 
-        this.menubreeds.click();
+        menubreeds.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(whygetdog));
-        this.whygetdog.click();
+        whygetdog.click();
         wait.until(ExpectedConditions.visibilityOf(whygetdogElement));
 
     }
 
     public void Clickfindrespbreeder() {
 
-        this.menubreeds.click();
+        menubreeds.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(findrespbreeder));
-        this.findrespbreeder.click();
+        findrespbreeder.click();
         wait.until(ExpectedConditions.visibilityOf(findrespbreederElement));
 
     }
 
     public void Clickgetstartdogsports() {
 
-        this.menubreeds.click();
+        menubreeds.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(getstartdogsports));
-        this.getstartdogsports.click();
+        getstartdogsports.click();
         wait.until(ExpectedConditions.visibilityOf(getstartdogsportsElement));
 
     }
 
     public void Clickallaboutpuppies() {
 
-        this.menubreeds.click();
+        menubreeds.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(allaboutpuppies));
-        this.allaboutpuppies.click();
+        allaboutpuppies.click();
         wait.until(ExpectedConditions.visibilityOf(puppiesPageTitle));
-        //this.driver.get(this.driver.getCurrentUrl() + "?test=true");
+        //driver.get(driver.getCurrentUrl() + "?test=true");
 
 
     }
 
     public void Clickfindpurebreed() {
 
-        this.menubreeds.click();
+        menubreeds.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(findpurebreed));
-        this.findpurebreed.click();
+        findpurebreed.click();
         for (String winHandle : driver.getWindowHandles()) {driver.switchTo().window(winHandle);}
         wait.until(ExpectedConditions.urlContains("/puppies"));
 
@@ -337,20 +337,20 @@ public class BreedsMenu {
 
     public void Clickmenuregdog() {
 
-        this.menubreeds.click();
+        menubreeds.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(menuregdog));
-        this.menuregdog.click();
+        menuregdog.click();
         wait.until(ExpectedConditions.visibilityOf(menuregdogElement));
 
     }
 
     public void Clickfindbreedclub() {
 
-        this.menubreeds.click();
+        menubreeds.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(findbreedclub));
-        this.findbreedclub.click();
+        findbreedclub.click();
         for (String winHandle : driver.getWindowHandles()) { driver.switchTo().window(winHandle); }
         wait.until(ExpectedConditions.urlContains("/club-search/"));
 
@@ -358,30 +358,30 @@ public class BreedsMenu {
 
     public void Clickmostpopdogs() {
 
-        this.menubreeds.click();
+        menubreeds.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(mostpopdogs));
-        this.mostpopdogs.click();
+        mostpopdogs.click();
         wait.until(ExpectedConditions.visibilityOf(mostpopdogsElement));
 
     }
 
     public void Clickfordogbreeders() {
 
-        this.menubreeds.click();
+        menubreeds.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(fordogbreeders));
-        this.fordogbreeders.click();
+        fordogbreeders.click();
         wait.until(ExpectedConditions.visibilityOf(fordogbreedersElement));
 
     }
 
     public void Clickfordogowners() {
 
-        this.menubreeds.click();
+        menubreeds.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(fordogowners));
-        this.fordogowners.click();
+        fordogowners.click();
         wait.until(ExpectedConditions.visibilityOf(fordogownersElement));
 
     }

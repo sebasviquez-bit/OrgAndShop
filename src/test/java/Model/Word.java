@@ -9,7 +9,7 @@ public class Word {
 
     public Word(String WordSearch){
 
-        this.WordSearch= WordSearch;
+        WordSearch= WordSearch;
     }
 
 
